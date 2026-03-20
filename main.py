@@ -1,284 +1,117 @@
-import argparse
+"""
+Main pipeline orchestrator.
+
+Usage:
+    python main.py [PDF_PATH] [--debug]
+
+Runs the full pipeline: PDF extraction -> Cloudinary upload.
+Configure the pipeline steps below by toggling the flags.
+"""
+
 import asyncio
-import base64
 import os
-import re
-import time
 from pathlib import Path
 
-
-def configure_ssl_certificates():
-    if os.getenv("SSL_CERT_FILE"):
-        return
-
-    ca_bundle = None
-
-    try:
-        import certifi
-
-        ca_bundle = certifi.where()
-    except ImportError:
-        try:
-            from pip._vendor import certifi as pip_certifi
-
-            ca_bundle = pip_certifi.where()
-        except Exception:
-            return
-
-    os.environ.setdefault("SSL_CERT_FILE", ca_bundle)
-    os.environ.setdefault("REQUESTS_CA_BUNDLE", ca_bundle)
-
-
-def load_env_file(env_path):
-    if not env_path.exists():
-        return
-
-    with env_path.open() as env_file:
-        for raw_line in env_file:
-            line = raw_line.strip()
-
-            if not line or line.startswith("#"):
-                continue
-
-            if line.startswith("export "):
-                line = line[len("export "):].strip()
-
-            if "=" not in line:
-                continue
-
-            key, value = line.split("=", 1)
-            os.environ.setdefault(key.strip(), value.strip().strip("'\""))
-
-
 BASE_DIR = Path(__file__).resolve().parent
-load_env_file(BASE_DIR / ".env")
-configure_ssl_certificates()
 
-from datalab_sdk import AsyncDatalabClient, ConvertOptions
-from datalab_sdk.exceptions import DatalabAPIError, DatalabTimeoutError
+# ============================================================
+# PIPELINE CONFIGURATION - Change these to control the pipeline
+# ============================================================
 
-# --- CONFIGURATION ---
-def parse_args():
-    parser = argparse.ArgumentParser(description="Convert a PDF to markdown using Datalab.")
-    parser.add_argument(
-        "pdf",
-        nargs="?",
-        default=str(BASE_DIR / "PDFs" / "JEE_Mains_2026_Jan_28.pdf"),
-        help="Path to the input PDF file (default: PDFs/JEE_Mains_2026_Jan_28.pdf)",
-    )
-    parser.add_argument("--debug", action="store_true", help="Process only a single page for testing")
-    return parser.parse_args()
+# Input PDF path
+PDF_PATH = str(BASE_DIR / "PDFs" / "JEE_Mains_2026_Jan_28.pdf")
 
-ARGS = parse_args()
-DEBUG_MODE = ARGS.debug
-INPUT_FILE = Path(ARGS.pdf).resolve()
-OUTPUT_DIR = BASE_DIR / "Datalab-Output"
-OUTPUT_STEM = INPUT_FILE.stem
-IMAGES_DIR = OUTPUT_DIR / "images"
-API_KEY = os.getenv("DATALAB_API_KEY")
+# Output directory for extracted markdown and images
+OUTPUT_DIR = str(BASE_DIR / "Datalab-Output")
+
+# Page range to extract (e.g. "3-5", "4", None for full PDF)
+PAGE_RANGE = None  # Set to None to use the value from .env
+
+# Pipeline steps - toggle these to run specific steps
+RUN_EXTRACTION = True       # Step 1: Extract PDF to markdown + images via Datalab
+RUN_CLOUDINARY_UPLOAD = True  # Step 2: Upload images to Cloudinary and update markdown
+
+# Cloudinary folder name (images will be uploaded to this folder)
+# Set to None to auto-generate from PDF name: "TripleScore/{pdf_stem}"
+CLOUDINARY_FOLDER = None
+
+# Debug mode - process only a single page (useful for testing)
+DEBUG_MODE = False
+
+# Datalab polling settings
 POLL_INTERVAL_SECONDS = 3
 MAX_POLLS = 600
-PAGE_RANGE = os.getenv("PAGE_RANGE") or None
-IMAGE_LINK_PATTERN = re.compile(r"!\[[^\]]*]\(([^)]+)\)")
 
-# Cloudinary configuration
-CLOUDINARY_CLOUD_NAME = os.getenv("CLOUDINARY_CLOUD_NAME")
-CLOUDINARY_API_KEY = os.getenv("CLOUDINARY_API_KEY")
-CLOUDINARY_API_SECRET = os.getenv("CLOUDINARY_API_SECRET")
-CLOUDINARY_ENABLED = all([CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET])
-
-if CLOUDINARY_ENABLED:
-    import cloudinary
-    import cloudinary.uploader
-    cloudinary.config(
-        cloud_name=CLOUDINARY_CLOUD_NAME,
-        api_key=CLOUDINARY_API_KEY,
-        api_secret=CLOUDINARY_API_SECRET,
-        secure=True,
-    )
-# ---------------------
-
-class ProgressDatalabClient(AsyncDatalabClient):
-    async def _poll_result(
-        self, check_url: str, max_polls: int = 300, poll_interval: int = 1
-    ):
-        full_url = (
-            check_url
-            if check_url.startswith("http")
-            else f"{self.base_url}/{check_url.lstrip('/')}"
-        )
-        started_at = time.monotonic()
-
-        print("Conversion started. Waiting for Datalab updates...", flush=True)
-
-        for poll_number in range(1, max_polls + 1):
-            data = await self._poll_get_with_retry(full_url)
-
-            status = data.get("status", "unknown")
-            elapsed_seconds = int(time.monotonic() - started_at)
-            details = [
-                f"status={status}",
-                f"elapsed={elapsed_seconds}s",
-                f"poll={poll_number}/{max_polls}",
-            ]
-
-            page_count = data.get("page_count")
-            runtime = data.get("runtime")
-            if page_count is not None:
-                details.append(f"pages={page_count}")
-            if runtime is not None:
-                details.append(f"runtime={runtime}s")
-
-            print(f"Conversion update: {', '.join(details)}", flush=True)
-
-            if status == "complete":
-                return data
-
-            if not data.get("success", True) and status != "processing":
-                raise DatalabAPIError(
-                    f"Processing failed: {data.get('error', 'Unknown error')}"
-                )
-
-            await asyncio.sleep(poll_interval)
-
-        raise DatalabTimeoutError(
-            f"Polling timed out after {max_polls * poll_interval} seconds"
-        )
+# ============================================================
 
 
-def save_images(images):
-    IMAGES_DIR.mkdir(parents=True, exist_ok=True)
-
-    for image_name, image_data in (images or {}).items():
-        image_path = IMAGES_DIR / image_name
-        with image_path.open("wb") as image_file:
-            image_file.write(base64.b64decode(image_data))
-
-
-def move_existing_images_to_output_dir():
-    IMAGES_DIR.mkdir(parents=True, exist_ok=True)
-
-    for image_path in BASE_DIR.glob("*_img.*"):
-        target_path = IMAGES_DIR / image_path.name
-        if image_path == target_path:
-            continue
-        image_path.replace(target_path)
-
-
-def rewrite_markdown_image_paths(markdown_text):
-    def replace_image_path(match):
-        image_ref = match.group(1).strip()
-        image_name = Path(image_ref).name
-        return match.group(0).replace(image_ref, f"images/{image_name}")
-
-    return IMAGE_LINK_PATTERN.sub(replace_image_path, markdown_text)
-
-
-async def upload_images_to_cloudinary(images_dir, folder_name):
-    url_map = {}
-
-    if not CLOUDINARY_ENABLED:
-        print("Cloudinary credentials not configured. Skipping upload.", flush=True)
-        return url_map
-
-    image_files = [f for f in images_dir.iterdir() if f.is_file()]
-    if not image_files:
-        return url_map
-
-    print(f"Uploading {len(image_files)} image(s) to Cloudinary...", flush=True)
-
-    for image_path in image_files:
-        try:
-            public_id = f"{folder_name}/{image_path.stem}"
-            response = await asyncio.to_thread(
-                cloudinary.uploader.upload,
-                str(image_path),
-                public_id=public_id,
-                overwrite=True,
-                resource_type="image",
-            )
-            secure_url = response.get("secure_url")
-            if secure_url:
-                url_map[image_path.name] = secure_url
-                print(f"  Uploaded: {image_path.name}", flush=True)
-            else:
-                print(f"  Warning: No URL returned for {image_path.name}", flush=True)
-        except Exception as e:
-            print(f"  Failed to upload {image_path.name}: {e}", flush=True)
-
-    print(f"Uploaded {len(url_map)}/{len(image_files)} image(s).", flush=True)
-    return url_map
-
-
-def rewrite_markdown_with_cloudinary_urls(markdown_text, url_map):
-    if not url_map:
-        return markdown_text
-
-    def replace_with_cloudinary(match):
-        image_ref = match.group(1).strip()
-        image_name = Path(image_ref).name
-        if image_name in url_map:
-            return match.group(0).replace(image_ref, url_map[image_name])
-        return match.group(0)
-
-    return IMAGE_LINK_PATTERN.sub(replace_with_cloudinary, markdown_text)
-
-
-async def extract_page_markdown():
-    if not API_KEY:
-        raise RuntimeError(
-            "Missing DATALAB_API_KEY. Set it in the .env file "
-            "in this directory before running the script."
-        )
-
-    if not INPUT_FILE.exists():
-        raise FileNotFoundError(f"Input PDF not found: {INPUT_FILE}")
-
-    move_existing_images_to_output_dir()
-
+async def run_pipeline():
+    pdf_path = PDF_PATH
+    output_dir = OUTPUT_DIR
     page_range = PAGE_RANGE
+    debug = DEBUG_MODE
 
-    # 1. Convert with paginated markdown so each page can be split cleanly
-    options = ConvertOptions(
-        output_format="markdown",
-        mode="balanced",
-        page_range=page_range,
-    )
+    # CLI args override the config above
+    import argparse
+    parser = argparse.ArgumentParser(description="Run the full data pipeline.")
+    parser.add_argument("pdf", nargs="?", default=None, help="Path to input PDF")
+    parser.add_argument("--debug", action="store_true", help="Process only a single page")
+    args = parser.parse_args()
 
-    print(f"Submitting {INPUT_FILE.name} for conversion...", flush=True)
-    async with ProgressDatalabClient(api_key=API_KEY) as client:
-        result = await client.convert(
-            INPUT_FILE,
-            options=options,
-            max_polls=MAX_POLLS,
+    if args.pdf:
+        pdf_path = args.pdf
+    if args.debug:
+        debug = True
+
+    md_path = None
+
+    # --- Step 1: PDF Extraction ---
+    if RUN_EXTRACTION:
+        from extract_pdf import extract
+
+        page_range_value = page_range or os.getenv("PAGE_RANGE") or None
+
+        print("=" * 50, flush=True)
+        print("STEP 1: PDF Extraction (Datalab)", flush=True)
+        print("=" * 50, flush=True)
+
+        md_path = await extract(
+            pdf_path=pdf_path,
+            output_dir=output_dir,
+            page_range=page_range_value,
+            debug=debug,
             poll_interval=POLL_INTERVAL_SECONDS,
+            max_polls=MAX_POLLS,
         )
+    else:
+        # If skipping extraction, look for existing markdown
+        pdf_stem = Path(pdf_path).stem
+        candidate = Path(output_dir) / f"{pdf_stem}.md"
+        if candidate.exists():
+            md_path = candidate
+            print(f"Skipping extraction. Using existing: {candidate.name}", flush=True)
+        else:
+            print(f"Skipping extraction. No markdown found at: {candidate}", flush=True)
 
-    markdown_text = rewrite_markdown_image_paths(result.markdown or "")
-    if not markdown_text:
-        raise RuntimeError("Datalab returned no markdown content.")
+    # --- Step 2: Cloudinary Upload ---
+    if RUN_CLOUDINARY_UPLOAD and md_path:
+        from upload_cloudinary import upload_and_rewrite
 
-    result.markdown = markdown_text
+        print("\n" + "=" * 50, flush=True)
+        print("STEP 2: Cloudinary Upload", flush=True)
+        print("=" * 50, flush=True)
 
-    # 2. Save output locally
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    result.save_output(OUTPUT_DIR / OUTPUT_STEM, save_images=False)
-    save_images(result.images)
+        await upload_and_rewrite(
+            md_path=md_path,
+            cloudinary_folder=CLOUDINARY_FOLDER,
+        )
+    elif RUN_CLOUDINARY_UPLOAD and not md_path:
+        print("Skipping Cloudinary upload: no markdown file available.", flush=True)
 
-    # 3. Upload images to Cloudinary and rewrite markdown paths
-    url_map = await upload_images_to_cloudinary(IMAGES_DIR, f"TripleScore/{OUTPUT_STEM}")
-    markdown_text = rewrite_markdown_with_cloudinary_urls(markdown_text, url_map)
+    print("\n" + "=" * 50, flush=True)
+    print("Pipeline complete.", flush=True)
+    print("=" * 50, flush=True)
 
-    # 4. Save full markdown
-    output_file = "debug_output.md" if DEBUG_MODE else f"{OUTPUT_STEM}.md"
-    with open(OUTPUT_DIR / output_file, "w", encoding="utf-8") as output_handle:
-        output_handle.write(markdown_text)
-
-    print("Extraction complete.", flush=True)
-    print(
-        f"Markdown saved to {output_file} and images are in {IMAGES_DIR.name}/",
-        flush=True,
-    )
 
 if __name__ == "__main__":
-    asyncio.run(extract_page_markdown())
+    asyncio.run(run_pipeline())
