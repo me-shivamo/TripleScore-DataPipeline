@@ -72,8 +72,9 @@ def parse_args():
 ARGS = parse_args()
 DEBUG_MODE = ARGS.debug
 INPUT_FILE = Path(ARGS.pdf).resolve()
+OUTPUT_DIR = BASE_DIR / "Datalab-Output"
 OUTPUT_STEM = INPUT_FILE.stem
-IMAGES_DIR = BASE_DIR / "images"
+IMAGES_DIR = OUTPUT_DIR / "images"
 API_KEY = os.getenv("DATALAB_API_KEY")
 POLL_INTERVAL_SECONDS = 3
 MAX_POLLS = 600
@@ -195,12 +196,13 @@ async def extract_page_markdown():
     result.markdown = markdown_text
 
     # 2. Save output locally
-    result.save_output(BASE_DIR / OUTPUT_STEM, save_images=False)
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    result.save_output(OUTPUT_DIR / OUTPUT_STEM, save_images=False)
     save_images(result.images)
 
     # 3. Save full markdown
     output_file = "debug_output.md" if DEBUG_MODE else f"{OUTPUT_STEM}.md"
-    with open(BASE_DIR / output_file, "w", encoding="utf-8") as output_handle:
+    with open(OUTPUT_DIR / output_file, "w", encoding="utf-8") as output_handle:
         output_handle.write(markdown_text)
 
     print("Extraction complete.", flush=True)
