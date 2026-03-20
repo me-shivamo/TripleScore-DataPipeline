@@ -1,6 +1,5 @@
 import asyncio
 import base64
-import json
 import os
 import re
 import time
@@ -66,7 +65,6 @@ API_KEY = os.getenv("DATALAB_API_KEY")
 POLL_INTERVAL_SECONDS = 3
 MAX_POLLS = 600
 DEBUG_PAGE_RANGE = "4"
-PAGE_BREAK_PATTERN = re.compile(r"(?:^|\n\n)\{(\d+)\}-{20,}\n\n")
 IMAGE_LINK_PATTERN = re.compile(r"!\[[^\]]*]\(([^)]+)\)")
 # ---------------------
 
@@ -146,55 +144,6 @@ def rewrite_markdown_image_paths(markdown_text):
     return IMAGE_LINK_PATTERN.sub(replace_image_path, markdown_text)
 
 
-def split_markdown_into_pages(markdown_text):
-    markdown_text = markdown_text.strip()
-    if not markdown_text:
-        return []
-
-    matches = list(PAGE_BREAK_PATTERN.finditer(markdown_text))
-    if not matches:
-        return [(1, markdown_text)]
-
-    pages = []
-    for index, match in enumerate(matches):
-        page_number = int(match.group(1))
-        start = match.end()
-        end = matches[index + 1].start() if index + 1 < len(matches) else len(markdown_text)
-        page_markdown = markdown_text[start:end].strip()
-        pages.append((page_number, page_markdown))
-
-    return pages
-
-
-def build_page_records(markdown_text):
-    page_records = []
-
-    for page_number, page_markdown in split_markdown_into_pages(markdown_text):
-        images = []
-        seen_images = set()
-
-        for match in IMAGE_LINK_PATTERN.finditer(page_markdown):
-            image_name = Path(match.group(1)).name
-            if image_name in seen_images:
-                continue
-            seen_images.add(image_name)
-            images.append(
-                {
-                    "name": image_name,
-                    "local_path": str(IMAGES_DIR / image_name),
-                }
-            )
-
-        page_records.append(
-            {
-                "page_number": page_number,
-                "markdown": page_markdown,
-                "images": images,
-            }
-        )
-
-    return page_records
-
 
 async def extract_page_markdown():
     if not API_KEY:
@@ -214,7 +163,6 @@ async def extract_page_markdown():
     options = ConvertOptions(
         output_format="markdown",
         mode="balanced",
-        paginate=True,
         page_range=page_range,
     )
 
@@ -237,16 +185,14 @@ async def extract_page_markdown():
     result.save_output(BASE_DIR / OUTPUT_STEM, save_images=False)
     save_images(result.images)
 
-    page_records = build_page_records(markdown_text)
-
-    # 3. Save page-wise markdown JSON
-    output_file = "debug_pages.json" if DEBUG_MODE else "full_pages.json"
+    # 3. Save full markdown
+    output_file = "debug_output.md" if DEBUG_MODE else f"{OUTPUT_STEM}.md"
     with open(BASE_DIR / output_file, "w", encoding="utf-8") as output_handle:
-        json.dump(page_records, output_handle, indent=4, ensure_ascii=False)
+        output_handle.write(markdown_text)
 
-    print(f"Extraction complete. Processed {len(page_records)} pages.", flush=True)
+    print("Extraction complete.", flush=True)
     print(
-        f"Data saved to {output_file} and images are in {IMAGES_DIR.name}/",
+        f"Markdown saved to {output_file} and images are in {IMAGES_DIR.name}/",
         flush=True,
     )
 
