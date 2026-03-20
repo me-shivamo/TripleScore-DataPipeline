@@ -1,3 +1,4 @@
+import argparse
 import asyncio
 import base64
 import os
@@ -57,9 +58,21 @@ from datalab_sdk import AsyncDatalabClient, ConvertOptions
 from datalab_sdk.exceptions import DatalabAPIError, DatalabTimeoutError
 
 # --- CONFIGURATION ---
-DEBUG_MODE = False  # Set to False to process the entire document
-INPUT_FILE = BASE_DIR / "JEE_Mains_2026_Jan_28.pdf"
-OUTPUT_STEM = "jee_mains_test"
+def parse_args():
+    parser = argparse.ArgumentParser(description="Convert a PDF to markdown using Datalab.")
+    parser.add_argument(
+        "pdf",
+        nargs="?",
+        default=str(BASE_DIR / "PDFs" / "JEE_Mains_2026_Jan_28.pdf"),
+        help="Path to the input PDF file (default: PDFs/JEE_Mains_2026_Jan_28.pdf)",
+    )
+    parser.add_argument("--debug", action="store_true", help="Process only a single page for testing")
+    return parser.parse_args()
+
+ARGS = parse_args()
+DEBUG_MODE = ARGS.debug
+INPUT_FILE = Path(ARGS.pdf).resolve()
+OUTPUT_STEM = INPUT_FILE.stem
 IMAGES_DIR = BASE_DIR / "images"
 API_KEY = os.getenv("DATALAB_API_KEY")
 POLL_INTERVAL_SECONDS = 3
