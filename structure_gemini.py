@@ -4,7 +4,7 @@ Standalone Gemini structuring module.
 Usage:
     python structure_gemini.py <markdown_file> [--output-dir DIR]
 
-Reads a Cloudinary-Output markdown file, splits it into individual question
+Reads a DO-Spaces-Output markdown file, splits it into individual question
 blocks, sends each to Gemini 2.5 Flash-Lite (via OpenRouter) for structured
 extraction, and saves the result as a JSON array.
 """
@@ -140,10 +140,10 @@ async def extract_question(client, block_text, question_num):
 
 
 async def structure_markdown(md_path, output_dir=None):
-    """Parse Cloudinary-Output markdown into structured JSON using Gemini.
+    """Parse DO-Spaces-Output markdown into structured JSON using Gemini.
 
     Args:
-        md_path: Path to the Cloudinary-Output markdown file.
+        md_path: Path to the DO-Spaces-Output markdown file.
         output_dir: Where to save the JSON. Defaults to Structured-Output/.
 
     Returns:
@@ -201,7 +201,7 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(description="Structure markdown into JSON via Gemini.")
-    parser.add_argument("markdown", help="Path to the Cloudinary-Output markdown file")
+    parser.add_argument("markdown", help="Path to the DO-Spaces-Output markdown file")
     parser.add_argument("--output-dir", default=None, help="Output directory (default: Structured-Output/)")
     args = parser.parse_args()
 

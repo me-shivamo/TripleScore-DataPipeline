@@ -1,5 +1,5 @@
 # Requires Python 3.13.0
 certifi
 datalab-python-sdk==0.2.2
-cloudinary
+boto3
 openai
