@@ -80,6 +80,22 @@ POLL_INTERVAL_SECONDS = 3
 MAX_POLLS = 600
 PAGE_RANGE = os.getenv("PAGE_RANGE") or None
 IMAGE_LINK_PATTERN = re.compile(r"!\[[^\]]*]\(([^)]+)\)")
+
+# Cloudinary configuration
+CLOUDINARY_CLOUD_NAME = os.getenv("CLOUDINARY_CLOUD_NAME")
+CLOUDINARY_API_KEY = os.getenv("CLOUDINARY_API_KEY")
+CLOUDINARY_API_SECRET = os.getenv("CLOUDINARY_API_SECRET")
+CLOUDINARY_ENABLED = all([CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET])
+
+if CLOUDINARY_ENABLED:
+    import cloudinary
+    import cloudinary.uploader
+    cloudinary.config(
+        cloud_name=CLOUDINARY_CLOUD_NAME,
+        api_key=CLOUDINARY_API_KEY,
+        api_secret=CLOUDINARY_API_SECRET,
+        secure=True,
+    )
 # ---------------------
 
 class ProgressDatalabClient(AsyncDatalabClient):
@@ -158,6 +174,55 @@ def rewrite_markdown_image_paths(markdown_text):
     return IMAGE_LINK_PATTERN.sub(replace_image_path, markdown_text)
 
 
+async def upload_images_to_cloudinary(images_dir, folder_name):
+    url_map = {}
+
+    if not CLOUDINARY_ENABLED:
+        print("Cloudinary credentials not configured. Skipping upload.", flush=True)
+        return url_map
+
+    image_files = [f for f in images_dir.iterdir() if f.is_file()]
+    if not image_files:
+        return url_map
+
+    print(f"Uploading {len(image_files)} image(s) to Cloudinary...", flush=True)
+
+    for image_path in image_files:
+        try:
+            public_id = f"{folder_name}/{image_path.stem}"
+            response = await asyncio.to_thread(
+                cloudinary.uploader.upload,
+                str(image_path),
+                public_id=public_id,
+                overwrite=True,
+                resource_type="image",
+            )
+            secure_url = response.get("secure_url")
+            if secure_url:
+                url_map[image_path.name] = secure_url
+                print(f"  Uploaded: {image_path.name}", flush=True)
+            else:
+                print(f"  Warning: No URL returned for {image_path.name}", flush=True)
+        except Exception as e:
+            print(f"  Failed to upload {image_path.name}: {e}", flush=True)
+
+    print(f"Uploaded {len(url_map)}/{len(image_files)} image(s).", flush=True)
+    return url_map
+
+
+def rewrite_markdown_with_cloudinary_urls(markdown_text, url_map):
+    if not url_map:
+        return markdown_text
+
+    def replace_with_cloudinary(match):
+        image_ref = match.group(1).strip()
+        image_name = Path(image_ref).name
+        if image_name in url_map:
+            return match.group(0).replace(image_ref, url_map[image_name])
+        return match.group(0)
+
+    return IMAGE_LINK_PATTERN.sub(replace_with_cloudinary, markdown_text)
+
 
 async def extract_page_markdown():
     if not API_KEY:
@@ -200,7 +265,11 @@ async def extract_page_markdown():
     result.save_output(OUTPUT_DIR / OUTPUT_STEM, save_images=False)
     save_images(result.images)
 
-    # 3. Save full markdown
+    # 3. Upload images to Cloudinary and rewrite markdown paths
+    url_map = await upload_images_to_cloudinary(IMAGES_DIR, f"TripleScore/{OUTPUT_STEM}")
+    markdown_text = rewrite_markdown_with_cloudinary_urls(markdown_text, url_map)
+
+    # 4. Save full markdown
     output_file = "debug_output.md" if DEBUG_MODE else f"{OUTPUT_STEM}.md"
     with open(OUTPUT_DIR / output_file, "w", encoding="utf-8") as output_handle:
         output_handle.write(markdown_text)
