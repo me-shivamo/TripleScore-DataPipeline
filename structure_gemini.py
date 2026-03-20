@@ -48,13 +48,11 @@ QUESTION_START = re.compile(
 SYSTEM_PROMPT = """You are a JEE exam question parser. Extract structured data from this markdown block.
 
 Rules:
-- "question": Full question text. Preserve LaTeX ($...$ and $$...$$). Remove bold markers (**) and question number prefix.
-- "question_image": Cloudinary URL of the question diagram (first image before "Ans." line), or empty string if none.
+- "question": Full question text. Preserve LaTeX ($...$ and $$...$$). Remove bold markers (**) and question number prefix. If the question has diagram(s)/image(s), keep them inline as markdown image syntax ![description](url) at their original position in the text. Remove duplicate image description text that appears as a standalone paragraph after the image link.
 - "options": Array of option strings. Preserve LaTeX. Strip "(1)", "(2)" etc. prefixes. Always 4 elements for MCQ.
 - "type": "multiple_choice" (4 options, single answer), "numerical" (blanks/asks for number), "multiple_select" (multiple correct), "open_text" (otherwise).
 - "correct_answer": The actual answer value (e.g. "$mg/4$", "120.15", "1000"), NOT the option number.
-- "explanation_image": Cloudinary URL of solution diagram (image after "Ans." line), or empty string if none.
-- "explanation": Full solution text exact as in markdown + simple short explanation. Preserve LaTeX. Remove "Sol." prefix and "Correct option (N)" suffix.
+- "explanation": Full solution text exact as in markdown + simple short explanation. Preserve LaTeX. Remove "Sol." prefix and "Correct option (N)" suffix. If the solution has diagram(s)/image(s), keep them inline as markdown image syntax ![description](url) at their original position. Remove duplicate image description text that appears as a standalone paragraph after the image link.
 - "subject": Classify as "Physics", "Chemistry", or "Maths" based on question content."""
 
 RESPONSE_SCHEMA = {
@@ -66,7 +64,6 @@ RESPONSE_SCHEMA = {
             "type": "object",
             "properties": {
                 "question": {"type": "string"},
-                "question_image": {"type": "string"},
                 "options": {"type": "array", "items": {"type": "string"}},
                 "type": {
                     "type": "string",
@@ -78,7 +75,6 @@ RESPONSE_SCHEMA = {
                     ],
                 },
                 "correct_answer": {"type": "string"},
-                "explanation_image": {"type": "string"},
                 "explanation": {"type": "string"},
                 "subject": {
                     "type": "string",
@@ -87,11 +83,9 @@ RESPONSE_SCHEMA = {
             },
             "required": [
                 "question",
-                "question_image",
                 "options",
                 "type",
                 "correct_answer",
-                "explanation_image",
                 "explanation",
                 "subject",
             ],
