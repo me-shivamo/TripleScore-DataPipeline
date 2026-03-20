@@ -61,9 +61,10 @@ Upload images from an already-extracted markdown file:
 ```bash
 python upload_cloudinary.py Datalab-Output/JEE_Mains_2026_Jan_28.md
 python upload_cloudinary.py Datalab-Output/JEE_Mains_2026_Jan_28.md --folder MyFolder/subfolder
+python upload_cloudinary.py Datalab-Output/JEE_Mains_2026_Jan_28.md --output-dir custom_output/
 ```
 
-This uploads all images referenced in the markdown to Cloudinary and rewrites the image paths in the file to Cloudinary URLs.
+This uploads all images referenced in the markdown to Cloudinary and saves the updated markdown (with Cloudinary URLs) to `Cloudinary-Output/`. The original file in `Datalab-Output/` stays unchanged.
 
 ## Project Structure
 
@@ -74,8 +75,10 @@ This uploads all images referenced in the markdown to Cloudinary and rewrites th
 ├── requirements.txt        # Python dependencies
 ├── .env                    # API keys and config (not committed)
 ├── PDFs/                   # Input PDF files
-└── Datalab-Output/         # Extraction output
-    ├── *.md                # Extracted markdown
-    ├── *.metadata.json     # Extraction metadata
-    └── images/             # Extracted images
+├── Datalab-Output/         # Extraction output
+│   ├── *.md                # Extracted markdown (local image paths)
+│   ├── *.metadata.json     # Extraction metadata
+│   └── images/             # Extracted images
+└── Cloudinary-Output/      # Cloudinary-updated output
+    └── *.md                # Markdown with Cloudinary image URLs
 ```
