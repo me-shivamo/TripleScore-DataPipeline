@@ -2,3 +2,4 @@
 certifi
 datalab-python-sdk==0.2.2
 cloudinary
+openai

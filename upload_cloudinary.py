@@ -166,7 +166,7 @@ async def upload_and_rewrite(md_path, cloudinary_folder=None, output_dir=None):
     output_file.write_text(markdown_text, encoding="utf-8")
     print(f"Saved updated markdown to {output_file}", flush=True)
 
-    return url_map
+    return url_map, output_file
 
 
 if __name__ == "__main__":
