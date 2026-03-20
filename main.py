@@ -77,7 +77,7 @@ IMAGES_DIR = BASE_DIR / "images"
 API_KEY = os.getenv("DATALAB_API_KEY")
 POLL_INTERVAL_SECONDS = 3
 MAX_POLLS = 600
-DEBUG_PAGE_RANGE = "4"
+PAGE_RANGE = os.getenv("PAGE_RANGE") or None
 IMAGE_LINK_PATTERN = re.compile(r"!\[[^\]]*]\(([^)]+)\)")
 # ---------------------
 
@@ -170,7 +170,7 @@ async def extract_page_markdown():
 
     move_existing_images_to_output_dir()
 
-    page_range = DEBUG_PAGE_RANGE if DEBUG_MODE else None
+    page_range = PAGE_RANGE
 
     # 1. Convert with paginated markdown so each page can be split cleanly
     options = ConvertOptions(
