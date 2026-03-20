@@ -54,7 +54,7 @@ Sol. **Statement 1:**  $f(x) = \frac{x}{1+|x|}$
 
 $$f(x) = \begin{cases} \frac{x}{1+x} & x \geq 0 \\ \frac{x}{1-x} & x < 0 \end{cases}$$
 
-![Graph of the function f(x) = x/(1+|x|). The graph is an S-shaped curve passing through the origin (0,0). It has horizontal asymptotes at y=1 and y=-1, indicated by dashed lines. The curve is strictly increasing and passes the horizontal line test, making it one-one.](images/5d9aa54cc7489433f94ed47c7689d94b_img.jpg)
+![Graph of the function f(x) = x/(1+|x|). The graph is an S-shaped curve passing through the origin (0,0). It has horizontal asymptotes at y=1 and y=-1, indicated by dashed lines. The curve is strictly increasing and passes the horizontal line test, making it one-one.](https://res.cloudinary.com/dhurlz78l/image/upload/v1773997486/TripleScore/JEE_Mains_2026_Jan_28/5d9aa54cc7489433f94ed47c7689d94b_img.jpg)
 
 Graph of the function f(x) = x/(1+|x|). The graph is an S-shaped curve passing through the origin (0,0). It has horizontal asymptotes at y=1 and y=-1, indicated by dashed lines. The curve is strictly increasing and passes the horizontal line test, making it one-one.
 
@@ -81,7 +81,7 @@ Ans. (2)
 
 Sol.
 
-![Diagram of an ellipse centered at C(1, -2). The center C, focus F1(3, -2), and vertex A1(5, -2) are all on the x-axis. The distance from the center to the focus is CF1 = 2, and the distance from the center to the vertex is CA1 = 4. The ellipse is elongated horizontally.](images/9e214525d1eb12d31be55591de365318_img.jpg)
+![Diagram of an ellipse centered at C(1, -2). The center C, focus F1(3, -2), and vertex A1(5, -2) are all on the x-axis. The distance from the center to the focus is CF1 = 2, and the distance from the center to the vertex is CA1 = 4. The ellipse is elongated horizontally.](https://res.cloudinary.com/dhurlz78l/image/upload/v1773997485/TripleScore/JEE_Mains_2026_Jan_28/9e214525d1eb12d31be55591de365318_img.jpg)
 
 Diagram of an ellipse centered at C(1, -2). The center C, focus F1(3, -2), and vertex A1(5, -2) are all on the x-axis. The distance from the center to the focus is CF1 = 2, and the distance from the center to the vertex is CA1 = 4. The ellipse is elongated horizontally.
 
@@ -133,7 +133,7 @@ $$24(e + L) = 24 \left[ \frac{5}{3} + \frac{32}{3} \right] = 8 \times 37 = 296$$
 
 Ans. (3)
 
-![Graph showing two parabolas, P1 and P2, intersecting at points (-3, 36), (0, 27), and (3, 36). The region between them is shaded. The origin is labeled O.](images/421acfd16f1ef11ac6092823b8ba615c_img.jpg)
+![Graph showing two parabolas, P1 and P2, intersecting at points (-3, 36), (0, 27), and (3, 36). The region between them is shaded. The origin is labeled O.](https://res.cloudinary.com/dhurlz78l/image/upload/v1773997487/TripleScore/JEE_Mains_2026_Jan_28/421acfd16f1ef11ac6092823b8ba615c_img.jpg)
 
 Graph showing two parabolas, P1 and P2, intersecting at points (-3, 36), (0, 27), and (3, 36). The region between them is shaded. The origin is labeled O.
 
