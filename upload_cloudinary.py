@@ -125,12 +125,13 @@ def rewrite_markdown_with_cloudinary_urls(markdown_text, url_map):
     return IMAGE_LINK_PATTERN.sub(replace_with_cloudinary, markdown_text)
 
 
-async def upload_and_rewrite(md_path, cloudinary_folder=None):
-    """Upload images referenced in a markdown file to Cloudinary and rewrite the file.
+async def upload_and_rewrite(md_path, cloudinary_folder=None, output_dir=None):
+    """Upload images referenced in a markdown file to Cloudinary and save to Cloudinary-Output.
 
     Args:
-        md_path: Path to the markdown file.
+        md_path: Path to the source markdown file.
         cloudinary_folder: Cloudinary folder name. Defaults to "TripleScore/{md_stem}".
+        output_dir: Directory to save the updated markdown. Defaults to Cloudinary-Output/.
 
     Returns:
         dict mapping local filename -> Cloudinary secure URL.
@@ -143,6 +144,11 @@ async def upload_and_rewrite(md_path, cloudinary_folder=None):
     if cloudinary_folder is None:
         cloudinary_folder = f"TripleScore/{md_path.stem}"
 
+    if output_dir is None:
+        output_dir = BASE_DIR / "Cloudinary-Output"
+    else:
+        output_dir = Path(output_dir)
+
     if not configure_cloudinary():
         print("Cloudinary credentials not configured. Skipping upload.", flush=True)
         return {}
@@ -150,12 +156,15 @@ async def upload_and_rewrite(md_path, cloudinary_folder=None):
     # Upload images
     url_map = await upload_images(images_dir, cloudinary_folder)
 
-    # Rewrite markdown file
+    # Save updated markdown to Cloudinary-Output/
+    markdown_text = md_path.read_text(encoding="utf-8")
     if url_map:
-        markdown_text = md_path.read_text(encoding="utf-8")
-        updated_text = rewrite_markdown_with_cloudinary_urls(markdown_text, url_map)
-        md_path.write_text(updated_text, encoding="utf-8")
-        print(f"Updated {md_path.name} with Cloudinary URLs.", flush=True)
+        markdown_text = rewrite_markdown_with_cloudinary_urls(markdown_text, url_map)
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    output_file = output_dir / md_path.name
+    output_file.write_text(markdown_text, encoding="utf-8")
+    print(f"Saved updated markdown to {output_file}", flush=True)
 
     return url_map
 
@@ -166,6 +175,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Upload images to Cloudinary and update markdown.")
     parser.add_argument("markdown", help="Path to the markdown file")
     parser.add_argument("--folder", default=None, help="Cloudinary folder (default: TripleScore/<md_stem>)")
+    parser.add_argument("--output-dir", default=None, help="Output directory (default: Cloudinary-Output/)")
     args = parser.parse_args()
 
-    asyncio.run(upload_and_rewrite(args.markdown, args.folder))
+    asyncio.run(upload_and_rewrite(args.markdown, args.folder, args.output_dir))
