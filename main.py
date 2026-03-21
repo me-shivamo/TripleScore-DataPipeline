@@ -19,18 +19,20 @@ BASE_DIR = Path(__file__).resolve().parent
 # ============================================================
 
 # Input PDF path
-PDF_PATH = str(BASE_DIR / "PDFs" / "JEE_Mains_2026_Jan_28.pdf")
+PDF_PATH = str(BASE_DIR / "PDFs" / "JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions.pdf")
 
 # Output directory for extracted markdown and images
 OUTPUT_DIR = str(BASE_DIR / "Datalab-Output")
 
 # Page range to extract (e.g. "3-5", "4", None for full PDF)
-PAGE_RANGE = None  # Set to None to use the value from .env
+PAGE_RANGE = ""  # Empty string = extract ALL pages
 
 # Pipeline steps - toggle these to run specific steps
 RUN_EXTRACTION = True       # Step 1: Extract PDF to markdown + images via Datalab
 RUN_SPACES_UPLOAD = True      # Step 2: Upload images to DigitalOcean Spaces and update markdown
 RUN_GEMINI_STRUCTURING = True  # Step 3: Structure markdown to JSON via Gemini
+RUN_CLASSIFICATION = True       # Step 4: Classify topic and chapter via Gemini
+RUN_EMBEDDING = True            # Step 5: Generate embeddings via Google Gemini API
 
 # DigitalOcean Spaces folder name (images will be uploaded to this folder)
 # Set to None to auto-generate from PDF name: "TripleScore/{pdf_stem}"
@@ -71,6 +73,9 @@ async def run_pipeline():
         from extract_pdf import extract
 
         page_range_value = page_range or os.getenv("PAGE_RANGE") or None
+        # Ensure empty strings become None (extract full PDF)
+        if page_range_value and not page_range_value.strip():
+            page_range_value = None
 
         print("=" * 50, flush=True)
         print("STEP 1: PDF Extraction (Datalab)", flush=True)
@@ -128,6 +133,30 @@ async def run_pipeline():
         await structure_markdown(md_path=spaces_md_path)
     elif RUN_GEMINI_STRUCTURING and not spaces_md_path:
         print("Skipping Gemini structuring: no Spaces markdown available.", flush=True)
+
+    # --- Step 4: Topic/Chapter Classification ---
+    if RUN_CLASSIFICATION:
+        from classify_topic_chapter import classify_all
+
+        print("\n" + "=" * 50, flush=True)
+        print("STEP 4: Topic/Chapter Classification", flush=True)
+        print("=" * 50, flush=True)
+
+        await classify_all()
+    else:
+        print("Skipping classification.", flush=True)
+
+    # --- Step 5: Embedding Generation ---
+    if RUN_EMBEDDING:
+        from embed_questions import embed_all
+
+        print("\n" + "=" * 50, flush=True)
+        print("STEP 5: Embedding Generation", flush=True)
+        print("=" * 50, flush=True)
+
+        embed_all()
+    else:
+        print("Skipping embedding.", flush=True)
 
     print("\n" + "=" * 50, flush=True)
     print("Pipeline complete.", flush=True)

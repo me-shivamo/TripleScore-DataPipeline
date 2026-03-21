@@ -111,7 +111,8 @@ class ProgressDatalabClient(AsyncDatalabClient):
                     f"Processing failed: {data.get('error', 'Unknown error')}"
                 )
 
-            await asyncio.sleep(poll_interval)
+            print(f"  Polling again in 30s... (poll {poll_number}/{max_polls})", flush=True)
+            await asyncio.sleep(30)
 
         raise DatalabTimeoutError(
             f"Polling timed out after {max_polls * poll_interval} seconds"

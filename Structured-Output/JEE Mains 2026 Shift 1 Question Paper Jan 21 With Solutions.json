@@ -1,6 +1,423 @@
 [
   {
-    "question": "A uniform rod of mass  $m$  and length  $l$  suspended by means of two identical inextensible light strings as shown in figure. Tension in one string immediately after the other string is cut, is \u0000\u0000\u0000\u0000. (g acceleration due to gravity)\n\n![Diagram of a uniform rod of length l suspended by two vertical strings from a horizontal ceiling. The strings are attached at points A and B at the ends of the rod.](https://res.cloudinary.com/dhurlz78l/image/upload/v1774001663/TripleScore/JEE%20Mains%202026%20Shift%201%20Question%20Paper%20Jan%2021%20With%20Solutions/78f163db583eb0c6d013e6f8ffe6d7d8_img.jpg)",
+    "question": "If the domain of the function\n\n$$f(x) = \\cos^{-1}\\left(\\frac{2x-5}{11-3x}\\right) + \\sin^{-1}(2x^2 - 3x + 1) \\text{ is the}\n$$interval  $[α, β]$ , then  $α + 2β$  is equal to :",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "3",
+    "explanation": "$$f(x) = \\cos^{-1} \\left( \\frac{2x-5}{11-3x} \\right) + \\sin^{-1} (2x^2 - 3x + 1)$$\n$$-1 \\leq \\frac{2x-5}{11-3x} \\leq 1$$\n$$-1 \\leq 2x^2 - 3x + 1 \\leq 1$$\n$$2x^2 - 3x + 2 \\geq 0, 2x^2 - 3x \\leq 0$$\n$$x \\in \\left[ 0, \\frac{3}{2} \\right] \\dots \\dots (i)$$\n$$\\frac{2x-5}{11-3x} + 1 \\geq 0 \\qquad \\frac{2x-5}{11-3x} - 1 \\leq 0$$\n$$\\frac{2x-5+11-3x}{11-3x} \\geq 0 \\quad \\frac{5x-16}{11-3x} \\leq 0$$\nImage: A number line diagram for the inequality 16/5 < x < 11/3. The line has tick marks at 16/5 and 11/3. The region between these two points is shaded and labeled with a '+'. The regions outside these points are labeled with '-'.\n$$\\frac{6-x}{11-3x} \\geq 0$$\nImage: A number line showing the intervals where the expression is positive or negative. The critical points 11/3 and 6 are marked. The regions to the left of 11/3 and to the right of 6 are marked with a '+', and the region between 11/3 and 6 is marked with a '-'.\n$$x \\in \\left(-\\infty, \\frac{16}{5}\\right] \\cup \\left(\\frac{11}{3}, \\infty\\right)$$\n$$x \\in \\left(-\\infty, \\frac{11}{3}\\right) \\cup [6, \\infty)$$\nintersection\n$$x \\in \\left(-\\infty, \\frac{16}{5}\\right] \\cup [6, \\infty) \\dots(ii)$$\nIntersection of (i) & (ii)  $x \\in \\left[0, \\frac{3}{2}\\right]$\n$$α = 0, β = \frac{3}{2} \u0003 α + 2β = 3$",
+    "subject": "Maths"
+  },
+  {
+    "question": "The area of the region, inside the ellipse  $x^2 + 4y^2 = 4$  and outside the region bounded by the curves  $y = |x| - 1$  and  $y = 1 - |x|$ , is :",
+    "options": [
+      " $2(\\pi - 1)$                      ",
+      " $2π - \frac{1}{2}$   ",
+      " $3(\\pi - 1)$                      ",
+      " $2π - 1$   "
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$2(\\pi - 1)$",
+    "explanation": "Image: A Cartesian coordinate system showing the solution set for the inequality  $|x| + |y| ≤ 1$ . The boundary is a diamond-shaped rhombus with vertices at  $(0, 1)$ ,  $(1, 0)$ ,  $(0, -1)$ , and  $(-1, 0)$ . The interior of this rhombus is shaded with horizontal lines. An ellipse is also drawn, passing through the same four vertices. Two lines are shown:  $y = |x| - 1$  (the bottom-right V-shape) and  $y = 1 - |x|$  (the top V-shape). The region inside the rhombus is the solution set.\nGraph of the inequality |x| + |y| ≤ 1.\n$$\\begin{aligned} \text{Required area} &= \text{area of ellipse} - \text{shaded area} \\ &= π \u0003 2 \u0003 1 - 4 \u0003 \u0003 \frac{1}{2} \u0003 1 \u0003 1 \u0003 \u0003 = 2π - 2 \u0003\n\\end{aligned}$$",
+    "subject": "Maths"
+  },
+  {
+    "question": "The number of relations, defined on the set  $\\{a, b, c, d\\}$ , which are both reflexive and symmetric, is equal to:",
+    "options": [
+      "256",
+      "16",
+      "1024",
+      "64"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "64",
+    "explanation": "Number of relation which are reply and sym. both  $= 1^4 \times 2^6 = 64$\n\n![matrix of elements](url)",
+    "subject": "Maths"
+  },
+  {
+    "question": "Let  $y = y(x)$  be the solution curve of the differential equation  $(1+x^2)dy + (y - \tan^{-1}x)dx = 0$ ,  $y(0) = 1$ . Then the value of  $y(1)$  is :",
+    "options": [
+      "$\\frac{2}{e^{\\pi/4}} + \\frac{\\pi}{4} - 1$",
+      "$\\frac{2}{e^{\\pi/4}} - \\frac{\\pi}{4} - 1$",
+      "$\\frac{4}{e^{\\pi/4}} + \\frac{\\pi}{2} - 1$",
+      "$\\frac{4}{e^{\\pi/4}} - \\frac{\\pi}{2} - 1$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$\\frac{2}{e^{\\pi/4}} + \\frac{\\pi}{4} - 1$",
+    "explanation": "$\\frac{dy}{dx} + \\frac{y}{x^2+1} = \\frac{\\tan^{-1}x}{x^2+1}$\n\nI.f. $= e^{\\tan^{-1}x}$\n\n$y \\times e^{\\tan^{-1}x} = \\int e^{\\tan^{-1}x} \\cdot \\frac{\\tan^{-1}x}{1+x^2} dx$\n\n$y \\times e^{\\tan^{-1}x} = \\tan^{-1}x (e^{\\tan^{-1}x}) - e^{\\tan^{-1}x} + c$\n\n$y(0) = 1 \\Rightarrow c = 2$\n\n$y(1) = \\frac{2}{e^{\\pi/4}} + \\frac{\\pi}{4} - 1$",
+    "subject": "Maths"
+  },
+  {
+    "question": "The number of strictly increasing functions  $f$  from the set  $\\{1, 2, 3, 4, 5, 6\\}$  to the set  $\\{1, 2, 3, \\dots, 9\\}$  such that  $f(i) \\neq i$  for  $1 \\leq i \\leq 6$ , is equal to :",
+    "options": [
+      "$21$",
+      "$27$",
+      "$22$",
+      "$28$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$28$",
+    "explanation": "$f(i) \\neq i$ ,  $f(x)$  is strictly increasing function  \n $f: A \\rightarrow B$ , where  $A = \\{1, 2, 3, \\dots, 6\\}$   \n $B = \\{1, 2, 3, \\dots, 9\\}$ , then number of function  $f: A \\rightarrow B$  is equal to\n![A mapping diagram showing two sets A and B. Set A contains elements {1, 2, 3, 4, 5, 6} and set B contains elements {1, 2, 3, 4, 5, 6, 7, 8, 9}. An arrow labeled f points from set A to set B.](images/32f3dbb543933c01efffae559bfd1f13_img.jpg)\n\n$f(i) \\neq i \\text{ Case - i } f(1) = 2 \\Rightarrow {}^7C_5 = 21$\n\n$\text{Case- ii } f(1) = 3 \\Rightarrow {}^6C_5 = 6$\n\n$\text{Case- iii } f(1) = 4 \\Rightarrow {}^5C_5 = 1$\n\n$\text{No of function A to B} = 21 + 6 + 1 = 28$",
+    "subject": "Maths"
+  },
+  {
+    "question": "Let  $f: \\mathbb{R} \\rightarrow (0, \\infty)$  be a twice differentiable function such that  $f(3) = 18$ ,  $f'(3) = 0$  and  $f''(3) = 4$ .\n\nThen  $\\lim_{x \\rightarrow 1} \\left( \\log_e \\left( \\frac{f(2+x)}{f(3)} \\right)^{\\frac{18}{(x-1)^2}} \\right)$  is equal to :",
+    "options": [
+      "$1$",
+      "$9$",
+      "$2$",
+      "$18$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$2$",
+    "explanation": "Let  $T = \\lim_{x \\rightarrow 1} \\left( \\frac{f(x+2)}{f(3)} \\right)^{\\frac{18}{(x-1)^2}}$ ;  $1^\\infty$  form\n\n$\\\\Rightarrow T = e^{\\\\lim_{x \\rightarrow 1} \\frac{18}{(x-1)^2} \\left( \\frac{f(x+2)-f(3)}{f(3)} \\right)}$\n\n$\\\\Rightarrow T = e^{\\\\lim_{x \\rightarrow 1} \\frac{18}{(x-1)^2} \\left( \\frac{f(x+2)-f(3)}{18} \\right)}$\n\n$\\\\Rightarrow T = e^{\\\\lim_{x \\rightarrow 1} \\left( \\frac{f(x+2)-f(3)}{(x-1)^2} \\right) \\frac{0}{0} \\text{ form}} \\quad \\text{apply L' pital}$\n\n$\\\\Rightarrow T = e^{\\\\lim_{x \\rightarrow 1} \\frac{f'(x+2)}{2(x-1)} \\frac{0}{0} \\text{ form}} \\quad \\text{apply L' pital}$\n\n$\\\\Rightarrow T = e^{\\\\lim_{x \\rightarrow 1} \\frac{f''(x+2)}{2}} ; = e^{\\frac{4}{2}} = e^2$\n\n$\\\\Rightarrow \\log_e(T) = 2$",
+    "subject": "Maths"
+  },
+  {
+    "question": "Let the foci of hyperbola coincide with the foci of the ellipse  $\\frac{x^2}{36} + \\frac{y^2}{16} = 1$ . If the eccentricity of the hyperbola is 5, then the length of its latus rectum is:",
+    "options": [
+      "12",
+      "16",
+      "$\\frac{96}{\\sqrt{5}}$",
+      "$24\\sqrt{5}$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$\\frac{96}{\\sqrt{5}}$",
+    "explanation": "Let  $e_1$  be eccentricity of ellipse\n$$\\Rightarrow e_1 = \\sqrt{1 - \\frac{16}{36}} = \\sqrt{1 - \\frac{4}{9}} = \\frac{\\sqrt{5}}{3}$$ \n$$\\text{So } ae_1 = 6 \\cdot \\frac{\\sqrt{5}}{3} = 2\\sqrt{5}$$ \n$$\\text{Now H: } \\frac{x^2}{p^2} - \\frac{y^2}{q^2} = 1$$ \n$$p.e = ae_1$$ \n$$p \\cdot 5 = 2\\sqrt{5}$$ \n$$p = \\frac{2}{\\sqrt{5}} \\Rightarrow e^2 = 1 + \\frac{q^2}{p^2} \\Rightarrow 25 = 1 + \\frac{5q^2}{4} \\Rightarrow q^2 = \\frac{96}{5}$$ \n$$\\text{So length of LR } \\frac{2q^2}{p} = \\frac{96}{\\sqrt{5}}$$",
+    "subject": "Physics"
+  },
+  {
+    "question": "The value of  $\\int_{-\\pi/6}^{\\pi/6} \\left( \\frac{\\pi + 4x^{11}}{1 - \\sin(|x| + \\pi/6)} \\right) dx$  is equal to",
+    "options": [
+      "$2\\pi$",
+      "$4\\pi$",
+      "$8\\pi$",
+      "$6\\pi$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$4\\pi$",
+    "explanation": "$= 2\\pi \\int_0^{\\pi/6} \\frac{1}{1 - \\sin\\left(x + \\frac{\\pi}{6}\\right)} dx \\text{ let } x + \\frac{x}{6} = t \\quad dx = dt$\n$$= 2\\pi \\int_{\\pi/6}^{\\pi/3} \\frac{dt}{1 - \\sin t} = 2\\pi \\int_{\\pi/6}^{\\pi/3} \\frac{1 + \\sin t}{\\cos^2 t} dt$$ \n$$= 2\\pi \\left[ \\int_{\\pi/6}^{\\pi/3} \\sec^2 t dt + \\int_{\\pi/6}^{\\pi/3} \\sec t \\tan t dt \\right]$$ \n$$= 2\\pi \\left[ (\\tan t)_{\\pi/6}^{\\pi/3} + (\\sec t)_{\\pi/6}^{\\pi/3} \\right]$$ \n$$= 2\\pi \\left[ \\left( \\sqrt{3} - \\frac{1}{\\sqrt{3}} \\right) + \\left( 2 - \\frac{2}{\\sqrt{3}} \\right) \\right]$$ \n$$= 2\\pi \\left[ \\sqrt{3} + 2 - \\sqrt{3} \\right] = 4\\pi$$",
+    "subject": "Maths"
+  },
+  {
+    "question": "Let the mean and variance of 7 observations 2, 4, 10,  $x$ , 12, 14,  $y$ ,  $x > y$ , be 8 and 16 respectively. Two numbers are chosen from  $\\{1, 2, 3, x-4, y, 5\\}$  one after another without replacement, then the probability, that the smaller number among the two chosen numbers is less than 4, is:",
+    "options": [
+      " $\\frac{3}{5}$ ",
+      " $\\frac{4}{5}$ ",
+      " $\\frac{2}{5}$ ",
+      " $\\frac{1}{3}$ "
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "4/5",
+    "explanation": "Mean  $(\\bar{x}) = 8$  (Given)\n\n$$\\Rightarrow \\frac{2+4+10+x+12+14+y}{7} = 8$$\n\n$$\\Rightarrow x + y = 14 \\dots(1)\\dots$$\n\nVariance  $(\\sigma^2) = 16$  (Given)\n\n$$\\Rightarrow 16 = \\frac{2^2 + 4^2 + 10^2 + x^2 + 12^2 + 14^2 + y^2}{7} - 8^2$$\n\n$$\\Rightarrow x^2 + y^2 = 100 \\dots(2)\\dots$$\n\n$$\\because (x + y)^2 = x^2 + y^2 + 2xy$$\n\n$$\\Rightarrow xy = 48 \\text{ (sum is 14 product is 48)}$$\n\nSince problem states  $x > y$\n\n$$\\therefore x = 8 \\text{ and } y = 6$$\n\nNow set  $X = \\{1, 2, 3, 4, 6, 5\\}$\n\nNow we choose two numbers one after another without replacement total outcomes  $= 6 \\times 5 = 30$\n\nWe want the prob. That the smaller number among the two is less than 4\n\n$$P(\\text{smaller} < 4) = 1 - P(\\text{smaller} \\geq 4)$$\n\n$$= 1 - \\frac{6}{30} = \\frac{4}{5}$$",
+    "subject": "Maths"
+  },
+  {
+    "question": "Let  $(\\alpha, \\beta, \\gamma)$  be the co-ordinates of the foot of the perpendicular drawn from the point  $(5, 4, 2)$  on the line  $\\\\vec{r} = (-\\\\hat{i} + 3\\\\hat{j} + \\\\hat{k}) + \\lambda(2\\\\hat{i} + 3\\\\hat{j} - \\\\hat{k})$ .\n\nThen the length of the projection of the vector  $\\\\alpha\\\\hat{i} + \\\\beta\\\\hat{j} + \\\\gamma\\\\hat{k}$  on the vector  $6\\\\hat{i} + 2\\\\hat{j} + 3\\\\hat{k}$  is :",
+    "options": [
+      " $\\frac{15}{7}$ ",
+      " 4 ",
+      " $\\frac{18}{7}$ ",
+      " 3 "
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "18/7",
+    "explanation": "![Diagram for Question 14: A point A(5,4,2) is shown above a horizontal line. A vertical line segment connects A to the horizontal line, meeting it at a point labeled (\\alpha, \\beta, \\gamma). A right-angle symbol is shown at the intersection point (\\alpha, \\beta, \\gamma).](images/38b977dc8ba47e36367f97933421e3ae_img.jpg)\n\nDiagram for Question 14: A point A(5,4,2) is shown above a horizontal line. A vertical line segment connects A to the horizontal line, meeting it at a point labeled (\\alpha, \\beta, \\gamma). A right-angle symbol is shown at the intersection point (\\alpha, \\beta, \\gamma).\n\n$$\\\\vec{r} = (-\\\\hat{i} + 3\\\\hat{j} + \\\\hat{k}) + \\lambda(2\\\\hat{i} + 3\\\\hat{j} - \\\\hat{k})$$\n\n$$\\frac{x+1}{2} = \\frac{y-3}{3} = \\frac{z-1}{-1} = \\lambda$$\n\nAny general point P on the line is\n\n$$(2\\lambda - 1, 3\\lambda + 3, -\\lambda + 1)$$\n\nLet the given point is A (5,4,2)\n\n$$\\\\vec{AP} = (2\\lambda - 6)\\\\hat{i} + (3\\lambda - 1)\\\\hat{j} + (-\\\\lambda - 1)\\\\hat{k}$$\n\n$$\\because \\\\vec{AP} \\\\perp \\\\text{Line (L)}$$\n\n$$\\therefore \\\\vec{AP} \\cdot (2\\\\hat{i} + 3\\\\hat{j} - \\\\hat{k}) = 0$$\n\n$$2(2\\lambda - 6) + 3(3\\lambda - 1) - 1(-\\\\lambda - 1) = 0$$\n\n$$\\Rightarrow \\lambda = 1$$\n\n$$\\therefore \\alpha = 1$$\n\n$$\\\\beta = 6$$\n\n$$\\\\gamma = 0$$\n\n$$\\\\text{Let the vector } \\\\vec{u} = \\\\alpha\\\\hat{i} + \\\\beta\\\\hat{j} + \\\\gamma\\\\hat{k}$$\n\n$$\\\\vec{u} = \\\\hat{i} + 6\\\\hat{j} + 0\\\\hat{k}$$\n\n$$\\\\& \\\\vec{w} = 6\\\\hat{i} + 2\\\\hat{j} + 3\\\\hat{k}$$\n\n$$\\\\text{So projection} = \\frac{|\\\\vec{u} \\\\cdot \\\\vec{w}|}{|\\\\vec{w}|} = \\frac{18}{7}$$",
+    "subject": "Maths"
+  },
+  {
+    "question": "Let PQ and MN be two straight lines touching the circle  $x^2 + y^2 - 4x - 6y - 3 = 0$  at the points A and B respectively. Let O be the centre of the circle and  $\\angle AOB = \\pi/3$ . Then the locus of the point of intersection of the lines PQ and MN is:",
+    "options": [
+      " $3(x^2 + y^2) - 18x - 12y + 25 = 0$   ",
+      " $x^2 + y^2 - 12x - 18y - 25 = 0$   ",
+      " $x^2 + y^2 - 18x - 12y - 25 = 0$   ",
+      " $3(x^2 + y^2) - 12x - 18y - 25 = 0$   "
+    ],
+    "type": "multiple_choice",
+    "correct_answer": " $3(x^2 + y^2) - 12x - 18y - 25 = 0$   ",
+    "explanation": "Given circle\n![Diagram for Question 15: A circle with center O(2,3) and radius r. Two tangent lines PQ and MN touch the circle at points A and B respectively. The lines intersect at point P(h,k). A dashed line connects O to P. The angle between the radii OA and OB is 60 degrees. The angle between the radius OA and the line OP is 30 degrees. The angle between the tangent line PQ and the line OP is also 30 degrees. Right-angle symbols are shown at points A and B where the radii meet the tangents.](images/826f85fa91187318bfe4671d5d2a258a_img.jpg)\nDiagram for Question 15: A circle with center O(2,3) and radius r. Two tangent lines PQ and MN touch the circle at points A and B respectively. The lines intersect at point P(h,k). A dashed line connects O to P. The angle between the radii OA and OB is 60 degrees. The angle between the radius OA and the line OP is 30 degrees. The angle between the tangent line PQ and the line OP is also 30 degrees. Right-angle symbols are shown at points A and B where the radii meet the tangents.\n$$x^2 + y^2 - 4x - 6y - 3 = 0$$ \n$$C(2,3) \\& r = 4$$ \n$$\\cos 30^\\circ = \\frac{r}{OR} = \\frac{4}{OR}$$ \n$$\\Rightarrow OR = \\frac{8}{\\sqrt{3}}$$\nNow \n$$OR^2 = (h - 2)^2 + (k - 3)^2$$ \n$$\\Rightarrow 3(x^2 + y^2) - 12x - 18y - 25 = 0$$",
+    "subject": "Maths"
+  },
+  {
+    "question": "If the coefficient of x in the expansion of  $(ax^2 + bx + c)(1 - 2x)^{26}$  is  $-56$  and the coefficients of  $x^2$  and  $x^3$  are both zero, then  $a + b + c$  is equal to",
+    "options": [
+      " 1300 ",
+      " 1500  ",
+      " 1403 ",
+      " 1483 "
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "1403",
+    "explanation": "Sol. $(ax^2 + bx + c) \\sum_{r=0}^{26} {}^{26}C_r (-2x)^r$\nCoeff. of $x^2 : a \\cdot {}^{26}C_0 (-2)^0 + b \\cdot {}^{26}C_1 (-2) + c \\cdot {}^{26}C_2 (-2)^2 = 0$\n$\righarrow a - 52b + 1300c = 0 \\dots (1)$\nCoeff. of $x^3 : a \\cdot {}^{26}C_1 (-2) + b \\cdot {}^{26}C_2 (-2)^2 + c \\cdot {}^{26}C_3 (-2)^3 = 0$\n$\righarrow -52a + 1300b - 20800c = 0 \\dots (2)$\nCoeff. of $x = -56$\n$\righarrow b \\cdot {}^{26}C_0 (-2)^0 + c \\cdot {}^{26}C_1 (-2)^1 = -56$\n$b - 52c = -56 \\dots (3)$\nAfter solving (1), (2) & (3)\n$a = 1300, b = 100, c = 3$\n$\righarrow a + b + c = 1403$",
+    "subject": "Maths"
+  },
+  {
+    "question": "If  $x^2 + x + 1 = 0$ , then the value of  $\\left(x + \\frac{1}{x}\\right)^4 + \\left(x^2 + \\frac{1}{x^2}\\right)^4 + \\left(x^3 + \\frac{1}{x^3}\\right)^4 + \\dots + \\left(x^{25} + \\frac{1}{x^{25}}\\right)^4$  is :",
+    "options": [
+      "128",
+      "162",
+      "175",
+      "145"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "145",
+    "explanation": "Sol. $x^2 + x + 1 = 0$\n\n$\\\\Rightarrow x = \\omega \\text{ or } \\omega^2$\n\n$\\\\therefore \\alpha = \\omega \\text{ & } \\beta = \\omega^2$\n\n$= (\\omega + \\omega^2)^4 + (\\omega^2 + \\omega^4)^4 + (\\omega^3 + \\omega^6)^4 + \\dots + (\\omega^{25} + \\omega^{50})^4$\n\n$= [(\\omega + \\omega^2)^4 + (\\omega^2 + \\omega^4)^4 + (\\omega^4 + \\omega^8)^4 + \\dots + (\\omega^{25} + \\omega^{50})^4] + [(\\omega^3 + \\omega^6)^4 + (\\omega^6 + \\omega^{12})^4 + (\\omega^9 + \\omega^{18})^4 + \\dots + (\\omega^{24} + \\omega^{48})^4]$\n\n$= \\underbrace{[1+1+1+\\dots+1]}_{17 \\text{ times}} + \\underbrace{[(1+1)^4 + (1+1)^4 + \\dots + (1+1)^4]}_{8 \\text{ times}}$\n\n$= 17 + 128$\n\n$= 145",
+    "subject": "Maths"
+  },
+  {
+    "question": "The value of  $\\csc 10^\\circ - \\sqrt{3} \\sec 10^\\circ$  is equal to:",
+    "options": [
+      "4",
+      "2",
+      "8",
+      "6"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "4",
+    "explanation": "Sol. $= \\frac{1}{\\sin 10^\u0002} - \\frac{\\sqrt{3}}{\\cos 10^\u0002}$\n\n$= \\frac{\\cos 10^\u0002 - \\sqrt{3} \\sin 10^\u0002}{\\sin 10^\u0002 \\cos 10^\u0002}$\n\n$= 4 \\left[ \\frac{\\frac{1}{2} \\cos 10^\u0002 - \\frac{\\sqrt{3}}{2} \\sin 10^\u0002}{2 \\sin 10^\u0002 \\cos 10^\u0002} \\right]$\n\n$= 4 \\left[ \\frac{\\sin(30^\u0002 - 10^\u0002)}{\\sin 20^\u0002} \\right]$\n\n$= 4$",
+    "subject": "Maths"
+  },
+  {
+    "question": "The sum of all the roots of the equation  $(x-1)^2 - 5|x-1| + 6 = 0$ , is:",
+    "options": [
+      "4",
+      "3",
+      "1",
+      "5"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "4",
+    "explanation": "Let $|x-1| = t$\n$$t^2 - 5t + 6 = 0$$\n$$t = 2 \text{ & } t = 3$$\n$$|x-1| = 2 \text{ & } |x-1| = 3$$\n$$x-1 = \\pm 2 \text{ & } x-1 = \\pm 3$$\n$$x = 1 \\pm 2 \text{ & } x = 1 \\pm 3$$\n$$\\therefore \text{ root} = 3, -1, 4, -2$$\n$$\\therefore \text{ Sum of root} = 3 + (-1) + 4 + (-2) = 4.$$\n",
+    "subject": "Maths"
+  },
+  {
+    "question": "Let O be the vertex of the parabola  $x^2 = 4y$  and Q be any point on it. Let the locus of the point P, which divides the line segment OQ internally in the ratio 2: 3 be the conic C. Then the equation of the chord of C, which is bisected at the point (1, 2), is:",
+    "options": [
+      "$5x-y-3=0$",
+      "$4x-5y+6=0$",
+      "$x-2y+3=0$",
+      "$5x-4y+3=0$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$5x-4y+3=0$",
+    "explanation": "$$h = \\frac{4t}{5}$$\n![A graph of a parabola y = x^2/5 in the first quadrant. The origin is labeled O. A point P(h, k) is on the parabola, and a point Q(2t, t^2) is also on the parabola. A tangent line is drawn at P(h, k), and a normal line is drawn at Q(2t, t^2). The tangent line has a slope of 2, and the normal line has a slope of 3. The x-axis and y-axis are shown.](images/3121afa7ca030b22ee0345864ca6f38b_img.jpg)\nA graph of a parabola y = x^2/5 in the first quadrant. The origin is labeled O. A point P(h, k) is on the parabola, and a point Q(2t, t^2) is also on the parabola. A tangent line is drawn at P(h, k), and a normal line is drawn at Q(2t, t^2). The tangent line has a slope of 2, and the normal line has a slope of 3. The x-axis and y-axis are shown.\n$$k = \\frac{2t^2}{5} = \\frac{2}{5} \\cdot \\left(\\frac{5h}{4}\\right)^2$$\n$$8k = 5h^2$$\n$$\\Rightarrow 5x^2 = 8y$$\n$$T = S_1$$\n$$5(xx_1) - 4(y + y_1) = 5x_1^2 - 8y_1$$\n$$5(x) - 4(y + 2) = 5 - 8 \\cdot 2$$\n$$5x - 4y + 3 = 0$$\n",
+    "subject": "Maths"
+  },
+  {
+    "question": "Let $f: \\mathbb{R} \\rightarrow \\mathbb{R}$ be a twice differentiable function such that the quadratic equation $f(x)m^2 - 2f'(x)m + f''(x) = 0$ in $m$, has two equal roots for every $x \\in \\mathbb{R}$. If $f(0) = 1$, $f'(0) = 2$ and $(\\alpha, \\beta)$ is the largest interval in which the function $f(\\log_e x - x)$ is increasing, then $\\alpha + \\beta$ is equal to",
+    "options": [
+      "1",
+      "2",
+      "0",
+      "1/2"
+    ],
+    "type": "numerical",
+    "correct_answer": "1",
+    "explanation": "Given quadratic equation has equal roots, thus\n$$D = 0 \\Rightarrow (f'(x))^2 = f''(x) \\cdot f(x)$$\n$$\\frac{f'(x)}{f(x)} = \\frac{f''(x)}{f'(x)}$$\nIntegrate\n$$\\ln(f(x)) = \\ln(f'(x)) + \\ln C \\Rightarrow f(x) = c \\cdot f'(x)$$\n$$\\text{Put } x = 0$$\n$$1 = c \\cdot 2 \\Rightarrow c = \\frac{1}{2}$$\n$$\\text{Now } 2f(x) = f'(x)$$\n$$\\Rightarrow \\frac{f'(x)}{f(x)} = 2$$\nIntegrate\n$$\\ln(f(x)) = 2x + d$$\n$$\\Rightarrow d = 0$$\n$$\\Rightarrow \\ln(f(x)) = 2x \\Rightarrow f(x) = e^{2x}$$\n$$\\text{Now let } g(x) = f(\\ln x - x) = e^{2(\\ln x - x)}$$\n$$\\therefore g'(x) = 2e^{2(\\ln x - x)} \\left(\\frac{1}{x} - 1\\right) \\geq 0$$\n$$\\Rightarrow \\frac{1-x}{x} \\geq 0$$\n$$\\Rightarrow x \\in (0, 1]$$\n$$\\Rightarrow \\alpha = 0, \\beta = 1$$\n$$\\alpha + \\beta = 1.$$\n\nThe function is increasing when its derivative is non-negative. We found the derivative $g'(x)$ and set it to be greater than or equal to zero. Solving the inequality $\\frac{1-x}{x} \\geq 0$ gives the interval $(0, 1]$. The largest such interval is $(\\alpha, \\beta) = (0, 1]$. Therefore, $\\alpha + \\beta = 0 + 1 = 1$.",
+    "subject": "Maths"
+  },
+  {
+    "question": "Let $a_1 = 1$ and for $n ≥ 1$, $a_{n+1} = \frac{1}{2}a_n + \frac{n^2 - 2n - 1}{n^2(n+1)^2}$. Then $\\left| \\sum_{n=1}^{\\infty} \\left( a_n - \\frac{2}{n^2} \\right) \\right|$ is equal to _____.",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "2",
+    "explanation": " $a_{n+1} - \\frac{1}{2}a_n = \\frac{n^2 - 2n - 1}{n^2(n+1)^2} = \\frac{2n^2 - (n+1)^3}{n^2(n+1)^2}$\n $\\Rightarrow a_{n+1} - \\frac{1}{2}a_n = \\frac{2}{(n+1)^2} - \\frac{1}{n^2}$\n $n = 1 \t a_2 - \\frac{1}{2}a_1 = \\frac{2}{2^2} - \\frac{1}{1^2}$\n $2 \\left[ a_3 - \\frac{1}{2}a_2 = \\frac{2}{3^2} - \\frac{1}{2^2} \\right]$\n $2^2 \\left[ a_4 - \\frac{1}{2}a_3 = \\frac{2}{4^2} - \\frac{1}{3^2} \\right]$\n $\\vdots$\n $2^{n-2} \\left[ a_n - \\frac{1}{2}a_{n-1} = \\frac{2}{n^2} - \\frac{1}{(n-1)^2} \\right]$\n $2^{n-1} \\left[ a_{n+1} - \\frac{1}{2}a_n = \\frac{2}{(n+1)^2} - \\frac{1}{n^2} \\right]$\nAdding\n $a_{n+1} = \\frac{2}{(n+1)^2} - \\frac{1}{2^n} \\Rightarrow a_n = \\frac{2}{n^2} - \\frac{1}{2^{n-1}}$\n $\\Rightarrow \\left| \\sum_{n=1}^{\\infty} \\left( a_n - \\frac{2}{n^2} \\right) \\right| \\Rightarrow \\left| \\sum_{n=1}^{\\infty} -\\frac{1}{2^{n-1}} \\right| = 2$",
+    "subject": "Maths"
+  },
+  {
+    "question": "Let  $S = \\{(m, n) : m, n \\in \\{1, 2, 3, \\dots, 50\\}\\} $. If the number of elements  $(m, n)$  in  $S$  such that  $6^m + 9^n$  is a multiple of 5 is  $p$  and the number of elements  $(m, n)$  in  $S$  such that  $m + n$  is a square of a prime number is  $q$ , then  $p + q$  is equal to.....",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "1333",
+    "explanation": "$S = \\{1, 2, 3, \\dots, 50\\}$\n\n$p = (6^m + 9^n)$  is divisible by 5\n\nNo. of ways\n\n$$6^m = (5\\lambda + 1)^m = 5k + 1$$\n\n$$9^n = (10 - 1)^n = 10\\mu - 1 \\text{ if } n \\text{ is odd}$$\n\n$\\\\Rightarrow n$  must be odd\n\n$10\\mu + 1$  if  $n$  is even\n\n$$\\\\Rightarrow \\text{No. of ways} = 50 \\times 25 = 1250$$\n\n$q \\Rightarrow (m + n)$  is square of a prime\n\n|        | $m + n = 4$ | $m + n = 9$ | $m + n = 25$ | $m + n = 49$ |\n|--------|-------------|-------------|--------------|--------------|\n| No. of | $\\\\downarrow$           | $\\\\downarrow$           | $\\\\downarrow$            | $\\\\downarrow$            |\n| ways   | 3           | 8           | 24           | 48           |\n\n$$q = 3 + 8 + 24 + 48 = 83$$\n\n$$= p + q = 1250 + 83 = 1333$$",
+    "subject": "Maths"
+  },
+  {
+    "question": "For some  $\\\\alpha, \\\\beta \\\\in \\\\mathbb{R}$ , let  $A = \\begin{bmatrix} \\\\alpha & 2 \\\\ 1 & 2 \\end{bmatrix}$  and  $B = \\begin{bmatrix} 1 & 1 \\\\ 1 & \\\\beta \\end{bmatrix}$  be such that  $A^2 - 4A + 2I = B^2 - 3B + I = O$ . Then  $(\\\\det(\\\\text{adj}(A^3 - B^3)))^2$  is equal to .....",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "225",
+    "explanation": "$\\\\text{Tr}(A) = 4 \\Rightarrow \\\\alpha + 2 = 4 \\Rightarrow \\\\alpha = 2$\n\n$\\\\text{Tr}(B) = 3 \\Rightarrow \\\\beta + 1 = 3 \\Rightarrow \\\\beta = 2$\n\n$$A^2 - 4A + 2I = O$$\n\n$$A^3 = 4A^2 - 2A = 16A - 8I - 2A$$\n\n$$14A - 8I$$\n\n$$= \\begin{bmatrix} 28 & 28 \\\\ 14 & 28 \\end{bmatrix} + \\begin{bmatrix} -8 & 0 \\\\ 0 & -8 \\end{bmatrix}$$\n\n$$= A^3 = \\begin{bmatrix} 20 & 28 \\\\ 14 & 20 \\end{bmatrix}$$\n\n$$B^2 - 3B + I = O$$\n\n$$B^2 = 3B - I$$\n\n$$\\\\Rightarrow B^3 = 3B^2 - B = 3(3B - I) - B = 8B - 3I$$\n\n$$B^3 = \\begin{bmatrix} 8 & 8 \\\\ 8 & 16 \\end{bmatrix} + \\begin{bmatrix} -3 & 0 \\\\ 0 & -3 \\end{bmatrix} = \\begin{bmatrix} 5 & 8 \\\\ 8 & 13 \\end{bmatrix}$$\n\n$$A^3 - B^3 = \\begin{bmatrix} 20 & 28 \\\\ 14 & 20 \\end{bmatrix} - \\begin{bmatrix} 5 & 8 \\\\ 8 & 13 \\end{bmatrix} = \\begin{bmatrix} 15 & 20 \\\\ 6 & 7 \\end{bmatrix}$$\n\n$$\\\\Rightarrow |A^3 - B^3| = 105 - 120 = -15$$\n\n$$\\\\Rightarrow |\\text{adj}(A^3 - B^3)| = |A^3 - B^3| = -15$$\n\n$$\\\\Rightarrow |\\text{adj}(A^3 - B^3)|^2 = 225$$",
+    "subject": "Maths"
+  },
+  {
+    "question": "$6 \\int_0^\\pi |(\\sin 3x + \\sin 2x + \\sin x)| dx$ is equal to.....",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "17",
+    "explanation": "$$6 \\int_0^\\pi |2 \\sin 2x \\cos x + \\sin 2x| dx$$\n$$6 \\int_0^\\pi |4 \\sin x \\cos^2 x + 2 \\sin x \\cos x| dx$$\n$$I = 12 \\int_0^\\pi \\sin x |2 \\cos^2 x + \\cos x| dx$$\nPut $\\cos x = t, -\\sin x dx = dt$\n$$I = -12 \\int_1^{-1} |2t^2 + t| dt$$\n$$I = 12 \\left( \\int_{-1}^{-1/2} (2t^2 + t) dt + \\int_{-1/2}^0 -(2t^2 + t) dt + \\int_0^1 (2t^2 + t) dt \\right)$$\n$$I = 17$$",
+    "subject": "Maths"
+  },
+  {
+    "question": "Potential energy ( $V$ ) versus distance ( $x$ ) is given by the graph, Rank various regions as per the magnitudes of the force ( $F$ ) acting on a particle from high to low.\n![A graph of Potential Energy (V) versus Distance (x). The x-axis ranges from 0 to 7, and the y-axis ranges from 0 to 7. The graph consists of four segments: AB (from (0,0) to (1,1)), BC (from (1,1) to (2,4)), CD (from (2,4) to (4,4)), and DE (from (4,4) to (6,3)). The slope of each segment represents the negative of the force in that region.](images/f519a5be118c846f631c992412353fb9_img.jpg)\nA graph of Potential Energy (V) versus Distance (x). The x-axis ranges from 0 to 7, and the y-axis ranges from 0 to 7. The graph consists of four segments: AB (from (0,0) to (1,1)), BC (from (1,1) to (2,4)), CD (from (2,4) to (4,4)), and DE (from (4,4) to (6,3)). The slope of each segment represents the negative of the force in that region.",
+    "options": [
+      "$F_{BC} > F_{CD} > F_{DE} > F_{AB}$",
+      "$F_{CD} > F_{AB} > F_{BC} > F_{DE}$",
+      "$F_{CD} > F_{DE} > F_{AB} > F_{BC}$",
+      "$F_{BC} > F_{AB} > F_{DE} > F_{CD}$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$F_{BC} > F_{AB} > F_{DE} > F_{CD}$",
+    "explanation": "Slope of potential energy v/s position curve gives negative of force.\n\n$$\\therefore F_{BC} > F_{AB} > F_{DE} > F_{CD}$$",
+    "subject": "Physics"
+  },
+  {
+    "question": "A gas based geyser heats water flowing at the rate of 5.0 litres per minute from  $27^{\\circ}\\text{C}$  to  $87^{\\circ}\\text{C}$ .\nThe rate of consumption of the gas is \u0000\u0000\u0000\u0000 g/s.  \n(Take heat of combustion of gas  $= 5.0 \\times 10^4 \\text{ J/g}$ )  \nspecific heat capacity of water  $= 4200 \\text{ J/kg. } ^{\\circ}\\text{C}}$",
+    "options": [
+      "2.1",
+      "4.2",
+      "0.42",
+      "0.21"
+    ],
+    "type": "numerical",
+    "correct_answer": "0.42",
+    "explanation": "Water flow rate  $= 5 \\text{ l/min} = \\frac{5}{60} \\text{ kg/s}$\n\n$$\\therefore \\text{ Power of heater} = \\frac{dm}{dt} S \\Delta T = \\frac{1}{12} \\times 4200 \\times 60 \\text{ W}$$ \n\n$\therefore$  Let rate of consumption of gas be  $x \\text{ g/s}$ .\n\n$$\\therefore x \\times 5.0 \\times 10^4 = \\frac{1}{12} \\times 4200 \\times 60$$ \n\n$$\\Rightarrow x = 4200 \\times 10^{-4} = 0.42 \\text{ g/s}$$",
+    "subject": "Physics"
+  },
+  {
+    "question": "A conducting circular loop of area  $1.0 \\text{ m}^2$  is placed perpendicular to a magnetic field which varies as  $B = \\sin(100 t)$  Tesla. If the resistance of the loop is  $100 \\Omega$ , then the average thermal energy dissipated in the loop in one period is \u0000\u0000\u0000\u0000 J.",
+    "options": [
+      "$\\frac{\\pi}{2}$",
+      "$2\\pi$",
+      "$\\pi$",
+      "$\\pi^2$"
+    ],
+    "type": "numerical",
+    "correct_answer": "\\pi",
+    "explanation": "Area of the loop  $= 1 \\text{ m}^2$\n\n$$B = \\sin(100 t)$$\n\n$$\\therefore \\phi = BA = \\sin(100t)$$\n\n$$\\therefore \\frac{d\\phi}{dt} = 100 \\cos(100t)$$\n\n$$\\therefore P = \\frac{V^2}{R} = \\frac{10^4 \\cos^2(100t)}{100}$$ \n\n$\therefore$  Thermal energy dissipated in 1 time period\n\n$$= \\int_0^T P dt = \\int_0^T 100 \\cos^2(100t) dt$$ \n\n$$T = \\frac{2\\pi}{100} = \\frac{\\pi}{50} \\text{ sec}$$ \n\n$$\\begin{aligned} \\therefore Q &= 100 \\int_0^{\\pi/50} \\cos^2(100t) dt \\ &= 100 \\int_0^{\\pi/50} \\frac{1 + \\cos 200t}{2} dt \\ &= 100 \\left[ \\frac{\\pi}{100} \\right] = \\pi \\end{aligned}$$",
+    "subject": "Physics"
+  },
+  {
+    "question": "Water flows through a horizontal tube as shown in the figure. The difference in height between the water columns in vertical tubes is $5 \text{ cm}$ and the area of cross-sections at $A$ and $B$ are $6 \text{ cm}^2$ and $3 \text{ cm}^2$ respectively.\n\nThe rate of flow will be _______ $\text{cm}^3/\text{s}$ . (take $g = 10 \text{ m/s}^2$ )\n\n![Diagram of a horizontal pipe with a constriction. The wider part has a point A and a vertical manometer tube showing a liquid level difference of 5 cm. The narrower part has a point B and a horizontal arrow indicating flow to the right.](images/967c30813761a8952ecc5e16bf42ea45_img.jpg)",
+    "options": [
+      "$\\frac{200}{\\sqrt{3}}$",
+      "$200\\sqrt{6}$",
+      "$200\\sqrt{3}$",
+      "$100\\sqrt{3}$"
+    ],
+    "type": "numerical",
+    "correct_answer": "$200\\sqrt{3}$",
+    "explanation": "From continuity equation\n\n$A_A V_A = A_B V_B ⇒ 6V_A = 3V_B ⇒ V_B = 2V_A$\n\nApplying Bernoulli's equation between A & B,\n\n$P_A + \\frac{1}{2}\\rho V_A^2 = P_B + \\frac{1}{2}\\rho V_B^2$\n$⇒ \\rho g \\times 0.05 = \\frac{1}{2}\\rho [V_B^2 - V_A^2] = \\frac{1}{2}\\rho (3V_A^2)$\n$⇒ V_A = \\sqrt{\\frac{2g \\times 0.05}{3}} \\text{ m/s} = \\frac{1}{\\sqrt{3}} \\text{ m/s} = \\frac{100}{\\sqrt{3}} \\text{ cm/s}$\n$⇒ \\text{Volume flow rate} = A_A V_A = \\frac{6 \\times 100}{\\sqrt{3}} \\text{ cm}^3/\\text{sec}$\n$= 200\\sqrt{3} \\text{ cm}^3/\\text{sec}$",
+    "subject": "Physics"
+  },
+  {
+    "question": "In an experiment the values of two spring constants were measured as $k_1 = (10 ± 0.2)$ N/m and $k_2 = (20 ± 0.3)$ N/m. If these springs are connected in parallel, then the percentage error in equivalent spring constant is :",
+    "options": [
+      "2.67%",
+      "2.33%",
+      "1.33%",
+      "1.67%"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "1.67%",
+    "explanation": "For parallel combination of spring,\n\n$K_{eq} = K_1 + K_2 = 30 \\text{ N/m}$\n\n$Δ K_{eq} = Δ K_1 + Δ K_2 = 0.2 + 0.3 = 0.5 \\text{ N/m}$\n\n$∴ \\text{ %Error in } K = \\frac{0.5}{30} \\times 100 = 1.67\\%$",
+    "subject": "Physics"
+  },
+  {
+    "question": "A 4 kg mass moves under the influence of a force  $\\\\vec{F} = (4t^3\\\\hat{i} - 3t\\\\hat{j})$  N where  $t$  is the time in second. If mass starts from origin at  $t = 0$ , the velocity and position after  $t = 2$  s will be :",
+    "options": [
+      "$\\\\vec{v} = 3\\\\hat{i} + \\\\frac{3}{2}\\\\hat{j}$   $\\\\vec{r} = \\\\frac{6}{5}\\\\hat{i} + \\\\hat{j}$",
+      "$\\\\vec{v} = 4\\\\hat{i} - \\\\frac{3}{2}\\\\hat{j}$   $\\\\vec{r} = \\\\frac{8}{5}\\\\hat{i} - \\\\hat{j}$",
+      "$\\\\vec{v} = 4\\\\hat{i} + \\\\frac{5}{2}\\\\hat{j}$   $\\\\vec{r} = \\\\frac{8}{5}\\\\hat{i} + 2\\\\hat{j}$",
+      "$\\\\vec{v} = 4\\\\hat{i} - \\\\frac{3}{2}\\\\hat{j}$   $\\\\vec{r} = \\\\frac{6}{5}\\\\hat{i} - \\\\hat{j}$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "(2)",
+    "explanation": "$\\\\vec{F} = 4t^3\\\\hat{i} - 3t\\\\hat{j}$\n\n$$\\\\vec{a} = \\\\frac{\\\\vec{F}}{m} = t^3\\\\hat{i} - \\\\frac{3}{4}t\\\\hat{j}$$ \n\n$$a_x = t^3$$\n\n$$\\\\frac{dv_x}{dt} = t^3$$\n\n$$\\\\int_{v_x=0}^{v_{x2}} dv_x = \\\\int_{t=0}^{t=2} t^3 dt$$\n\n$$v_{x2} - 0 = \\\\left[ \\\\frac{t^4}{4} \\\\right]_0^2$$\n\n$$v_{x2} = 4$$\n\n$$a_y = \\\\frac{-3}{4}t$$\n\n$$\\\\frac{dv_y}{dt} = -\\\\frac{3}{4}t$$\n\n$$\\\\int_0^{v_{y2}} dv_y = \\\\int_0^2 \\\\frac{-3}{4}t dt$$\n\n$$v_{y2} = \\\\frac{-3}{4} \\\\left[ \\\\frac{t^2}{2} \\\\right]_0^2$$\n\n$$v_{y2} = \\\\frac{-3}{2}$$\n\n$$\\\\vec{v}_2 = 4\\\\hat{i} - \\\\frac{3}{2}\\\\hat{j}$$\n\n$$v_x = \\\\frac{t^4}{4}$$\n\n$$\\\\int_0^{x_2} dx = \\\\int_0^2 \\\\frac{t^4}{4} dt$$\n\n$$x_2 - 0 = \\\\left[ \\\\frac{t^5}{20} \\\\right]_0^2$$\n\n$$x_2 = \\\\frac{8}{5}$$\n\n$$v_y = \\\\frac{-3}{8}t^2$$\n\n$$\\\\int_0^{y_2} dy = \\\\int_0^2 \\\\frac{-3}{8}t^2 dt$$\n\n$$y_2 - 0 = \\\\frac{-3}{8} \\\\left[ \\\\frac{t^3}{3} \\\\right]_0^2$$\n\n$$y_2 = -1$$\n\n$$\\\\vec{r} = \\\\frac{8}{5}\\\\hat{i} - \\\\hat{j}$$",
+    "subject": "Physics"
+  },
+  {
+    "question": "Consider a modified Bernoulli equation.\n\n$$\\\\left(P + \\\\frac{A}{Bt^2}\\\\right) + \\\\rho g(h + Bt) + \\\\frac{1}{2}\\\\rho V^2 = \\\\text{constant}$$\n\nIf  $t$  has the dimension of time then the dimensions of  $A$  and  $B$  are ______ , ______ respectively.",
+    "options": [
+      "$[ML^0T^{-1}]$  and  $[M^0LT]$",
+      "$[ML^0T^{-1}]$  and  $[M^0LT^{-1}]$",
+      "$[ML^0T^{-2}]$  and  $[M^0LT^{-2}]$",
+      "$[ML^0T^{-2}]$  and  $[M^0LT^{-1}]$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "(2)",
+    "explanation": "$$\\\\Rightarrow [P] = \\\\left[\\\\frac{A}{Bt^2}\\\\right] \\dots\\dots(1)$$\n\n$$\\\\Rightarrow [h] = [Bt] \\dots\\dots(2)$$\n\n$$\\\\Rightarrow [B] = \\\\left[\\\\frac{h}{t}\\\\right] = \\\\left[\\\\frac{L}{T}\\\\right] = [LT^{-1}]$$\n\nPutting  $B$  in equation (1)\n\n$$[ML^{-1}T^{-2}] = \\\\left[\\\\frac{A}{LT^{-1} \\\\times T^2}\\\\right]$$\n\n$$[A] = [ML^0T^{-1}]$$",
+    "subject": "Physics"
+  },
+  {
+    "question": "A current carrying is placed vertically and a particle of mass  $m$  with charge  $Q$  is released from rest. The particle moves along the axis of solenoid. If  $g$  is acceleration due to gravity then the acceleration ( $a$ ) of the charged particle will satisfy :",
+    "options": [
+      "$a = g$",
+      "$a > g$",
+      "$a = 0$",
+      "$0 < a < g$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$a = g$",
+    "explanation": "Since the solenoid is placed vertically, the magnetic field inside the solenoid will be either along  $-y$  or  $+y$  axis.\n$\n\\Rightarrow$  Particle will gain velocity along  $-y$  axis.\n\n$$\\Rightarrow \\vec{F}_B = q(\\vec{v} \\times \\vec{B})$$\n\n$$\\Rightarrow \\vec{F}_B = 0$$\n\n$$\\Rightarrow \\vec{F}_{\\text{net}} = m\\vec{g}$$\n\n$$\\Rightarrow a_{\\text{net}} = g$$\n\nCorrect option (1)",
+    "subject": "Physics"
+  },
+  {
+    "question": "A parallel plate capacitor has capacitance  $C$ , when there is vacuum within the parallel plates.\nA sheet having thickness  $\\left(\\frac{1}{3}\\right)^{\\text{rd}}$  of the separation between the plates and relative permittivity  $K$  is introduced between the plates. The new capacitance of the system is : ![Diagram of a parallel plate capacitor with area A and separation distance d. The formula C = (A * epsilon_0) / d is shown next to it.](images/0d583d4b00f8977a65b353cfdb8ac556_img.jpg)\n![Diagram showing the insertion of a dielectric sheet of thickness t = d/3 into the capacitor. The capacitor is then shown as two capacitors in series: C1 with separation 2d/3 and C2 with separation d/3.](images/38f5d3a07ab34f471f84ce5bb8f48c7b_img.jpg)",
+    "options": [
+      "$\\frac{3KC}{2K+1}$",
+      "$\\frac{CK}{2+K}$",
+      "$\\frac{3CK^2}{(2K+1)^2}$",
+      "$\\frac{4KC}{3K-1}$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$\\frac{3KC}{2K+1}$",
+    "explanation": "$$C_1 = \\frac{3A\\epsilon_0}{2d}$$\n\n$$C_2 = \\frac{3A\\epsilon_0 \\times K}{d}$$\n\n$$C_1 = \\frac{3}{2}C$$\n\n$$C_2 = 3KC$$\n\n$$C_{\\text{eq}} = \\frac{C_1 C_2}{C_1 + C_2} = \\frac{\\frac{3}{2}C \\times 3KC}{\\frac{3}{2}C + 3KC}$$\n\n$$C_{\\text{eq}} = \\frac{\\frac{9}{2}KC^2}{\\frac{3}{2}C(2K+1)} = \\frac{3KC}{2K+1}$$\n\nCorrect option (1)",
+    "subject": "Physics"
+  },
+  {
+    "question": "The electric field a plane electromagnetic wave is given by :\n\n$$E_y = 69 \\sin[0.6 \\times 10^3 x - 1.8 \\times 10^{11} t] \\text{ V/m.}$$ \n\nThe expression for magnetic field associated with this electromagnetic wave is \u0000\u0000\u0000 T.",
+    "options": [
+      "$B_z = 2.3 \\times 10^{-7} \\sin[0.6 \\times 10^3 x - 1.8 \\times 10^{11} t]$",
+      "$B_z = 2.3 \\times 10^{-7} \\sin[0.6 \\times 10^3 x + 1.8 \\times 10^{11} t]$",
+      "$B_y = 69 \\sin[0.6 \\times 10^3 x + 1.8 \\times 10^{11} t]$",
+      "$B_y = 2.3 \\times 10^{-7} \\sin[0.6 \\times 10^3 x - 1.8 \\times 10^{11} t]$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$B_z = 2.3 \\times 10^{-7} \\sin[0.6 \\times 10^3 x - 1.8 \\times 10^{11} t]$",
+    "explanation": " $\\hat{B} = \\hat{c} \\times \\hat{E}$ \n\n$\rArr \\hat{c} = \\hat{i}$  because phase of electric field is function of x.\n\n$\rArr \\hat{E} = \\hat{j}$  (given)\n\n$\rArr \\hat{B} = \\hat{i} \\times \\hat{j} = \\hat{k}$\n\n$$|B| = \\frac{|E|}{c} = \\frac{69 \\times 0.6 \\times 10^3}{1.8 \\times 10^{11}} = \\frac{69}{3 \\times 10^8}$$ \n\n$$|B| = 2.9 \\times 10^{-7}$$ \n\n$$\\bar{B}_z = 2.9 \\times 10^{-7} \\sin(0.6 \\times 10^3 x - 1.8 \\times 10^{11} t)$$\n\n(phase is same as that of electric field)",
+    "subject": "Physics"
+  },
+  {
+    "question": "In a double slit experiment the distance between the slits is 0.1 cm and the screen is placed at 50 cm from the slits plane. When one slit is covered with a transparent sheet having thickness t and refractive index  $n(= 1.5)$ , the central fringe shifts by 0.2 cm. The value of t is \u0000\u0000\u0000 cm.",
+    "options": [
+      "$8 \\times 10^{-4}$",
+      "$6.0 \\times 10^{-3}$",
+      "$5.6 \\times 10^{-4}$",
+      "$5.0 \\times 10^{-3}$"
+    ],
+    "type": "numerical",
+    "correct_answer": "$8 \\times 10^{-4}$",
+    "explanation": " $d \\sin \\theta = (\\mu - 1)t$\n\n$$d \\left[ \\frac{x}{D} \\right] = (\\mu - 1)t$$ \n\n$$t = \\frac{x d}{D(\\mu - 1)}$$ \n\n$$= \\frac{(0.2)(0.1)}{50(1.5 - 1)}$$ \n\n$$t = 8 \\times 10^{-4} \\text{ cm}$$",
+    "subject": "Physics"
+  },
+  {
+    "question": "A light wave described by  $E = 60 \times \\sin(3 \\times 10^{15})t + \\sin(12 \\times 10^{15})t$  (in SI units) falls on a metal surface of work function 2.8 eV. The maximum kinetic energy of ejected photoelectron is (approximately) \u0003 eV.",
+    "options": [
+      "5.1",
+      "3.8",
+      "6.0",
+      "7.8"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "5.1",
+    "explanation": "$$\\omega_1 = 3 \\times 10^{15}$$  rad/sec\n\n$$\\omega_2 = 12 \\times 10^{15}$$  rad/sec\n\n$$\\therefore \\nu = \\frac{\\omega}{2\\pi}$$ \n\n$$E_{\\text{photon}} = h\\nu = 6.6 \\times 10^{-34} \\times 1.91 \\times 10^{15} \\\\ = 1.26 \\times 10^{-18} \\text{ J}$$ \n\n$$E_{\\text{max}} = \\frac{1.26 \\times 10^{-18}}{1.6 \\times 10^{-19}} \\approx 7.9 \\text{ eV}$$ \n\n$$K_{\\text{max}} = E_{\\text{max}} - \\phi_0 \\\\ = 7.9 - 2.8 \\\\ K_{\\text{max}} = 5.1 \\text{ eV}$$",
+    "subject": "Physics"
+  },
+  {
+    "question": "If an alpha particle with energy 7.7 MeV is bombarded on a thin gold foil, the closest distance from nucleus it can reach is \u0003 m.\n\n(Atomic number of gold = 79 and  $\\frac{1}{4\\pi\\epsilon_0} = 9 \\times 10^9$\n\nin SI units)",
+    "options": [
+      "$2.95 \\times 10^{-14}$",
+      "$2.95 \\times 10^{-16}$",
+      "$3.85 \\times 10^{-16}$",
+      "$3.85 \\times 10^{-14}$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$2.95 \\times 10^{-14}$",
+    "explanation": "Energy conservation\n\n$$K_i + U_i = K_f + U_f$$ \n\n$$7.7 \\times 10^6 \\times 1.6 \\times 10^{-19} + 0 \\\\ = 0 + \\frac{9 \\times 10^9 (1.6 \\times 10^{-19}) (79 \\times 1.6 \\times 10^{-19})}{r}$$ \n\n$$r = 2.95 \\times 10^{-14}$$",
+    "subject": "Physics"
+  },
+  {
+    "question": "A uniform rod of mass  $m$  and length  $l$  suspended by means of two identical inextensible light strings as shown in figure. Tension in one string immediately after the other string is cut, is \n\n![Diagram of a uniform rod of length l suspended by two vertical strings from a horizontal ceiling. The strings are attached at points A and B at the ends of the rod.](images/78f163db583eb0c6d013e6f8ffe6d7d8_img.jpg)\n\n(g acceleration due to gravity)",
     "options": [
       "$mg/2$",
       "$mg/4$",
@@ -9,11 +426,11 @@
     ],
     "type": "multiple_choice",
     "correct_answer": "$mg/4$",
-    "explanation": "Diagram of a rod of length l suspended by a string at point A. The center of mass is at l/2. Tension T acts upwards at A, and weight mg acts downwards at l/2.\n\n$$\nmg \\frac{l}{2} = \\frac{ml^2}{3} \\alpha\n$$\n\n$$\n\\alpha = \\frac{3g}{2l} \\dots(1)\n$$\n\n$$mg - T = ma_c$$\n\n$$T = mg - ma_c$$\n\n$$= mg - m \\left( \\frac{l}{2} \\alpha \\right)$$\n\n$$= mg - m \\left( \\frac{l}{2} \\cdot \\frac{3g}{2l} \\right)$$\n\n$$T = \\frac{mg}{4}$$",
+    "explanation": "![Diagram of a rod of length l suspended by a single string at point A. The center of mass is at l/2, and the force of gravity mg acts downwards from there. The tension T acts upwards at point A.](images/df6babe297323feb1575ba89f5cf3b09_img.jpg)\n\n$$mg \\frac{l}{2} = \\frac{ml^2}{3} \\alpha$$ \n$$\\alpha = \\frac{3g}{2l} \\dots(1)$$ \n$$mg - T = ma_c$$ \n$$T = mg - ma_c$$ \n$$= mg - m \\left( \\frac{l}{2} \\alpha \\right)$$ \n$$= mg - m \\left( \\frac{l}{2} \\cdot \\frac{3g}{2l} \\right)$$ \n$$T = \\frac{mg}{4}$$",
     "subject": "Physics"
   },
   {
-    "question": "An aluminium and steel rods having same lengths and cross-sections are joined to make total length of 120 cm at $30^\text{o}\text{C}$. The coefficient of linear expansion of aluminium and steel are $24 \times 10^{-6}/^\text{o}\text{C}$ and $1.2 \times 10^{-5}/^\text{o}\text{C}$, respectively. The length of this composite rod when its temperature is raised to $100^\text{o}\text{C}$, is \n\n cm.",
+    "question": "An aluminium and steel rods having same lengths and cross-sections are joined to make total length of 120 cm at $30^\text{o}\text{C}$. The coefficient of linear expansion of aluminium and steel are $24 \times 10^{-6}/^\text{o}\text{C}$ and $1.2 \times 10^{-5}/^\text{o}\text{C}$, respectively. The length of this composite rod when its temperature is raised to $100^\text{o}\text{C}$, is \n____ cm.",
     "options": [
       "120.20",
       "120.15",
@@ -22,24 +439,24 @@
     ],
     "type": "multiple_choice",
     "correct_answer": "120.15",
-    "explanation": "$$l_{\\text{final}} = l_0(1 + \\alpha_A \\Delta T) + l_0(1 + \\alpha_B \\Delta T) \\\\ = l_0 [2 + (\\alpha_A + \\alpha_B) \\Delta T] \\\\ = 60 [2 + (36 \\times 10^{-6}) \\times 70] \\\\ = 60 [2 + 0.0025] \\\\ = 120.15 \\text{ cm}$$",
+    "explanation": "$$l_{\\text{final}} = l_0(1 + \\alpha_A \\Delta T) + l_0(1 + \\alpha_B \\Delta T) = l_0 [2 + (\\alpha_A + \\alpha_B) \\Delta T] = 60 [2 + (36 \\times 10^{-6}) \\times 70] = 60 [2 + 0.0025] = 120.15 \\text{ cm}$$",
     "subject": "Physics"
   },
   {
-    "question": "A 1 m long metal rod AB completes the circuit as shown in figure. The area of circuit is perpendicular to the magnetic field of 0.10 T. If the resistance of the total circuit is  $2\nΩ$  then the force needed to move the rod towards right with constant speed (v) of 1.5 m/s is \n\n![Diagram of a circuit with a 2-ohm resistor and a metal rod AB of length 1 m moving with velocity v to the right in a uniform magnetic field B directed into the page. The rod AB completes the circuit.](https://res.cloudinary.com/dhurlz78l/image/upload/v1774001662/TripleScore/JEE%20Mains%202026%20Shift%201%20Question%20Paper%20Jan%2021%20With%20Solutions/638091db82245c9dc328387edff215d8_img.jpg)",
+    "question": "A 1 m long metal rod AB completes the circuit as shown in figure. The area of circuit is perpendicular to the magnetic field of 0.10 T. If the resistance of the total circuit is  $2\text{\textonehalf}$  then the force needed to move the rod towards right with constant speed (v) of 1.5 m/s is \u0000\u0000 N.\n\n![Diagram of a metal rod AB of length 1 m moving with velocity v to the right on two parallel rails. The rails are connected by a resistor of 2 ohms. A uniform magnetic field B is directed into the page (indicated by crosses).](images/638091db82245c9dc328387edff215d8_img.jpg)",
     "options": [
       "$7.5 \\times 10^{-2}$",
       "$5.7 \\times 10^{-3}$",
       "$5.7 \\times 10^{-2}$",
       "$7.5 \\times 10^{-3}$"
     ],
-    "type": "multiple_choice",
+    "type": "numerical",
     "correct_answer": "$7.5 \\times 10^{-3}$",
-    "explanation": "To maintain constant speed\n\n$$F_{\\text{ext}} = F_B$$\n\n$$\\Rightarrow F_{\\text{ext}} = iBl$$\n\n$$= \\left( \\frac{vBl}{R} \\right) lB$$\n\n$$= \\frac{B^2 l^2 v}{R}$$\n\n$$= \\frac{(0.1)^2 \\times (1)^2 \\times 1.5}{2}$$\n\n$$= 7.5 \\times 10^{-3} \\text{ N}$$\n\n![Diagram of the circuit showing the rod AB moving with velocity v to the right. The magnetic field B is into the page. The force F_B acts on the rod to the left, and the external force F_ext acts to the right.](https://res.cloudinary.com/dhurlz78l/image/upload/v1774001665/TripleScore/JEE%20Mains%202026%20Shift%201%20Question%20Paper%20Jan%2021%20With%20Solutions/712864499aa520cf6eaa8ac3218e2557_img.jpg)",
+    "explanation": "To maintain constant speed\n\n$$F_{\text{ext}} = F_B$$\n\n$$\\Rightarrow F_{\text{ext}} = iBl$$\n\n$$= \\left( \\frac{vBl}{R} \\right) lB$$\n\n$$= \\frac{B^2 l^2 v}{R}$$\n\n$$= \\frac{(0.1)^2 \\times (1)^2 \\times 1.5}{2}$$\n\n$$= 7.5 \\times 10^{-3} \\text{ N}$$ ![Diagram showing the forces acting on the rod AB. The magnetic force F_B acts to the left, and the external force F_ext acts to the right. The rod is moving with velocity v to the right.](images/fe4d3ec6d42a681fd71de4dc627bb2c8_img.jpg)",
     "subject": "Physics"
   },
   {
-    "question": "The given circuit works as :\n![Logic circuit diagram with two inputs A and B. Input A is connected to the top input of an OR gate. Input B is connected to the bottom input of an OR gate. The output of the OR gate is connected to the input of a NAND gate. The output of the NAND gate is connected to the input of another OR gate. The output of this OR gate is the final output of the circuit.](https://res.cloudinary.com/dhurlz78l/image/upload/v1774001663/TripleScore/JEE%20Mains%202026%20Shift%201%20Question%20Paper%20Jan%2021%20With%20Solutions/4204d9ef35fe2b6403f7f8a6c469d469_img.jpg)",
+    "question": "The given circuit works as :\n\n![Logic circuit diagram with two inputs A and B. Input A is connected to the top input of an OR gate. Input B is connected to the bottom input of an OR gate. The output of the OR gate is connected to the input of a NAND gate. The output of the NAND gate is connected to the input of another OR gate. The output of this final OR gate is the circuit's output.](images/4204d9ef35fe2b6403f7f8a6c469d469_img.jpg)",
     "options": [
       "AND gate",
       "NOR gate",
@@ -48,11 +465,11 @@
     ],
     "type": "multiple_choice",
     "correct_answer": "NAND gate",
-    "explanation": "Logic gate diagram showing two NOT gates in parallel followed by an OR gate, and then a NOT gate. Inputs are A and B. NOT gate outputs are P and Q. OR gate output is R. Final NOT gate output is S.\n![Logic gate diagram showing two NOT gates in parallel followed by an OR gate, and then a NOT gate. Inputs are A and B. NOT gate outputs are P and Q. OR gate output is R. Final NOT gate output is S.](https://res.cloudinary.com/dhurlz78l/image/upload/v1774001661/TripleScore/JEE%20Mains%202026%20Shift%201%20Question%20Paper%20Jan%2021%20With%20Solutions/33ed1f9b27c7c21c797aa928b0f06851_img.jpg)\n$$P = \\bar{A}$$\n$$Q = \\bar{B}$$\n$$R = \\bar{A} + \\bar{B} = \\overline{AB} = AB$$\n$$S = \\overline{AB} \\Rightarrow \\text{NAND Gate}$$",
+    "explanation": "![Logic gate diagram showing two NOT gates (A to P, B to Q) connected to an OR gate (P, Q to R), which is then connected to a NOT gate (R to S).](images/33ed1f9b27c7c21c797aa928b0f06851_img.jpg)\n\n$$P = \\bar{A}$$\n\n$$Q = \\bar{B}$$\n\n$$R = \\bar{A} + \\bar{B} = \\overline{AB} = AB$$\n\n$$S = \\overline{AB} \\Rightarrow \\text{NAND Gate}$$",
     "subject": "Physics"
   },
   {
-    "question": "Two strings (A, B) having linear densities  $\\mu_A = 2 \\times 10^{-4}$  kg/m and  $\\\\mu_B = 4 \\times 10^{-4}$  kg/m and lengths  $L_A = 2.5$  m and  $L_B = 1.5$  m respectively are joined. Free ends of A and B are tied to two rigid supports C and D, respectively creating a tension of 500 N in the wire. Two identical pulses, sent from C and D ends, take time  $t_1$  and  $t_2$ , respectively, to reach the joint. The ratio  $t_1/t_2$  is :",
+    "question": "Two strings (A, B) having linear densities $\\mu_A = 2 \\times 10^{-4}$ kg/m and $\\mu_B = 4 \\times 10^{-4}$ kg/m and lengths $L_A = 2.5$ m and $L_B = 1.5$ m respectively are joined. Free ends of A and B are tied to two rigid supports C and D, respectively creating a tension of 500 N in the wire. Two identical pulses, sent from C and D ends, take time $t_1$ and $t_2$, respectively, to reach the joint. The ratio $t_1/t_2$ is :",
     "options": [
       "1.08",
       "1.90",
@@ -61,11 +478,11 @@
     ],
     "type": "multiple_choice",
     "correct_answer": "1.18",
-    "explanation": "Given  $L_A = 2.5$  m,\n\n$$L_B = 1.5$$ m,\n\n$$T = 500$$ N\n\n$$v_A = \\sqrt{\\frac{T}{\\mu_A}} = \\sqrt{\\frac{500}{2 \\times 10^{-4}}}} = 5\\sqrt{10} \\times 10^2 \\text{ m/s}$$\n\n$$v_B = \\sqrt{\\frac{T}{\\mu_B}} = \\sqrt{\\frac{500}{4 \\times 10^{-4}}}} = 5\\sqrt{5} \\times 10^2 \\text{ m/s}$$\n\n$$t_1 = \\frac{L_A}{v_A} = \\frac{2.5}{5\\sqrt{10}} \\times 10^{-2} \\text{ s}$$\n\n$$t_2 = \\frac{L_B}{v_B} = \\frac{1.5}{5\\sqrt{5}} \\times 10^{-2} \\text{ s}$$\n\n$$\\therefore \\frac{t_1}{t_2} = \\frac{2.5}{5\\sqrt{10}} \\times \\frac{5\\sqrt{5}}{1.5} = \\frac{5}{3} \\times \\frac{1}{\\sqrt{2}} = \\frac{1.66}{1.41} = 1.18$$",
+    "explanation": "Given $L_A = 2.5$ m,\n$$L_B = 1.5$$ m,\n$$T = 500$$ N\n$$v_A = \\sqrt{\\frac{T}{\\mu_A}} = \\sqrt{\\frac{500}{2 \\times 10^{-4}}} = 5\\sqrt{10} \\times 10^2 \\text{ m/s}$$\n$$v_B = \\sqrt{\\frac{T}{\\mu_B}} = \\sqrt{\\frac{500}{4 \\times 10^{-4}}} = 5\\sqrt{5} \\times 10^2 \\text{ m/s}$$\n$$t_1 = \\frac{L_A}{v_A} = \\frac{2.5}{5\\sqrt{10}} \\times 10^{-2} \\text{ s}$$\n$$t_2 = \\frac{L_B}{v_B} = \\frac{1.5}{5\\sqrt{5}} \\times 10^{-2} \\text{ s}$$\n$$\\therefore \\frac{t_1}{t_2} = \\frac{2.5}{5\\sqrt{10}} \\times \\frac{5\\sqrt{5}}{1.5} = \\frac{5}{3} \\times \\frac{1}{\\sqrt{2}} = \\frac{1.66}{1.41} = 1.18$$",
     "subject": "Physics"
   },
   {
-    "question": "Initially a satellite of 100 kg is in a circular orbit of radius  $1.5R_E$ . This satellite can be moved to a circular orbit of radius  $3R_E$  by supplying  $\\alpha \\times 10^6$  J of energy. The value of  $\\alpha$  is \n\n(Take Radius of Earth  $R_E = 6 \\times 10^6$  m and  $g = 10$  m/s<sup>2</sup>)",
+    "question": "Initially a satellite of 100 kg is in a circular orbit of radius $1.5R_E$. This satellite can be moved to a circular orbit of radius $3R_E$ by supplying $\\alpha \\times 10^6$ J of energy. The value of $\\alpha$ is ______.\n(Take Radius of Earth $R_E = 6 \\times 10^6$ m and $g = 10$ m/s<sup>2</sup>)",
     "options": [
       "150",
       "500",
@@ -74,11 +491,360 @@
     ],
     "type": "numerical",
     "correct_answer": "1000",
-    "explanation": "Energy of a satellite in a circular orbit is given as\n\n$$E = \\frac{-GM_E m}{2r}; r = \\text{radius of circular orbit}$$ \n\nRequired energy to be supplied  $= \\Delta E = E_f - E_i$\n\n$$\\begin{aligned} \\Delta E &= \\left( \\frac{-GM_E m}{2(3R_E)} \\right) - \\left( \\frac{-GM_E m}{2(1.5R_E)} \\right) \\\\ &= \\frac{GM_E m}{6R_E} \\end{aligned}$$ \n\n$$\\text{Now, } g = \\frac{GM_E}{R_E^2} \\Rightarrow \\frac{GM_E}{R_E} = gR_E$$ \n\n$$\\begin{aligned} \\therefore \\Delta E &= \\frac{1}{6} gmR_E \\\\ &= \\frac{1}{6} \\times 10 \\times 100 \\times 6 \\times 10^6 \\\\ &= 1000 \\times 10^6 \\end{aligned}$$ \n\n$\\alpha = 1000$",
+    "explanation": "Energy of a satellite in a circular orbit is given as\n$$E = \\frac{-GM_E m}{2r}; r = \\text{radius of circular orbit}$$ \nRequired energy to be supplied $= \\Delta E = E_f - E_i$\n$$\\begin{aligned} \\Delta E &= \\left( \\frac{-GM_E m}{2(3R_E)} \\right) - \\left( \\frac{-GM_E m}{2(1.5R_E)} \\right) \\ &= \\frac{GM_E m}{6R_E} \\end{aligned}$$\n$$\\text{Now, } g = \\frac{GM_E}{R_E^2} \\Rightarrow \\frac{GM_E}{R_E} = gR_E$$\n$$\\begin{aligned} \\therefore \\Delta E &= \\frac{1}{6} gmR_E \\ &= \\frac{1}{6} \\times 10 \\times 100 \\times 6 \\times 10^6 \\ &= 1000 \\times 10^6 \\end{aligned}$$\n$$\\alpha = 1000$$",
     "subject": "Physics"
   },
   {
-    "error": "Unterminated string starting at: line 2 column 15 (char 16)",
-    "question_number": 45
+    "question": "A point charge of $10^{-8}$ C is placed at origin. The work done in moving a point charge $2 \text{ \textmu C}$ from point A(4, 4, 2) m to B(2, 2, 1) m is \n\n$$ \frac{1}{4\text{ \textpi}\text{ \textepsilon}_0} = 9 \times 10^9 \text{ in SI units} $$",
+    "options": [
+      "$45 \\times 10^{-6}$",
+      "0",
+      "$30 \\times 10^{-6}$",
+      "$15 \\times 10^{-6}$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$30 \\times 10^{-6}$ J",
+    "explanation": "Work done by external agent :\n\n$$ W_{\text{ext}} = \text{ \textDelta} U; $$ \n\n$ \text{ \textDelta} U \rightarrow$ Change in potential energy in taking the charge from initial to final configuration\n\n$$ \rightarrow W_{\text{ext}} = \frac{1}{4\text{ \textpi}\text{ \textepsilon}_0} \frac{q_1 q_2}{r_f} - \frac{1}{4\text{ \textpi}\text{ \textepsilon}_0} \frac{q_1 q_2}{r_i} $$ \n\n$$ \text{Now, } r_f = \text{ \textsqrt}{(2-0)^2 + (2-0)^2 + (1-0)^2} = 3 \text{ m} $$ \n\n$$ r_i = \text{ \textsqrt}{(4-0)^2 + (4-0)^2 + (2-0)^2} = 6 \text{ m} $$ \n\n$$ \begin{aligned} \therefore W_{\text{ext}} &= (9 \times 10^9) \times (10^{-8} \times 2 \times 10^{-6}) \text{ \textleft} \frac{1}{3} - \frac{1}{6} \text{ \textright} \\ &= 3 \times 10^{-5} \\ &= 30 \times 10^{-6} \text{ J} \text{ \textendaligned} $$",
+    "subject": "Physics"
+  },
+  {
+    "question": "A collimated beam of light of diameter 2 mm is propagating along x-axis. The beam is required to be expanded in a collimated beam of diameter 14 mm using a system of two convex lenses. If first lens has focal length 40 mm, then the focal length of second lens is \n\n![Diagram of a beam expander system. A collimated beam of diameter 2 mm enters a convex lens with focal length 40 mm. The beam converges to a point and then diverges before entering a second convex lens with focal length f. The output is a collimated beam of diameter 14 mm. The distance between the two lenses is the sum of their focal lengths (40 mm + f).](images/0656422bf374a8a7bcc6fe99adc48599_img.jpg)",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "280 mm",
+    "explanation": "Diagram of a beam expander system. A collimated beam of diameter 2 mm enters a convex lens with focal length 40 mm. The beam converges to a point and then diverges before entering a second convex lens with focal length f. The output is a collimated beam of diameter 14 mm. The distance between the two lenses is the sum of their focal lengths (40 mm + f).\n\n$$ \frac{40}{2} = \frac{f}{14} $$ \n\n$$ \rightarrow f = 280 \text{ mm} $$",
+    "subject": "Physics"
+  },
+  {
+    "question": "The heat generated in 1 minute between points A and B in the given circuit, when a battery of 9V with internal resistance of 1 $\\Omega$ is connected across these points is \n\n![Circuit diagram for Question 47. A 9V battery with 1 ohm internal resistance is connected across points A and B. Between A and B, there are two parallel branches. The top branch has a 1 ohm resistor in series with a 2 ohm resistor. The bottom branch has a 2 ohm resistor in series with a 4 ohm resistor. A 1 ohm resistor is connected in parallel between the junction of the 1 ohm and 2 ohm resistors in the top branch and the junction of the 2 ohm and 4 ohm resistors in the bottom branch.](images/df1d0e45191302de72176e4390224c16_img.jpg)",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "1080",
+    "explanation": "Balanced Wheatstone bridge\n\n![Simplified circuit diagram for Question 48. It shows a single loop with a 9V battery, a 1 ohm internal resistance, and a 2 ohm resistor connected between points A and B.](images/ecad02fdc2408197e954e3e07feb350c_img.jpg)\n\n$$i = \\frac{9}{3} = 3 \\text{ A}$$\n\n$$\\begin{aligned} \\therefore H_{AB} &= i^2 R_{AB} t \\ &= (3)^2 \\times 2 \\times 60 = 1080 \\text{ J} \\end{aligned}$$",
+    "subject": "Physics"
+  },
+  {
+    "question": "Two identical thin rods of mass M kg and length L m are connected as shown in figure. Moment of inertia of the combined rod system about an axis passing through point P and perpendicular to the plane of the rods is  $\\frac{x}{2} ML^2 \\text{ kg m}^2$ . The value of x is \n\n![Diagram of two identical thin rods, each of mass M and length L, connected end-to-end. Point P is at the top end of the vertical rod.](images/3b41f981598222a670e2bb260dd8ce51_img.jpg)",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "17",
+    "explanation": "$$I = \\frac{ML^2}{3} + \\left( \\frac{ML^2}{12} + ML^2 \\right)$$\n$$= \\frac{4ML^2 + ML^2 + 12ML^2}{12}$$\n\n$$I = \\frac{17}{12} ML^2$$\n\n$\\therefore x = 17$\n\n![Diagram of two identical thin rods, each of mass M and length L, connected end-to-end. Point P is at the top end of the vertical rod.](images/0fe66868c7f83f7cd8acf7711c5a7e14_img.jpg)",
+    "subject": "Physics"
+  },
+  {
+    "question": "10 mole of oxygen is heated at constant volume from  $30^{\\circ}\\text{C}$  to  $40^{\\circ}\\text{C}$ . The change in the internal energy of the gas is \u0000\u0000\u0000\u0000 cal. (The molecular specific heat of oxygen at constant pressure,  $C_p = 7 \\text{ cal./mol } ^{\\circ}\\text{C}$  and  $R = 2 \\text{ cal./mol } ^{\\circ}\\text{C}$ .)",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "500",
+    "explanation": "$\\Delta U = nC_v\\Delta T$\n$= n(C_p - R)\\Delta T$\n$= 10(7 - 2)(40 - 30)$\n$\\Delta U = 500$",
+    "subject": "Physics"
+  },
+  {
+    "question": "In a microscope the objective is having focal length  $f_o = 2 \\text{ cm}$  and eye-piece is having focal length  $f_e = 4 \\text{ cm}$ . The tube length is  $32 \\text{ cm}$ . The magnification produced by this microscope for normal adjustment is \u0000\u0000\u0000\u0000.",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "100",
+    "explanation": "$m \\approx \\frac{LD}{f_o f_e}$\n$= \\frac{32}{2} \\times \\frac{25}{4}$\n$m = 100$",
+    "subject": "Physics"
+  },
+  {
+    "question": "Consider the following reactions.\n\n![](images/09954c289d97ae7583de4231188b09bf_img.jpg)\n\n$$\\text{PbCl}_2 + \\text{K}_2\\text{CrO}_4 \\rightarrow \\text{A} + 2\\text{KCl}$$ \n\n(Hot solution)\n\n![](images/1bc66558bfba9fbd8697fd3e73ae5543_img.jpg)\n\n$$\\text{A} + \\text{NaOH} \\rightleftharpoons \\text{B} + \\text{Na}_2\\text{CrO}_4$$\n\n![](images/87a4869488182e92e56d63bc28fd00b7_img.jpg)\n\n$$\\text{PbSO}_4 + 4\\text{CH}_3\\text{COONH}_4 \\rightarrow (\\text{NH}_4)_2\\text{SO}_4 + \\text{X}$$ \n\nIn the above reactions, A, B and X are respectively.",
+    "options": [
+      "$\\text{Na}_2[\\text{Pb}(\\text{OH})_2], \\text{PbCrO}_4$  and  $(\\text{NH}_4)_2[\\text{Pb}(\\text{CH}_3\\text{COO})_4]$",
+      "$\\text{PbCrO}_4, \\text{Na}_2[\\text{Pb}(\\text{OH})_4]$  and  $[\text{Pb}(\\text{NH}_3)_4]\text{SO}_4$",
+      "$\\text{Na}_2[\\text{Pb}(\\text{OH})_2], \\text{PbCrO}_4$  and  $[\text{Pb}(\\text{NH}_3)_4]\text{SO}_4$",
+      "$\\text{PbCrO}_4, \\text{Na}_2[\\text{Pb}(\\text{OH})_4]$  and  $(\\text{NH}_4)_2[\\text{Pb}(\\text{CH}_3\\text{COO})_4]$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "4",
+    "explanation": "$\\text{PbCl}_2 + \\text{K}_2\\text{CrO}_4 \\rightarrow \\text{PbCrO}_4 + 2\\text{KCl}$   \n(Hot solution) (A)\n\n![](images/61ca06b8985497a747f3554621f0e30a_img.jpg)\n\n$$\\text{PbCrO}_4 + 4\\text{NaOH} (\\text{excess}) \\rightarrow \\text{Na}_2[\\text{Pb}(\\text{OH})_4] + \\text{Na}_2\\text{CrO}_4$$ \n\n(B)\n\n![](images/2d963be51279f5ac1461051ca82cc878_img.jpg)\n\n$$\\text{PbSO}_4 + 4\\text{CH}_3\\text{COONH}_4 \\rightarrow (\\text{NH}_4)_2[\\text{Pb}(\\text{CH}_3\\text{COO})_4] + (\\text{NH}_4)_2\\text{SO}_4$$ \n\n(X)",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "Which of the following represents the correct trend for the mentioned property ?",
+    "options": [
+      "A, B and D only",
+      "A, B, C and D",
+      "A and B only",
+      "B and C only"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "1",
+    "explanation": "$\\Rightarrow$  On moving left to right in a period IE increases and from top to bottom in a group IE decreases.\n\n![](images/8343103996ef90678e82339344603d39_img.jpg)\n\n$$\\text{F} > \\text{P} > \\text{S} > \\text{B} \\text{ (IE order)}$$\n\n$\\Rightarrow$  On moving left to right in a period metallic and basic character decreases.\n\n![](images/a7734ec234fab6c62664a9ff257bb70a_img.jpg)\n\n$$\\text{K} > \\text{Mg} > \\text{Al} > \\text{B} \\text{ (Metallic character order)}$$\n\n$\\Rightarrow$  On moving top to bottom in a group metallic and basic character increases.\n\n![](images/8f92dd01838450a6523134a290e6ed2f_img.jpg)\n\n$$\\text{K}_2\\text{O} > \\text{Na}_2\\text{O} > \\text{MgO} > \\text{Al}_2\\text{O}_3$$\n\n$\\Rightarrow$  EA : Group 17 > Group 16 > Group 15\n\n![](images/c81a475cedafdd47c0a22a6b451fa77c_img.jpg)\n\n$$\\text{Cl} > \\text{F} > \\text{S} > \\text{P}$$",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "Identify A in the following reaction.\n![Decalin structure cis-1,2-cyclohexanedicarboxylic acid and oxalic acid structures](images/693ca69ca11e2d208a6b2944b4611cb0_img.jpg)\nA  $\\\\xrightarrow[Pt]{2\\\\text{H}_2}$ \nA  $\\\\xrightarrow{\\\\text{KMnO}_4}$ \nDecalin structure cis-1,2-cyclohexanedicarboxylic acid and oxalic acid structures",
+    "options": [
+      "![Naphthalene structure](images/4013f6082a7dd991074ce46e59d004bc_img.jpg)",
+      "![1,2,3,4,5,8-hexahydronaphthalene structure](images/7b3066c590947bda0eff08b3f8f4f4fc_img.jpg)",
+      "![1,2,3,4,5,6,7,8-octahydronaphthalene structure](images/a5921f07fbdbb0a13f33ccb287f7d8cb_img.jpg)",
+      "![Decalin structure](images/c387bae69b9c1cd274fc6d92325bb601_img.jpg)"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "![1,2,3,4,5,6,7,8-octahydronaphthalene structure](images/a5921f07fbdbb0a13f33ccb287f7d8cb_img.jpg)",
+    "explanation": "![Octalin structure Decalin structure Octalin structure with bridgehead hydrogens cis-1,2-cyclohexanedicarboxylic acid and oxalic acid structures](images/d31a5e5337932403bf48a8222810db6e_img.jpg)\n$\\\\xrightarrow[\\\\Delta]{2\\\\text{H}_2/Pt}$ \n$\\\\xrightarrow[\\\\Delta]{\\\\text{KMnO}_4}$ \nOctalin structure Decalin structure Octalin structure with bridgehead hydrogens cis-1,2-cyclohexanedicarboxylic acid and oxalic acid structures",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "A hydrocarbon 'P' ( $C_4H_8$ ) on reaction with HCl gives an optically active compound 'Q' ( $C_4H_9Cl$ ) which on reaction with one mole of ammonia gives compound 'R' ( $C_4H_{11}N$ ). 'R' on diazotization followed by hydrolysis gives 'S'. Identify P, Q, R and S.\n![](images/dc6b7f4585ddbce6f8d5704927209dca_img.jpg)",
+    "options": [
+      "$P = \\text{CH}_3 - \\text{CH}_2 - \\text{CH} = \\text{CH}_2$ ,  $Q = \\text{CH}_3 - \\text{CH}_2 - \\text{CH}_2 - \\underset{\\\\text{Cl}}{\\\\text{CH}_2}$ \n![](images/ce3bab84f36009bcc14fb73b577f3edc_img.jpg)\n$$R = \\text{CH}_3\\text{CH}_2\\text{CH}_2\\text{NH}, S = \\text{CH}_3\\text{CH}_2\\text{CH(OH)CH}_3$$\n![cyclopropyl group cyclopropyl group cyclopropyl group cyclopropyl group with OH substituent](images/02641f47658d23cca80880ff77d5122e_img.jpg)",
+      "P=CH<sub>3</sub>—, Q=Cl—CH<sub>2</sub>—, \nR=H<sub>2</sub>N—CH<sub>2</sub>—, S=\n\n![cyclopropyl group cyclopropyl group cyclopropyl group cyclopropyl group with OH substituent](images/ca8f3c3de04012ba85c1310504f46346_img.jpg)",
+      "$P = \\text{CH}_3 - \\text{CH} = \\text{CH} - \\text{CH}_3$ ,  $Q = \\text{CH}_3 - \\text{CH}_2 - \\underset{\\\\text{Cl}}{\\\\underset{|}{\\\\text{CH}}} - \\text{CH}_3$ ,  \n$R = \\text{CH}_3 - \\text{CH}_2 - \\underset{\\\\text{NH}_2}{\\\\underset{|}{\\\\text{CH}}} - \\text{CH}_3$ ,  $S = \\text{CH}_3 - \\text{CH}_2 - \\underset{\\\\text{OH}}{\\\\underset{|}{\\\\text{CH}}} - \\text{CH}_3$\n![](images/95448405c4187cfc3527f8149ee72117_img.jpg)",
+      "P= $\\\\text{CH}_3\\text{CH}=\\\\text{CHCH}_3$ , Q= $\\\\text{CH}_3\\text{CH}_2\\text{CH}_2\\text{CH}_2\\text{Cl}$ ,  \nR= $\\\\text{CH}_3\\text{CH}_2\\text{CH}_2\\underset{\\\\text{NH}_2}{\\\\underset{|}{\\\\text{CH}}}_2$ , S= $\\\\text{CH}_3\\text{CH}_2\\text{CH}_2\\underset{\\\\text{CH}_2\\text{OH}}{\\\\underset{|}{\\\\text{CH}}}_2$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$P = \\text{CH}_3 - \\text{CH} = \\text{CH} - \\text{CH}_3$ ,  $Q = \\text{CH}_3 - \\text{CH}_2 - \\underset{\\\\text{Cl}}{\\\\underset{|}{\\\\text{CH}}} - \\text{CH}_3$ ,  \n$R = \\text{CH}_3 - \\text{CH}_2 - \\underset{\\\\text{NH}_2}{\\\\underset{|}{\\\\text{CH}}} - \\text{CH}_3$ ,  $S = \\text{CH}_3 - \\text{CH}_2 - \\underset{\\\\text{OH}}{\\\\underset{|}{\\\\text{CH}}} - \\text{CH}_3$\n![](images/95448405c4187cfc3527f8149ee72117_img.jpg)",
+    "explanation": "\n![](images/64c3498c8d6a24f8ae536f534944dfca_img.jpg)",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "Given below are two statements :\n\nStatement I : The number of pairs among  [SiO2, CO2] ,  [SnO, SnO2] ,  [PbO, PbO2]  and  [GeO, GeO2] , which contain oxides that are both amphoteric is 2.\n\nStatement II :  BF3  is an electron deficient molecule can act as a lewis acid, forms adduct with  NH3  and has a trigonal planar geometry.\n\nIn the light of the above statement, choose the correct answer from the option given below.",
+    "options": [
+      "Both Statement I and Statement II are true.",
+      "Both Statement I and Statement II are false.",
+      "Statement I is true but Statement II is false.",
+      "Statement I is false Statement II is true."
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "Both Statement I and Statement II are true.",
+    "explanation": "SiO2 , CO2 , GeO , GeO2 are acidic in nature. \nSnO , SnO2 , PbO , PbO2 are amphoteric in nature.\n\n⇒ BF3 is Lewis acid according to Lewis octet theory and has sp2 hybridization with trigonal planar geometry and it can accept lone pair from ammonia to form adduct.",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "80 mL of a hydrocarbon on mixing with 264 mL of oxygen in a closed U-tube undergoes complete combustion. The residual gases after cooling to 273 K occupy 224 mL. When the system is treated with KOH solution, the volume decreases to 64 mL. The formula of the hydrocarbon is :",
+    "options": [
+      "C2H4",
+      "C4H10",
+      "C2H2",
+      "C2H6"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "C2H2",
+    "explanation": "CxHy(g) + (x + y/4) O2(g) --> xCO2(g) + y/2 H2O(l)\n\n|                      |    |                                        |       |   |\n|----------------------|----|----------------------------------------|-------|---|\n| t=0                | 80 | 264                                    | 0     | - |\n| t=t_final | -  | 264 - 80(x + y/4) | 80x | - |\n\n264 - 80(x + y/4) + 80x = 224\n\n264 - 80y/4 = 224\n\n40 = 80y/4 => y = 2\n\n264 - 80(x + y/4) = 64\n\n264 - 80(x + 1/2) = 64\n\n264 - 80x - 40 = 64\n\nx = 2",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "14.0 g of calcium metal is allowed to react with excess HCl at 1.0 atm pressure and 273 K.\n\nWhich of the following statements is **incorrect** ?\n\n[Given : Molar mass in g mol⁻¹ of Ca-40, Cl-35.5, H-1]\n\n![](images/fbc6c59b5ee4cb60ac6b7b076ec702c3_img.jpg)",
+    "options": [
+      "0.35 mol of H₂ gas is evolved.",
+      "7.84 L of H₂ gas is evolved.",
+      "33.3 g of CaCl₂ is produced.",
+      "The limiting reagent is calcium metal."
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "33.3 g of CaCl₂ is produced.",
+    "explanation": "Ca(s) + 2HCl(g) → CaCl₂(s) + H₂(g)\n\n14 g of Ca = 14/40 = 0.35 mole\n\n0.35 mole of Ca produces 0.35 mole of H₂ gas.\nVolume of H₂ gas evolved = 0.35 × 22.4 = 7.84 L\n\nMole of CaCl₂ produced = 0.35 mole\nWeight of CaCl₂ = 0.35 × (40 + 2 × 35.5) = 0.35 × 111 = 38.85 g\n\n(3) is wrong because weight of CaCl₂ = 0.35 × 111 = 38.85 gm",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "In Carius method, 0.75 g of an organic compound gave 1.2 g of barium sulphate, find percentage of sulphur (molar mass 32 g mol¹). Molar mass of barium sulphate is 233 g mol¹.",
+    "options": [
+      "4.55%",
+      "10.30%",
+      "21.97%",
+      "16.48%"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "21.97%",
+    "explanation": "Percentage of sulphur = $\\frac{\\text{Molar mass of S}}{\\text{Molar mass of BaSO}_4} \\times \\frac{\\text{Mass of BaSO}_4}{\\text{Mass of organic compound}} \\times 100$\n\nPercentage of sulphur = $\\frac{32}{233} \\times \\frac{1.2}{0.75} \\times 100$\n\nPercentage of sulphur = $21.97 \\%$\n\n$$= \\frac{1.2 \\times 32}{233} \\times \\frac{100}{0.75} = 21.97\\%$$",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "Elements P and Q form two types of non-volatile, non-ionizable compounds PQ and PQ2. When 1 g of PQ is dissolved in 50 g of solvent 'A'. ΔTb was 1.176 K while when 1 g of PQ2 is dissolved in 50 g of solvent 'A', ΔTb was 0.689 K. (Kb of 'A' = 5 K kg mol-1). The molar masses of elements P and Q (in g mol-1) respectively, are :",
+    "options": [
+      "70, 110",
+      "65, 145",
+      "60, 25",
+      "25, 60"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "25, 60",
+    "explanation": " (ΔTb)PQ = Kb m\n1.176 = 5 * (1 / M1) * (1000 / 50)\nM1 = 85.03\n(ΔTb)PQ2 = 5 * (1 / M2) * (1000 / 50) = 0.689\nM2 = 145.13\nLet molar mass of P & Q are Mp and MQ respectively\nMp + MQ = 85.03\nMp + 2MQ = 145.13\nMp = 24.93 ≈ 25\nMQ = 60.1 ≈ 60",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "An organic compound (P) on treatment with aqueous ammonia under hot condition forms compound (Q) which on heating with Br2 and KOH forms compound (R) having molecular formula C6H7N. Names of P, Q and R respectively are.",
+    "options": [
+      "Benzoic acid, benzamide, aniline",
+      "Toluic acid, methylbenzamide, 2-methylaniline",
+      "Benzoic acid, 4-methylbenzamide, 4-methylaniline.",
+      "Phenylethanoic acid, phenylethanamide, benzamine"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "Benzoic acid, benzamide, aniline",
+    "explanation": "Ph-COOH (P) --(NH3, Δ)--> Ph-CONH2 (Q) --(Br2|KOH)--> Ph-NH2 (R)",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "An organic compound \"P\" of molecular formula  $C_6H_{12}O_3$  gives positive iodoform test but negative Tollen's test. When \"P\" is treated with dilute acid, it produces \"Q\". \"Q\" gives positive Tollen's test and also iodoform test. The structure of \"P\" is :",
+    "options": [
+      "\\begin{array}{ccccccc} & & \\text{O} & & & & \\text{CH}_2 \\\\ & & || & & & & | \\\\ \\text{CH}_3 & - & \\text{C} & - & \\text{CH} & - & \\text{CH}_2 \\\\ & & & & & & | \\\\ & & & & & & \\text{OCH}_3 \\end{array}",
+      "\\begin{array}{ccccccc} & & \\text{O} & & & & \\text{CH}_2 \\\\ & & || & & & & | \\\\ \\text{CH}_3 & - & \\text{C} & - & \\text{CH}_2 & - & \\text{CH} & - & \\text{OCH}_3 \\\\ & & & & & & & & | \\\\ & & & & & & & & \\text{OCH}_3 \\end{array}",
+      "\\begin{array}{ccccccc} & & \\text{O} & & & & & & \\text{CH}_2 \\\\ & & || & & & & & & | \\\\ \\text{H} & - & \\text{C} & - & \\text{CH}_2 & - & \\text{CH}_2 & - & \\text{CH} & - & \\text{OCH}_3 \\\\ & & & & & & & & & & | \\\\ & & & & & & & & & & \\text{OCH}_3 \\end{array}",
+      "\\begin{array}{ccccccc} & & \\text{O} & & \\text{OCH}_3 & & \\\\ & & || & & | & & \\\\ \\text{CH}_3 & - & \\text{C} & - & \\text{C} & - & \\text{CH}_3 \\\\ & & & & & & | \\\\ & & & & & & \\text{OCH}_3 \\end{array}"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "\\begin{array}{ccccccc} & & \\text{O} & & & & \\text{CH}_2 \\\\ & & || & & & & | \\\\ \\text{CH}_3 & - & \\text{C} & - & \\text{CH}_2 & - & \\text{CH} & - & \\text{OCH}_3 \\\\ & & & & & & & & | \\\\ & & & & & & & & \\text{OCH}_3 \\end{array}",
+    "explanation": "The compound P gives a positive iodoform test, which means it has a methyl ketone group or a secondary alcohol with a methyl group attached to the carbinol carbon. It gives a negative Tollen's test, meaning it is not an aldehyde. When P is treated with dilute acid, it produces Q, which gives a positive Tollen's test and also a positive iodoform test. This implies that Q is an aldehyde and also has the methyl ketone or secondary alcohol group. The molecular formula of P is $C_6H_{12}O_3$. The structure of P is $CH_3-C(=O)-CH_2-CH(OCH_3)_2$. This compound has a methyl ketone group, so it gives a positive iodoform test. It does not have an aldehyde group, so it gives a negative Tollen's test. When treated with dilute acid, the acetal group hydrolyzes to form an aldehyde. The reaction is: $CH_3-C(=O)-CH_2-CH(OCH_3)_2 + H_2O \rightarrow CH_3-C(=O)-CH_2-CH_2-CHO + 2CH_3OH$. The product Q is $CH_3-C(=O)-CH_2-CH_2-CHO$. This compound Q has a methyl ketone group and an aldehyde group. Therefore, it gives a positive iodoform test and a positive Tollen's test. The structure of P is shown in option (2).",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "From the following, the least stable structure is :",
+    "options": [
+      "$\\text{CH}_2=\\text{CH}-\\text{CH}=\\text{CH}-\\text{CH}_2-\\text{CH}=\\text{CH}-\\text{CH}_2-\\text{CH}=\\text{CH}-\\text{N}^+(\\text{O}^-)_2$",
+      "$\\text{CH}_2=\\text{CH}-\\text{CH}=\\text{CH}-\\text{CH}_2-\\text{CH}=\\text{CH}-\\text{CH}_2-\\text{CH}=\\text{CH}-\\text{N}^+(\\text{O}^-)_2$",
+      "$\\text{CH}_2=\\text{CH}-\\text{CH}=\\text{CH}-\\text{CH}_2-\\text{CH}=\\text{CH}-\\text{CH}_2-\\text{CH}=\\text{CH}-\\text{N}^+(\\text{O}^-)_2$",
+      "$\\text{CH}_2=\\text{CH}-\\text{CH}=\\text{CH}-\\text{CH}_2-\\text{CH}=\\text{CH}-\\text{CH}_2-\\text{CH}=\\text{CH}-\\text{N}^+(\\text{O}^-)_2$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$\\text{CH}_2=\\text{CH}-\\text{CH}=\\text{CH}-\\text{CH}_2-\\text{CH}=\\text{CH}-\\text{CH}_2-\\text{CH}=\\text{CH}-\\text{N}^+(\\text{O}^-)_2$",
+    "explanation": "The stability of a molecule is influenced by resonance. In the given structures, the positive charge is delocalized through resonance. However, the presence of adjacent positive charges significantly destabilizes the molecule. Let's examine the resonance structures of the given compounds. The nitro group $(-\\text{NO}_2)$ is electron-withdrawing. The conjugated system allows for resonance. In option (3), we have the structure: $\\text{CH}_2=\\text{CH}-\\text{CH}=\\text{CH}-\\text{CH}_2-\\text{CH}=\\text{CH}-\\text{CH}_2-\\text{CH}=\\text{CH}-\\text{N}^+(\\text{O}^-)_2$. When the positive charge is on the nitrogen atom, and there is a double bond on the adjacent carbon, resonance can occur. However, if we consider resonance structures where the positive charge is on the carbon atoms, we can have structures with adjacent positive charges. For example, if the positive charge is on the carbon adjacent to the nitrogen, and the double bond shifts, we can get a structure with two adjacent positive charges. In option (3), the positive charge is on the nitrogen, and there are conjugated double bonds. The question asks for the least stable structure. The provided solution states that the structure with positive charge on adjacent atoms is least stable. Let's re-examine the options. All options appear to be the same. Assuming there is a typo in the options and they represent different resonance contributors or different compounds, we will analyze based on the provided solution's logic. The solution indicates that the least stable structure has positive charges on adjacent atoms. This implies that among the resonance structures of a given compound, or among different compounds, the one with adjacent positive charges is least stable due to electrostatic repulsion. Without distinct options, it's hard to pinpoint the exact reason. However, if we assume option (3) refers to a specific resonance structure or a compound that leads to adjacent positive charges in its resonance, then it would be the least stable. The provided image for the solution shows a resonance structure with adjacent positive charges. Let's assume the options were meant to be different resonance structures or compounds. The logic provided is that adjacent positive charges lead to instability. Based on the provided solution's text and image, the least stable structure is the one that exhibits resonance leading to adjacent positive charges. Option (3) is identified as the least stable. The resonance structure shown in the solution image has positive charges on adjacent carbon atoms, which is highly unstable. Therefore, if option (3) corresponds to this scenario, it is the correct answer.",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "$\text{MnO}_4^{2-}$ , in acidic medium, disproportionates to :",
+    "options": [
+      "$\text{Mn}_2\text{O}_7$  and  $\text{MnO}_2$",
+      "$\text{MnO}_4^-$  and  $\text{MnO}$",
+      "$\text{MnO}_4^-$  and  $\text{MnO}_2$",
+      "$\text{Mn}_2\text{O}_7$  and  $\text{MnO}$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$\text{MnO}_4^-$  and  $\text{MnO}_2$",
+    "explanation": "$3\text{MnO}_4^{2-} + 4\text{H}^+ \rightarrow 2\text{MnO}_4^- + \text{MnO}_2 + 2\text{H}_2\text{O}$",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "Given below are two statements:\n\n**Statement I:** The number of species among  $\text{SF}_4$ ,  $\text{NH}_4^+$ ,  $[\text{NiCl}_4]$ ,  $\text{XeF}_4$ ,  $[\text{PtCl}_4]^{2-}$ ,  $\text{SeF}_4$  and  $[\text{Ni}(\text{CN})_4]^{2-}$ , that have tetrahedral geometry is 3.\n\n**Statement II:** In the set  $[\text{NO}_2, \text{BeH}_2, \text{BF}_3, \text{AlCl}_3]$ , all the molecules have incomplete octet around central atom. In the light of the above statements, choose the correct answer from the options given below:",
+    "options": [
+      "**Statement I** is true but **Statement II** is false",
+      "Both **Statement I** and **Statement II** are false",
+      "**Statement I** is false but **Statement II** is true",
+      "Both **Statement I** and **Statement II** are true"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "**Statement I** is false but **Statement II** is true",
+    "explanation": "Statement-I\n\n$\text{SF}_4$  (See-saw)\n\n$\text{XeF}_4$  (square planar),\n\n$[\text{PtCl}_4]^{2-}$  (square planar),\n\n$[\text{NiCl}_4]^{2-}$  (Tetrahedral),\n\n$[\text{Ni}(\text{CN})_4]^{2-}$  (square planar),\n\n$\text{SeF}_4$  (See-saw)\n\n$\text{NH}_4^+$  (Tetrahedral)\n\nStatement-II\n\n$\text{NO}_2$  (seven electrons on N)\n\n$\text{BeH}_2$  (four electrons on Be)\n\n$\text{BF}_3$  (six electrons on B)\n\n$\text{AlCl}_3$  (six electrons on Al)",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "Given below are two statements:\n\nStatement I: Among  $[\text{Cu}(\text{NH}_3)_4]^{2+}$ ,  $[\text{Ni}(\text{en})_3]^{2+}$ ,  $[\text{Ni}(\text{NH}_3)_6]^{2+}$  and  $[\text{Mn}(\text{H}_2\text{O})_6]^{2+}$ ,  $[\text{Mn}(\text{H}_2\text{O})_6]^{2+}$ , has the maximum number of unpaired electrons.\n\nStatement II: The number of pairs among  $\\{[\text{NiCl}_4]^{2-}$ ,  $[\text{Ni}(\text{CO})_4] \\}$ ,  $\\{[\text{NiCl}_4]^{2-}$ ,  $[\text{Ni}(\text{CN}_4)]^{2-}\\}$  and  $\\{[\text{Ni}(\text{CO})_4]$ ,  $[\text{Ni}(\text{CN}_4]^{2-}\\}$  that contain only diamagnetic species is two.\n\nIn the light of the above statements, choose the **correct** answer from the options given below:",
+    "options": [
+      "Statement I is false but Statement II is true",
+      "Both Statement I and Statement II are true",
+      "Both Statement I and Statement II are false",
+      "Statement I is true but Statement II is false"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "Statement I is true but Statement II is false",
+    "explanation": "[Cu(NH3)4]2+ => d9 , dsp2 one unpaired electron\n[Ni(en)3]2+ => d8 , sp3d2 two unpaired electrons\n[Ni(NH3)6]2+ => d8 , sp3d2 two unpaired electrons\n[Mn(H2O)6]2+ => d5 , sp3d2 five unpaired electrons\n[Ni(CO)4] (diamagnetic)\n[NiCl4]2- (paramagnetic)\n[Ni(CN)4]2- (diamagnetic)",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "Identify correct statement from the following :",
+    "options": [
+      "B, C and D only",
+      "A, B and C only",
+      "A, B and E only",
+      "C, D and E only"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "A, B and E only",
+    "explanation": "![Skeletal structures of propanal and propanone](images/0cbaa733e8381d79b89648437341d27b_img.jpg) are Functional isomer\n\nCH3-CH=CH-CH3 & CH3-CH2-CH=CH2\n\nAre Positional isomer\n\nCH3-CH2-O-CH2-CH3 & CH3-CH2-CH2-O-CH3\n\nare Metamer\n\nCH3-CH=CH-CH3 does not have optical isomer\n\n![Skeletal structures of pentane and 2,2-dimethylpropane](images/3bae9ad3e379f54a1004e2ee48ae35f1_img.jpg) Chain isomer",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "Identify the correct statements.\n\n- A. Arginine and Tryptophan are essential amino acids.\n- B. Histidine does not contain heterocyclic ring in its structure.\n- C. Proline is a six membered cyclic ring amino acid.\n- D. Glycine does not have chiral centre.\n- E. Cysteine has characteristic feature of side chain as  $\\text{MeS}-\\text{CH}_2-\\text{CH}_2-$ .\n\nChoose the **correct** answer from the options given below:",
+    "options": [
+      "C and E Only",
+      "B and E Only",
+      "C and D Only",
+      "A and D Only"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "A and D Only",
+    "explanation": "• Histidine does contain heterocyclic ring.\n\n• Proline is a five membered cyclic ring amino acid.\n\n• Cysteine has characteristic feature of side chain as  $\\text{CH}_2-\\text{SMe}$",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "Which of the following graphs between pressure 'P' versus volume 'V' represent the maximum work done ?\n\n![Graph (1): Pressure (p) in bar vs Volume (V) in L. The y-axis has values 1.0 and 2.0. The x-axis has values 0, 22.4, and 44.8. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=1.0 bar goes from V=22.4 L to V=44.8 L. A curve starts at (22.4, 2.0) and goes down to (44.8, 1.0). Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (44.8, 1.0) to (22.4, 0) to (0,0).](images/e9f324c9d7f5305a55cb156855e95b95_img.jpg)\n\n(1)\n\nGraph (1): Pressure (p) in bar vs Volume (V) in L. The y-axis has values 1.0 and 2.0. The x-axis has values 0, 22.4, and 44.8. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=1.0 bar goes from V=22.4 L to V=44.8 L. A curve starts at (22.4, 2.0) and goes down to (44.8, 1.0). Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (44.8, 1.0) to (22.4, 0) to (0,0).\n\n![Graph (2): Pressure (p) in bar vs Volume (V) in L. The y-axis has a value of 2.0. The x-axis has values 0 and 22.4. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=2.0 bar goes from V=0 to V=22.4 L. Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (0,0).](images/9b5411fa2d169b66f6185fbf67b49766_img.jpg)\n\n(2)\n\nGraph (2): Pressure (p) in bar vs Volume (V) in L. The y-axis has a value of 2.0. The x-axis has values 0 and 22.4. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=2.0 bar goes from V=0 to V=22.4 L. Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (0,0).\n\n![Graph (3): Pressure (p) in bar vs Volume (V) in L. The y-axis has values 1.0 and 2.0. The x-axis has values 0, 22.4, and 44.8. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=1.0 bar goes from V=22.4 L to V=44.8 L. A curve starts at (22.4, 2.0) and goes down to (44.8, 1.0). Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (44.8, 1.0) to (22.4, 0) to (0,0).](images/a289b64f80c6df506c0c55d553fc4496_img.jpg)\n\n(3)\n\nGraph (3): Pressure (p) in bar vs Volume (V) in L. The y-axis has values 1.0 and 2.0. The x-axis has values 0, 22.4, and 44.8. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=1.0 bar goes from V=22.4 L to V=44.8 L. A curve starts at (22.4, 2.0) and goes down to (44.8, 1.0). Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (44.8, 1.0) to (22.4, 0) to (0,0).\n\n![Graph (4): Pressure (p) in bar vs Volume (V) in L. The y-axis has values 1.0 and 2.0. The x-axis has values 0, 22.4, and 44.8. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=1.0 bar goes from V=22.4 L to V=44.8 L. A curve starts at (22.4, 2.0) and goes down to (44.8, 1.0). Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (44.8, 1.0) to (22.4, 0) to (0,0).](images/50fecd0e7c9bf4ebf321d8367d42cc94_img.jpg)\n\n(4)\n\nGraph (4): Pressure (p) in bar vs Volume (V) in L. The y-axis has values 1.0 and 2.0. The x-axis has values 0, 22.4, and 44.8. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=1.0 bar goes from V=22.4 L to V=44.8 L. A curve starts at (22.4, 2.0) and goes down to (44.8, 1.0). Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (44.8, 1.0) to (22.4, 0) to (0,0).",
+    "options": [
+      "Graph (1)",
+      "Graph (2)",
+      "Graph (3)",
+      "Graph (4)"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "Graph (4)",
+    "explanation": "Area under the P v/s V curve, is equal to magnitude of work.\n\nIn option (2) work done is zero while in remaining options net work done is negative due to expansion. NTA has given the answer without considering the negative sign that is considered only magnitude.",
+    "subject": "Physics"
+  },
+  {
+    "question": "For the reaction,  $\text{N}_2\text{O}_4 \rightleftharpoons 2\text{NO}_2$ , graph is plotted as shown below. Identify correct statements.\n\n- A. Standard free energy change for the reaction is  $-5.40 \text{ kJ mol}^{-1}$ .\n- B. As  $\\Delta G^\\ominus$  in graph is positive,  $\text{N}_2\text{O}_4$  will not dissociate into  $\text{NO}_2$  at all.\n- C. Reverse reaction will go to completion.\n- D. When 1 mole of  $\text{N}_2\text{O}_4$  changes into equilibrium mixture, value of  $\\Delta G^\\ominus = -0.84 \text{ kJ mol}^{-1}$\n- E. When 2 mole of  $\text{NO}_2$ , changes into equilibrium mixture,  $\\Delta G^\\ominus$  for equilibrium mixture is  $-6.24 \text{ kJ mol}^{-1}$ .\n- E. When 2 mole of  $\text{NO}_2$ , changes into equilibrium mixture,  $\\Delta G^\\ominus$  for equilibrium mixture is  $-6.24 \text{ kJ mol}^{-1}$ .\n\n![Graph of Gibbs free energy (G) in kJ mol⁻¹ vs Fraction of N₂O₄ dissociated. The y-axis has points A, E, and B. The x-axis has values 0.2, 0.4, 0.6, and 0.8. Point A is at x=0, E is at the minimum (x ≈ 0.3), and B is at x=0.6. A horizontal line labeled 'Constant p, T' is shown. The vertical distance from A to B is 5.40. The vertical distance from E to B is 0.84.](images/4a0acd64a680ef89f832de06989e2544_img.jpg)\n\nGraph of Gibbs free energy (G) in kJ mol⁻¹ vs Fraction of N₂O₄ dissociated. The y-axis has points A, E, and B. The x-axis has values 0.2, 0.4, 0.6, and 0.8. Point A is at x=0, E is at the minimum (x ≈ 0.3), and B is at x=0.6. A horizontal line labeled 'Constant p, T' is shown. The vertical distance from A to B is 5.40. The vertical distance from E to B is 0.84.\n\nChoose the **correct** answer from the options given below :",
+    "options": [
+      "D and E only",
+      "C and E only",
+      "A and D only",
+      "B and C only"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "D and E only",
+    "explanation": "![Graph of Gibbs free energy (G) in kJ mol⁻¹ vs Fraction of N₂O₄ dissociated. The y-axis has points A, E, and B. The x-axis has values 0.2, 0.4, 0.6, and 0.8. Point A is at x=0, E is at the minimum (x ≈ 0.3), and B is at x=0.6. A horizontal line labeled 'Constant p,' is shown. The vertical distance from A to B is 5.40. The vertical distance from E to B is 0.84.](images/5cad19fd7e72c11423eafd4817d3a891_img.jpg)\n\nGraph of Gibbs free energy (G) in kJ mol⁻¹ vs Fraction of N₂O₄ dissociated. The y-axis has points A, E, and B. The x-axis has values 0.2, 0.4, 0.6, and 0.8. Point A is at x=0, E is at the minimum (x ≈ 0.3), and B is at x=0.6. A horizontal line labeled 'Constant p,' is shown. The vertical distance from A to B is 5.40. The vertical distance from E to B is 0.84.\n\n- (A)  $\\Delta_r G^\\circ = G^\\circ_B - G^\\circ_A = +ve$\n- (B)  $\\Delta_r G^\\circ = +ve$ ,  $\text{N}_2\text{O}_4$  will partially dissociates into  $\text{NO}_2$ .\n- (C) For reverse reaction  \nIt is partially completed as there is equilibrium at E.\n- (D) For 1 mole  $\text{N}_2\text{O}_4$ ;  $\\Delta_r G^\\circ = -0.84 \text{ kJ mol}^{-1}$\n- (E) For 2 mole  $\text{NO}_2$ ;  $\\Delta G^\\circ = -5.4 - 0.84$   \n $= -6.24 \text{ kJ mol}^{-1}$",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "Given below are two statements:\n\n**Statement I:** When an electric discharge is passed through gaseous hydrogen, the hydrogen molecules dissociate and the energetically excited hydrogen atoms produce electromagnetic radiation of discrete frequencies.\n\n**Statement II:** The frequency of second line of Balmer series obtained from  $\text{He}^+$  is equal to that of first line of Lyman series obtained from hydrogen atom.\n\nIn the light of the above statements, choose the correct answer from the options given below:",
+    "options": [
+      "Both Statement I and Statement II are true",
+      "Both Statement I and Statement II are false",
+      "Statement I is false but Statement II is true",
+      "Statement I is true but Statement II is false"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "Both Statement I and Statement II are true",
+    "explanation": "$$\\text{Sol. } \\frac{1}{\\lambda} = RZ^2 \\left( \\frac{1}{n_1^2} - \\frac{1}{n_2^2} \\right)$$\n\nFor Ist line of lyman series in H-atom\n\n$$\\frac{1}{\\lambda} = R(1)^2 \\left( \\frac{1}{1^2} - \\frac{1}{2^2} \\right)$$\n\n$$\\frac{1}{\\lambda} = \\frac{3R}{4}$$\n\nfor 2⁴ line of Balmer series of  $\text{He}^+$\n\n$$\\frac{1}{\\lambda'} = R(2)^2 \\left( \\frac{1}{2^2} - \\frac{1}{4^2} \\right)$$\n\n$$\\frac{1}{\\lambda'} = \\frac{3R}{4}$$\n\nAs  $\\lambda$  and  $\\lambda'$  is equal so frequency of these lines will be also equal.\n\n#### SECTION-B",
+    "subject": "Physics"
+  },
+  {
+    "question": "Pre-exponential factors of two different reactions of same order are identical. Let activation energy of first reaction exceeds the activation energy of second reaction by  $20 \text{ kJ mol}^{-1}$ . If  $k_1$  and  $k_2$  are the rate constants of first and second reaction respectively at  $300 \text{ K}$ , then  $\frac{k_2}{k_1}$  will be ..... .  \n(nearest integer) [ $R=8.3 \text{ J K}^{-1} \text{ mol}^{-1}$ ]",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "8",
+    "explanation": "Assuming 'A' same for both reaction.\n\n$$\\ln k_1 = \\ln A - \\frac{E_1}{300R}$$\n\n$$\\ln k_2 = \\ln A - \\frac{E_2}{300R}$$\n\n$$\\ln \\left( \\frac{k_2}{k_1} \\right) = \\frac{E_1 - E_2}{300R} = \\frac{20 \\times 1000}{300R}$$\n\n$$= 8.032$$",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "The pH and conductance of a weak acid (HX) was found to be 5 and  $4 \times 10^{-5} \text{ S}$ , respectively. The conductance was measured under standard condition using a cell where the electrode plates having a surface area of  $1 \text{ cm}^2$  were at a distance of  $15 \text{ cm}$  apart. The value of the limiting molar conductivity is .....  $\text{S m}^2 \text{ mol}^{-1}$ . (nearest integer)  \n(Given: degree of dissociation of the weak acid ( $\\alpha \\ll 1$ ))",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "6",
+    "explanation": "pH = 5\n\n$[\text{H}^+] = 10^{-5} = [\text{HX}] \nachar \n$$= [\text{HX}] \nachar \frac{\\Lambda_m}{\\Lambda_m^\\infty}$$\n\n$$\\Lambda_m = \\frac{k \\times 1000}{[\text{HX}]}$$\n\n$$K = G \nachar G^* = 4 \nachar 10^{-5} \nachar \\frac{15}{1} = 6 \nachar 10^{-4} \\text{ S.cm}^{-1}$$\n\n$$[\text{H}^+] = 10^{-5} = [\text{HX}] \nachar \\frac{6 \nachar 10^{-4} \nachar 1000}{\\Lambda_m^\\infty \nachar [\text{HX}]}$$\n\n$$\\Lambda_m^\\infty = 60000 \\text{ S.cm}^2 \\text{ mol}^{-1}$$\n\n$$\\Lambda_m^\\infty = 6 \\text{ S.m}^2 \\text{ mol}^{-1}$$",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "Use the following data :\n\n| Substance          | $\\Delta_f H^\\ominus (500K)$<br>$\\text{kJ mol}^{-1}$ | $S^\\ominus (500K)$<br>$\\text{JK}^{-1} \\text{mol}^{-1}$ |\n|--------------------|-----------------------------------------------------|--------------------------------------------------------|\n| AB(g)              | 32                                                  | 222                                                    |\n| A <sub>2</sub> (g) | 6                                                   | 146                                                    |\n| B <sub>2</sub> (g) | X                                                   | 280                                                    |\n\nOne mole each of A<sub>2</sub>(g) and B<sub>2</sub>(g) are taken in a 1L closed flask and allowed to establish the equilibrium at 500K.\n\n![](images/f3e939b40b59b6455f83d2c200c43cb1_img.jpg)\n\n$$\\text{A}_2(\\text{g}) + \\text{B}_2(\\text{g}) \\rightleftharpoons 2\\text{AB}(\\text{g})$$\n\nThe value of x (in kJ mol<sup>-1</sup>) is ..... (Nearest integer)\n\n(Given:  $\\log K = 2.2$   $R = 8.3 \\text{ JK}^{-1} \\text{mol}^{-1}$ )",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "70",
+    "explanation": "$\\text{A}_2 + \\text{B}_2 \\xrightarrow{500K} 2\\text{AB}$   $\\log K = 2.2$\n\n$$\\Delta H^\\circ = (2 \\times 32) - (6 + x) = (58 - x) \\text{ kJ}$$ \n\n$$\\Delta S^\\circ = (2 \\times 222) - (146 + 280) = 18 \\text{ Joule}$$ \n\n$$\\Delta G^\\circ = -RT \\ln K$$ \n\n$$\\Delta G^\\circ = -\\frac{8.314 \\times 500 \\times 2.2 \\times 2.303}{1000}$$ \n\n$$\\Delta G^\\circ = -21.06$$ \n\n$$\\Delta H^\\circ - T\\Delta S^\\circ = -21.06$$ \n\n$$58 - x - 500 \\left( \\frac{18}{1000} \\right) = -21.06$$ \n\n$$x = 70.06 \\text{ KJ/mol}$$",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "Consider the following reaction sequence\n\n![](images/d913be13a3014737435349cabf2ec4c9_img.jpg)\n\nc1ccccc1  $\\xrightarrow[333 K]{\\text{conc.HNO}_3 + \\text{conc.H}_2\\text{SO}_4}$  P  $\\xrightarrow[2. \\text{ pH neutralised}]{1. \\text{ Sn/HCl}/\\Delta}$  Q  $\\xrightarrow{(\\text{CH}_3\\text{CO})_2}$  R  \n R  $\\xrightarrow[\\text{conc.HNO}_3 + \\text{conc.H}_2\\text{SO}_4]{}$  S (major product)  $\\xrightarrow[2. \\text{ pH neutralised}]{1. \\text{ HCl/EtOH}, \\Delta}$  T\n\nThe percentage of nitrogen in product 'T' formed is .....%. (Nearest integer)\n\n(Given molar mass in g mol<sup>-1</sup> H:1, C:12, N:14, O:16)",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "20",
+    "explanation": "![](images/66e7278704ab71a5895fa150a33fe075_img.jpg)\n\nc1ccccc1  $\\xrightarrow[\\text{H}_2\\text{SO}_4]{\\text{HNO}_3}$  Ph-NO<sub>2</sub> (P)  $\\xrightarrow{\\text{Sn/HCl}}$  Ph-NH<sub>2</sub> (Q)  $\\xrightarrow{(\\text{CH}_3\\text{CO})_2\\text{O}}$  Ph-NH-C(=O)-CH<sub>3</sub> (R)  \n R  $\\xrightarrow[\\text{H}_2\\text{SO}_4]{\\text{HNO}_3}$  H<sub>2</sub>N-C<sub>6</sub>H<sub>4</sub>-NO<sub>2</sub> (S)  $\\xrightarrow[\\text{EtOH}]{\\text{HCl}}$  H<sub>2</sub>N-C<sub>6</sub>H<sub>4</sub>-NO<sub>2</sub> (T)\n\n$$\\text{Mol. wt} = 6 \\times 12 + (6 \\times 1) + (2 \\times 14) + (2 \\times 16) = 138$$ \n\n$$\\% \\text{N} = \\frac{28}{138} \\times 100 = 20.29\\%$$",
+    "subject": "Chemistry"
+  },
+  {
+    "question": "Consider the following reactions:\n\n![](images/201d4fc0b3d7837424300fc1aed89d8c_img.jpg)\n\n$$\\text{NaCl} + \\text{K}_2\\text{Cr}_2\\text{O}_7 + \\text{H}_2\\text{SO}_4 \\rightarrow \\text{A} + \\text{KHSO}_4 + \\text{NaHSO}_4 + \\text{H}_2\\text{O}$$ \n\n![](images/9867683f28a3854caaaeaf2dda85850f_img.jpg)\n\n$$\\text{A} + \\text{NaOH} \\rightarrow \\text{B} + \\text{NaCl} + \\text{H}_2\\text{O}$$ \n\n![](images/e600e3d399382a7ca6068687fec1c3c8_img.jpg)\n\n$$\\text{B} + \\text{H}_2\\text{SO}_4 + \\text{H}_2\\text{O}_2 \\rightarrow \\text{C} + \\text{Na}_2\\text{SO}_4 + \\text{H}_2\\text{O}$$ \n\nIn the product 'C', 'X' is the number of O₂²⁻ units, 'Y' is the total number oxygen atoms present and 'Z' is the oxidation state of Cr. The value of X + Y + Z is ..... .\n\nAns. (13)",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "13",
+    "explanation": "A  $\\rightarrow$  CrO₂Cl₂\n\n![](images/dab94805585065ae0b55490d57dc08fa_img.jpg)\n\nB  $\\rightarrow$  Na₂CrO₄\n\n![](images/08a18ff449079f5160cf252d3a4f3481_img.jpg)\n\nC  $\\rightarrow$  CrO₅\n\n![](images/5ece7b1c62fc388fb9bd504023a0c38d_img.jpg)\n\nO=[Cr]1(O)OOO1  \n Structure of CrO₅ showing a central Cr atom with a +6 oxidation state, bonded to two terminal oxygens and two bridging peroxide groups.\n\n$$X = 2, Y = 5 \\text{ and } Z = 6$$",
+    "subject": "Chemistry"
   }
 ]
