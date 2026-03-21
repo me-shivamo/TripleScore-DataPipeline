@@ -5,10 +5,19 @@ from sklearn.manifold import TSNE
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent.parent
-INPUT = ROOT / "Embedded-Output" / "JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions.json"
+EMBED_DIR = ROOT / "Embedded-Output"
 OUTPUT = ROOT / "web" / "public" / "data" / "questions.json"
 
-data = json.loads(INPUT.read_text())
+# Load all embedded JSON files (exclude index.json)
+data = []
+for f in sorted(EMBED_DIR.glob("*.json")):
+    if f.name == "index.json":
+        continue
+    print(f"Loading {f.name}")
+    data.extend(json.loads(f.read_text()))
+
+print(f"Total questions: {len(data)}")
+
 embeddings = np.array([q["embedding"] for q in data])
 
 tsne = TSNE(n_components=2, random_state=42, perplexity=min(30, len(data) - 1))

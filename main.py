@@ -19,7 +19,7 @@ BASE_DIR = Path(__file__).resolve().parent
 # ============================================================
 
 # Input PDF path
-PDF_PATH = str(BASE_DIR / "PDFs" / "JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions.pdf")
+PDF_PATH = str(BASE_DIR / "PDFs" / "JEE_Mains_2026_Jan_28.pdf")
 
 # Output directory for extracted markdown and images
 OUTPUT_DIR = str(BASE_DIR / "Datalab-Output")

@@ -256,7 +256,7 @@
     "correct_answer": "2",
     "explanation": " $a_{n+1} - \\frac{1}{2}a_n = \\frac{n^2 - 2n - 1}{n^2(n+1)^2} = \\frac{2n^2 - (n+1)^3}{n^2(n+1)^2}$\n $\\Rightarrow a_{n+1} - \\frac{1}{2}a_n = \\frac{2}{(n+1)^2} - \\frac{1}{n^2}$\n $n = 1 \t a_2 - \\frac{1}{2}a_1 = \\frac{2}{2^2} - \\frac{1}{1^2}$\n $2 \\left[ a_3 - \\frac{1}{2}a_2 = \\frac{2}{3^2} - \\frac{1}{2^2} \\right]$\n $2^2 \\left[ a_4 - \\frac{1}{2}a_3 = \\frac{2}{4^2} - \\frac{1}{3^2} \\right]$\n $\\vdots$\n $2^{n-2} \\left[ a_n - \\frac{1}{2}a_{n-1} = \\frac{2}{n^2} - \\frac{1}{(n-1)^2} \\right]$\n $2^{n-1} \\left[ a_{n+1} - \\frac{1}{2}a_n = \\frac{2}{(n+1)^2} - \\frac{1}{n^2} \\right]$\nAdding\n $a_{n+1} = \\frac{2}{(n+1)^2} - \\frac{1}{2^n} \\Rightarrow a_n = \\frac{2}{n^2} - \\frac{1}{2^{n-1}}$\n $\\Rightarrow \\left| \\sum_{n=1}^{\\infty} \\left( a_n - \\frac{2}{n^2} \\right) \\right| \\Rightarrow \\left| \\sum_{n=1}^{\\infty} -\\frac{1}{2^{n-1}} \\right| = 2$",
     "subject": "Maths",
-    "topic": "Calculus",
+    "topic": "Algebra",
     "chapter": "Sequences and Series"
   },
   {
@@ -346,7 +346,7 @@
     "correct_answer": "$200\\sqrt{3}$",
     "explanation": "From continuity equation\n\n$A_A V_A = A_B V_B ⇒ 6V_A = 3V_B ⇒ V_B = 2V_A$\n\nApplying Bernoulli's equation between A & B,\n\n$P_A + \\frac{1}{2}\\rho V_A^2 = P_B + \\frac{1}{2}\\rho V_B^2$\n$⇒ \\rho g \\times 0.05 = \\frac{1}{2}\\rho [V_B^2 - V_A^2] = \\frac{1}{2}\\rho (3V_A^2)$\n$⇒ V_A = \\sqrt{\\frac{2g \\times 0.05}{3}} \\text{ m/s} = \\frac{1}{\\sqrt{3}} \\text{ m/s} = \\frac{100}{\\sqrt{3}} \\text{ cm/s}$\n$⇒ \\text{Volume flow rate} = A_A V_A = \\frac{6 \\times 100}{\\sqrt{3}} \\text{ cm}^3/\\text{sec}$\n$= 200\\sqrt{3} \\text{ cm}^3/\\text{sec}$",
     "subject": "Physics",
-    "topic": "Mechanics",
+    "topic": "Properties of Solids and Liquids",
     "chapter": "Properties of Solids and Liquids"
   },
   {
@@ -361,8 +361,8 @@
     "correct_answer": "1.67%",
     "explanation": "For parallel combination of spring,\n\n$K_{eq} = K_1 + K_2 = 30 \\text{ N/m}$\n\n$Δ K_{eq} = Δ K_1 + Δ K_2 = 0.2 + 0.3 = 0.5 \\text{ N/m}$\n\n$∴ \\text{ %Error in } K = \\frac{0.5}{30} \\times 100 = 1.67\\%$",
     "subject": "Physics",
-    "topic": "Mechanics",
-    "chapter": "Laws of Motion"
+    "topic": "Units Dimensions and Errors",
+    "chapter": "Units Dimensions and Errors"
   },
   {
     "question": "A 4 kg mass moves under the influence of a force  $\\\\vec{F} = (4t^3\\\\hat{i} - 3t\\\\hat{j})$  N where  $t$  is the time in second. If mass starts from origin at  $t = 0$ , the velocity and position after  $t = 2$  s will be :",
@@ -511,8 +511,8 @@
     "correct_answer": "120.15",
     "explanation": "$$l_{\\text{final}} = l_0(1 + \\alpha_A \\Delta T) + l_0(1 + \\alpha_B \\Delta T) = l_0 [2 + (\\alpha_A + \\alpha_B) \\Delta T] = 60 [2 + (36 \\times 10^{-6}) \\times 70] = 60 [2 + 0.0025] = 120.15 \\text{ cm}$$",
     "subject": "Physics",
-    "topic": "Mechanics",
-    "chapter": "Properties of Solids and Liquids"
+    "topic": "Thermodynamics",
+    "chapter": "Heat Transfer"
   },
   {
     "question": "A 1 m long metal rod AB completes the circuit as shown in figure. The area of circuit is perpendicular to the magnetic field of 0.10 T. If the resistance of the total circuit is  $2\text{\textonehalf}$  then the force needed to move the rod towards right with constant speed (v) of 1.5 m/s is \u0000\u0000 N.\n\n![Diagram of a metal rod AB of length 1 m moving with velocity v to the right on two parallel rails. The rails are connected by a resistor of 2 ohms. A uniform magnetic field B is directed into the page (indicated by crosses).](images/638091db82245c9dc328387edff215d8_img.jpg)",
@@ -667,7 +667,7 @@
     "explanation": "$\\Rightarrow$  On moving left to right in a period IE increases and from top to bottom in a group IE decreases.\n\n![](images/8343103996ef90678e82339344603d39_img.jpg)\n\n$$\\text{F} > \\text{P} > \\text{S} > \\text{B} \\text{ (IE order)}$$\n\n$\\Rightarrow$  On moving left to right in a period metallic and basic character decreases.\n\n![](images/a7734ec234fab6c62664a9ff257bb70a_img.jpg)\n\n$$\\text{K} > \\text{Mg} > \\text{Al} > \\text{B} \\text{ (Metallic character order)}$$\n\n$\\Rightarrow$  On moving top to bottom in a group metallic and basic character increases.\n\n![](images/8f92dd01838450a6523134a290e6ed2f_img.jpg)\n\n$$\\text{K}_2\\text{O} > \\text{Na}_2\\text{O} > \\text{MgO} > \\text{Al}_2\\text{O}_3$$\n\n$\\Rightarrow$  EA : Group 17 > Group 16 > Group 15\n\n![](images/c81a475cedafdd47c0a22a6b451fa77c_img.jpg)\n\n$$\\text{Cl} > \\text{F} > \\text{S} > \\text{P}$$",
     "subject": "Chemistry",
     "topic": "Inorganic Chemistry",
-    "chapter": "Periodic Table and Periodicity"
+    "chapter": "p-Block Elements"
   },
   {
     "question": "Identify A in the following reaction.\n![Decalin structure cis-1,2-cyclohexanedicarboxylic acid and oxalic acid structures](images/693ca69ca11e2d208a6b2944b4611cb0_img.jpg)\nA  $\\\\xrightarrow[Pt]{2\\\\text{H}_2}$ \nA  $\\\\xrightarrow{\\\\text{KMnO}_4}$ \nDecalin structure cis-1,2-cyclohexanedicarboxylic acid and oxalic acid structures",
@@ -697,7 +697,7 @@
     "explanation": "\n![](images/64c3498c8d6a24f8ae536f534944dfca_img.jpg)",
     "subject": "Chemistry",
     "topic": "Organic Chemistry",
-    "chapter": "Haloalkanes and Haloarenes"
+    "chapter": "Hydrocarbons"
   },
   {
     "question": "Given below are two statements :\n\nStatement I : The number of pairs among  [SiO2, CO2] ,  [SnO, SnO2] ,  [PbO, PbO2]  and  [GeO, GeO2] , which contain oxides that are both amphoteric is 2.\n\nStatement II :  BF3  is an electron deficient molecule can act as a lewis acid, forms adduct with  NH3  and has a trigonal planar geometry.\n\nIn the light of the above statement, choose the correct answer from the option given below.",
@@ -957,7 +957,7 @@
     "explanation": "pH = 5\n\n$[\text{H}^+] = 10^{-5} = [\text{HX}] \nachar \n$$= [\text{HX}] \nachar \frac{\\Lambda_m}{\\Lambda_m^\\infty}$$\n\n$$\\Lambda_m = \\frac{k \\times 1000}{[\text{HX}]}$$\n\n$$K = G \nachar G^* = 4 \nachar 10^{-5} \nachar \\frac{15}{1} = 6 \nachar 10^{-4} \\text{ S.cm}^{-1}$$\n\n$$[\text{H}^+] = 10^{-5} = [\text{HX}] \nachar \\frac{6 \nachar 10^{-4} \nachar 1000}{\\Lambda_m^\\infty \nachar [\text{HX}]}$$\n\n$$\\Lambda_m^\\infty = 60000 \\text{ S.cm}^2 \\text{ mol}^{-1}$$\n\n$$\\Lambda_m^\\infty = 6 \\text{ S.m}^2 \\text{ mol}^{-1}$$",
     "subject": "Chemistry",
     "topic": "Physical Chemistry",
-    "chapter": "Ionic Equilibrium"
+    "chapter": "Solutions"
   },
   {
     "question": "Use the following data :\n\n| Substance          | $\\Delta_f H^\\ominus (500K)$<br>$\\text{kJ mol}^{-1}$ | $S^\\ominus (500K)$<br>$\\text{JK}^{-1} \\text{mol}^{-1}$ |\n|--------------------|-----------------------------------------------------|--------------------------------------------------------|\n| AB(g)              | 32                                                  | 222                                                    |\n| A <sub>2</sub> (g) | 6                                                   | 146                                                    |\n| B <sub>2</sub> (g) | X                                                   | 280                                                    |\n\nOne mole each of A<sub>2</sub>(g) and B<sub>2</sub>(g) are taken in a 1L closed flask and allowed to establish the equilibrium at 500K.\n\n![](images/f3e939b40b59b6455f83d2c200c43cb1_img.jpg)\n\n$$\\text{A}_2(\\text{g}) + \\text{B}_2(\\text{g}) \\rightleftharpoons 2\\text{AB}(\\text{g})$$\n\nThe value of x (in kJ mol<sup>-1</sup>) is ..... (Nearest integer)\n\n(Given:  $\\log K = 2.2$   $R = 8.3 \\text{ JK}^{-1} \\text{mol}^{-1}$ )",

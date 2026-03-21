@@ -88,10 +88,7 @@ export default function Home() {
             question={selectedQuestion}
             allQuestions={questions}
             onSelect={handleSelect}
-            onClose={() => {
-              setSelectedId(null);
-              router.push("/", { scroll: false });
-            }}
+            onClose={() => setSelectedId(null)}
           />
         </div>
       )}

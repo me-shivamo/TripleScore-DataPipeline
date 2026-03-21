@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Question, SUBJECT_COLORS } from "@/lib/types";
 import { renderLatex } from "@/lib/latex";
 import NearbyQuestions from "./NearbyQuestions";
@@ -15,6 +15,8 @@ interface Props {
 
 export default function QuestionPanel({ question, allQuestions, onSelect, onClose }: Props) {
   const [showAnswer, setShowAnswer] = useState(false);
+
+  useEffect(() => setShowAnswer(false), [question.id]);
 
   const nearbyIds = useMemo(
     () => findNearest(question.embedding, allQuestions, question.id, 5),
@@ -51,6 +53,13 @@ export default function QuestionPanel({ question, allQuestions, onSelect, onClos
         className="text-gray-200 text-sm leading-relaxed mb-4 latex-content"
         dangerouslySetInnerHTML={{ __html: renderLatex(question.question) }}
       />
+
+      {/* Image */}
+      {question.image_url && (
+        <div className="mb-4">
+          <img src={question.image_url} alt="Question image" className="max-w-full rounded border border-[#222]" />
+        </div>
+      )}
 
       {/* Options */}
       {question.options.length > 0 && (
