@@ -2,7 +2,7 @@
 Standalone DigitalOcean Spaces upload module.
 
 Usage:
-    python upload_digitalocean.py <markdown_file> [--folder FOLDER]
+    python 02_upload_digitalocean.py <markdown_file> [--folder FOLDER]
 
 Uploads all images referenced in the markdown file to DigitalOcean Spaces,
 then rewrites the markdown with CDN URLs.
@@ -145,7 +145,7 @@ async def upload_and_rewrite(md_path, spaces_folder=None, output_dir=None):
     Args:
         md_path: Path to the source markdown file.
         spaces_folder: Folder name in the Space. Defaults to "TripleScore/{md_stem}".
-        output_dir: Directory to save the updated markdown. Defaults to DO-Spaces-Output/.
+        output_dir: Directory to save the updated markdown. Defaults to 02_DO-Spaces-Output/.
 
     Returns:
         dict mapping local filename -> CDN URL.

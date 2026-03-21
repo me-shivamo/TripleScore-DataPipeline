@@ -2,9 +2,9 @@
 Standalone Gemini structuring module.
 
 Usage:
-    python structure_gemini.py <markdown_file> [--output-dir DIR]
+    python 03_structure_gemini.py <markdown_file> [--output-dir DIR]
 
-Reads a DO-Spaces-Output markdown file, splits it into individual question
+Reads a 02_DO-Spaces-Output markdown file, splits it into individual question
 blocks, sends pairs of 2 to Gemini 2.5 Flash-Lite (via OpenRouter) for structured
 extraction, and saves the result as a JSON array.
 """
@@ -234,11 +234,11 @@ async def extract_question_batch(client, block1, block2):
 
 
 async def structure_markdown(md_path, output_dir=None):
-    """Parse DO-Spaces-Output markdown into structured JSON using Gemini.
+    """Parse 02_DO-Spaces-Output markdown into structured JSON using Gemini.
 
     Args:
-        md_path: Path to the DO-Spaces-Output markdown file.
-        output_dir: Where to save the JSON. Defaults to Structured-Output/.
+        md_path: Path to the 02_DO-Spaces-Output markdown file.
+        output_dir: Where to save the JSON. Defaults to 03_Structured-Output/.
 
     Returns:
         Path to the output JSON file.

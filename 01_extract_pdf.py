@@ -2,7 +2,7 @@
 Standalone Datalab PDF extraction module.
 
 Usage:
-    python extract_pdf.py [PDF_PATH] [--debug] [--page-range PAGE_RANGE]
+    python 01_extract_pdf.py [PDF_PATH] [--debug] [--page-range PAGE_RANGE]
 
 Extracts a PDF to markdown + images using the Datalab API.
 Output is saved to 01_Datalab-Output/{pdf_stem}.md and 01_Datalab-Output/images/

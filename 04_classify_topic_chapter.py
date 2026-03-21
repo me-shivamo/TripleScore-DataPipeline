@@ -2,11 +2,11 @@
 Standalone topic/chapter classification module.
 
 Usage:
-    python classify_topic_chapter.py [--input-dir DIR] [--output-dir DIR]
+    python 04_classify_topic_chapter.py [--input-dir DIR] [--output-dir DIR]
 
-Reads Structured-Output/*.json files, sends pairs of 2 questions to Gemini (via
+Reads 03_Structured-Output/*.json files, sends pairs of 2 questions to Gemini (via
 OpenRouter) to classify topic and chapter, and saves the enriched results
-to Classified-Output/*.json.
+to 04_Classified-Output/*.json.
 """
 
 import asyncio

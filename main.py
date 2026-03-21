@@ -117,7 +117,7 @@ async def run_pipeline():
     elif RUN_SPACES_UPLOAD and not md_path:
         print("Skipping Spaces upload: no markdown file available.", flush=True)
 
-    # If skipping Step 2, look for existing DO-Spaces-Output markdown
+    # If skipping Step 2, look for existing 02_DO-Spaces-Output markdown
     if not spaces_md_path and md_path:
         candidate = BASE_DIR / "02_DO-Spaces-Output" / Path(md_path).name
         if candidate.exists():

@@ -2,10 +2,10 @@
 Standalone embedding module.
 
 Usage:
-    python embed_questions.py [--input-dir DIR] [--output-dir DIR]
+    python 05_embed_questions.py [--input-dir DIR] [--output-dir DIR]
 
-Reads Classified-Output/*.json files, generates embeddings for each question
-using Google's text-embedding-004 model, and saves to Embedded-Output/*.json
+Reads 04_Classified-Output/*.json files, generates embeddings for each question
+using Google's text-embedding-004 model, and saves to 05_Embedded-Output/*.json
 with an index.json for fast lookup.
 """
 
