@@ -39,7 +39,7 @@ def load_env_file(env_path):
 BASE_DIR = Path(__file__).resolve().parent
 load_env_file(BASE_DIR / ".env")
 
-API_DELAY = 1.1  # 60 requests/min free tier
+API_DELAY = 0.1  # gemini-embedding-001 has 1500 req/min free tier
 
 
 def build_embedding_text(question):
@@ -68,7 +68,7 @@ def embed_file(input_file, output_dir, genai):
         try:
             text = build_embedding_text(question)
             result = genai.embed_content(
-                model="models/text-embedding-004",
+                model="models/gemini-embedding-001",
                 content=text,
                 task_type="RETRIEVAL_DOCUMENT",
             )
