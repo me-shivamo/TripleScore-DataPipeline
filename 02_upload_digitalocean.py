@@ -159,7 +159,7 @@ async def upload_and_rewrite(md_path, spaces_folder=None, output_dir=None):
         spaces_folder = f"TripleScore/{md_path.stem}"
 
     if output_dir is None:
-        output_dir = BASE_DIR / "DO-Spaces-Output"
+        output_dir = BASE_DIR / "02_DO-Spaces-Output"
     else:
         output_dir = Path(output_dir)
 
@@ -185,7 +185,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Upload images to DigitalOcean Spaces and update markdown.")
     parser.add_argument("markdown", help="Path to the markdown file")
     parser.add_argument("--folder", default=None, help="Spaces folder (default: TripleScore/<md_stem>)")
-    parser.add_argument("--output-dir", default=None, help="Output directory (default: DO-Spaces-Output/)")
+    parser.add_argument("--output-dir", default=None, help="Output directory (default: 02_DO-Spaces-Output/)")
     args = parser.parse_args()
 
     asyncio.run(upload_and_rewrite(args.markdown, args.folder, args.output_dir))

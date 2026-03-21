@@ -119,12 +119,12 @@ def embed_all(input_dir=None, output_dir=None):
     import google.generativeai as genai
 
     if input_dir is None:
-        input_dir = BASE_DIR / "Classified-Output"
+        input_dir = BASE_DIR / "04_Classified-Output"
     else:
         input_dir = Path(input_dir)
 
     if output_dir is None:
-        output_dir = BASE_DIR / "Embedded-Output"
+        output_dir = BASE_DIR / "05_Embedded-Output"
     else:
         output_dir = Path(output_dir)
 
@@ -154,8 +154,8 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(description="Generate embeddings for classified questions.")
-    parser.add_argument("--input-dir", default=None, help="Input directory (default: Classified-Output/)")
-    parser.add_argument("--output-dir", default=None, help="Output directory (default: Embedded-Output/)")
+    parser.add_argument("--input-dir", default=None, help="Input directory (default: 04_Classified-Output/)")
+    parser.add_argument("--output-dir", default=None, help="Output directory (default: 05_Embedded-Output/)")
     args = parser.parse_args()
 
     embed_all(args.input_dir, args.output_dir)

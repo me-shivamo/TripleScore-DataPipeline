@@ -5,7 +5,7 @@ Usage:
     python extract_pdf.py [PDF_PATH] [--debug] [--page-range PAGE_RANGE]
 
 Extracts a PDF to markdown + images using the Datalab API.
-Output is saved to Datalab-Output/{pdf_stem}.md and Datalab-Output/images/
+Output is saved to 01_Datalab-Output/{pdf_stem}.md and 01_Datalab-Output/images/
 """
 
 import argparse
@@ -230,7 +230,7 @@ if __name__ == "__main__":
     asyncio.run(
         extract(
             pdf_path=args.pdf,
-            output_dir=BASE_DIR / "Datalab-Output",
+            output_dir=BASE_DIR / "01_Datalab-Output",
             page_range=page_range,
             debug=args.debug,
         )

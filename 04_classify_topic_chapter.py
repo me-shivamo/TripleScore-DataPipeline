@@ -307,12 +307,12 @@ async def classify_all(input_dir=None, output_dir=None):
     import openai
 
     if input_dir is None:
-        input_dir = BASE_DIR / "Structured-Output"
+        input_dir = BASE_DIR / "03_Structured-Output"
     else:
         input_dir = Path(input_dir)
 
     if output_dir is None:
-        output_dir = BASE_DIR / "Classified-Output"
+        output_dir = BASE_DIR / "04_Classified-Output"
     else:
         output_dir = Path(output_dir)
 
@@ -343,8 +343,8 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(description="Classify questions by topic and chapter.")
-    parser.add_argument("--input-dir", default=None, help="Input directory (default: Structured-Output/)")
-    parser.add_argument("--output-dir", default=None, help="Output directory (default: Classified-Output/)")
+    parser.add_argument("--input-dir", default=None, help="Input directory (default: 03_Structured-Output/)")
+    parser.add_argument("--output-dir", default=None, help="Output directory (default: 04_Classified-Output/)")
     args = parser.parse_args()
 
     asyncio.run(classify_all(args.input_dir, args.output_dir))

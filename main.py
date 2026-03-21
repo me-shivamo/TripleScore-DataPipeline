@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent
 PDF_PATH = str(BASE_DIR / "PDFs" / "JEE_Mains_2026_Jan_28.pdf")
 
 # Output directory for extracted markdown and images
-OUTPUT_DIR = str(BASE_DIR / "Datalab-Output")
+OUTPUT_DIR = str(BASE_DIR / "01_Datalab-Output")
 
 # Page range to extract (e.g. "3-5", "4", None for full PDF)
 PAGE_RANGE = ""  # Empty string = extract ALL pages
@@ -70,7 +70,8 @@ async def run_pipeline():
 
     # --- Step 1: PDF Extraction ---
     if RUN_EXTRACTION:
-        from extract_pdf import extract
+        import importlib
+        extract = importlib.import_module("01_extract_pdf").extract
 
         page_range_value = page_range or os.getenv("PAGE_RANGE") or None
         # Ensure empty strings become None (extract full PDF)
@@ -102,7 +103,8 @@ async def run_pipeline():
     # --- Step 2: DigitalOcean Spaces Upload ---
     spaces_md_path = None
     if RUN_SPACES_UPLOAD and md_path:
-        from upload_digitalocean import upload_and_rewrite
+        import importlib
+        upload_and_rewrite = importlib.import_module("02_upload_digitalocean").upload_and_rewrite
 
         print("\n" + "=" * 50, flush=True)
         print("STEP 2: DigitalOcean Spaces Upload", flush=True)
@@ -117,14 +119,15 @@ async def run_pipeline():
 
     # If skipping Step 2, look for existing DO-Spaces-Output markdown
     if not spaces_md_path and md_path:
-        candidate = BASE_DIR / "DO-Spaces-Output" / Path(md_path).name
+        candidate = BASE_DIR / "02_DO-Spaces-Output" / Path(md_path).name
         if candidate.exists():
             spaces_md_path = candidate
             print(f"Using existing Spaces output: {candidate.name}", flush=True)
 
     # --- Step 3: Gemini Structuring ---
     if RUN_GEMINI_STRUCTURING and spaces_md_path:
-        from structure_gemini import structure_markdown
+        import importlib
+        structure_markdown = importlib.import_module("03_structure_gemini").structure_markdown
 
         print("\n" + "=" * 50, flush=True)
         print("STEP 3: Gemini Structuring", flush=True)
@@ -136,7 +139,8 @@ async def run_pipeline():
 
     # --- Step 4: Topic/Chapter Classification ---
     if RUN_CLASSIFICATION:
-        from classify_topic_chapter import classify_all
+        import importlib
+        classify_all = importlib.import_module("04_classify_topic_chapter").classify_all
 
         print("\n" + "=" * 50, flush=True)
         print("STEP 4: Topic/Chapter Classification", flush=True)
@@ -148,7 +152,8 @@ async def run_pipeline():
 
     # --- Step 5: Embedding Generation ---
     if RUN_EMBEDDING:
-        from embed_questions import embed_all
+        import importlib
+        embed_all = importlib.import_module("05_embed_questions").embed_all
 
         print("\n" + "=" * 50, flush=True)
         print("STEP 5: Embedding Generation", flush=True)

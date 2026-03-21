@@ -5,7 +5,7 @@ from sklearn.manifold import TSNE
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent.parent
-EMBED_DIR = ROOT / "Embedded-Output"
+EMBED_DIR = ROOT / "05_Embedded-Output"
 OUTPUT = ROOT / "web" / "public" / "data" / "questions.json"
 
 # Load all embedded JSON files (exclude index.json)

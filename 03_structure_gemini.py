@@ -254,7 +254,7 @@ async def structure_markdown(md_path, output_dir=None):
         raise RuntimeError("OPENROUTER_API_KEY not set. Add it to .env or environment.")
 
     if output_dir is None:
-        output_dir = BASE_DIR / "Structured-Output"
+        output_dir = BASE_DIR / "03_Structured-Output"
     else:
         output_dir = Path(output_dir)
 
@@ -344,8 +344,8 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(description="Structure markdown into JSON via Gemini.")
-    parser.add_argument("markdown", help="Path to the DO-Spaces-Output markdown file")
-    parser.add_argument("--output-dir", default=None, help="Output directory (default: Structured-Output/)")
+    parser.add_argument("markdown", help="Path to the 02_DO-Spaces-Output markdown file")
+    parser.add_argument("--output-dir", default=None, help="Output directory (default: 03_Structured-Output/)")
     args = parser.parse_args()
 
     asyncio.run(structure_markdown(args.markdown, args.output_dir))
