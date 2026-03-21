@@ -1,14 +1,12 @@
 "use client";
 
 import { useState, useEffect, useMemo, useCallback } from "react";
-import { useRouter } from "next/navigation";
 import { Question } from "@/lib/types";
 import ScatterPlot from "@/components/ScatterPlot";
 import QuestionPanel from "@/components/QuestionPanel";
 import FilterSidebar from "@/components/FilterSidebar";
 
 export default function Home() {
-  const router = useRouter();
   const [questions, setQuestions] = useState<Question[]>([]);
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [hoveredId, setHoveredId] = useState<number | null>(null);
@@ -49,10 +47,9 @@ export default function Home() {
 
   const handleSelect = useCallback(
     (id: number) => {
-      setSelectedId(id);
-      router.push(`/q/${id}`, { scroll: false });
+      setSelectedId((prev) => (prev === id ? null : id));
     },
-    [router]
+    []
   );
 
   return (

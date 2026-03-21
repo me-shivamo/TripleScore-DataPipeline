@@ -8,6 +8,7 @@ export interface Question {
   subject: string;
   topic: string;
   chapter: string;
+  image_url?: string;
   x: number;
   y: number;
   embedding: number[];

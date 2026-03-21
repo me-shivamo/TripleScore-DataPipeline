@@ -2,6 +2,8 @@
 
 import { useRef, useEffect, useCallback } from "react";
 import { Question, SUBJECT_COLORS } from "@/lib/types";
+import { zoom as d3Zoom, zoomIdentity, ZoomTransform } from "d3-zoom";
+import { select } from "d3-selection";
 
 interface Props {
   questions: Question[];
@@ -18,6 +20,7 @@ const SELECTED_RADIUS = 10;
 export default function ScatterPlot({ questions, selectedId, onSelect, hoveredId, onHover }: Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const transformRef = useRef<ZoomTransform>(zoomIdentity);
 
   const draw = useCallback(() => {
     const canvas = canvasRef.current;
@@ -33,16 +36,19 @@ export default function ScatterPlot({ questions, selectedId, onSelect, hoveredId
 
     const w = rect.width;
     const h = rect.height;
+    const t = transformRef.current;
 
     ctx.clearRect(0, 0, w, h);
+    ctx.save();
+    ctx.translate(t.x, t.y);
+    ctx.scale(t.k, t.k);
 
-    // Draw dots
     for (const q of questions) {
       const cx = PADDING + q.x * (w - 2 * PADDING);
       const cy = PADDING + q.y * (h - 2 * PADDING);
       const isSelected = q.id === selectedId;
       const isHovered = q.id === hoveredId;
-      const r = isSelected ? SELECTED_RADIUS : isHovered ? DOT_RADIUS + 2 : DOT_RADIUS;
+      const r = (isSelected ? SELECTED_RADIUS : isHovered ? DOT_RADIUS + 2 : DOT_RADIUS) / t.k;
 
       ctx.beginPath();
       ctx.arc(cx, cy, r, 0, Math.PI * 2);
@@ -52,18 +58,20 @@ export default function ScatterPlot({ questions, selectedId, onSelect, hoveredId
 
       if (isSelected) {
         ctx.strokeStyle = "#fff";
-        ctx.lineWidth = 2;
+        ctx.lineWidth = 2 / t.k;
         ctx.stroke();
       }
       ctx.globalAlpha = 1;
     }
 
-    // Tooltip for hovered
+    ctx.restore();
+
+    // Tooltip in screen space
     if (hoveredId) {
       const q = questions.find((q) => q.id === hoveredId);
       if (q) {
-        const cx = PADDING + q.x * (w - 2 * PADDING);
-        const cy = PADDING + q.y * (h - 2 * PADDING);
+        const cx = t.applyX(PADDING + q.x * (w - 2 * PADDING));
+        const cy = t.applyY(PADDING + q.y * (h - 2 * PADDING));
         const label = `Q${q.id}: ${q.subject} - ${q.topic}`;
         ctx.font = "12px Inter, sans-serif";
         const metrics = ctx.measureText(label);
@@ -90,10 +98,27 @@ export default function ScatterPlot({ questions, selectedId, onSelect, hoveredId
   }, [questions, selectedId, hoveredId]);
 
   useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const zoomBehavior = d3Zoom<HTMLCanvasElement, unknown>()
+      .scaleExtent([0.3, 20])
+      .on("zoom", (event) => {
+        transformRef.current = event.transform;
+        draw();
+      });
+
+    const sel = select(canvas);
+    sel.call(zoomBehavior);
+    sel.on("dblclick.zoom", null);
+
     draw();
     const onResize = () => draw();
     window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("resize", onResize);
+      sel.on(".zoom", null);
+    };
   }, [draw]);
 
   const getQuestionAt = (e: React.MouseEvent<HTMLCanvasElement>) => {
@@ -104,13 +129,14 @@ export default function ScatterPlot({ questions, selectedId, onSelect, hoveredId
     const my = e.clientY - rect.top;
     const w = rect.width;
     const h = rect.height;
+    const t = transformRef.current;
 
     let closest: Question | null = null;
     let closestDist = Infinity;
 
     for (const q of questions) {
-      const cx = PADDING + q.x * (w - 2 * PADDING);
-      const cy = PADDING + q.y * (h - 2 * PADDING);
+      const cx = t.applyX(PADDING + q.x * (w - 2 * PADDING));
+      const cy = t.applyY(PADDING + q.y * (h - 2 * PADDING));
       const dist = Math.sqrt((mx - cx) ** 2 + (my - cy) ** 2);
       if (dist < 20 && dist < closestDist) {
         closest = q;
@@ -143,6 +169,9 @@ export default function ScatterPlot({ questions, selectedId, onSelect, hoveredId
             <span className="text-gray-300">{subject}</span>
           </div>
         ))}
+      </div>
+      <div className="absolute bottom-3 left-3 text-[10px] text-gray-600">
+        Scroll to zoom · Drag to pan
       </div>
     </div>
   );

@@ -68,7 +68,7 @@ def embed_file(input_file, output_dir, genai):
         try:
             text = build_embedding_text(question)
             result = genai.embed_content(
-                model="models/gemini-embedding-001",
+                model="models/gemini-embedding-2-preview",
                 content=text,
                 task_type="RETRIEVAL_DOCUMENT",
             )
