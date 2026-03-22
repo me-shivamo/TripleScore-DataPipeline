@@ -89,7 +89,10 @@ async def upload_images(images_dir, folder="TripleScore"):
         return url_map
 
     space_name = os.getenv("DO_SPACES_NAME")
+    region = os.getenv("DO_SPACES_REGION")
     cdn_endpoint = os.getenv("DO_SPACES_CDN_ENDPOINT", "").rstrip("/")
+    if not cdn_endpoint:
+        cdn_endpoint = f"https://{space_name}.{region}.digitaloceanspaces.com"
 
     print(f"Uploading {len(image_files)} image(s) to DigitalOcean Spaces...", flush=True)
 
@@ -111,7 +114,7 @@ async def upload_images(images_dir, folder="TripleScore"):
                 str(image_path),
                 space_name,
                 object_key,
-                ExtraArgs={"ACL": "public-read", "ContentType": content_type},
+                ExtraArgs={"ContentType": content_type},
             )
 
             cdn_url = f"{cdn_endpoint}/{object_key}"
@@ -121,6 +124,8 @@ async def upload_images(images_dir, folder="TripleScore"):
             print(f"  Failed to upload {image_path.name}: {e}", flush=True)
 
     print(f"Uploaded {len(url_map)}/{len(image_files)} image(s).", flush=True)
+    if not url_map and image_files:
+        print("WARNING: No images were uploaded successfully. Markdown CDN links will not be updated.", flush=True)
     return url_map
 
 
@@ -170,6 +175,8 @@ async def upload_and_rewrite(md_path, spaces_folder=None, output_dir=None):
     markdown_text = md_path.read_text(encoding="utf-8")
     if url_map:
         markdown_text = rewrite_markdown_with_cdn_urls(markdown_text, url_map)
+    else:
+        print("WARNING: url_map is empty — markdown written without CDN URL substitution.", flush=True)
 
     output_dir.mkdir(parents=True, exist_ok=True)
     output_file = output_dir / md_path.name
