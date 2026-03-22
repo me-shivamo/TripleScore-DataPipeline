@@ -76,7 +76,7 @@ $$\text{Required sum} = {}^{1001}C_{499} + {}^{1001}C_{500} = {}^{1002}C_{500}$$
 
 **Ans. (2)**
 
-![A diagram showing a parabola y^2 = 8x opening to the right. The focus A is at (2, 0) on the x-axis. A line segment BC is a chord of the parabola, with point B at (2t1^2, 4t1) and point C at (2t2^2, 4t2). The triangle ABC is formed by connecting the focus A to points B and C.](images/34537007f2d3f7f8b6d11709d1768963_img.jpg)
+![A diagram showing a parabola y^2 = 8x opening to the right. The focus A is at (2, 0) on the x-axis. A line segment BC is a chord of the parabola, with point B at (2t1^2, 4t1) and point C at (2t2^2, 4t2). The triangle ABC is formed by connecting the focus A to points B and C.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/34537007f2d3f7f8b6d11709d1768963_img.jpg)
 
 **Sol.**
 
@@ -240,7 +240,7 @@ Sol. **Statement 1:**  $f(x) = \frac{x}{1+|x|}$
 
 $$f(x) = \begin{cases} \frac{x}{1+x} & x \geq 0 \\ \frac{x}{1-x} & x < 0 \end{cases}$$
 
-![Graph of the function f(x) = x/(1+|x|). The graph is an S-shaped curve passing through the origin (0,0). It has horizontal asymptotes at y=1 and y=-1, represented by dashed lines. The curve is strictly increasing and passes the horizontal line test, indicating it is one-one.](images/5d9aa54cc7489433f94ed47c7689d94b_img.jpg)
+![Graph of the function f(x) = x/(1+|x|). The graph is an S-shaped curve passing through the origin (0,0). It has horizontal asymptotes at y=1 and y=-1, represented by dashed lines. The curve is strictly increasing and passes the horizontal line test, indicating it is one-one.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/5d9aa54cc7489433f94ed47c7689d94b_img.jpg)
 
 Graph of the function f(x) = x/(1+|x|). The graph is an S-shaped curve passing through the origin (0,0). It has horizontal asymptotes at y=1 and y=-1, represented by dashed lines. The curve is strictly increasing and passes the horizontal line test, indicating it is one-one.
 
@@ -267,7 +267,7 @@ Ans. (2)
 
 Sol.
 
-![Diagram of an ellipse centered at C(1, -2). The center C, focus F1(3, -2), and vertex A1(5, -2) are all on the horizontal line y = -2. The distance from the center to the focus is CF1 = 2, and the distance from the center to the vertex is CA1 = 4. The ellipse is elongated horizontally.](images/9e214525d1eb12d31be55591de365318_img.jpg)
+![Diagram of an ellipse centered at C(1, -2). The center C, focus F1(3, -2), and vertex A1(5, -2) are all on the horizontal line y = -2. The distance from the center to the focus is CF1 = 2, and the distance from the center to the vertex is CA1 = 4. The ellipse is elongated horizontally.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/9e214525d1eb12d31be55591de365318_img.jpg)
 
 Diagram of an ellipse centered at C(1, -2). The center C, focus F1(3, -2), and vertex A1(5, -2) are all on the horizontal line y = -2. The distance from the center to the focus is CF1 = 2, and the distance from the center to the vertex is CA1 = 4. The ellipse is elongated horizontally.
 
@@ -319,7 +319,7 @@ $$24(e + L) = 24 \left[ \frac{5}{3} + \frac{32}{3} \right] = 8 \times 37 = 296$$
 
 Ans. (3)
 
-![Graph showing two parabolas, P1 and P2, intersecting at points (-3, 36), (0, 27), and (3, 36). The region between them is shaded. The origin is labeled O.](images/421acfd16f1ef11ac6092823b8ba615c_img.jpg)
+![Graph showing two parabolas, P1 and P2, intersecting at points (-3, 36), (0, 27), and (3, 36). The region between them is shaded. The origin is labeled O.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/421acfd16f1ef11ac6092823b8ba615c_img.jpg)
 
 Sol.
 
@@ -458,7 +458,7 @@ Required sum  $= -2 + 0 + 4 = 2$
 
 **Ans. (3)**
 
-![Diagram for Question 16: A 3D coordinate system showing point P(3, 2, 1) and a line passing through (1, 0, 1) with direction vector <1, 2, 1>. A perpendicular line segment PN is drawn from P to the line, meeting it at point N. The image point Q is shown on the extension of PN such that N is the midpoint of PQ.](images/67b83c4adaaa4de02d367168308deb2a_img.jpg)
+![Diagram for Question 16: A 3D coordinate system showing point P(3, 2, 1) and a line passing through (1, 0, 1) with direction vector <1, 2, 1>. A perpendicular line segment PN is drawn from P to the line, meeting it at point N. The image point Q is shown on the extension of PN such that N is the midpoint of PQ.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/67b83c4adaaa4de02d367168308deb2a_img.jpg)
 
 Diagram for Question 16: A 3D coordinate system showing point P(3, 2, 1) and a line passing through (1, 0, 1) with direction vector <1, 2, 1>. A perpendicular line segment PN is drawn from P to the line, meeting it at point N. The image point Q is shown on the extension of PN such that N is the midpoint of PQ.
 
@@ -470,7 +470,7 @@ drs of PN  $= \langle r - 2, 2r - 2, r \rangle$
  $\therefore N \equiv (2, 2, 2)$   
  $\Rightarrow Q \equiv (1, 2, 3)$
 
-![Diagram for Question 16 solution: Shows point Q(1, 2, 3) and a line passing through A(9, 9, 5) with direction vector <3, 2, -2>. A perpendicular line segment QM is drawn from Q to the line, meeting it at point M. The distance AQ is labeled as sqrt(117) and AM is labeled as 2*sqrt(17).](images/90d90676a30e927a818ead3711862453_img.jpg)
+![Diagram for Question 16 solution: Shows point Q(1, 2, 3) and a line passing through A(9, 9, 5) with direction vector <3, 2, -2>. A perpendicular line segment QM is drawn from Q to the line, meeting it at point M. The distance AQ is labeled as sqrt(117) and AM is labeled as 2*sqrt(17).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/90d90676a30e927a818ead3711862453_img.jpg)
 
 Diagram for Question 16 solution: Shows point Q(1, 2, 3) and a line passing through A(9, 9, 5) with direction vector <3, 2, -2>. A perpendicular line segment QM is drawn from Q to the line, meeting it at point M. The distance AQ is labeled as sqrt(117) and AM is labeled as 2\*sqrt(17).
 
@@ -491,7 +491,7 @@ $$\therefore QM = \sqrt{117 - 68} = \sqrt{49} = 7$$
 
 **Sol.**  $\cos 2\theta = \frac{3-1-3}{\sqrt{11} \cdot \sqrt{11}} = -\frac{1}{11}$
 
-![Diagram for Question 17: A triangle ABC with vertex A at the top. Point P is in the plane of the triangle. A line segment AP is drawn, and its length is labeled as sqrt(5)/2. The angle between AB and AC is labeled as 2*theta. The length of AB is labeled as sqrt(11).](images/e40ba44ba095240702ed2099e01d23ce_img.jpg)
+![Diagram for Question 17: A triangle ABC with vertex A at the top. Point P is in the plane of the triangle. A line segment AP is drawn, and its length is labeled as sqrt(5)/2. The angle between AB and AC is labeled as 2*theta. The length of AB is labeled as sqrt(11).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/e40ba44ba095240702ed2099e01d23ce_img.jpg)
 
 Diagram for Question 17: A triangle ABC with vertex A at the top. Point P is in the plane of the triangle. A line segment AP is drawn, and its length is labeled as sqrt(5)/2. The angle between AB and AC is labeled as 2\*theta. The length of AB is labeled as sqrt(11).
 
@@ -520,7 +520,7 @@ $$|z - 2| + |z + 2| = 5 \Rightarrow \frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$$
 
 $$\Rightarrow \frac{4x^2}{25} + \frac{4y^2}{9} = 1$$
 
-![A graph showing an ellipse centered at (2,0) on the x-axis. The ellipse passes through points A(z1) at (6,0) and B(z2) at (-5/2, 0). The center is marked at (2,0). The x-axis is labeled with values -5/2, 0, 2, 6. The y-axis is also shown.](images/d864789b0d8384da1d22fd6a5d76bbdf_img.jpg)
+![A graph showing an ellipse centered at (2,0) on the x-axis. The ellipse passes through points A(z1) at (6,0) and B(z2) at (-5/2, 0). The center is marked at (2,0). The x-axis is labeled with values -5/2, 0, 2, 6. The y-axis is also shown.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/d864789b0d8384da1d22fd6a5d76bbdf_img.jpg)
 
 A graph showing an ellipse centered at (2,0) on the x-axis. The ellipse passes through points A(z1) at (6,0) and B(z2) at (-5/2, 0). The center is marked at (2,0). The x-axis is labeled with values -5/2, 0, 2, 6. The y-axis is also shown.
 
@@ -697,7 +697,7 @@ Sol.  $\hat{B} = \hat{C} \times \hat{E} = \hat{k} \times \hat{j} = -\hat{i}$
 
 28. A biconvex lens is formed by using two thin planoconvex lenses, as shown in the figure. The refractive index and radius of curved surfaces are also mentioned in figure. When an object is placed on the left side of lens at a distance of 30 cm from the biconvex lens, the magnification of the image will be :
 
-![Diagram of a biconvex lens formed by two thin planoconvex lenses. The left surface has a refractive index μ = 1.5 and a radius of curvature of 15 cm. The right surface has a refractive index μ = 1.2 and a radius of curvature of 12 cm. The lens is shown with a vertical dashed line representing the optical axis.](images/9e80d0382f6981fb29e6d8d55dbea732_img.jpg)
+![Diagram of a biconvex lens formed by two thin planoconvex lenses. The left surface has a refractive index μ = 1.5 and a radius of curvature of 15 cm. The right surface has a refractive index μ = 1.2 and a radius of curvature of 12 cm. The lens is shown with a vertical dashed line representing the optical axis.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/9e80d0382f6981fb29e6d8d55dbea732_img.jpg)
 
 Diagram of a biconvex lens formed by two thin planoconvex lenses. The left surface has a refractive index μ = 1.5 and a radius of curvature of 15 cm. The right surface has a refractive index μ = 1.2 and a radius of curvature of 12 cm. The lens is shown with a vertical dashed line representing the optical axis.
 
@@ -726,7 +726,7 @@ Sol.  $\lambda = \frac{k_B T}{\sqrt{2} \pi \sigma^2 P}$
 
 30. Two p-n junction diodes  $D_1$  and  $D_2$  are connected as shown in figure. A and B are input signals and C is the output. The given circuit will function as a \_\_\_\_\_.
 
-![Circuit diagram for Question 30. Two diodes, D1 and D2, are connected in parallel. The anode of D1 is connected to input A, and the anode of D2 is connected to input B. The cathodes of both diodes are connected together at a common node, which is then connected to the output C. A resistor R is connected between this common node and a DC voltage source V_dc = 5V.](images/5b4e774d63e0e0ed73801a9247755e5f_img.jpg)
+![Circuit diagram for Question 30. Two diodes, D1 and D2, are connected in parallel. The anode of D1 is connected to input A, and the anode of D2 is connected to input B. The cathodes of both diodes are connected together at a common node, which is then connected to the output C. A resistor R is connected between this common node and a DC voltage source V_dc = 5V.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/5b4e774d63e0e0ed73801a9247755e5f_img.jpg)
 
 Circuit diagram for Question 30. Two diodes, D1 and D2, are connected in parallel. The anode of D1 is connected to input A, and the anode of D2 is connected to input B. The cathodes of both diodes are connected together at a common node, which is then connected to the output C. A resistor R is connected between this common node and a DC voltage source V\_dc = 5V.
 
@@ -741,7 +741,7 @@ Hence the Gate will be AND Gate
 
 31. A wheatstone bridge is initially at room temperature and all arms of the bridge have same value of resistances ( $R_1 = R_2 = R_3 = R_4$ ). When  $R_3$  resistance is heated to some temperature, its resistance value has gone up by 10%. The potential difference ( $V_a - V_b$ ) (after  $R_3$  is heated) is \_\_\_\_\_ V.
 
-![Circuit diagram for Question 31. A Wheatstone bridge with four resistors R1, R2, R3, and R4. R1 is between nodes A and C, R2 is between A and D, R3 is between C and B, and R4 is between D and B. A 40V DC source is connected across nodes C and D. Node A is connected to the negative terminal and node B to the positive terminal of the source.](images/8e14350b4b669119a3bdfca7869110ca_img.jpg)
+![Circuit diagram for Question 31. A Wheatstone bridge with four resistors R1, R2, R3, and R4. R1 is between nodes A and C, R2 is between A and D, R3 is between C and B, and R4 is between D and B. A 40V DC source is connected across nodes C and D. Node A is connected to the negative terminal and node B to the positive terminal of the source.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/8e14350b4b669119a3bdfca7869110ca_img.jpg)
 
 Circuit diagram for Question 31. A Wheatstone bridge with four resistors R1, R2, R3, and R4. R1 is between nodes A and C, R2 is between A and D, R3 is between C and B, and R4 is between D and B. A 40V DC source is connected across nodes C and D. Node A is connected to the negative terminal and node B to the positive terminal of the source.
 
@@ -751,7 +751,7 @@ Ans. (3)
 
 Sol.
 
-![Circuit diagram for Question 31 with values. R1 = R, R2 = R, R3 = 1.1R, R4 = R. The 40V source is connected across C and D. Currents i1 and i2 are shown entering node D from R4 and R2 respectively.](images/b3c108e7145f2017957569d06ea359cb_img.jpg)
+![Circuit diagram for Question 31 with values. R1 = R, R2 = R, R3 = 1.1R, R4 = R. The 40V source is connected across C and D. Currents i1 and i2 are shown entering node D from R4 and R2 respectively.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/b3c108e7145f2017957569d06ea359cb_img.jpg)
 
 Circuit diagram for Question 31 with values. R1 = R, R2 = R, R3 = 1.1R, R4 = R. The 40V source is connected across C and D. Currents i1 and i2 are shown entering node D from R4 and R2 respectively.
 
@@ -913,7 +913,7 @@ Ans. (1)
 
 Sol. Solid cylinder
 
-![Graph of Magnetic Field (B) versus radial distance (r) for a solid cylinder. The graph shows a linear increase from the origin to a peak value B_max at the surface, followed by a non-linear decrease for r > surface radius.](images/8b79f5ec940d107c246612c2a2ec519f_img.jpg)
+![Graph of Magnetic Field (B) versus radial distance (r) for a solid cylinder. The graph shows a linear increase from the origin to a peak value B_max at the surface, followed by a non-linear decrease for r > surface radius.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/8b79f5ec940d107c246612c2a2ec519f_img.jpg)
 
 Graph of Magnetic Field (B) versus radial distance (r) for a solid cylinder. The graph shows a linear increase from the origin to a peak value B\_max at the surface, followed by a non-linear decrease for r > surface radius.
 
@@ -923,7 +923,7 @@ $B_{\min}$  at Axis
 
 40. A small block of mass  $m$  slides down from the top of a frictionless inclined surface, while the inclined plane is moving towards left with constant acceleration  $a_0$ . The angle between the inclined plane and ground is  $\theta$  and its base length is  $L$ . Assuming that initially the small block is at the top of the inclined plane, the time it takes to reach the lowest point of the inclined plane is \_\_\_\_\_.
 
-![Diagram of an inclined plane with angle theta and base length L. The plane is moving to the left with acceleration a_0. A small block of mass m is at the top of the incline.](images/832a3f95cc4469630aca33d36af8602c_img.jpg)
+![Diagram of an inclined plane with angle theta and base length L. The plane is moving to the left with acceleration a_0. A small block of mass m is at the top of the incline.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/832a3f95cc4469630aca33d36af8602c_img.jpg)
 
 Diagram of an inclined plane with angle theta and base length L. The plane is moving to the left with acceleration a\_0. A small block of mass m is at the top of the incline.
 
@@ -934,7 +934,7 @@ Diagram of an inclined plane with angle theta and base length L. The plane is mo
 
 Ans. (2)
 
-![Free body diagram of the block on the inclined plane. Forces shown are: Normal force (N) perpendicular to the plane, gravitational force (mg) vertically downwards, pseudo force (ma_0 cos theta) perpendicular to the plane, and pseudo force (ma_0 sin theta) parallel to the plane. The angle theta is also indicated.](images/7252177c6edb66ce69242cc4a8a9d157_img.jpg)
+![Free body diagram of the block on the inclined plane. Forces shown are: Normal force (N) perpendicular to the plane, gravitational force (mg) vertically downwards, pseudo force (ma_0 cos theta) perpendicular to the plane, and pseudo force (ma_0 sin theta) parallel to the plane. The angle theta is also indicated.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/7252177c6edb66ce69242cc4a8a9d157_img.jpg)
 
 Free body diagram of the block on the inclined plane. Forces shown are: Normal force (N) perpendicular to the plane, gravitational force (mg) vertically downwards, pseudo force (ma\_0 cos theta) perpendicular to the plane, and pseudo force (ma\_0 sin theta) parallel to the plane. The angle theta is also indicated.
 
@@ -975,7 +975,7 @@ Sol. Theoretical
 
 42. As shown in the figure, a spring is kept in a stretched position with some extension by holding the masses 1 kg and 0.2 kg with a separation more than spring natural length and are released. Assuming the horizontal surface to be frictionless, the angular frequency (in SI unit) of the system is :
 
-![Diagram of a spring-mass system. A spring with constant k = 150 N/m is attached to two masses, 1 kg and 200 g, on a frictionless horizontal surface. The masses are being held in a stretched position.](images/78f163db583eb0c6d013e6f8ffe6d7d8_img.jpg)
+![Diagram of a spring-mass system. A spring with constant k = 150 N/m is attached to two masses, 1 kg and 200 g, on a frictionless horizontal surface. The masses are being held in a stretched position.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/78f163db583eb0c6d013e6f8ffe6d7d8_img.jpg)
 
 Diagram of a spring-mass system. A spring with constant k = 150 N/m is attached to two masses, 1 kg and 200 g, on a frictionless horizontal surface. The masses are being held in a stretched position.
 
@@ -1082,7 +1082,7 @@ Sol.  $|f_A - f_B| = 4$
 
 47. A thermodynamic system is taken through the cyclic process ABC as shown in the figure. The total work done by the system during the cycle ABC is \_\_\_\_\_ J.
 
-![A P-V diagram showing a cyclic process ABC. The vertical axis is Pressure P in Pascals (Pa) with values 100 and 300. The horizontal axis is Volume V in cubic meters (m³) with values 2 and 5. The cycle consists of three points: A(2, 100), B(5, 300), and C(5, 100). The path is A to B (a straight line), B to C (a vertical line down), and C to A (a horizontal line left).](images/1145fc59efdc7dacc8d3c715d7ff3248_img.jpg)
+![A P-V diagram showing a cyclic process ABC. The vertical axis is Pressure P in Pascals (Pa) with values 100 and 300. The horizontal axis is Volume V in cubic meters (m³) with values 2 and 5. The cycle consists of three points: A(2, 100), B(5, 300), and C(5, 100). The path is A to B (a straight line), B to C (a vertical line down), and C to A (a horizontal line left).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/1145fc59efdc7dacc8d3c715d7ff3248_img.jpg)
 
 A P-V diagram showing a cyclic process ABC. The vertical axis is Pressure P in Pascals (Pa) with values 100 and 300. The horizontal axis is Volume V in cubic meters (m³) with values 2 and 5. The cycle consists of three points: A(2, 100), B(5, 300), and C(5, 100). The path is A to B (a straight line), B to C (a vertical line down), and C to A (a horizontal line left).
 
@@ -1119,7 +1119,7 @@ Ans. (30)
 
 Sol.
 
-![A diagram of a flywheel with mass 3 kg and radius 5 m. A string is wound around its circumference, and a 3 kg mass is attached to the loose end. The mass is shown hanging 3 m below the wheel.](images/fa6575a61902b4bb6fb6c11eab20e0d4_img.jpg)
+![A diagram of a flywheel with mass 3 kg and radius 5 m. A string is wound around its circumference, and a 3 kg mass is attached to the loose end. The mass is shown hanging 3 m below the wheel.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/fa6575a61902b4bb6fb6c11eab20e0d4_img.jpg)
 
 A diagram of a flywheel with mass 3 kg and radius 5 m. A string is wound around its circumference, and a 3 kg mass is attached to the loose end. The mass is shown hanging 3 m below the wheel.
 
@@ -1192,7 +1192,7 @@ Most metallic = P, valence electrons = 5
 
 54. Observe the following equilibrium in a 1 L flask.
 
-![](images/d4ac7ee80ea3b0644dacf9bf310e204d_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/d4ac7ee80ea3b0644dacf9bf310e204d_img.jpg)
 
 $$\text{A(g)} \rightleftharpoons \text{B(g)}$$
 
@@ -1213,7 +1213,7 @@ $$K_{\text{eq}} = \frac{[\text{B}]_{\text{eq}}}{[\text{A}]_{\text{eq}}} = \frac{
 
 Now 0.1 mole of A is added so reaction will move in forward direction.
 
-![](images/ca99a3aff21816ac6a0f2fbcdde8409a_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/ca99a3aff21816ac6a0f2fbcdde8409a_img.jpg)
 
 $$\text{A} \rightleftharpoons \text{B}$$
 
@@ -1267,9 +1267,9 @@ Sol. Reaction given Alcohol
 
 - (A)  $\text{CH}_4 + \text{O}_2 \xrightarrow[\Delta]{\text{Mo}_2\text{O}_3} \text{HCHO}$   
  (B)  $2\text{CH}_3\text{CH}_3 + 3\text{O}_2 \xrightarrow[\Delta]{(\text{CH}_3\text{COO})_2\text{Mn}} \text{CH}_3\text{COOH}$   
- (C) ![Isobutane structure](images/eb3b294aa88bb677c42039fbc745bfef_img.jpg)  $\xrightarrow{\text{KMnO}_4}$  ![tert-butanol structure](images/604e925857627503256319dd3d7da323_img.jpg)  
+ (C) ![Isobutane structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/eb3b294aa88bb677c42039fbc745bfef_img.jpg)  $\xrightarrow{\text{KMnO}_4}$  ![tert-butanol structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/604e925857627503256319dd3d7da323_img.jpg)  
  (D)  $2\text{CH}_4 + \text{O}_2 \xrightarrow[523\text{K}, 100\text{ atm.}]{\text{Cu}} \text{CH}_3-\text{OH}$   
- (E) ![2-butene structure](images/0b9ba2991bebe8a661b06c77af885a78_img.jpg)  $\xrightarrow{\text{KMnO}_4/\text{H}^+} \text{CH}_3\text{COOH}$
+ (E) ![2-butene structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/0b9ba2991bebe8a661b06c77af885a78_img.jpg)  $\xrightarrow{\text{KMnO}_4/\text{H}^+} \text{CH}_3\text{COOH}$
 
 And.  $\rightarrow$  (3) C, D
 
@@ -1302,14 +1302,14 @@ Permanganate ion  $\rightarrow \text{MnO}_4^-$
 
 58. Which of the following reaction is NOT correctly represented ?
 
-- (1) ![Methylcyclohexane structure](images/198487c2305d7a5bff485546f8bfdeb9_img.jpg)  $\xrightarrow{\text{Br}_2, h\nu}$  ![Bromomethylcyclohexane structure](images/56c5eee191ee80b3df41587dd5d99fc2_img.jpg)  
- (2) ![Anilinium chloride structure](images/c994803e63eb990edcaae273aa301526_img.jpg)  $\xrightarrow{\text{Cu}_2\text{Br}_2/\text{HBr}}$  ![Bromobenzene structure](images/4e3ada6cfa8fb4cde55dc128e6df126b_img.jpg)  
- (3) ![Toluene structure](images/492f0674a2ddee538d28fb8044cbeb2c_img.jpg)  $\xrightarrow{\text{Br}_2, h\nu}$  ![Bromomethylbenzene structure](images/d78a435a1c01e076938ec468cdbcf53e_img.jpg)  
- (4) ![Toluene structure](images/8e873b2721f1f320bcef3d48ab64c7d9_img.jpg)  $\xrightarrow[\text{dark}]{\text{Br}_2, \text{Fe}} \text{Ortho and para Bromotoluenes}$
+- (1) ![Methylcyclohexane structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/198487c2305d7a5bff485546f8bfdeb9_img.jpg)  $\xrightarrow{\text{Br}_2, h\nu}$  ![Bromomethylcyclohexane structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/56c5eee191ee80b3df41587dd5d99fc2_img.jpg)  
+ (2) ![Anilinium chloride structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/c994803e63eb990edcaae273aa301526_img.jpg)  $\xrightarrow{\text{Cu}_2\text{Br}_2/\text{HBr}}$  ![Bromobenzene structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/4e3ada6cfa8fb4cde55dc128e6df126b_img.jpg)  
+ (3) ![Toluene structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/492f0674a2ddee538d28fb8044cbeb2c_img.jpg)  $\xrightarrow{\text{Br}_2, h\nu}$  ![Bromomethylbenzene structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/d78a435a1c01e076938ec468cdbcf53e_img.jpg)  
+ (4) ![Toluene structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/8e873b2721f1f320bcef3d48ab64c7d9_img.jpg)  $\xrightarrow[\text{dark}]{\text{Br}_2, \text{Fe}} \text{Ortho and para Bromotoluenes}$
 
 Ans. (1)
 
-![Reaction of methylcyclohexane with Br2 under hv to form bromomethylcyclohexane Reaction of aniline with Cu2Br2/HB to form bromobenzene Reaction of toluene with Br2 under hv to form benzyl bromide Reaction of toluene with Br2 in the dark with Fe to form ortho-bromotoluene and para-bromotoluene](images/001a8189b29470cabf6136fabae629ad_img.jpg)
+![Reaction of methylcyclohexane with Br2 under hv to form bromomethylcyclohexane Reaction of aniline with Cu2Br2/HB to form bromobenzene Reaction of toluene with Br2 under hv to form benzyl bromide Reaction of toluene with Br2 in the dark with Fe to form ortho-bromotoluene and para-bromotoluene](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/001a8189b29470cabf6136fabae629ad_img.jpg)
 
 Sol. (1)
 
@@ -1323,7 +1323,7 @@ Reaction of methylcyclohexane with Br2 under hv to form bromomethylcyclohexane R
 
 Major product of reaction (1) will be
 
-![Reaction of methylcyclohexane with Br2 under hv to form 1-bromomethylcyclohexane](images/bd42abd7fd73485b511ec2573d613933_img.jpg)
+![Reaction of methylcyclohexane with Br2 under hv to form 1-bromomethylcyclohexane](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/bd42abd7fd73485b511ec2573d613933_img.jpg)
 
 Reaction of methylcyclohexane with Br2 under hv to form 1-bromomethylcyclohexane
 
@@ -1354,7 +1354,7 @@ Ans. (2) is correct.
 
 60. The cyclic cations having the same number of hyperconjugation are :
 
-![Cyclic cation structure A Cyclic cation structure B Cyclic cation structure C Cyclic cation structure D](images/223533ae382ec172d80b3a9d574dfe8f_img.jpg)
+![Cyclic cation structure A Cyclic cation structure B Cyclic cation structure C Cyclic cation structure D](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/223533ae382ec172d80b3a9d574dfe8f_img.jpg)
 
 A.
 
@@ -1375,7 +1375,7 @@ Choose the **correct** answer from the options given below :
 
 Ans. (1)
 
-![Cyclic cation structure A Cyclic cation structure B Cyclic cation structure C Cyclic cation structure D](images/a7734ec234fab6c62664a9ff257bb70a_img.jpg)
+![Cyclic cation structure A Cyclic cation structure B Cyclic cation structure C Cyclic cation structure D](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/a7734ec234fab6c62664a9ff257bb70a_img.jpg)
 
 Sol. (A)  $6\alpha\text{H}$
 
@@ -1391,25 +1391,25 @@ Ans. – (1) A & C
 
 61. Structures of four disaccharides are given below. Among the given disaccharides, the non-reducing sugar is :
 
-![Structure of sucrose: A glucose unit (pyranose) linked via an alpha-1,2-glycosidic bond to a fructose unit (furanose). The linkage is between the anomeric carbons of both units, making it a non-reducing sugar.](images/dc6b7f4585ddbce6f8d5704927209dca_img.jpg)
+![Structure of sucrose: A glucose unit (pyranose) linked via an alpha-1,2-glycosidic bond to a fructose unit (furanose). The linkage is between the anomeric carbons of both units, making it a non-reducing sugar.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/dc6b7f4585ddbce6f8d5704927209dca_img.jpg)
 
 (1)
 
 Structure of sucrose: A glucose unit (pyranose) linked via an alpha-1,2-glycosidic bond to a fructose unit (furanose). The linkage is between the anomeric carbons of both units, making it a non-reducing sugar.
 
-![Structure of maltose: A glucose unit linked via an alpha-1,4-glycosidic bond to another glucose unit. The right glucose unit has a free anomeric carbon, making it a reducing sugar.](images/ce3bab84f36009bcc14fb73b577f3edc_img.jpg)
+![Structure of maltose: A glucose unit linked via an alpha-1,4-glycosidic bond to another glucose unit. The right glucose unit has a free anomeric carbon, making it a reducing sugar.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/ce3bab84f36009bcc14fb73b577f3edc_img.jpg)
 
 (2)
 
 Structure of maltose: A glucose unit linked via an alpha-1,4-glycosidic bond to another glucose unit. The right glucose unit has a free anomeric carbon, making it a reducing sugar.
 
-![Structure of cellobiose: Two glucose units linked via a beta-1,4-glycosidic bond. The right glucose unit has a free anomeric carbon, making it a reducing sugar.](images/02641f47658d23cca80880ff77d5122e_img.jpg)
+![Structure of cellobiose: Two glucose units linked via a beta-1,4-glycosidic bond. The right glucose unit has a free anomeric carbon, making it a reducing sugar.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/02641f47658d23cca80880ff77d5122e_img.jpg)
 
 (3)
 
 Structure of cellobiose: Two glucose units linked via a beta-1,4-glycosidic bond. The right glucose unit has a free anomeric carbon, making it a reducing sugar.
 
-![Structure of lactose: A galactose unit linked via a beta-1,4-glycosidic bond to a glucose unit. The right glucose unit has a free anomeric carbon, making it a reducing sugar.](images/ca8f3c3de04012ba85c1310504f46346_img.jpg)
+![Structure of lactose: A galactose unit linked via a beta-1,4-glycosidic bond to a glucose unit. The right glucose unit has a free anomeric carbon, making it a reducing sugar.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/ca8f3c3de04012ba85c1310504f46346_img.jpg)
 
 (4)
 
@@ -1421,7 +1421,7 @@ Sol. Structure (1) given is of sucrose which is non reducing.
 
 For non reducing sugar compound should have acetal linkage not hemi acetal linkage.
 
-![General structure of an acetal: A central carbon atom bonded to two -OR groups and two other groups (represented by lines).](images/64c3498c8d6a24f8ae536f534944dfca_img.jpg)
+![General structure of an acetal: A central carbon atom bonded to two -OR groups and two other groups (represented by lines).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/64c3498c8d6a24f8ae536f534944dfca_img.jpg)
 
 General structure of an acetal: A central carbon atom bonded to two -OR groups and two other groups (represented by lines).
 
@@ -1464,35 +1464,35 @@ Ans. (3)
 
 Sol.
 
-![Reaction scheme: Isopropylamine (CH3-CH(CH3)-NH2) reacts with HNO2 to form isopropyldiazonium ion (CH3-CH(CH3)-N2+). Loss of N2 gives isopropyl cation (CH3-CH(CH3)+). Reaction with H2O gives isopropanol (CH3-CH(CH3)-OH), labeled as (Y). Oxidation of (Y) gives acetone (CH3-C(=O)-CH3), labeled as (Z). Acetone is noted to give a positive iodoform test.](images/ff50e018c6d5903b2f45e87d74906b55_img.jpg)
+![Reaction scheme: Isopropylamine (CH3-CH(CH3)-NH2) reacts with HNO2 to form isopropyldiazonium ion (CH3-CH(CH3)-N2+). Loss of N2 gives isopropyl cation (CH3-CH(CH3)+). Reaction with H2O gives isopropanol (CH3-CH(CH3)-OH), labeled as (Y). Oxidation of (Y) gives acetone (CH3-C(=O)-CH3), labeled as (Z). Acetone is noted to give a positive iodoform test.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/ff50e018c6d5903b2f45e87d74906b55_img.jpg)
 
 Reaction scheme: Isopropylamine (CH3-CH(CH3)-NH2) reacts with HNO2 to form isopropyldiazonium ion (CH3-CH(CH3)-N2+). Loss of N2 gives isopropyl cation (CH3-CH(CH3)+). Reaction with H2O gives isopropanol (CH3-CH(CH3)-OH), labeled as (Y). Oxidation of (Y) gives acetone (CH3-C(=O)-CH3), labeled as (Z). Acetone is noted to give a positive iodoform test.
 
 
 
-![](images/25dffdbbc548992c1797e85015cb9b96_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/25dffdbbc548992c1797e85015cb9b96_img.jpg)
 
 Sol.  $\text{Na}_2\text{B}_4\text{O}_7 \xrightarrow{\Delta} (2\text{NaBO}_2) + \text{B}_2\text{O}_3$   
 (X)
 
-![](images/c299914a19c013ae6c0be2ec6dfdf67d_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/c299914a19c013ae6c0be2ec6dfdf67d_img.jpg)
 
 $\text{CuSO}_4 + \text{B}_2\text{O}_3 \xrightarrow[\text{Non-Luminous flame}]{\Delta} \overset{+2}{\text{Cu}(\text{BO}_2)_2} + \text{SO}_3$   
 (Blue bead) (Z)
 
-![](images/e4bee3a71f916ebce44dad553727127b_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/e4bee3a71f916ebce44dad553727127b_img.jpg)
 
 $2\text{Cu}(\text{BO}_2)_2 + 2\text{NaBO}_2 + \text{C} \xrightarrow{\Delta} \text{Cu}_2\text{O} + 2\text{Na}_2\text{B}_4\text{O}_7 + \text{CO}_2$   
 Luminous Flame
 
-![](images/63b3b342636858d9975b1a434add0d1b_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/63b3b342636858d9975b1a434add0d1b_img.jpg)
 
 $2\overset{+1}{\text{Cu}}\text{BO}_2 + \text{Na}_2\text{B}_4\text{O}_7 + \text{CO}_2$   
 Colorless (Q)
 
 68. For the given reaction;
 
-![](images/50d66f553b03c11a639556067e3afdda_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/50d66f553b03c11a639556067e3afdda_img.jpg)
 
 $\text{CaCO}_3 + 2\text{HCl} \rightarrow \text{CaCl}_2 + \text{H}_2\text{O} + \text{CO}_2$
 
@@ -1517,7 +1517,7 @@ $$\text{Wt. of HCl} = 339 \times \frac{38.55}{100} = 130.68 \text{ g}$$
 
 (LR)
 
-![](images/27b9d60b1d6f660d5517ed167f0b614e_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/27b9d60b1d6f660d5517ed167f0b614e_img.jpg)
 
 $\text{CaCO}_3 + 2\text{HCl} \rightarrow \text{CaCl}_2 + \text{H}_2\text{O} + \text{CO}_2$
 
@@ -1540,15 +1540,15 @@ Ans. (4)
 
 Sol.  $\text{Mn}^{2+} 3\text{d}^5 \text{ n} = 5$
 
-![](images/cf1ad8bb4774d4d398587d988eb0ec5c_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/cf1ad8bb4774d4d398587d988eb0ec5c_img.jpg)
 
 $\text{Cu}^{2+} 3\text{d}^9 \text{ t}_{2\text{g}}^{2,2,2} \text{ e}_\text{g}^{2,1} \text{ n} = 1$
 
-![](images/42740feac4456704eb6072e592ff0218_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/42740feac4456704eb6072e592ff0218_img.jpg)
 
 $\text{Ni}^{2+} 3\text{d}^8$  square planar  $\text{n} = 0$
 
-![](images/0b5024fd2852386fc0637cb65e9cbbba_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/0b5024fd2852386fc0637cb65e9cbbba_img.jpg)
 
 $\text{Ni}^{2+} 3\text{d}^8$  tetrahedral  $\text{e}^{2,2} \text{ t}_2^{2,1,1} \text{ n} = 2$
 
@@ -1571,7 +1571,7 @@ Ans. (3) 21.05%
 
 71. Two positively charged particles  $m_1$  and  $m_2$  have been accelerated across the same potential difference of 200 keV as shown below.
 
-![Diagram showing two positively charged particles, m1 and m2, being accelerated across a potential difference of 200 keV in a vacuum. The particles are shown moving from left to right towards a negatively charged plate. The potential difference is indicated by a double-headed arrow labeled '200 keV'.](images/c2b5dee6d038c290537219e60b820e59_img.jpg)
+![Diagram showing two positively charged particles, m1 and m2, being accelerated across a potential difference of 200 keV in a vacuum. The particles are shown moving from left to right towards a negatively charged plate. The potential difference is indicated by a double-headed arrow labeled '200 keV'.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/c2b5dee6d038c290537219e60b820e59_img.jpg)
 
 Diagram showing two positively charged particles, m1 and m2, being accelerated across a potential difference of 200 keV in a vacuum. The particles are shown moving from left to right towards a negatively charged plate. The potential difference is indicated by a double-headed arrow labeled '200 keV'.
 
@@ -1654,7 +1654,7 @@ $$A = 4$$
 
 74. A volume of x mL of 5 M NaHCO $_3$  solution was mixed with 10 mL of 2 M H $_2$ CO $_3$  solution to make an electrolytic buffer. If the same buffer was used in the following electrochemical cell to record a cell potential of 235.3 mV, then the value of x = \_\_\_\_\_ mL (nearest integer).
 
-![](images/a2710243fca52cc69c7f2c6e1b6c0001_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/a2710243fca52cc69c7f2c6e1b6c0001_img.jpg)
 
 $$\text{Sn(s)} \mid \text{Sn(OH)}_6^{2-} \text{ (0.5 M)} \mid \text{HSnO}_2^- \text{ (0.05 M)} \mid \text{OH}^- \mid \text{Bi}_2\text{O}_3\text{(s)} \mid \text{Bi(s)}$$
 
@@ -1666,11 +1666,11 @@ Ans. (78)
 
 **Sol.** We have considered
 
-![](images/00e0efca56d303fad7b930fdf60f82e3_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/00e0efca56d303fad7b930fdf60f82e3_img.jpg)
 
 $$E_{[\text{Sn(OH)}_6]^{2-}/\text{HSnO}_2^-}^{\circ} = -0.9 \text{ V}$$
 
-![](images/1bd25829b53b59c477c29c8cbf10dc57_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/1bd25829b53b59c477c29c8cbf10dc57_img.jpg)
 
 $$\text{Pt} | \text{HSnO}_2^-(\text{aq}), [\text{Sn(OH)}_6]^{2-}(\text{aq}), \text{OH}^-(\text{aq}) | \text{Bi}_2\text{O}_3(\text{s}) | \text{Bi}(\text{s})$$
 
@@ -1680,17 +1680,17 @@ $$E_{\text{cell}}^{\circ} = +0.9 - 0.44 = 0.46 \text{ V}$$
 
 **Oxidation Half :**
 
-![](images/aca5f8de018eef4a97f80b27c1ab66d6_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/aca5f8de018eef4a97f80b27c1ab66d6_img.jpg)
 
 $$\text{HSnO}_2^- + \text{H}_2\text{O} + 3\text{OH}^- \rightarrow [\text{Sn(OH)}_6]^{2-} + 2\text{e}^-$$
 
 **Reduction Half :**
 
-![](images/0372867c661ee6f9c71f97af407af5a6_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/0372867c661ee6f9c71f97af407af5a6_img.jpg)
 
 $$\text{Bi}_2\text{O}_3 + 3\text{H}_2\text{O} + 6\text{e}^- \rightarrow 2\text{Bi} + 6\text{OH}^-$$
 
-![](images/c3f6bf977f898dd3686479e65d4911ae_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/c3f6bf977f898dd3686479e65d4911ae_img.jpg)
 
 $$3\text{HSnO}_2^-(\text{aq}) + \text{Bi}_2\text{O}_3(\text{s}) + 6\text{H}_2\text{O} + 3\text{OH}^-(\text{aq}) \rightarrow 3[\text{Sn(OH)}_6]^{2-}(\text{aq}) + 2\text{Bi}(\text{s})$$
 
@@ -1740,6 +1740,6 @@ $$n = 2$$
 
 Complex is :  $[\text{Co(en)}_2\text{NH}_3\text{Cl}]\text{Cl}_2$
 
-![](images/87083bfd8e7a503b01bfecbd751a56e8_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Jan_28/87083bfd8e7a503b01bfecbd751a56e8_img.jpg)
 
 $$\Rightarrow \text{Co}^{3+} \quad 3\text{d}^6 \quad t_{2g}^{2,2,2} \quad e_g^{0,0}$$

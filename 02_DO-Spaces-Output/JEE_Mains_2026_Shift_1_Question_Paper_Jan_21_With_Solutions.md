@@ -69,7 +69,7 @@ $$\alpha = 0, \beta = \frac{3}{2} \Rightarrow \alpha + 2\beta = 3$$
 
 **Ans. (1)**
 
-![Graph of the inequality |x| + |y| ≤ 1.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/4233f6446b28ee3dc002a03e65cf5fa8_img.jpg)
+![Graph of the inequality |x| + |y| ≤ 1.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/4233f6446b28ee3dc002a03e65cf5fa8_img.jpg)
 
 **Sol.**
 
@@ -146,7 +146,7 @@ $$(1) 21 \quad (2) 27 \quad (3) 22 \quad (4) 28$$
  $f: A \rightarrow B$ , where  $A = \{1, 2, 3, \dots, 6\}$   
  $B = \{1, 2, 3, \dots, 9\}$ , then number of function  $f: A \rightarrow B$  is equal to
 
-![A mapping diagram showing two sets A and B. Set A contains elements {1, 2, 3, 4, 5, 6} and set B contains elements {1, 2, 3, 4, 5, 6, 7, 8, 9}. An arrow labeled f points from set A to set B.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/32f3dbb543933c01efffae559bfd1f13_img.jpg)
+![A mapping diagram showing two sets A and B. Set A contains elements {1, 2, 3, 4, 5, 6} and set B contains elements {1, 2, 3, 4, 5, 6, 7, 8, 9}. An arrow labeled f points from set A to set B.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/32f3dbb543933c01efffae559bfd1f13_img.jpg)
 
 A mapping diagram showing two sets A and B. Set A contains elements {1, 2, 3, 4, 5, 6} and set B contains elements {1, 2, 3, 4, 5, 6, 7, 8, 9}. An arrow labeled f points from set A to set B.
 
@@ -270,7 +270,7 @@ Ans. (3)
 
 Sol.
 
-![Diagram for Question 14: A point A(5,4,2) is shown above a horizontal line. A vertical line segment connects A to the horizontal line, meeting it at a point labeled (\alpha, \beta, \gamma). A right-angle symbol is shown at the intersection point (\alpha, \beta, \gamma).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/38b977dc8ba47e36367f97933421e3ae_img.jpg)
+![Diagram for Question 14: A point A(5,4,2) is shown above a horizontal line. A vertical line segment connects A to the horizontal line, meeting it at a point labeled (\alpha, \beta, \gamma). A right-angle symbol is shown at the intersection point (\alpha, \beta, \gamma).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/38b977dc8ba47e36367f97933421e3ae_img.jpg)
 
 Diagram for Question 14: A point A(5,4,2) is shown above a horizontal line. A vertical line segment connects A to the horizontal line, meeting it at a point labeled (\alpha, \beta, \gamma). A right-angle symbol is shown at the intersection point (\alpha, \beta, \gamma).
 
@@ -319,7 +319,7 @@ Ans. (4)
 
 Sol. Given circle
 
-![Diagram for Question 15: A circle with center O(2,3) and radius r. Two tangent lines PQ and MN touch the circle at points A and B respectively. The lines intersect at point P(h,k). A dashed line connects O to P. The angle between the radii OA and OB is 60 degrees. The angle between the radius OA and the line OP is 30 degrees. The angle between the tangent line PQ and the line OP is also 30 degrees. Right-angle symbols are shown at points A and B where the radii meet the tangents.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/826f85fa91187318bfe4671d5d2a258a_img.jpg)
+![Diagram for Question 15: A circle with center O(2,3) and radius r. Two tangent lines PQ and MN touch the circle at points A and B respectively. The lines intersect at point P(h,k). A dashed line connects O to P. The angle between the radii OA and OB is 60 degrees. The angle between the radius OA and the line OP is 30 degrees. The angle between the tangent line PQ and the line OP is also 30 degrees. Right-angle symbols are shown at points A and B where the radii meet the tangents.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/826f85fa91187318bfe4671d5d2a258a_img.jpg)
 
 Diagram for Question 15: A circle with center O(2,3) and radius r. Two tangent lines PQ and MN touch the circle at points A and B respectively. The lines intersect at point P(h,k). A dashed line connects O to P. The angle between the radii OA and OB is 60 degrees. The angle between the radius OA and the line OP is 30 degrees. The angle between the tangent line PQ and the line OP is also 30 degrees. Right-angle symbols are shown at points A and B where the radii meet the tangents.
 
@@ -438,7 +438,7 @@ Ans. (4)
 
 Sol.  $h = \frac{4t}{5}$
 
-![A graph of a parabola y = x^2/5 in the first quadrant. The origin is labeled O. A point P(h, k) is on the parabola, and a point Q(2t, t^2) is also on the parabola. A tangent line is drawn at P(h, k), and a normal line is drawn at Q(2t, t^2). The tangent line has a slope of 2, and the normal line has a slope of 3. The x-axis and y-axis are shown.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/3121afa7ca030b22ee0345864ca6f38b_img.jpg)
+![A graph of a parabola y = x^2/5 in the first quadrant. The origin is labeled O. A point P(h, k) is on the parabola, and a point Q(2t, t^2) is also on the parabola. A tangent line is drawn at P(h, k), and a normal line is drawn at Q(2t, t^2). The tangent line has a slope of 2, and the normal line has a slope of 3. The x-axis and y-axis are shown.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/3121afa7ca030b22ee0345864ca6f38b_img.jpg)
 
 A graph of a parabola y = x^2/5 in the first quadrant. The origin is labeled O. A point P(h, k) is on the parabola, and a point Q(2t, t^2) is also on the parabola. A tangent line is drawn at P(h, k), and a normal line is drawn at Q(2t, t^2). The tangent line has a slope of 2, and the normal line has a slope of 3. The x-axis and y-axis are shown.
 
@@ -619,7 +619,7 @@ $$I = 17$$
 
 26. Potential energy ( $V$ ) versus distance ( $x$ ) is given by the graph, Rank various regions as per the magnitudes of the force ( $F$ ) acting on a particle from high to low.
 
-![A graph of Potential Energy (V) versus Distance (x). The x-axis ranges from 0 to 7, and the y-axis ranges from 0 to 7. The graph consists of four segments: AB (from (0,0) to (1,1)), BC (from (1,1) to (2,4)), CD (from (2,4) to (4,4)), and DE (from (4,4) to (6,3)). The slope of each segment represents the negative of the force in that region.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/f519a5be118c846f631c992412353fb9_img.jpg)
+![A graph of Potential Energy (V) versus Distance (x). The x-axis ranges from 0 to 7, and the y-axis ranges from 0 to 7. The graph consists of four segments: AB (from (0,0) to (1,1)), BC (from (1,1) to (2,4)), CD (from (2,4) to (4,4)), and DE (from (4,4) to (6,3)). The slope of each segment represents the negative of the force in that region.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/f519a5be118c846f631c992412353fb9_img.jpg)
 
 A graph of Potential Energy (V) versus Distance (x). The x-axis ranges from 0 to 7, and the y-axis ranges from 0 to 7. The graph consists of four segments: AB (from (0,0) to (1,1)), BC (from (1,1) to (2,4)), CD (from (2,4) to (4,4)), and DE (from (4,4) to (6,3)). The slope of each segment represents the negative of the force in that region.
 
@@ -688,7 +688,7 @@ $$\begin{aligned} \therefore Q &= 100 \int_0^{\pi/50} \cos^2(100t) dt \\ &= 100 
 
 The rate of flow will be \_\_\_\_\_  $\text{cm}^3/\text{s}$ . (take  $g = 10 \text{ m/s}^2$ )
 
-![Diagram of a horizontal pipe with a constriction. The wider part has a point A and a vertical manometer tube showing a liquid level difference of 5 cm. The narrower part has a point B and a horizontal arrow indicating flow to the right.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/967c30813761a8952ecc5e16bf42ea45_img.jpg)
+![Diagram of a horizontal pipe with a constriction. The wider part has a point A and a vertical manometer tube showing a liquid level difference of 5 cm. The narrower part has a point B and a horizontal arrow indicating flow to the right.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/967c30813761a8952ecc5e16bf42ea45_img.jpg)
 
 Diagram of a horizontal pipe with a constriction. The wider part has a point A and a vertical manometer tube showing a liquid level difference of 5 cm. The narrower part has a point B and a horizontal arrow indicating flow to the right.
 
@@ -829,7 +829,7 @@ $$\Rightarrow a_{\text{net}} = g$$
 
 Correct option (1)
 
-![Diagram of a solenoid with current flowing through it. A particle of mass m and charge Q is shown falling along the central axis. A downward arrow is labeled mg, representing the gravitational force. The magnetic field direction is indicated by a downward arrow labeled B.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/34fc5d0f4264ebd58a6e8c509744da86_img.jpg)
+![Diagram of a solenoid with current flowing through it. A particle of mass m and charge Q is shown falling along the central axis. A downward arrow is labeled mg, representing the gravitational force. The magnetic field direction is indicated by a downward arrow labeled B.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/34fc5d0f4264ebd58a6e8c509744da86_img.jpg)
 
 Diagram of a solenoid with current flowing through it. A particle of mass m and charge Q is shown falling along the central axis. A downward arrow is labeled mg, representing the gravitational force. The magnetic field direction is indicated by a downward arrow labeled B.
 
@@ -844,11 +844,11 @@ A sheet having thickness  $\left(\frac{1}{3}\right)^{\text{rd}}$  of the separat
 
 Ans. (1)
 
-![Diagram of a parallel plate capacitor with area A and separation distance d. The formula C = (A * epsilon_0) / d is shown next to it.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/0d583d4b00f8977a65b353cfdb8ac556_img.jpg)
+![Diagram of a parallel plate capacitor with area A and separation distance d. The formula C = (A * epsilon_0) / d is shown next to it.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/0d583d4b00f8977a65b353cfdb8ac556_img.jpg)
 
 Diagram of a parallel plate capacitor with area A and separation distance d. The formula C = (A \* epsilon\_0) / d is shown next to it.
 
-![Diagram showing the insertion of a dielectric sheet of thickness t = d/3 into the capacitor. The capacitor is then shown as two capacitors in series: C1 with separation 2d/3 and C2 with separation d/3.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/38f5d3a07ab34f471f84ce5bb8f48c7b_img.jpg)
+![Diagram showing the insertion of a dielectric sheet of thickness t = d/3 into the capacitor. The capacitor is then shown as two capacitors in series: C1 with separation 2d/3 and C2 with separation d/3.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/38f5d3a07ab34f471f84ce5bb8f48c7b_img.jpg)
 
 Diagram showing the insertion of a dielectric sheet of thickness t = d/3 into the capacitor. The capacitor is then shown as two capacitors in series: C1 with separation 2d/3 and C2 with separation d/3.
 
@@ -970,7 +970,7 @@ Correct option (1).
 
 39. A uniform rod of mass  $m$  and length  $l$  suspended by means of two identical inextensible light strings as shown in figure. Tension in one string immediately after the other string is cut, is \_\_\_\_\_. (g acceleration due to gravity)
 
-![Diagram of a uniform rod of length l suspended by two vertical strings from a horizontal ceiling. The strings are attached at points A and B at the ends of the rod.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/78f163db583eb0c6d013e6f8ffe6d7d8_img.jpg)
+![Diagram of a uniform rod of length l suspended by two vertical strings from a horizontal ceiling. The strings are attached at points A and B at the ends of the rod.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/78f163db583eb0c6d013e6f8ffe6d7d8_img.jpg)
 
 Diagram of a uniform rod of length l suspended by two vertical strings from a horizontal ceiling. The strings are attached at points A and B at the ends of the rod.
 
@@ -979,7 +979,7 @@ Diagram of a uniform rod of length l suspended by two vertical strings from a ho
 
 Ans. (2)
 
-![Diagram of a rod of length l suspended by a single string at point A. The center of mass is at l/2, and the force of gravity mg acts downwards from there. The tension T acts upwards at point A.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/df6babe297323feb1575ba89f5cf3b09_img.jpg)
+![Diagram of a rod of length l suspended by a single string at point A. The center of mass is at l/2, and the force of gravity mg acts downwards from there. The tension T acts upwards at point A.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/df6babe297323feb1575ba89f5cf3b09_img.jpg)
 
 Sol.
 
@@ -1014,7 +1014,7 @@ Correct option (2)
 
 41. A 1 m long metal rod AB completes the circuit as shown in figure. The area of circuit is perpendicular to the magnetic field of 0.10 T. If the resistance of the total circuit is  $2\Omega$  then the force needed to move the rod towards right with constant speed (v) of 1.5 m/s is \_\_\_\_\_ N.
 
-![Diagram of a metal rod AB of length 1 m moving with velocity v to the right on two parallel rails. The rails are connected by a resistor of 2 ohms. A uniform magnetic field B is directed into the page (indicated by crosses).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/638091db82245c9dc328387edff215d8_img.jpg)
+![Diagram of a metal rod AB of length 1 m moving with velocity v to the right on two parallel rails. The rails are connected by a resistor of 2 ohms. A uniform magnetic field B is directed into the page (indicated by crosses).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/638091db82245c9dc328387edff215d8_img.jpg)
 
 Diagram of a metal rod AB of length 1 m moving with velocity v to the right on two parallel rails. The rails are connected by a resistor of 2 ohms. A uniform magnetic field B is directed into the page (indicated by crosses).
 
@@ -1037,7 +1037,7 @@ $$= \frac{(0.1)^2 \times (1)^2 \times 1.5}{2}$$
 
 $$= 7.5 \times 10^{-3} \text{ N}$$
 
-![Diagram showing the forces acting on the rod AB. The magnetic force F_B acts to the left, and the external force F_ext acts to the right. The rod is moving with velocity v to the right.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/fe4d3ec6d42a681fd71de4dc627bb2c8_img.jpg)
+![Diagram showing the forces acting on the rod AB. The magnetic force F_B acts to the left, and the external force F_ext acts to the right. The rod is moving with velocity v to the right.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/fe4d3ec6d42a681fd71de4dc627bb2c8_img.jpg)
 
 Diagram showing the forces acting on the rod AB. The magnetic force F\_B acts to the left, and the external force F\_ext acts to the right. The rod is moving with velocity v to the right.
 
@@ -1045,7 +1045,7 @@ Correct option (4)
 
 42. The given circuit works as :
 
-![Logic circuit diagram with two inputs A and B. Input A is connected to the top input of an OR gate. Input B is connected to the bottom input of an OR gate. The output of the OR gate is connected to the input of a NAND gate. The output of the NAND gate is connected to the input of another OR gate. The output of this final OR gate is the circuit's output.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/4204d9ef35fe2b6403f7f8a6c469d469_img.jpg)
+![Logic circuit diagram with two inputs A and B. Input A is connected to the top input of an OR gate. Input B is connected to the bottom input of an OR gate. The output of the OR gate is connected to the input of a NAND gate. The output of the NAND gate is connected to the input of another OR gate. The output of this final OR gate is the circuit's output.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/4204d9ef35fe2b6403f7f8a6c469d469_img.jpg)
 
 Logic circuit diagram with two inputs A and B. Input A is connected to the top input of an OR gate. Input B is connected to the bottom input of an OR gate. The output of the OR gate is connected to the input of a NAND gate. The output of the NAND gate is connected to the input of another OR gate. The output of this final OR gate is the circuit's output.
 
@@ -1054,7 +1054,7 @@ Logic circuit diagram with two inputs A and B. Input A is connected to the top i
 
 Ans. (3)
 
-![Logic gate diagram showing two NOT gates (A to P, B to Q) connected to an OR gate (P, Q to R), which is then connected to a NOT gate (R to S).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/33ed1f9b27c7c21c797aa928b0f06851_img.jpg)
+![Logic gate diagram showing two NOT gates (A to P, B to Q) connected to an OR gate (P, Q to R), which is then connected to a NOT gate (R to S).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/33ed1f9b27c7c21c797aa928b0f06851_img.jpg)
 
 **Sol.**
 
@@ -1155,7 +1155,7 @@ $$\begin{aligned} \therefore W_{\text{ext}} &= (9 \times 10^9) \times (10^{-8} \
 
 **Ans. (280)**
 
-![Diagram of a beam expander system. A collimated beam of diameter 2 mm enters a convex lens with focal length 40 mm. The beam converges to a point and then diverges before entering a second convex lens with focal length f. The output is a collimated beam of diameter 14 mm. The distance between the two lenses is the sum of their focal lengths (40 mm + f).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/0656422bf374a8a7bcc6fe99adc48599_img.jpg)
+![Diagram of a beam expander system. A collimated beam of diameter 2 mm enters a convex lens with focal length 40 mm. The beam converges to a point and then diverges before entering a second convex lens with focal length f. The output is a collimated beam of diameter 14 mm. The distance between the two lenses is the sum of their focal lengths (40 mm + f).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/0656422bf374a8a7bcc6fe99adc48599_img.jpg)
 
 **Sol.**
 
@@ -1169,7 +1169,7 @@ $$\Rightarrow f = 280 \text{ mm}$$
 
 47. The heat generated in 1 minute between points A and B in the given circuit, when a battery of 9V with internal resistance of 1  $\Omega$  is connected across these points is \_\_\_\_\_ J.
 
-![Circuit diagram for Question 47. A 9V battery with 1 ohm internal resistance is connected across points A and B. Between A and B, there are two parallel branches. The top branch has a 1 ohm resistor in series with a 2 ohm resistor. The bottom branch has a 2 ohm resistor in series with a 4 ohm resistor. A 1 ohm resistor is connected in parallel between the junction of the 1 ohm and 2 ohm resistors in the top branch and the junction of the 2 ohm and 4 ohm resistors in the bottom branch.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/df1d0e45191302de72176e4390224c16_img.jpg)
+![Circuit diagram for Question 47. A 9V battery with 1 ohm internal resistance is connected across points A and B. Between A and B, there are two parallel branches. The top branch has a 1 ohm resistor in series with a 2 ohm resistor. The bottom branch has a 2 ohm resistor in series with a 4 ohm resistor. A 1 ohm resistor is connected in parallel between the junction of the 1 ohm and 2 ohm resistors in the top branch and the junction of the 2 ohm and 4 ohm resistors in the bottom branch.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/df1d0e45191302de72176e4390224c16_img.jpg)
 
 Circuit diagram for Question 47. A 9V battery with 1 ohm internal resistance is connected across points A and B. Between A and B, there are two parallel branches. The top branch has a 1 ohm resistor in series with a 2 ohm resistor. The bottom branch has a 2 ohm resistor in series with a 4 ohm resistor. A 1 ohm resistor is connected in parallel between the junction of the 1 ohm and 2 ohm resistors in the top branch and the junction of the 2 ohm and 4 ohm resistors in the bottom branch.
 
@@ -1177,13 +1177,13 @@ Circuit diagram for Question 47. A 9V battery with 1 ohm internal resistance is 
 
 **Sol.**
 
-![Circuit diagram for Question 48. A Wheatstone bridge is shown with resistors 1 ohm, 2 ohm, 2 ohm, and 4 ohm. The bridge is balanced. A 9V battery with 1 ohm internal resistance is connected across points A and B.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/e518bff13dc73675afd211dbea636c29_img.jpg)
+![Circuit diagram for Question 48. A Wheatstone bridge is shown with resistors 1 ohm, 2 ohm, 2 ohm, and 4 ohm. The bridge is balanced. A 9V battery with 1 ohm internal resistance is connected across points A and B.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/e518bff13dc73675afd211dbea636c29_img.jpg)
 
 Circuit diagram for Question 48. A Wheatstone bridge is shown with resistors 1 ohm, 2 ohm, 2 ohm, and 4 ohm. The bridge is balanced. A 9V battery with 1 ohm internal resistance is connected across points A and B.
 
 Balanced Wheatstone bridge
 
-![Simplified circuit diagram for Question 48. It shows a single loop with a 9V battery, a 1 ohm internal resistance, and a 2 ohm resistor connected between points A and B.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/ecad02fdc2408197e954e3e07feb350c_img.jpg)
+![Simplified circuit diagram for Question 48. It shows a single loop with a 9V battery, a 1 ohm internal resistance, and a 2 ohm resistor connected between points A and B.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/ecad02fdc2408197e954e3e07feb350c_img.jpg)
 
 Simplified circuit diagram for Question 48. It shows a single loop with a 9V battery, a 1 ohm internal resistance, and a 2 ohm resistor connected between points A and B.
 
@@ -1195,7 +1195,7 @@ $$\begin{aligned} \therefore H_{AB} &= i^2 R_{AB} t \\ &= (3)^2 \times 2 \times 
 
 48. Two identical thin rods of mass M kg and length L m are connected as shown in figure. Moment of inertia of the combined rod system about an axis passing through point P and perpendicular to the plane of the rods is  $\frac{x}{2} ML^2 \text{ kg m}^2$ . The value of x is \_\_\_\_\_.
 
-![Diagram of two identical thin rods, each of mass M and length L, connected end-to-end. Point P is at the top end of the vertical rod.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/3b41f981598222a670e2bb260dd8ce51_img.jpg)
+![Diagram of two identical thin rods, each of mass M and length L, connected end-to-end. Point P is at the top end of the vertical rod.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/3b41f981598222a670e2bb260dd8ce51_img.jpg)
 
 Diagram of two identical thin rods, each of mass M and length L, connected end-to-end. Point P is at the top end of the vertical rod.
 
@@ -1209,7 +1209,7 @@ $$\therefore x = 17$$
 
 **Correct Answer : 17**
 
-![Diagram of two identical thin rods, each of mass M and length L, connected end-to-end. Point P is at the top end of the vertical rod.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/0fe66868c7f83f7cd8acf7711c5a7e14_img.jpg)
+![Diagram of two identical thin rods, each of mass M and length L, connected end-to-end. Point P is at the top end of the vertical rod.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/0fe66868c7f83f7cd8acf7711c5a7e14_img.jpg)
 
 Diagram of two identical thin rods, each of mass M and length L, connected end-to-end. Point P is at the top end of the vertical rod.
 
@@ -1235,17 +1235,17 @@ $$\begin{aligned}\text{Sol. } m &\approx \frac{LD}{f_o f_e} \\ &= \frac{32}{2} \
 
 51. Consider the following reactions.
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/09954c289d97ae7583de4231188b09bf_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/09954c289d97ae7583de4231188b09bf_img.jpg)
 
 $$\text{PbCl}_2 + \text{K}_2\text{CrO}_4 \rightarrow \text{A} + 2\text{KCl}$$
 
 (Hot solution)
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/1bc66558bfba9fbd8697fd3e73ae5543_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/1bc66558bfba9fbd8697fd3e73ae5543_img.jpg)
 
 $$\text{A} + \text{NaOH} \rightleftharpoons \text{B} + \text{Na}_2\text{CrO}_4$$
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/87a4869488182e92e56d63bc28fd00b7_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/87a4869488182e92e56d63bc28fd00b7_img.jpg)
 
 $$\text{PbSO}_4 + 4\text{CH}_3\text{COONH}_4 \rightarrow (\text{NH}_4)_2\text{SO}_4 + \text{X}$$
 
@@ -1258,18 +1258,18 @@ In the above reactions, A, B and X are respectively.
 
 Ans. (4)
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/4bd0282cffec1c673bec21c6f8ef5ee0_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/4bd0282cffec1c673bec21c6f8ef5ee0_img.jpg)
 
 **Sol.**  $\text{PbCl}_2 + \text{K}_2\text{CrO}_4 \rightarrow \text{PbCrO}_4 + 2\text{KCl}$   
 (Hot solution) (A)
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/61ca06b8985497a747f3554621f0e30a_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/61ca06b8985497a747f3554621f0e30a_img.jpg)
 
 $$\text{PbCrO}_4 + 4\text{NaOH} (\text{excess}) \rightarrow \text{Na}_2[\text{Pb}(\text{OH})_4] + \text{Na}_2\text{CrO}_4$$
 
 (B)
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/2d963be51279f5ac1461051ca82cc878_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/2d963be51279f5ac1461051ca82cc878_img.jpg)
 
 $$\text{PbSO}_4 + 4\text{CH}_3\text{COONH}_4 \rightarrow (\text{NH}_4)_2[\text{Pb}(\text{CH}_3\text{COO})_4] + (\text{NH}_4)_2\text{SO}_4$$
 
@@ -1292,31 +1292,31 @@ Ans. (1)
 
 **Sol.**  $\Rightarrow$  On moving left to right in a period IE increases and from top to bottom in a group IE decreases.
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/8343103996ef90678e82339344603d39_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/8343103996ef90678e82339344603d39_img.jpg)
 
 $$\text{F} > \text{P} > \text{S} > \text{B} \text{ (IE order)}$$
 
 $\Rightarrow$  On moving left to right in a period metallic and basic character decreases.
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/a7734ec234fab6c62664a9ff257bb70a_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/a7734ec234fab6c62664a9ff257bb70a_img.jpg)
 
 $$\text{K} > \text{Mg} > \text{Al} > \text{B} \text{ (Metallic character order)}$$
 
 $\Rightarrow$  On moving top to bottom in a group metallic and basic character increases.
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/8f92dd01838450a6523134a290e6ed2f_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/8f92dd01838450a6523134a290e6ed2f_img.jpg)
 
 $$\text{K}_2\text{O} > \text{Na}_2\text{O} > \text{MgO} > \text{Al}_2\text{O}_3$$
 
 $\Rightarrow$  EA : Group 17 > Group 16 > Group 15
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/c81a475cedafdd47c0a22a6b451fa77c_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/c81a475cedafdd47c0a22a6b451fa77c_img.jpg)
 
 $$\text{Cl} > \text{F} > \text{S} > \text{P}$$
 
 53. Identify A in the following reaction.
 
-![Decalin structure cis-1,2-cyclohexanedicarboxylic acid and oxalic acid structures](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/693ca69ca11e2d208a6b2944b4611cb0_img.jpg)
+![Decalin structure cis-1,2-cyclohexanedicarboxylic acid and oxalic acid structures](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/693ca69ca11e2d208a6b2944b4611cb0_img.jpg)
 
 A  $\xrightarrow[Pt]{2\text{H}_2}$
 
@@ -1324,14 +1324,14 @@ A  $\xrightarrow{\text{KMnO}_4}$
 
 Decalin structure cis-1,2-cyclohexanedicarboxylic acid and oxalic acid structures
 
-- (1) ![Naphthalene structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/4013f6082a7dd991074ce46e59d004bc_img.jpg)
-- (2) ![1,2,3,4,5,8-hexahydronaphthalene structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/7b3066c590947bda0eff08b3f8f4f4fc_img.jpg)
-- (3) ![1,2,3,4,5,6,7,8-octahydronaphthalene structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/a5921f07fbdbb0a13f33ccb287f7d8cb_img.jpg)
-- (4) ![Decalin structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/c387bae69b9c1cd274fc6d92325bb601_img.jpg)
+- (1) ![Naphthalene structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/4013f6082a7dd991074ce46e59d004bc_img.jpg)
+- (2) ![1,2,3,4,5,8-hexahydronaphthalene structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/7b3066c590947bda0eff08b3f8f4f4fc_img.jpg)
+- (3) ![1,2,3,4,5,6,7,8-octahydronaphthalene structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/a5921f07fbdbb0a13f33ccb287f7d8cb_img.jpg)
+- (4) ![Decalin structure](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/c387bae69b9c1cd274fc6d92325bb601_img.jpg)
 
 Ans. (3)
 
-![Octalin structure Decalin structure Octalin structure with bridgehead hydrogens cis-1,2-cyclohexanedicarboxylic acid and oxalic acid structures](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/d31a5e5337932403bf48a8222810db6e_img.jpg)
+![Octalin structure Decalin structure Octalin structure with bridgehead hydrogens cis-1,2-cyclohexanedicarboxylic acid and oxalic acid structures](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/d31a5e5337932403bf48a8222810db6e_img.jpg)
 
 **Sol.**  $\xrightarrow[\Delta]{2\text{H}_2/\text{Pt}}$
 
@@ -1341,27 +1341,27 @@ Octalin structure Decalin structure Octalin structure with bridgehead hydrogens 
 
 54. A hydrocarbon 'P' ( $C_4H_8$ ) on reaction with HCl gives an optically active compound 'Q' ( $C_4H_9Cl$ ) which on reaction with one mole of ammonia gives compound 'R' ( $C_4H_{11}N$ ). 'R' on diazotization followed by hydrolysis gives 'S'. Identify P, Q, R and S.
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/dc6b7f4585ddbce6f8d5704927209dca_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/dc6b7f4585ddbce6f8d5704927209dca_img.jpg)
 
 (1)  $P = \text{CH}_3 - \text{CH}_2 - \text{CH} = \text{CH}_2$ ,  $Q = \text{CH}_3 - \text{CH}_2 - \text{CH}_2 - \underset{\text{Cl}}{\text{CH}_2}$
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/ce3bab84f36009bcc14fb73b577f3edc_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/ce3bab84f36009bcc14fb73b577f3edc_img.jpg)
 
 $$R = \text{CH}_3\text{CH}_2\text{CH}_2\text{NH}, S = \text{CH}_3\text{CH}_2\text{CH(OH)CH}_3$$
 
-![cyclopropyl group cyclopropyl group cyclopropyl group cyclopropyl group with OH substituent](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/02641f47658d23cca80880ff77d5122e_img.jpg)
+![cyclopropyl group cyclopropyl group cyclopropyl group cyclopropyl group with OH substituent](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/02641f47658d23cca80880ff77d5122e_img.jpg)
 
 (2) P=CH<sub>3</sub>—, Q=Cl—CH<sub>2</sub>—,  
  R=H<sub>2</sub>N—CH<sub>2</sub>—, S=
 
 cyclopropyl group cyclopropyl group cyclopropyl group cyclopropyl group with OH substituent
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/ca8f3c3de04012ba85c1310504f46346_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/ca8f3c3de04012ba85c1310504f46346_img.jpg)
 
 (3)  $P = \text{CH}_3 - \text{CH} = \text{CH} - \text{CH}_3$ ,  $Q = \text{CH}_3 - \text{CH}_2 - \underset{\text{Cl}}{\underset{|}{\text{CH}}} - \text{CH}_3$ ,  
  $R = \text{CH}_3 - \text{CH}_2 - \underset{\text{NH}_2}{\underset{|}{\text{CH}}} - \text{CH}_3$ ,  $S = \text{CH}_3 - \text{CH}_2 - \underset{\text{OH}}{\underset{|}{\text{CH}}} - \text{CH}_3$
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/95448405c4187cfc3527f8149ee72117_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/95448405c4187cfc3527f8149ee72117_img.jpg)
 
 (4) P= $\text{CH}_3\text{CH}=\text{CHCH}_3$ , Q= $\text{CH}_3\text{CH}_2\text{CH}_2\text{CH}_2\text{Cl}$ ,  
  R= $\text{CH}_3\text{CH}_2\text{CH}_2\underset{\text{NH}_2}{\underset{|}{\text{CH}}}_2$ , S= $\text{CH}_3\text{CH}_2\text{CH}_2\underset{\text{CH}_2\text{OH}}{\underset{|}{\text{CH}}}_2$
@@ -1370,7 +1370,7 @@ cyclopropyl group cyclopropyl group cyclopropyl group cyclopropyl group with OH 
 
 **Sol.**
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/64c3498c8d6a24f8ae536f534944dfca_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/64c3498c8d6a24f8ae536f534944dfca_img.jpg)
 
 55. Given below are two statements :
 
@@ -1400,7 +1400,7 @@ In the light of the above statement, choose the correct answer from the option g
 
 **Sol.**  $C_xH_{y(g)} + \left(x + \frac{y}{4}\right) O_{2(g)} \longrightarrow xCO_{2(g)} + \frac{y}{2} H_2O_{(l)}$
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/7a8c40a0f544794befa404a7d4ca2c9b_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/7a8c40a0f544794befa404a7d4ca2c9b_img.jpg)
 
 |                      |    |                                        |       |   |
 |----------------------|----|----------------------------------------|-------|---|
@@ -1434,7 +1434,7 @@ Which of the following statements is **incorrect** ?
 
 Ans. (3)
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/fbc6c59b5ee4cb60ac6b7b076ec702c3_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/fbc6c59b5ee4cb60ac6b7b076ec702c3_img.jpg)
 
 Sol.  $\underset{\substack{| \\ 14 \\ 40}}{\text{Ca}_{(s)}} + \underset{\text{excess}}{2\text{HCl}_{(g)}} \longrightarrow \underset{-}{\text{CaCl}_{2(s)}} + \underset{-}{\text{H}_{2(g)}}$
 
@@ -1495,13 +1495,13 @@ $$M_Q = 60.1 \approx 60$$
 
 Ans. (1)
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/ab60ec12c363e7f1cbcd5f4eee7095ac_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/ab60ec12c363e7f1cbcd5f4eee7095ac_img.jpg)
 
 Sol.  $\underset{(P)}{\text{Ph}-\text{COOH}} \xrightarrow[\Delta]{\text{NH}_3} \underset{(Q)}{\text{Ph}-\overset{\text{O}}{\parallel}{\text{C}}-\text{NH}_2} \xrightarrow{\text{Br}_2 \mid \text{KOH}} \underset{(R)}{\text{Ph}-\text{NH}_2}$
 
 61. An organic compound "P" of molecular formula  $C_6H_{12}O_3$  gives positive iodoform test but negative Tollen's test. When "P" is treated with dilute acid, it produces "Q". "Q" gives positive Tollen's test and also iodoform test. The structure of "P" is :
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/c299914a19c013ae6c0be2ec6dfdf67d_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/c299914a19c013ae6c0be2ec6dfdf67d_img.jpg)
 
 (1)  $\begin{array}{ccccccc} & & \text{O} & & & & \text{CH}_2 \\ & & || & & & & | \\ \text{CH}_3 & - & \text{C} & - & \text{CH} & - & \text{CH}_2 \\ & & & & & & | \\ & & & & & & \text{OCH}_3 \end{array}$
 
@@ -1515,13 +1515,13 @@ Ans. (2)
 
 Sol.
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/20b38c805699678e6cb818ce9c6b4be6_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/20b38c805699678e6cb818ce9c6b4be6_img.jpg)
 
 $\begin{array}{c} \text{CH}_3 - \text{C}(=\text{O}) - \text{CH}_2 - \text{CH}(\text{OCH}_3)_2 \xrightarrow{\text{I}_2/\text{NaOH}} \text{CH}_3 - \text{C}(=\text{O}) - \text{CH}_2 - \text{CH}(\text{OCH}_3)_2 \rightarrow \text{+ve Iodoform test} \\ \xrightarrow{\text{Tollen's}} \text{CH}_3 - \text{C}(=\text{O}) - \text{CH}_2 - \text{CH}(\text{OCH}_3)_2 \rightarrow \text{-ve Tollen's test} \\ \xrightarrow{\text{H}_2\text{O}/\text{H}^+} \text{CH}_3 - \text{C}(=\text{O}) - \text{CH}_2 - \text{CH}_2 - \text{CH}_2 - \text{CHO} \xrightarrow{\text{I}_2/\text{NaOH}} \text{CH}_3 - \text{C}(=\text{O}) - \text{CH}_2 - \text{CH}_2 - \text{CH}_2 - \text{CHO} \rightarrow \text{+ve Iodoform test} \\ \xrightarrow{\text{Tollen's}} \text{CH}_3 - \text{C}(=\text{O}) - \text{CH}_2 - \text{CH}_2 - \text{CH}_2 - \text{CHO} \rightarrow \text{+ve Tollen's test} \end{array}$
 
 62. From the following, the least stable structure is :
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/b7782cc9d7766fe765c3d141a47e1034_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/b7782cc9d7766fe765c3d141a47e1034_img.jpg)
 
 (1)  $\text{CH}_2=\text{CH}-\text{CH}=\text{CH}-\text{CH}_2-\text{CH}=\text{CH}-\text{CH}_2-\text{CH}=\text{CH}-\text{N}^+(\text{O}^-)_2$
 
@@ -1533,7 +1533,7 @@ $\begin{array}{c} \text{CH}_3 - \text{C}(=\text{O}) - \text{CH}_2 - \text{CH}(\t
 
 Ans. (3)
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/6d5a27d6658a36a8f4dfa4e9244261a3_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/6d5a27d6658a36a8f4dfa4e9244261a3_img.jpg)
 
 Sol.  $\text{CH}_2=\text{CH}-\text{CH}=\text{CH}-\text{CH}_2-\text{CH}=\text{CH}-\text{CH}_2-\text{CH}=\text{CH}-\text{N}^+(\text{O}^-)_2$
 
@@ -1541,7 +1541,7 @@ This resonating structure having +ve charge on adjacent atoms so it is least sta
 
 63.  $\text{MnO}_4^{2-}$ , in acidic medium, disproportionates to :
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/c2989e49bb30162b782d896e6604f55f_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/c2989e49bb30162b782d896e6604f55f_img.jpg)
 
 (1)  $\text{Mn}_2\text{O}_7$  and  $\text{MnO}_2$   
 (2)  $\text{MnO}_4^-$  and  $\text{MnO}$   
@@ -1550,7 +1550,7 @@ This resonating structure having +ve charge on adjacent atoms so it is least sta
 
 Ans. (3)
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/6e74268054a3cc0750d23089e41f75b3_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/6e74268054a3cc0750d23089e41f75b3_img.jpg)
 
 Sol.  $3\text{MnO}_4^{2-} + 4\text{H}^+ \rightarrow 2\text{MnO}_4^- + \text{MnO}_2 + 2\text{H}_2\text{O}$
 
@@ -1560,7 +1560,7 @@ Sol.  $3\text{MnO}_4^{2-} + 4\text{H}^+ \rightarrow 2\text{MnO}_4^- + \text{MnO}
 
 **Statement II:** In the set  $[\text{NO}_2, \text{BeH}_2, \text{BF}_3, \text{AlCl}_3]$ , all the molecules have incomplete octet around central atom. In the light of the above statements, choose the correct answer from the options given below:
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/f7e254673cd7753ab626da6ed4296c89_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/f7e254673cd7753ab626da6ed4296c89_img.jpg)
 
 (1) **Statement I** is true but **Statement II** is false  
 (2) Both **Statement I** and **Statement II** are false  
@@ -1635,7 +1635,7 @@ Choose the **correct** answer from the options given below :
 
 **Ans. (3)**
 
-**Sol.** ![Skeletal structures of propanal and propanone](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/0cbaa733e8381d79b89648437341d27b_img.jpg) are Functional isomer
+**Sol.** ![Skeletal structures of propanal and propanone](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/0cbaa733e8381d79b89648437341d27b_img.jpg) are Functional isomer
 
 $\text{CH}_3-\text{CH}=\text{CH}-\text{CH}_3$  &  $\text{CH}_3-\text{CH}_2-\text{CH}=\text{CH}_2$
 
@@ -1647,7 +1647,7 @@ are Metamer
 
 $\text{CH}_3-\text{CH}=\text{CH}-\text{CH}_3$  does not have optical isomer
 
-![Skeletal structures of pentane and 2,2-dimethylpropane](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/3bae9ad3e379f54a1004e2ee48ae35f1_img.jpg) Chain isomer
+![Skeletal structures of pentane and 2,2-dimethylpropane](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/3bae9ad3e379f54a1004e2ee48ae35f1_img.jpg) Chain isomer
 
 67. Identify the correct statements.
 
@@ -1676,25 +1676,25 @@ Option
 
 68. Which of the following graphs between pressure 'P' versus volume 'V' represent the maximum work done ?
 
-![Graph (1): Pressure (p) in bar vs Volume (V) in L. The y-axis has values 1.0 and 2.0. The x-axis has values 0, 22.4, and 44.8. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=1.0 bar goes from V=22.4 L to V=44.8 L. A curve starts at (22.4, 2.0) and goes down to (44.8, 1.0). Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (44.8, 1.0) to (22.4, 0) to (0,0).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/e9f324c9d7f5305a55cb156855e95b95_img.jpg)
+![Graph (1): Pressure (p) in bar vs Volume (V) in L. The y-axis has values 1.0 and 2.0. The x-axis has values 0, 22.4, and 44.8. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=1.0 bar goes from V=22.4 L to V=44.8 L. A curve starts at (22.4, 2.0) and goes down to (44.8, 1.0). Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (44.8, 1.0) to (22.4, 0) to (0,0).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/e9f324c9d7f5305a55cb156855e95b95_img.jpg)
 
 (1)
 
 Graph (1): Pressure (p) in bar vs Volume (V) in L. The y-axis has values 1.0 and 2.0. The x-axis has values 0, 22.4, and 44.8. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=1.0 bar goes from V=22.4 L to V=44.8 L. A curve starts at (22.4, 2.0) and goes down to (44.8, 1.0). Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (44.8, 1.0) to (22.4, 0) to (0,0).
 
-![Graph (2): Pressure (p) in bar vs Volume (V) in L. The y-axis has a value of 2.0. The x-axis has values 0 and 22.4. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=2.0 bar goes from V=0 to V=22.4 L. Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (0,0).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/9b5411fa2d169b66f6185fbf67b49766_img.jpg)
+![Graph (2): Pressure (p) in bar vs Volume (V) in L. The y-axis has a value of 2.0. The x-axis has values 0 and 22.4. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=2.0 bar goes from V=0 to V=22.4 L. Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (0,0).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/9b5411fa2d169b66f6185fbf67b49766_img.jpg)
 
 (2)
 
 Graph (2): Pressure (p) in bar vs Volume (V) in L. The y-axis has a value of 2.0. The x-axis has values 0 and 22.4. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=2.0 bar goes from V=0 to V=22.4 L. Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (0,0).
 
-![Graph (3): Pressure (p) in bar vs Volume (V) in L. The y-axis has values 1.0 and 2.0. The x-axis has values 0, 22.4, and 44.8. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=1.0 bar goes from V=22.4 L to V=44.8 L. A curve starts at (22.4, 2.0) and goes down to (44.8, 1.0). Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (44.8, 1.0) to (22.4, 0) to (0,0).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/a289b64f80c6df506c0c55d553fc4496_img.jpg)
+![Graph (3): Pressure (p) in bar vs Volume (V) in L. The y-axis has values 1.0 and 2.0. The x-axis has values 0, 22.4, and 44.8. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=1.0 bar goes from V=22.4 L to V=44.8 L. A curve starts at (22.4, 2.0) and goes down to (44.8, 1.0). Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (44.8, 1.0) to (22.4, 0) to (0,0).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/a289b64f80c6df506c0c55d553fc4496_img.jpg)
 
 (3)
 
 Graph (3): Pressure (p) in bar vs Volume (V) in L. The y-axis has values 1.0 and 2.0. The x-axis has values 0, 22.4, and 44.8. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=1.0 bar goes from V=22.4 L to V=44.8 L. A curve starts at (22.4, 2.0) and goes down to (44.8, 1.0). Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (44.8, 1.0) to (22.4, 0) to (0,0).
 
-![Graph (4): Pressure (p) in bar vs Volume (V) in L. The y-axis has values 1.0 and 2.0. The x-axis has values 0, 22.4, and 44.8. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=1.0 bar goes from V=22.4 L to V=44.8 L. A curve starts at (22.4, 2.0) and goes down to (44.8, 1.0). Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (44.8, 1.0) to (22.4, 0) to (0,0).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/50fecd0e7c9bf4ebf321d8367d42cc94_img.jpg)
+![Graph (4): Pressure (p) in bar vs Volume (V) in L. The y-axis has values 1.0 and 2.0. The x-axis has values 0, 22.4, and 44.8. A vertical line at V=22.4 L goes from p=0 to p=2.0 bar. A horizontal line at p=1.0 bar goes from V=22.4 L to V=44.8 L. A curve starts at (22.4, 2.0) and goes down to (44.8, 1.0). Arrows indicate a clockwise cycle: (0,0) to (22.4, 2.0) to (44.8, 1.0) to (22.4, 0) to (0,0).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/50fecd0e7c9bf4ebf321d8367d42cc94_img.jpg)
 
 (4)
 
@@ -1715,7 +1715,7 @@ In option (2) work done is zero while in remaining options net work done is nega
 - E. When 2 mole of  $\text{NO}_2$ , changes into equilibrium mixture,  $\Delta G^\ominus$  for equilibrium mixture is  $-6.24 \text{ kJ mol}^{-1}$ .
 - E. When 2 mole of  $\text{NO}_2$ , changes into equilibrium mixture,  $\Delta G^\ominus$  for equilibrium mixture is  $-6.24 \text{ kJ mol}^{-1}$ .
 
-![Graph of Gibbs free energy (G) in kJ mol⁻¹ vs Fraction of N₂O₄ dissociated. The y-axis has points A, E, and B. The x-axis has values 0.2, 0.4, 0.6, and 0.8. Point A is at x=0, E is at the minimum (x ≈ 0.3), and B is at x=0.6. A horizontal line labeled 'Constant p, T' is shown. The vertical distance from A to B is 5.40. The vertical distance from E to B is 0.84.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/4a0acd64a680ef89f832de06989e2544_img.jpg)
+![Graph of Gibbs free energy (G) in kJ mol⁻¹ vs Fraction of N₂O₄ dissociated. The y-axis has points A, E, and B. The x-axis has values 0.2, 0.4, 0.6, and 0.8. Point A is at x=0, E is at the minimum (x ≈ 0.3), and B is at x=0.6. A horizontal line labeled 'Constant p, T' is shown. The vertical distance from A to B is 5.40. The vertical distance from E to B is 0.84.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/4a0acd64a680ef89f832de06989e2544_img.jpg)
 
 Graph of Gibbs free energy (G) in kJ mol⁻¹ vs Fraction of N₂O₄ dissociated. The y-axis has points A, E, and B. The x-axis has values 0.2, 0.4, 0.6, and 0.8. Point A is at x=0, E is at the minimum (x ≈ 0.3), and B is at x=0.6. A horizontal line labeled 'Constant p, T' is shown. The vertical distance from A to B is 5.40. The vertical distance from E to B is 0.84.
 
@@ -1730,7 +1730,7 @@ Ans. (1)
 
 Sol.
 
-![Graph of Gibbs free energy (G) in kJ mol⁻¹ vs Fraction of N₂O₄ dissociated. The y-axis has points A, E, and B. The x-axis has values 0.2, 0.4, 0.6, and 0.8. Point A is at x=0, E is at the minimum (x ≈ 0.3), and B is at x=0.6. A horizontal line labeled 'Constant p,' is shown. The vertical distance from A to B is 5.40. The vertical distance from E to B is 0.84.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/5cad19fd7e72c11423eafd4817d3a891_img.jpg)
+![Graph of Gibbs free energy (G) in kJ mol⁻¹ vs Fraction of N₂O₄ dissociated. The y-axis has points A, E, and B. The x-axis has values 0.2, 0.4, 0.6, and 0.8. Point A is at x=0, E is at the minimum (x ≈ 0.3), and B is at x=0.6. A horizontal line labeled 'Constant p,' is shown. The vertical distance from A to B is 5.40. The vertical distance from E to B is 0.84.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/5cad19fd7e72c11423eafd4817d3a891_img.jpg)
 
 Graph of Gibbs free energy (G) in kJ mol⁻¹ vs Fraction of N₂O₄ dissociated. The y-axis has points A, E, and B. The x-axis has values 0.2, 0.4, 0.6, and 0.8. Point A is at x=0, E is at the minimum (x ≈ 0.3), and B is at x=0.6. A horizontal line labeled 'Constant p,' is shown. The vertical distance from A to B is 5.40. The vertical distance from E to B is 0.84.
 
@@ -1780,11 +1780,11 @@ As  $\lambda$  and  $\lambda'$  is equal so frequency of these lines will be als
 
 Ans. (8)
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/b6685bd140e66991415d4e74810ddf83_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/b6685bd140e66991415d4e74810ddf83_img.jpg)
 
 $$\text{Sol. } A \xrightarrow{RX^{n(1)}} \text{product } E_1$$
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/9d3492dd6f549588eab380489c3db785_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/9d3492dd6f549588eab380489c3db785_img.jpg)
 
 $$B \xrightarrow{RX^{n(2)}} \text{product } E_2$$
 
@@ -1829,7 +1829,7 @@ $$\Lambda_m^\infty = 6 \text{ S.m}^2 \text{ mol}^{-1}$$
 
 One mole each of A<sub>2</sub>(g) and B<sub>2</sub>(g) are taken in a 1L closed flask and allowed to establish the equilibrium at 500K.
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/f3e939b40b59b6455f83d2c200c43cb1_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/f3e939b40b59b6455f83d2c200c43cb1_img.jpg)
 
 $$\text{A}_2(\text{g}) + \text{B}_2(\text{g}) \rightleftharpoons 2\text{AB}(\text{g})$$
 
@@ -1839,7 +1839,7 @@ The value of x (in kJ mol<sup>-1</sup>) is ..... (Nearest integer)
 
 Ans. (70)
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/9a55854713277649cb69ae30ca0688dc_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/9a55854713277649cb69ae30ca0688dc_img.jpg)
 
 Sol.  $\text{A}_2 + \text{B}_2 \xrightarrow{500K} 2\text{AB}$   $\log K = 2.2$
 
@@ -1861,7 +1861,7 @@ $$x = 70.06 \text{ KJ/mol}$$
 
 74. Consider the following reaction sequence
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/d913be13a3014737435349cabf2ec4c9_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/d913be13a3014737435349cabf2ec4c9_img.jpg)
 
 c1ccccc1  $\xrightarrow[333 K]{\text{conc.HNO}_3 + \text{conc.H}_2\text{SO}_4}$  P  $\xrightarrow[2. \text{ pH neutralised}]{1. \text{ Sn/HCl}/\Delta}$  Q  $\xrightarrow{(\text{CH}_3\text{CO})_2}$  R  
  R  $\xrightarrow[\text{conc.HNO}_3 + \text{conc.H}_2\text{SO}_4]{}$  S (major product)  $\xrightarrow[2. \text{ pH neutralised}]{1. \text{ HCl/EtOH}, \Delta}$  T
@@ -1874,7 +1874,7 @@ Ans. (20)
 
 Sol.
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/66e7278704ab71a5895fa150a33fe075_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/66e7278704ab71a5895fa150a33fe075_img.jpg)
 
 c1ccccc1  $\xrightarrow[\text{H}_2\text{SO}_4]{\text{HNO}_3}$  Ph-NO<sub>2</sub> (P)  $\xrightarrow{\text{Sn/HCl}}$  Ph-NH<sub>2</sub> (Q)  $\xrightarrow{(\text{CH}_3\text{CO})_2\text{O}}$  Ph-NH-C(=O)-CH<sub>3</sub> (R)  
  R  $\xrightarrow[\text{H}_2\text{SO}_4]{\text{HNO}_3}$  H<sub>2</sub>N-C<sub>6</sub>H<sub>4</sub>-NO<sub>2</sub> (S)  $\xrightarrow[\text{EtOH}]{\text{HCl}}$  H<sub>2</sub>N-C<sub>6</sub>H<sub>4</sub>-NO<sub>2</sub> (T)
@@ -1885,15 +1885,15 @@ $$\% \text{N} = \frac{28}{138} \times 100 = 20.29\%$$
 
 75. Consider the following reactions:
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/201d4fc0b3d7837424300fc1aed89d8c_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/201d4fc0b3d7837424300fc1aed89d8c_img.jpg)
 
 $$\text{NaCl} + \text{K}_2\text{Cr}_2\text{O}_7 + \text{H}_2\text{SO}_4 \rightarrow \text{A} + \text{KHSO}_4 + \text{NaHSO}_4 + \text{H}_2\text{O}$$
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/9867683f28a3854caaaeaf2dda85850f_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/9867683f28a3854caaaeaf2dda85850f_img.jpg)
 
 $$\text{A} + \text{NaOH} \rightarrow \text{B} + \text{NaCl} + \text{H}_2\text{O}$$
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/e600e3d399382a7ca6068687fec1c3c8_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/e600e3d399382a7ca6068687fec1c3c8_img.jpg)
 
 $$\text{B} + \text{H}_2\text{SO}_4 + \text{H}_2\text{O}_2 \rightarrow \text{C} + \text{Na}_2\text{SO}_4 + \text{H}_2\text{O}$$
 
@@ -1901,19 +1901,19 @@ In the product 'C', 'X' is the number of O<sub>2</sub><sup>2-</sup> units, 'Y' i
 
 Ans. (13)
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/66dfef9c83a675ded4f17041c76e94d4_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/66dfef9c83a675ded4f17041c76e94d4_img.jpg)
 
 Sol. A  $\rightarrow$  CrO<sub>2</sub>Cl<sub>2</sub>
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/dab94805585065ae0b55490d57dc08fa_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/dab94805585065ae0b55490d57dc08fa_img.jpg)
 
 B  $\rightarrow$  Na<sub>2</sub>CrO<sub>4</sub>
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/08a18ff449079f5160cf252d3a4f3481_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/08a18ff449079f5160cf252d3a4f3481_img.jpg)
 
 C  $\rightarrow$  CrO<sub>5</sub>
 
-![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE Mains 2026 Shift 1 Question Paper Jan 21 With Solutions/5ece7b1c62fc388fb9bd504023a0c38d_img.jpg)
+![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2026_Shift_1_Question_Paper_Jan_21_With_Solutions/5ece7b1c62fc388fb9bd504023a0c38d_img.jpg)
 
 O=[Cr]1(O)OOO1  
  Structure of CrO<sub>5</sub> showing a central Cr atom with a +6 oxidation state, bonded to two terminal oxygens and two bridging peroxide groups.
