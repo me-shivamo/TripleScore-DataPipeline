@@ -5,7 +5,7 @@ Usage:
     python 03_structure_gemini.py <markdown_file> [--output-dir DIR]
 
 Reads a 02_DO-Spaces-Output markdown file, splits it into individual question
-blocks, sends pairs of 2 to Gemini 2.5 Flash-Lite (via OpenRouter) for structured
+blocks, sends each one to Gemini 2.5 Flash-Lite (via OpenRouter) for structured
 extraction, and saves the result as a JSON array.
 """
 
@@ -48,24 +48,12 @@ QUESTION_START = re.compile(
 SYSTEM_PROMPT_SINGLE = """You are a JEE exam question parser. Extract structured data from this markdown block.
 
 Rules:
-- "question": Full question text. Preserve LaTeX ($...$ and $$...$$). Remove bold markers (**) and question number prefix. If the question has diagram(s)/image(s), keep them inline as markdown image syntax ![description](url) at their original position in the text. Remove duplicate image description text that appears as a standalone paragraph after the image link.
-- "options": Array of option strings. Preserve LaTeX. Strip "(1)", "(2)" etc. prefixes. Always 4 elements for MCQ.
-- "type": "multiple_choice" (4 options, single answer), "numerical" (blanks/asks for number), "multiple_select" (multiple correct), "open_text" (otherwise).
-- "correct_answer": The actual answer value (e.g. "$mg/4$", "120.15", "1000"), NOT the option number.
-- "explanation": Full solution text exact as in markdown + simple short explanation. Preserve LaTeX. Remove "Sol." prefix and "Correct option (N)" suffix. If the solution has diagram(s)/image(s), keep them inline as markdown image syntax ![description](url) at their original position. Remove duplicate image description text that appears as a standalone paragraph after the image link.
+- "question": Full question text. Preserve the exact markdown text in string. Remove question number prefix. If the question has diagram(s)/image(s), keep them inline as markdown image syntax ![description](url) at their original position in the text. Remove duplicate image description text that appears as a standalone paragraph after the image link.
+- "options": Array of option strings. Preserve the exact markdown text. Remove option numbers "(1)" or "(A)" etc... prefixes. Always 4 elements for MCQ.
+- "type": "multiple_choice", "numerical", "multiple_select", "open_text".
+- "correct_answer": The actual answer value, NOT include the option number.
+- "explanation": Full solution text exact as in markdown (make sure that it will proper render on website). Preserve markdown text in string. Remove "Sol." prefix and "Correct option (N)" suffix. If the solution has diagram(s)/image(s), keep them inline as markdown image syntax ![description](url) at their original position. Remove duplicate image description text that appears as a standalone paragraph after the image link.
 - "subject": Classify as "Physics", "Chemistry", or "Maths" based on question content."""
-
-SYSTEM_PROMPT_BATCH = """You are a JEE exam question parser. You will receive TWO question blocks separated by "---QUESTION SEPARATOR---". Extract structured data from EACH block and return a JSON array of exactly 2 objects.
-
-Rules for each object:
-- "question": Full question text. Preserve LaTeX ($...$ and $$...$$). Remove bold markers (**) and question number prefix. If the question has diagram(s)/image(s), keep them inline as markdown image syntax ![description](url) at their original position in the text. Remove duplicate image description text that appears as a standalone paragraph after the image link.
-- "options": Array of option strings. Preserve LaTeX. Strip "(1)", "(2)" etc. prefixes. Always 4 elements for MCQ.
-- "type": "multiple_choice" (4 options, single answer), "numerical" (blanks/asks for number), "multiple_select" (multiple correct), "open_text" (otherwise).
-- "correct_answer": The actual answer value (e.g. "$mg/4$", "120.15", "1000"), NOT the option number.
-- "explanation": Full solution text exact as in markdown + simple short explanation. Preserve LaTeX. Remove "Sol." prefix and "Correct option (N)" suffix. If the solution has diagram(s)/image(s), keep them inline as markdown image syntax ![description](url) at their original position. Remove duplicate image description text that appears as a standalone paragraph after the image link.
-- "subject": Classify as "Physics", "Chemistry", or "Maths" based on question content.
-
-Return a JSON array of exactly 2 structured objects, one per question, in the same order as provided."""
 
 RESPONSE_SCHEMA_SINGLE = {
     "type": "json_schema",
@@ -93,6 +81,14 @@ RESPONSE_SCHEMA_SINGLE = {
                     "enum": ["Physics", "Chemistry", "Maths"],
                 },
             },
+            "propertyOrdering": [
+                "question",
+                "options",
+                "type",
+                "correct_answer",
+                "explanation",
+                "subject",
+            ],
             "required": [
                 "question",
                 "options",
@@ -101,55 +97,6 @@ RESPONSE_SCHEMA_SINGLE = {
                 "explanation",
                 "subject",
             ],
-            "additionalProperties": False,
-        },
-    },
-}
-
-RESPONSE_SCHEMA_BATCH = {
-    "type": "json_schema",
-    "json_schema": {
-        "name": "question_extraction_batch",
-        "strict": True,
-        "schema": {
-            "type": "object",
-            "properties": {
-                "questions": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "question": {"type": "string"},
-                            "options": {"type": "array", "items": {"type": "string"}},
-                            "type": {
-                                "type": "string",
-                                "enum": [
-                                    "multiple_choice",
-                                    "multiple_select",
-                                    "numerical",
-                                    "open_text",
-                                ],
-                            },
-                            "correct_answer": {"type": "string"},
-                            "explanation": {"type": "string"},
-                            "subject": {
-                                "type": "string",
-                                "enum": ["Physics", "Chemistry", "Maths"],
-                            },
-                        },
-                        "required": [
-                            "question",
-                            "options",
-                            "type",
-                            "correct_answer",
-                            "explanation",
-                            "subject",
-                        ],
-                        "additionalProperties": False,
-                    },
-                },
-            },
-            "required": ["questions"],
             "additionalProperties": False,
         },
     },
@@ -187,7 +134,8 @@ async def extract_question_single(client, block_text, question_num):
                     {"role": "user", "content": block_text},
                 ],
                 response_format=RESPONSE_SCHEMA_SINGLE,
-                temperature=0.5,
+                temperature=1,
+                max_tokens=2500,
             )
             content = response.choices[0].message.content
             return json.loads(content)
@@ -197,39 +145,6 @@ async def extract_question_single(client, block_text, question_num):
                 return {"error": str(e), "question_number": question_num}
             delay = RETRY_BASE_DELAY * (2 ** attempt)
             print(f"  Q{question_num}: retry {attempt + 1} in {delay}s ({e})", flush=True)
-            await asyncio.sleep(delay)
-
-
-async def extract_question_batch(client, block1, block2):
-    """Send 2 question blocks in one API call. Returns list of 2 results or None on failure."""
-    q1_num, q1_text = block1
-    q2_num, q2_text = block2
-    combined = f"{q1_text}\n\n---QUESTION SEPARATOR---\n\n{q2_text}"
-
-    for attempt in range(MAX_RETRIES):
-        try:
-            response = await client.chat.completions.create(
-                model="google/gemini-2.5-flash-lite",
-                messages=[
-                    {"role": "system", "content": SYSTEM_PROMPT_BATCH},
-                    {"role": "user", "content": combined},
-                ],
-                response_format=RESPONSE_SCHEMA_BATCH,
-                temperature=0.5,
-            )
-            content = response.choices[0].message.content
-            parsed = json.loads(content)
-            questions = parsed.get("questions", parsed) if isinstance(parsed, dict) else parsed
-            if isinstance(questions, list) and len(questions) == 2:
-                return questions
-            print(f"  Batch Q{q1_num}+Q{q2_num}: unexpected response length {len(questions) if isinstance(questions, list) else 'N/A'}, falling back", flush=True)
-            return None
-        except Exception as e:
-            if attempt == MAX_RETRIES - 1:
-                print(f"  Batch Q{q1_num}+Q{q2_num}: FAILED after {MAX_RETRIES} attempts: {e}, falling back to individual", flush=True)
-                return None
-            delay = RETRY_BASE_DELAY * (2 ** attempt)
-            print(f"  Batch Q{q1_num}+Q{q2_num}: retry {attempt + 1} in {delay}s ({e})", flush=True)
             await asyncio.sleep(delay)
 
 
@@ -264,7 +179,7 @@ async def structure_markdown(md_path, output_dir=None):
     if not blocks:
         raise RuntimeError(f"No question blocks found in {md_path.name}")
 
-    print(f"Found {len(blocks)} question(s). Processing in batches of 2...", flush=True)
+    print(f"Found {len(blocks)} question(s). Processing one by one...", flush=True)
 
     client = openai.AsyncOpenAI(
         base_url="https://openrouter.ai/api/v1",
@@ -273,52 +188,18 @@ async def structure_markdown(md_path, output_dir=None):
     )
 
     results = []
-    batch_success = 0
-    batch_fail = 0
-    individual_success = 0
-    individual_fail = 0
+    success_count = 0
+    fail_count = 0
     total = len(blocks)
 
-    i = 0
-    while i < len(blocks):
-        if i + 1 < len(blocks):
-            # Try batch of 2
-            q1_num = blocks[i][0]
-            q2_num = blocks[i + 1][0]
-            print(f"  Processing batch Q{q1_num}+Q{q2_num}...", flush=True)
-            batch_result = await extract_question_batch(client, blocks[i], blocks[i + 1])
-
-            if batch_result is not None:
-                results.extend(batch_result)
-                batch_success += 1
-                print(f"  Batch Q{q1_num}+Q{q2_num}: OK", flush=True)
-                i += 2
-                continue
-
-            # Fallback: process individually
-            batch_fail += 1
-            print(f"  Falling back to individual for Q{q1_num} and Q{q2_num}...", flush=True)
-            for j in range(2):
-                q_num, q_text = blocks[i + j]
-                print(f"  Processing Q{q_num} individually...", flush=True)
-                result = await extract_question_single(client, q_text, q_num)
-                results.append(result)
-                if "error" in result:
-                    individual_fail += 1
-                else:
-                    individual_success += 1
-            i += 2
+    for q_num, q_text in blocks:
+        print(f"  Processing Q{q_num}...", flush=True)
+        result = await extract_question_single(client, q_text, q_num)
+        results.append(result)
+        if "error" in result:
+            fail_count += 1
         else:
-            # Odd one out - process individually
-            q_num, q_text = blocks[i]
-            print(f"  Processing Q{q_num} individually (odd)...", flush=True)
-            result = await extract_question_single(client, q_text, q_num)
-            results.append(result)
-            if "error" in result:
-                individual_fail += 1
-            else:
-                individual_success += 1
-            i += 1
+            success_count += 1
 
     output_dir.mkdir(parents=True, exist_ok=True)
     output_file = output_dir / f"{md_path.stem}.json"
@@ -327,14 +208,10 @@ async def structure_markdown(md_path, output_dir=None):
         encoding="utf-8",
     )
 
-    success_count = sum(1 for r in results if "error" not in r)
     print(f"\n--- Structuring Summary ---", flush=True)
     print(f"Total questions: {total}", flush=True)
     print(f"Successful: {success_count}", flush=True)
-    print(f"Failed: {total - success_count}", flush=True)
-    print(f"Batch calls succeeded: {batch_success}", flush=True)
-    print(f"Batch calls failed (fell back): {batch_fail}", flush=True)
-    print(f"Individual calls: success={individual_success}, fail={individual_fail}", flush=True)
+    print(f"Failed: {fail_count}", flush=True)
     print(f"Saved to {output_file}", flush=True)
 
     return output_file
