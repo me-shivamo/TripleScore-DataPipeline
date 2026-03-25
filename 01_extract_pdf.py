@@ -16,6 +16,8 @@ import re
 import time
 from pathlib import Path
 
+from pypdf import PdfReader
+
 
 def configure_ssl_certificates():
     if os.getenv("SSL_CERT_FILE"):
@@ -68,6 +70,38 @@ from datalab_sdk import AsyncDatalabClient, ConvertOptions
 from datalab_sdk.exceptions import DatalabAPIError, DatalabTimeoutError
 
 IMAGE_LINK_PATTERN = re.compile(r"!\[[^\]]*]\(([^)]+)\)")
+
+
+def get_pdf_page_count(pdf_path: Path) -> int:
+    """Return the total number of pages in a PDF file."""
+    reader = PdfReader(str(pdf_path))
+    return len(reader.pages)
+
+
+def parse_page_range(page_range, total_pages: int) -> tuple:
+    """Parse a page_range string like '3-20' into a (start, end) 1-based inclusive tuple.
+    If page_range is None, returns (1, total_pages)."""
+    if not page_range or not str(page_range).strip():
+        return 1, total_pages
+
+    page_range = str(page_range).strip()
+    if "-" in page_range:
+        parts = page_range.split("-", 1)
+        start = int(parts[0].strip())
+        end = int(parts[1].strip())
+    else:
+        start = int(page_range)
+        end = int(page_range)
+
+    start = max(1, start)
+    end = min(end, total_pages)
+
+    if start > end:
+        raise ValueError(
+            f"Invalid page_range '{page_range}': start ({start}) > end ({end})"
+        )
+
+    return start, end
 
 
 class ProgressDatalabClient(AsyncDatalabClient):
@@ -154,6 +188,7 @@ async def extract(
     debug=False,
     poll_interval=3,
     max_polls=600,
+    chunk_size=4,
 ):
     """Extract PDF to markdown + images. Returns the output markdown file path."""
     api_key = os.getenv("DATALAB_API_KEY")
@@ -173,31 +208,51 @@ async def extract(
 
     move_existing_images_to_output_dir(BASE_DIR, images_dir)
 
-    options = ConvertOptions(
-        output_format="markdown",
-        mode="balanced",
-        page_range=page_range,
-    )
+    total_pages = get_pdf_page_count(pdf_path)
+    range_start, range_end = parse_page_range(page_range, total_pages)
+    print(f"PDF has {total_pages} pages. Extracting pages {range_start}-{range_end} in chunks of {chunk_size}.", flush=True)
 
-    print(f"Submitting {pdf_path.name} for conversion...", flush=True)
+    all_markdown_parts = []
+    all_images = {}
+
     async with ProgressDatalabClient(api_key=api_key) as client:
-        result = await client.convert(
-            pdf_path,
-            options=options,
-            max_polls=max_polls,
-            poll_interval=poll_interval,
-        )
+        chunk_start = range_start
+        while chunk_start <= range_end:
+            chunk_end = min(chunk_start + chunk_size - 1, range_end)
+            chunk_range_str = f"{chunk_start}-{chunk_end}"
 
-    markdown_text = rewrite_markdown_image_paths(result.markdown or "")
-    if not markdown_text:
-        raise RuntimeError("Datalab returned no markdown content.")
+            print(f"Submitting {pdf_path.name} pages {chunk_range_str}...", flush=True)
+            options = ConvertOptions(
+                output_format="markdown",
+                mode="balanced",
+                page_range=chunk_range_str,
+            )
+            result = await client.convert(
+                pdf_path,
+                options=options,
+                max_polls=max_polls,
+                poll_interval=poll_interval,
+            )
 
-    result.markdown = markdown_text
+            chunk_md = rewrite_markdown_image_paths(result.markdown or "")
+            if not chunk_md.strip():
+                print(f"Pages {chunk_range_str} returned empty markdown. Stopping.", flush=True)
+                break
+
+            all_markdown_parts.append(chunk_md)
+            if result.images:
+                all_images.update(result.images)
+
+            chunk_start += chunk_size
+
+    if not all_markdown_parts:
+        raise RuntimeError("Datalab returned no markdown content for any chunk.")
+
+    markdown_text = "\n\n".join(all_markdown_parts)
 
     # Save output locally
     output_dir.mkdir(parents=True, exist_ok=True)
-    result.save_output(output_dir / output_stem, save_images=False)
-    save_images(result.images, images_dir)
+    save_images(all_images, images_dir)
 
     # Save full markdown
     output_file = "debug_output.md" if debug else f"{output_stem}.md"
@@ -221,6 +276,7 @@ def parse_args():
     )
     parser.add_argument("--debug", action="store_true", help="Process only a single page")
     parser.add_argument("--page-range", default=None, help="Page range (e.g. '3-5')")
+    parser.add_argument("--chunk-size", type=int, default=4, help="Number of pages per API call (default: 4)")
     return parser.parse_args()
 
 
@@ -233,5 +289,6 @@ if __name__ == "__main__":
             output_dir=BASE_DIR / "01_Datalab-Output",
             page_range=page_range,
             debug=args.debug,
+            chunk_size=args.chunk_size,
         )
     )
