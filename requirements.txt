@@ -4,3 +4,4 @@ datalab-python-sdk==0.2.2
 boto3
 openai
 google-generativeai
+pypdf
