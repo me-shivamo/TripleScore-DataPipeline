@@ -32,6 +32,7 @@ RUN_EXTRACTION = True       # Step 1: Extract PDF to markdown + images via Datal
 RUN_SPACES_UPLOAD = True      # Step 2: Upload images to DigitalOcean Spaces and update markdown
 RUN_GEMINI_STRUCTURING = True  # Step 3: Structure markdown to JSON via Gemini
 RUN_CLASSIFICATION = True       # Step 4: Classify topic and chapter via Gemini
+RUN_ENRICHMENT = True           # Step 4.1: Add question IDs and source
 RUN_EMBEDDING = True            # Step 5: Generate embeddings via Google Gemini API
 
 # DigitalOcean Spaces folder name (images will be uploaded to this folder)
@@ -149,6 +150,19 @@ async def run_pipeline():
         await classify_all()
     else:
         print("Skipping classification.", flush=True)
+
+    # --- Step 4.1: ID and Source Enrichment ---
+    if RUN_ENRICHMENT:
+        import importlib
+        enrich_all = importlib.import_module("04_1_enrich_ids").enrich_all
+
+        print("\n" + "=" * 50, flush=True)
+        print("STEP 4.1: ID and Source Enrichment", flush=True)
+        print("=" * 50, flush=True)
+
+        enrich_all()
+    else:
+        print("Skipping enrichment.", flush=True)
 
     # --- Step 5: Embedding Generation ---
     if RUN_EMBEDDING:
