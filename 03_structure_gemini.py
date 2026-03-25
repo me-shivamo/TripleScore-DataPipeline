@@ -13,6 +13,8 @@ import asyncio
 import json
 import os
 import re
+import sqlite3
+from datetime import datetime, timezone
 from pathlib import Path
 
 
@@ -39,6 +41,15 @@ def load_env_file(env_path):
 
 BASE_DIR = Path(__file__).resolve().parent
 load_env_file(BASE_DIR / ".env")
+
+# Pricing for google/gemini-2.5-flash-lite via OpenRouter (USD per 1M tokens)
+# Verify latest rates at: https://openrouter.ai/google/gemini-2.5-flash-lite
+MODEL_PRICING = {
+    "input_per_1m":  0.10,   # $ per 1M input tokens
+    "output_per_1m": 0.40,   # $ per 1M output tokens
+}
+
+DB_PATH = Path(__file__).resolve().parent / "token_usage.db"
 
 QUESTION_START = re.compile(
     r"^(?:-\s*)?(?:\*\*)?(\d{1,3})[\.\*]",
@@ -106,6 +117,50 @@ MAX_RETRIES = 3
 RETRY_BASE_DELAY = 2
 
 
+def setup_database():
+    """Create SQLite DB and tables if they don't already exist."""
+    conn = sqlite3.connect(DB_PATH)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS structuring_runs (
+            id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+            pdf_name            TEXT    NOT NULL,
+            run_timestamp       TEXT    NOT NULL,
+            total_questions     INTEGER NOT NULL,
+            successful          INTEGER NOT NULL,
+            failed              INTEGER NOT NULL,
+            total_input_tokens  INTEGER NOT NULL,
+            total_output_tokens INTEGER NOT NULL,
+            total_tokens        INTEGER NOT NULL,
+            total_input_cost    REAL    NOT NULL,
+            total_output_cost   REAL    NOT NULL,
+            total_cost          REAL    NOT NULL
+        )
+    """)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS structuring_question_stats (
+            id              INTEGER PRIMARY KEY AUTOINCREMENT,
+            run_id          INTEGER NOT NULL REFERENCES structuring_runs(id),
+            question_number INTEGER NOT NULL,
+            subject         TEXT,
+            input_tokens    INTEGER NOT NULL,
+            output_tokens   INTEGER NOT NULL,
+            total_tokens    INTEGER NOT NULL,
+            input_cost      REAL    NOT NULL,
+            output_cost     REAL    NOT NULL,
+            total_cost      REAL    NOT NULL
+        )
+    """)
+    conn.commit()
+    conn.close()
+
+
+def compute_cost(input_tokens, output_tokens):
+    """Return (input_cost, output_cost, total_cost) in USD."""
+    input_cost  = input_tokens  * MODEL_PRICING["input_per_1m"]  / 1_000_000
+    output_cost = output_tokens * MODEL_PRICING["output_per_1m"] / 1_000_000
+    return input_cost, output_cost, input_cost + output_cost
+
+
 def split_into_question_blocks(markdown_text):
     """Split markdown into (question_number, block_text) tuples."""
     matches = list(QUESTION_START.finditer(markdown_text))
@@ -124,7 +179,9 @@ def split_into_question_blocks(markdown_text):
 
 
 async def extract_question_single(client, block_text, question_num):
-    """Send a single question block to Gemini and return structured JSON."""
+    """Send a single question block to Gemini and return (structured JSON, usage_dict)."""
+    _no_usage = {"input_tokens": 0, "output_tokens": 0, "total_tokens": 0}
+
     for attempt in range(MAX_RETRIES):
         try:
             response = await client.chat.completions.create(
@@ -138,11 +195,17 @@ async def extract_question_single(client, block_text, question_num):
                 max_tokens=2500,
             )
             content = response.choices[0].message.content
-            return json.loads(content)
+            usage = response.usage
+            usage_dict = {
+                "input_tokens":  usage.prompt_tokens,
+                "output_tokens": usage.completion_tokens,
+                "total_tokens":  usage.total_tokens,
+            }
+            return json.loads(content), usage_dict
         except Exception as e:
             if attempt == MAX_RETRIES - 1:
                 print(f"  Q{question_num}: FAILED after {MAX_RETRIES} attempts: {e}", flush=True)
-                return {"error": str(e), "question_number": question_num}
+                return {"error": str(e), "question_number": question_num}, _no_usage
             delay = RETRY_BASE_DELAY * (2 ** attempt)
             print(f"  Q{question_num}: retry {attempt + 1} in {delay}s ({e})", flush=True)
             await asyncio.sleep(delay)
@@ -159,6 +222,8 @@ async def structure_markdown(md_path, output_dir=None):
         Path to the output JSON file.
     """
     import openai
+
+    setup_database()
 
     md_path = Path(md_path)
     if not md_path.exists():
@@ -190,16 +255,34 @@ async def structure_markdown(md_path, output_dir=None):
     results = []
     success_count = 0
     fail_count = 0
-    total = len(blocks)
+    per_question_stats = []
 
     for q_num, q_text in blocks:
         print(f"  Processing Q{q_num}...", flush=True)
-        result = await extract_question_single(client, q_text, q_num)
+        result, usage = await extract_question_single(client, q_text, q_num)
         results.append(result)
+
+        in_cost, out_cost, total_cost = compute_cost(usage["input_tokens"], usage["output_tokens"])
+
         if "error" in result:
             fail_count += 1
         else:
             success_count += 1
+            print(
+                f"    -> {result.get('subject', '?')}"
+                f"  |  tokens: {usage['input_tokens']} in + {usage['output_tokens']} out = {usage['total_tokens']}"
+                f"  |  cost: ${in_cost:.6f} + ${out_cost:.6f} = ${total_cost:.6f}",
+                flush=True,
+            )
+
+        per_question_stats.append({
+            "question_number": q_num,
+            "subject": result.get("subject"),
+            **usage,
+            "input_cost":  in_cost,
+            "output_cost": out_cost,
+            "total_cost":  total_cost,
+        })
 
     output_dir.mkdir(parents=True, exist_ok=True)
     output_file = output_dir / f"{md_path.stem}.json"
@@ -208,11 +291,56 @@ async def structure_markdown(md_path, output_dir=None):
         encoding="utf-8",
     )
 
-    print(f"\n--- Structuring Summary ---", flush=True)
-    print(f"Total questions: {total}", flush=True)
-    print(f"Successful: {success_count}", flush=True)
-    print(f"Failed: {fail_count}", flush=True)
+    # Aggregate totals
+    total  = len(blocks)
+    t_in   = sum(s["input_tokens"]  for s in per_question_stats)
+    t_out  = sum(s["output_tokens"] for s in per_question_stats)
+    t_tok  = sum(s["total_tokens"]  for s in per_question_stats)
+    t_in_c = sum(s["input_cost"]    for s in per_question_stats)
+    t_ou_c = sum(s["output_cost"]   for s in per_question_stats)
+    t_cost = sum(s["total_cost"]    for s in per_question_stats)
+
+    print(f"\n--- Structuring Summary for {md_path.name} ---", flush=True)
+    print(f"Total questions : {total}  |  Successful: {success_count}  |  Failed: {fail_count}", flush=True)
+    print(f"Total tokens    : {t_in} in + {t_out} out = {t_tok}", flush=True)
+    print(f"Total cost      : ${t_in_c:.6f} + ${t_ou_c:.6f} = ${t_cost:.6f}", flush=True)
     print(f"Saved to {output_file}", flush=True)
+
+    # Persist to SQLite
+    conn = sqlite3.connect(DB_PATH)
+    cur  = conn.cursor()
+    cur.execute("""
+        INSERT INTO structuring_runs
+            (pdf_name, run_timestamp, total_questions, successful, failed,
+             total_input_tokens, total_output_tokens, total_tokens,
+             total_input_cost, total_output_cost, total_cost)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    """, (
+        md_path.name,
+        datetime.now(timezone.utc).isoformat(),
+        total, success_count, fail_count,
+        t_in, t_out, t_tok,
+        t_in_c, t_ou_c, t_cost,
+    ))
+    run_id = cur.lastrowid
+    cur.executemany("""
+        INSERT INTO structuring_question_stats
+            (run_id, question_number, subject,
+             input_tokens, output_tokens, total_tokens,
+             input_cost, output_cost, total_cost)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    """, [
+        (
+            run_id,
+            s["question_number"], s["subject"],
+            s["input_tokens"], s["output_tokens"], s["total_tokens"],
+            s["input_cost"], s["output_cost"], s["total_cost"],
+        )
+        for s in per_question_stats
+    ])
+    conn.commit()
+    conn.close()
+    print(f"Token usage saved to {DB_PATH}", flush=True)
 
     return output_file
 
