@@ -24,8 +24,11 @@ PDF_PATH = str(BASE_DIR / "PDFs" / "JEE_Mains_2026_Jan_28.pdf")
 # Output directory for extracted markdown and images
 OUTPUT_DIR = str(BASE_DIR / "01_Datalab-Output")
 
-# Page range to extract (e.g. "3-5", "4", None for full PDF)
-PAGE_RANGE = ""  # Empty string = extract ALL pages
+# Starting page for extraction (1-based, None = first page)
+START_PAGE = None
+
+# Ending page for extraction (1-based, None = last page)
+END_PAGE = None
 
 # Pipeline steps - toggle these to run specific steps
 RUN_EXTRACTION = True       # Step 1: Extract PDF to markdown + images via Datalab
@@ -52,7 +55,8 @@ MAX_POLLS = 600
 async def run_pipeline():
     pdf_path = PDF_PATH
     output_dir = OUTPUT_DIR
-    page_range = PAGE_RANGE
+    start_page = START_PAGE
+    end_page = END_PAGE
     debug = DEBUG_MODE
 
     # CLI args override the config above
@@ -74,25 +78,35 @@ async def run_pipeline():
         import importlib
         extract = importlib.import_module("01_extract_pdf").extract
 
-        page_range_value = page_range or os.getenv("PAGE_RANGE") or None
-        # Ensure empty strings become None (extract full PDF)
-        if page_range_value and not page_range_value.strip():
-            page_range_value = None
+        env_start = os.getenv("START_PAGE", "").strip()
+        env_end = os.getenv("END_PAGE", "").strip()
+        resolved_start = start_page or (int(env_start) if env_start else None)
+        resolved_end = end_page or (int(env_end) if env_end else None)
+
+        env_chunk = os.getenv("CHUNK_SIZE", "").strip()
+        chunk_size = int(env_chunk) if env_chunk else 0
+
+        env_quality = os.getenv("MIN_QUALITY_SCORE", "").strip()
+        min_quality_score = float(env_quality) if env_quality else 4.0
+
+        env_retries = os.getenv("MAX_CHUNK_RETRIES", "").strip()
+        max_chunk_retries = int(env_retries) if env_retries else 2
 
         print("=" * 50, flush=True)
         print("STEP 1: PDF Extraction (Datalab)", flush=True)
         print("=" * 50, flush=True)
 
-        env_chunk = os.getenv("CHUNK_SIZE", "").strip()
-        chunk_size = int(env_chunk) if env_chunk else 0
         md_path = await extract(
             pdf_path=pdf_path,
             output_dir=output_dir,
-            page_range=page_range_value,
+            start_page=resolved_start,
+            end_page=resolved_end,
             debug=debug,
             poll_interval=POLL_INTERVAL_SECONDS,
             max_polls=MAX_POLLS,
             chunk_size=chunk_size,
+            min_quality_score=min_quality_score,
+            max_chunk_retries=max_chunk_retries,
         )
     else:
         # If skipping extraction, look for existing markdown
