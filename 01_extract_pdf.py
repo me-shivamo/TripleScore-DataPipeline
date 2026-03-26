@@ -188,7 +188,7 @@ async def extract(
     debug=False,
     poll_interval=3,
     max_polls=600,
-    chunk_size=4,
+    chunk_size=0,
 ):
     """Extract PDF to markdown + images. Returns the output markdown file path."""
     api_key = os.getenv("DATALAB_API_KEY")
@@ -210,7 +210,8 @@ async def extract(
 
     total_pages = get_pdf_page_count(pdf_path)
     range_start, range_end = parse_page_range(page_range, total_pages)
-    print(f"PDF has {total_pages} pages. Extracting pages {range_start}-{range_end} in chunks of {chunk_size}.", flush=True)
+    effective_chunk = chunk_size if chunk_size > 0 else (range_end - range_start + 1)
+    print(f"PDF has {total_pages} pages. Extracting pages {range_start}-{range_end} in chunks of {effective_chunk}.", flush=True)
 
     all_markdown_parts = []
     all_images = {}
@@ -218,7 +219,7 @@ async def extract(
     async with ProgressDatalabClient(api_key=api_key) as client:
         chunk_start = range_start
         while chunk_start <= range_end:
-            chunk_end = min(chunk_start + chunk_size - 1, range_end)
+            chunk_end = min(chunk_start + effective_chunk - 1, range_end)
             chunk_range_str = f"{chunk_start}-{chunk_end}"
 
             print(f"Submitting {pdf_path.name} pages {chunk_range_str}...", flush=True)
@@ -243,7 +244,7 @@ async def extract(
             if result.images:
                 all_images.update(result.images)
 
-            chunk_start += chunk_size
+            chunk_start += effective_chunk
 
     if not all_markdown_parts:
         raise RuntimeError("Datalab returned no markdown content for any chunk.")
@@ -276,7 +277,10 @@ def parse_args():
     )
     parser.add_argument("--debug", action="store_true", help="Process only a single page")
     parser.add_argument("--page-range", default=None, help="Page range (e.g. '3-5')")
-    parser.add_argument("--chunk-size", type=int, default=4, help="Number of pages per API call (default: 4)")
+    env_chunk = os.getenv("CHUNK_SIZE", "").strip()
+    default_chunk = int(env_chunk) if env_chunk else 0
+    parser.add_argument("--chunk-size", type=int, default=default_chunk,
+                        help="Pages per API call. 0 or empty = full PDF in one call (reads CHUNK_SIZE env var)")
     return parser.parse_args()
 
 

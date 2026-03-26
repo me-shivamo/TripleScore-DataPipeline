@@ -83,6 +83,8 @@ async def run_pipeline():
         print("STEP 1: PDF Extraction (Datalab)", flush=True)
         print("=" * 50, flush=True)
 
+        env_chunk = os.getenv("CHUNK_SIZE", "").strip()
+        chunk_size = int(env_chunk) if env_chunk else 0
         md_path = await extract(
             pdf_path=pdf_path,
             output_dir=output_dir,
@@ -90,6 +92,7 @@ async def run_pipeline():
             debug=debug,
             poll_interval=POLL_INTERVAL_SECONDS,
             max_polls=MAX_POLLS,
+            chunk_size=chunk_size,
         )
     else:
         # If skipping extraction, look for existing markdown
