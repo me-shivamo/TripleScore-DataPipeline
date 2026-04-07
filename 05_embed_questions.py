@@ -43,7 +43,7 @@ API_DELAY = 0.1  # gemini-embedding-001 has 1500 req/min free tier
 
 
 def build_embedding_text(question):
-    """Build the embedding input string from 5 parameters."""
+    """Build the embedding input string from subject, chapter, topic, question, and options."""
     options_str = ", ".join(question.get("options", []))
     return (
         f"Subject: {question.get('subject', '')}\n"
@@ -71,6 +71,7 @@ def embed_file(input_file, output_dir, genai):
                 model="models/gemini-embedding-2-preview",
                 content=text,
                 task_type="RETRIEVAL_DOCUMENT",
+                title=question.get("title", ""),
             )
             question["embedding"] = result["embedding"]
         except Exception as e:
@@ -119,7 +120,7 @@ def embed_all(input_dir=None, output_dir=None):
     import google.generativeai as genai
 
     if input_dir is None:
-        input_dir = BASE_DIR / "04_Classified-Output"
+        input_dir = BASE_DIR / "04_1_Enriched-Output"
     else:
         input_dir = Path(input_dir)
 
