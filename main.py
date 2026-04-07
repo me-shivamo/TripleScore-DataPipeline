@@ -32,6 +32,7 @@ END_PAGE = None
 
 # Pipeline steps - toggle these to run specific steps
 RUN_EXTRACTION = True       # Step 1: Extract PDF to markdown + images via Datalab
+RUN_QUESTION_AUDIT = True   # Step 1.1: Audit extracted markdown for missing questions (1-75)
 RUN_SPACES_UPLOAD = True      # Step 2: Upload images to DigitalOcean Spaces and update markdown
 RUN_GEMINI_STRUCTURING = True  # Step 3: Structure markdown to JSON via Gemini
 RUN_CLASSIFICATION = True       # Step 4: Classify topic and chapter via Gemini
@@ -92,6 +93,9 @@ async def run_pipeline():
         env_retries = os.getenv("MAX_CHUNK_RETRIES", "").strip()
         max_chunk_retries = int(env_retries) if env_retries else 2
 
+        env_mode = os.getenv("PARSE_MODE", "").strip()
+        parse_mode = env_mode if env_mode else "balanced"
+
         print("=" * 50, flush=True)
         print("STEP 1: PDF Extraction (Datalab)", flush=True)
         print("=" * 50, flush=True)
@@ -107,6 +111,7 @@ async def run_pipeline():
             chunk_size=chunk_size,
             min_quality_score=min_quality_score,
             max_chunk_retries=max_chunk_retries,
+            parse_mode=parse_mode,
         )
     else:
         # If skipping extraction, look for existing markdown
@@ -117,6 +122,19 @@ async def run_pipeline():
             print(f"Skipping extraction. Using existing: {candidate.name}", flush=True)
         else:
             print(f"Skipping extraction. No markdown found at: {candidate}", flush=True)
+
+    # --- Step 1.1: Question Audit ---
+    if RUN_QUESTION_AUDIT and md_path and Path(md_path).exists():
+        import importlib
+        audit_questions = importlib.import_module("01_1_audit_questions").audit_questions
+
+        print("\n" + "=" * 50, flush=True)
+        print("STEP 1.1: Question Audit", flush=True)
+        print("=" * 50, flush=True)
+
+        audit_questions(md_path)
+    elif RUN_QUESTION_AUDIT and not md_path:
+        print("Skipping question audit: no markdown file available.", flush=True)
 
     # --- Step 2: DigitalOcean Spaces Upload ---
     spaces_md_path = None
