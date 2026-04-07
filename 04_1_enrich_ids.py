@@ -8,10 +8,10 @@ Reads 04_Classified-Output/*.json files, adds 'id' (first key) and 'source'
 (last key) to every question, and saves the enriched results to
 04_1_Enriched-Output/*.json.
 
-ID format   : {q_number:02d}{subject_abbr}{shift}{month}{year}
-              e.g. 01M1Jan2026
+Title format : JEE Mains {year} {month} {day} - {subject} Q{number}
+               e.g. JEE Mains 2026 Jan 28 - Physics Q5
 Source format: {month} {year} Shift {shift}
-              e.g. Jan 2026 Shift 1
+               e.g. Jan 2026 Shift 1
 """
 
 import json
@@ -20,21 +20,16 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 
-SUBJECT_ABBR = {
-    "Physics":   "P",
-    "Chemistry": "C",
-    "Maths":     "M",
-}
-
 MONTHS = r"Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 
 
 def parse_pdf_meta(stem: str):
-    """Extract (year, month, shift) from a PDF/JSON filename stem.
+    """Extract (year, month, day, shift) from a PDF/JSON filename stem.
 
     Rules:
     - year  : first 4-digit sequence matching 20xx
     - month : first occurrence of a month abbreviation
+    - day   : first 1-2 digit number after the month abbreviation; defaults to '' if absent
     - shift : digit after 'Shift_'; defaults to 2 if 'Shift' is absent
     """
     year_match = re.search(r"20\d{2}", stem)
@@ -43,29 +38,35 @@ def parse_pdf_meta(stem: str):
     month_match = re.search(MONTHS, stem)
     month = month_match.group() if month_match else "Unknown"
 
+    if month_match:
+        day_match = re.search(r"(\d{1,2})", stem[month_match.end():])
+        day = str(int(day_match.group(1))) if day_match else ""
+    else:
+        day = ""
+
     shift_match = re.search(r"Shift_(\d+)", stem, re.IGNORECASE)
     shift = shift_match.group(1) if shift_match else "2"
 
-    return year, month, shift
+    return year, month, day, shift
 
 
 def enrich_file(input_file: Path, output_dir: Path):
-    """Add 'id' and 'source' to every question in a single JSON file."""
+    """Add 'title' and 'source' to every question in a single JSON file."""
     questions = json.loads(input_file.read_text(encoding="utf-8"))
-    year, month, shift = parse_pdf_meta(input_file.stem)
+    year, month, day, shift = parse_pdf_meta(input_file.stem)
     source = f"{month} {year} Shift {shift}"
+    date_part = f"{month} {day}".strip() if day else month
 
     print(f"\nProcessing {input_file.name}: {len(questions)} question(s)", flush=True)
-    print(f"  Parsed meta -> year={year}, month={month}, shift={shift}", flush=True)
+    print(f"  Parsed meta -> year={year}, month={month}, day={day}, shift={shift}", flush=True)
 
     enriched = []
     for idx, q in enumerate(questions):
         subject = q.get("subject", "")
-        abbr = SUBJECT_ABBR.get(subject, "X")
-        question_id = f"{idx + 1:02d}{abbr}{shift}{month}{year}"
+        title = f"JEE Mains {year} {date_part} - {shift} - {subject} Q{idx + 1}"
 
-        # Build new dict with 'id' first and 'source' last
-        new_q = {"id": question_id}
+        # Build new dict with 'title' first and 'source' last
+        new_q = {"title": title}
         new_q.update(q)
         new_q["source"] = source
         enriched.append(new_q)
