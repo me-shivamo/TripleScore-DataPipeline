@@ -79,13 +79,13 @@ def get_pdf_page_count(pdf_path: Path) -> int:
 
 
 def resolve_page_bounds(start_page, end_page, total_pages: int) -> tuple:
-    """Resolve start/end page values to a 1-based inclusive (start, end) tuple.
-    None or 0 for start_page defaults to 1; None or 0 for end_page defaults to total_pages."""
-    start = int(start_page) if start_page else 1
-    end = int(end_page) if end_page else total_pages
+    """Resolve start/end page values to a 0-based inclusive (start, end) tuple.
+    None for start_page defaults to 0; None for end_page defaults to total_pages - 1."""
+    start = int(start_page) if start_page is not None else 0
+    end = int(end_page) if end_page is not None else total_pages - 1
 
-    start = max(1, start)
-    end = min(end, total_pages)
+    start = max(0, start)
+    end = min(end, total_pages - 1)
 
     if start > end:
         raise ValueError(
@@ -183,6 +183,7 @@ async def extract(
     chunk_size=0,
     min_quality_score=4.0,
     max_chunk_retries=2,
+    parse_mode="balanced",
 ):
     """Extract PDF to markdown + images. Returns the output markdown file path."""
     api_key = os.getenv("DATALAB_API_KEY")
@@ -239,8 +240,9 @@ async def extract(
 
                 options = ConvertOptions(
                     output_format="markdown",
-                    mode="balanced",
+                    mode=parse_mode,
                     page_range=chunk_range_str,
+                    skip_cache=True,
                 )
                 result = await client.convert(
                     pdf_path,
@@ -370,6 +372,11 @@ def parse_args():
                         default=int(env_retries) if env_retries else 2,
                         help="Max retries per chunk on quality failure (reads MAX_CHUNK_RETRIES env var)")
 
+    env_mode = os.getenv("PARSE_MODE", "").strip()
+    parser.add_argument("--parse-mode", default=env_mode if env_mode else "balanced",
+                        choices=["fast", "balanced", "accurate"],
+                        help="Datalab parsing mode: fast, balanced, or accurate (reads PARSE_MODE env var)")
+
     return parser.parse_args()
 
 
@@ -385,5 +392,6 @@ if __name__ == "__main__":
             chunk_size=args.chunk_size,
             min_quality_score=args.min_quality_score,
             max_chunk_retries=args.max_chunk_retries,
+            parse_mode=args.parse_mode,
         )
     )
