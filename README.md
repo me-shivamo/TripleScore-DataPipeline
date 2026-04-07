@@ -13,6 +13,7 @@ PDF
  └─ Step 4:   04_classify_topic_chapter.py → 04_Classified-Output/*.json
  └─ Step 4.1: 04_1_enrich_ids.py        → 04_1_Enriched-Output/*.json
  └─ Step 5:   05_embed_questions.py      → 05_Embedded-Output/*.json + index.json
+ └─ Step 6:   06_import_to_supabase.py  → Supabase questions table
 ```
 
 ## Setup
@@ -216,6 +217,42 @@ Output: `05_Embedded-Output/{pdf_stem}.json` — each question with an `embeddin
 
 ---
 
+---
+
+### Step 6 — Import to Supabase
+
+Upload embedded questions from `05_Embedded-Output/` into the Supabase (PostgreSQL) database.
+
+Safe to re-run at any time — questions already in the database are skipped automatically.
+
+```bash
+# Import all files in 05_Embedded-Output/  (most common)
+python 06_import_to_supabase.py
+
+# Import a single file
+python 06_import_to_supabase.py --file 05_Embedded-Output/some_paper.json
+
+# Import from a custom directory
+python 06_import_to_supabase.py --input-dir my_embedded/
+```
+
+| Flag | Default | Description |
+|---|---|---|
+| `--file PATH` | `None` | Import a single JSON file instead of the whole directory |
+| `--input-dir DIR` | `05_Embedded-Output/` | Directory of embedded JSON files to import |
+
+**Requirements:** `DATABASE_URL` must be set in `TripleScore-Backend/.env` pointing to your Supabase instance.
+
+Example output:
+```
+Importing JEE_Mains_2025_Shift_2_Question_Paper_Apr_03.json ... 75 created, 0 skipped
+
+Done — 75 created, 0 skipped
+Total questions in database: 75
+```
+
+---
+
 ## Project Structure
 
 ```
@@ -227,6 +264,7 @@ Output: `05_Embedded-Output/{pdf_stem}.json` — each question with an `embeddin
 ├── 04_classify_topic_chapter.py   # Step 4:   Topic/chapter classification via Gemini
 ├── 04_1_enrich_ids.py             # Step 4.1: Add question title and source
 ├── 05_embed_questions.py          # Step 5:   Generate embeddings via Gemini
+├── 06_import_to_supabase.py       # Step 6:   Import embedded questions into Supabase
 ├── requirements.txt               # Python dependencies
 ├── .env                           # API keys and config (not committed)
 ├── PDFs/                          # Input PDF files
