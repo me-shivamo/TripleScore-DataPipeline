@@ -464,9 +464,16 @@ async def classify_all(input_dir=None, output_dir=None, single_file=None):
             print(f"File not found: {json_files[0]}", flush=True)
             return
     else:
-        json_files = sorted(input_dir.glob("*.json"))
-        if not json_files:
+        all_files = sorted(input_dir.glob("*.json"))
+        if not all_files:
             print(f"No JSON files found in {input_dir}", flush=True)
+            return
+        json_files = [f for f in all_files if not (output_dir / f.name).exists()]
+        skipped = len(all_files) - len(json_files)
+        if skipped:
+            print(f"Skipping {skipped} already-classified file(s).", flush=True)
+        if not json_files:
+            print("All files already classified. Nothing to do.", flush=True)
             return
 
     print(f"Found {len(json_files)} file(s) to classify.", flush=True)

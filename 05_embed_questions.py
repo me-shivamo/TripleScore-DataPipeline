@@ -115,8 +115,8 @@ def build_index(all_questions, output_dir):
     print(f"\nIndex saved to {index_file} ({len(index)} entries)", flush=True)
 
 
-def embed_all(input_dir=None, output_dir=None):
-    """Generate embeddings for all classified questions."""
+def embed_all(input_dir=None, output_dir=None, single_file=None):
+    """Generate embeddings for all classified questions, or a single file."""
     import google.generativeai as genai
 
     if input_dir is None:
@@ -135,17 +135,35 @@ def embed_all(input_dir=None, output_dir=None):
 
     genai.configure(api_key=api_key)
 
-    json_files = sorted(input_dir.glob("*.json"))
-    if not json_files:
-        print(f"No JSON files found in {input_dir}", flush=True)
-        return
+    if single_file:
+        json_files = [Path(single_file)]
+        if not json_files[0].exists():
+            print(f"File not found: {json_files[0]}", flush=True)
+            return
+    else:
+        all_files = sorted(input_dir.glob("*.json"))
+        if not all_files:
+            print(f"No JSON files found in {input_dir}", flush=True)
+            return
 
-    print(f"Found {len(json_files)} file(s) to embed.", flush=True)
+        json_files = [f for f in all_files if not (output_dir / f.name).exists()]
+        skipped = len(all_files) - len(json_files)
+        if skipped:
+            print(f"Skipping {skipped} already-embedded file(s).", flush=True)
 
+    if json_files:
+        print(f"Found {len(json_files)} file(s) to embed.", flush=True)
+        for json_file in json_files:
+            embed_file(json_file, output_dir, genai)
+    else:
+        print("All files already embedded. Nothing to do.", flush=True)
+
+    # Rebuild index from ALL output files (both old and newly embedded)
     all_questions = {}
-    for json_file in json_files:
-        questions = embed_file(json_file, output_dir, genai)
-        all_questions[json_file.stem] = questions
+    for out_file in sorted(output_dir.glob("*.json")):
+        if out_file.name == "index.json":
+            continue
+        all_questions[out_file.stem] = json.loads(out_file.read_text(encoding="utf-8"))
 
     build_index(all_questions, output_dir)
     print("\nEmbedding complete.", flush=True)
