@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Markdown Renderer</title>
+
+  <!-- KaTeX for math rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"/>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathIfReady()"></script>
+
+  <!-- marked.js for markdown parsing -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@9.1.6/marked.min.js"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f0f2f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 16px;
+      gap: 24px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .editor-area {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    textarea {
+      width: 100%;
+      height: 260px;
+      padding: 14px;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      resize: vertical;
+      background: #fff;
+      color: #222;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    textarea:focus { border-color: #4f8ef7; }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    button {
+      padding: 9px 22px;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    button:active { transform: scale(0.97); }
+
+    #renderBtn {
+      background: #4f8ef7;
+      color: #fff;
+    }
+
+    #renderBtn:hover { background: #3a78e0; }
+
+    #clearBtn {
+      background: #e5e7eb;
+      color: #444;
+    }
+
+    #clearBtn:hover { background: #d1d5db; }
+
+    .output-area {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    #output {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 28px 32px;
+      min-height: 120px;
+      line-height: 1.8;
+      color: #222;
+      font-size: 1rem;
+    }
+
+    /* Rendered markdown styles */
+    #output h1, #output h2, #output h3 {
+      margin: 1.2em 0 0.5em;
+      color: #1a1a2e;
+    }
+
+    #output p { margin: 0.6em 0; }
+
+    #output ol, #output ul {
+      padding-left: 1.6em;
+      margin: 0.5em 0;
+    }
+
+    #output li { margin: 0.3em 0; }
+
+    #output strong { font-weight: 700; color: #111; }
+
+    #output em { font-style: italic; }
+
+    #output code {
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'Consolas', monospace;
+      font-size: 0.88em;
+    }
+
+    #output pre {
+      background: #f3f4f6;
+      padding: 14px;
+      border-radius: 6px;
+      overflow-x: auto;
+      margin: 0.8em 0;
+    }
+
+    #output pre code { background: none; padding: 0; }
+
+    #output blockquote {
+      border-left: 4px solid #4f8ef7;
+      padding-left: 14px;
+      color: #555;
+      margin: 0.8em 0;
+    }
+
+    /* KaTeX display blocks */
+    #output .katex-display {
+      margin: 1em 0;
+      overflow-x: auto;
+    }
+
+    /* Question numbering — make the leading number bold */
+    #output > ol > li::marker {
+      font-weight: 700;
+    }
+
+    /* Options list inside questions */
+    #output ol ol { list-style-type: none; padding-left: 0.5em; }
+    #output ol ol li::before { content: ""; }
+
+    .placeholder {
+      color: #aaa;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Markdown + LaTeX Renderer</h1>
+
+  <div class="container">
+    <div class="editor-area">
+      <label for="mdInput">Paste Markdown here</label>
+      <textarea id="mdInput" placeholder="Paste your markdown text here...&#10;&#10;Supports: **bold**, *italic*, lists, HTML tags like <sup>, <sub>, and LaTeX math like $\frac{x}{y}$ or $$\begin{vmatrix}...$$"></textarea>
+    </div>
+
+    <div class="actions">
+      <button id="renderBtn">Render</button>
+      <button id="clearBtn">Clear</button>
+    </div>
+
+    <div class="output-area">
+      <label>Output</label>
+      <div id="output"><span class="placeholder">Output will appear here after clicking Render.</span></div>
+    </div>
+  </div>
+
+  <script>
+    let katexReady = false;
+
+    function renderMathIfReady() {
+      katexReady = true;
+    }
+
+    function applyKatex(element) {
+      if (typeof renderMathInElement === 'function') {
+        renderMathInElement(element, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$',  right: '$',  display: false },
+            { left: '\\(', right: '\\)', display: false },
+            { left: '\\[', right: '\\]', display: true }
+          ],
+          throwOnError: false
+        });
+      }
+    }
+
+    // Configure marked: allow HTML passthrough (for <sup>, <sub>, etc.)
+    marked.setOptions({
+      gfm: true,
+      breaks: true,
+      mangle: false,
+      headerIds: false
+    });
+
+    document.getElementById('renderBtn').addEventListener('click', () => {
+      const input = document.getElementById('mdInput').value.trim();
+      const output = document.getElementById('output');
+
+      if (!input) {
+        output.innerHTML = '<span class="placeholder">Nothing to render.</span>';
+        return;
+      }
+
+      // marked parses markdown; HTML tags like <sup>/<sub> pass through
+      output.innerHTML = marked.parse(input);
+
+      // Apply KaTeX math rendering after markdown is in the DOM
+      applyKatex(output);
+    });
+
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      document.getElementById('mdInput').value = '';
+      document.getElementById('output').innerHTML =
+        '<span class="placeholder">Output will appear here after clicking Render.</span>';
+    });
+
+    // Allow Ctrl+Enter to render
+    document.getElementById('mdInput').addEventListener('keydown', (e) => {
+      if (e.ctrlKey && e.key === 'Enter') {
+        document.getElementById('renderBtn').click();
+      }
+    });
+  </script>
+</body>
+</html>
