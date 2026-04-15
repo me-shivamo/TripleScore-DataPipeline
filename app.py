@@ -1608,6 +1608,11 @@ class PipelineApp:
             self.status_var.set(msgs[state])
 
     def _detect_existing_outputs(self):
+        # Reset all steps to IDLE first so switching PDFs clears stale Done states
+        for sid in list(self.step_states.keys()):
+            if self.step_states[sid] != StepState.RUNNING:
+                self._set_step_state(sid, StepState.IDLE)
+
         pdf_path = self.cfg.get("pdf_path", tk.StringVar()).get().strip()
         if not pdf_path:
             return

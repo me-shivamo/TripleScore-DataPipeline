@@ -1,0 +1,1070 @@
+[
+  {
+    "question": "Let A be a matrix of order 3 x 3 and |A| = 5. If |2 adj(3A adj(2A))| = 2<sup>α</sup>.3<sup>β</sup>.5<sup>γ</sup> α, β, γ ∈ N then α + β + γ is equal to",
+    "options": [
+      "25",
+      "26",
+      "27",
+      "28"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "27",
+    "explanation": "|2 adj(3A adj(2A))|\n2<sup>3</sup> |3A adj(2A)|\n2<sup>3</sup> (3<sup>3</sup>)<sup>2</sup> |A|<sup>2</sup> |adj(2A)|\n2<sup>3</sup> 3<sup>6</sup> |A|<sup>2</sup> (|2A|)<sup>2</sup>\n2<sup>3</sup> 3<sup>6</sup> |A|<sup>2</sup> (2<sup>3</sup>)<sup>2</sup> |A|<sup>2</sup>\n2<sup>3</sup> 3<sup>6</sup> |A|<sup>2</sup> 2<sup>12</sup> |A|<sup>4</sup>\n2<sup>15</sup> 3<sup>6</sup> |A|<sup>6</sup>\n2<sup>15</sup> 3<sup>6</sup> 5<sup>6</sup> = 2<sup>α</sup> 3<sup>β</sup> 5<sup>γ</sup>\nα = 15, β = 6, γ = 6\nα + β + γ = 27",
+    "subject": "Maths",
+    "topic": "Algebra",
+    "chapter": "Matrices"
+  },
+  {
+    "question": "Let a line passing through the point (4,1,0) intersect the line L₁;  $\\\\frac{x-1}{2} = \frac{y-2}{3} = \frac{z-3}{4}$  at the point A (Â, \u0002, \u0003) and the line L₂: x - 6 = y = -z + 4 at the point B (a, b, c).\n\nThen  $\\\\begin{vmatrix} 1 & 0 & 1 \\\\ \\\\alpha & \\\\beta & \\\\gamma \\\\ a & b & c \\\\end{vmatrix}$  is equal to",
+    "options": [
+      "8",
+      "16",
+      "12",
+      "6"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "8",
+    "explanation": "![A 3D coordinate system showing a line passing through point p(4,1,0) and points A and B. Two planes, L1 and L2, are shown intersecting at the line. L1 contains point A and L2 contains point B.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/f5f48eb1753d75fb380cf01027a6395d_img.jpg)\n\nA 3D coordinate system with axes  $x$ ,  $y$ , and  $z$ . A line passes through point  $p(4,1,0)$  on the  $x$ -axis, point  $A$  in the  $xy$ -plane, and point  $B$  in space. Two planes,  $L_1$  and  $L_2$ , intersect along this line. Plane  $L_1$  is vertical and contains point  $A$ . Plane  $L_2$  is tilted and contains point  $B$ .\n\nA 3D coordinate system showing a line passing through point p(4,1,0) and points A and B. Two planes, L1 and L2, are shown intersecting at the line. L1 contains point A and L2 contains point B.\n\n$$L_1 = \frac{x-1}{2} = \frac{y-2}{3} = \frac{z-3}{4} = p$$\n\n$$L_2 = \frac{x-6}{1} = \frac{y}{1} = \frac{z-4}{-1} = q$$\n\n$$A(2p + 1, 3p + 2, 4p + 3)$$\n\n$$B(q + 6, q, 4 - q)$$\n\n$$\\text{D.R. of PA} = 2p - 3, 3p + 1, 4p + 3$$\n\n$$\\text{D.R. of PB} = q + 2, q - 1, 4 - q$$\n\n$$\\frac{2p-3}{q+2} = \frac{3p+1}{q-1} = \frac{4p+3}{4-q}$$\n\n$$2pq - 2p - 3q + 3 = 3pq + 6p + q + 2$$\n\n$$pq + rp + 4q - 1 = 0 \"... (1)$$\n\n$$12p - 3pq + 4 - q = 4pq + 3q - 4p - 3$$\n\n$$7pq - 16p + 4q - 7 = 0 \"... (2)$$\n\n$$8p - 2pq - 12 + 3q = 4pq + 8p + 3q + 6$$\n\n$$6pq = -18 \", \boxed{pq = -3}$$\n\n$$8p + 4q = 4 \",' 2p + q = 1$$\n\n$$-21 - 16p + 4q - 7 \", 4p - q = -7$$\n\n$$16p - 4q = -28 \", \boxed{p = -1, q = 3}$$\n\n$$A(-1, -1, -1) \", B(9, 3, 1)$$\n\n$$\\\\begin{vmatrix} 1 & 0 & 1 \\\\ -1 & -1 & -1 \\\\ 9 & 3 & 1 \\\\end{vmatrix} = \\\\begin{vmatrix} 0 & -1 & 0 \\\\ -1 & -1 & -1 \\\\ 9 & 3 & 1 \\\\end{vmatrix} = 1(-1+9) = 8$$\n\n### Option (1)",
+    "subject": "Maths",
+    "topic": "3D Geometry",
+    "chapter": "Three Dimensional Geometry"
+  },
+  {
+    "question": "Let  $\\\\alpha$  and  $\\\\beta$  be the roots of  $x^2 + \\\\sqrt{3}x - 16 = 0$ , and  $\\\\gamma$  and  $\\\\delta$  be the roots of  $x^2 + 3x - 1 = 0$ . If  $P_n = \\\\alpha^n + \\\\beta^n$  and  $Q_n = \\\\gamma^n + \\\\delta^n$ , then  $\\\\frac{P_{25} + \\\\sqrt{3}P_{24}}{2P_{23}} + \\\\frac{Q_{25} - Q_{23}}{Q_{24}}$  is equal to",
+    "options": [
+      "3",
+      "4",
+      "5",
+      "7"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "5",
+    "explanation": "$$x^2 + \\\\sqrt{3}x - 16 = 0 \\\\begin{cases} \\\\alpha \\\\ \\\\beta \\end{cases} \\quad P_n = \\\\alpha^n + \\\\beta^n$$\n\n$$P_n + \\\\sqrt{3}P_{n-1} - 16P_{n-2} = 0$$\n\n$$P_{25} + \\\\sqrt{3}P_{24} - 16P_{23} = 0$$\n\n$$therefore \\\\frac{P_{25} + \\\\sqrt{3}P_{24}}{2P_{23}} = 8$$\n\nSimilarly\n\n$$x^2 + 3x - 1 = 0 \\\\begin{cases} \\\\gamma \\\\ \\\\delta \\end{cases} \\quad Q_n = \\\\gamma^n + \\\\delta^n$$\n\n$$\\\\begin{aligned} Q_{25} - Q_{23} &= \\\\gamma^{25} + \\\\delta^{25} - \\\\gamma^{23} - \\\\delta^{23} \\\\ &= \\\\gamma^{23}(\\\\gamma^2 - 1) + \\\\delta^{23}(\\\\delta^2 - 1) \\\\ &= \\\\gamma^{23}(-3\\\\gamma) + \\\\delta^{23}(-3\\\\gamma) \\\\ &= -3[\\\\gamma^{24} + \\\\delta^{24}] \\\\ &= -3Q_{24} \\\\end{aligned}$$ \n\n$$therefore \\\\frac{Q_{25} - Q_{23}}{Q_{24}} = -3$$\n\n$$\\\\frac{P_{25} + \\\\sqrt{3}P_{24}}{2P_{23}} + \\\\frac{Q_{25} - Q_{23}}{Q_{24}} = 8 - 3 = 5$$",
+    "subject": "Maths",
+    "topic": "Algebra",
+    "chapter": "Quadratic Equations"
+  },
+  {
+    "question": "The sum of all rational terms in the expansion of  $(2 + \\sqrt{3})^8$  is",
+    "options": [
+      "16923",
+      "3763",
+      "33845",
+      "18817"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "18817",
+    "explanation": "$S = (2 + \\sqrt{3})^8$\n\nFor sum of rational terms\n\n$$\\begin{aligned} &= {}^8C_0(2)^8 + {}^8C_2(2)^6(\\sqrt{3})^2 + {}^8C_4(2)^4(\\sqrt{3})^4 \\ &\\quad + {}^8C_6(2)^2(\\sqrt{3})^6 + {}^8C_8(\\sqrt{3})^8 \\ &= 2^8 + 28 \\times 2^6 \\cdot 3 + 70 \\cdot 2^4 \\cdot 9 + 28 \\cdot 2^2 \\cdot 27 + 81 \\ &= 256 + 5376 + 10080 + 3024 + 81 \\ &= 18817 \\end{aligned}$$",
+    "subject": "Maths",
+    "topic": "Algebra",
+    "chapter": "Binomial Theorem"
+  },
+  {
+    "question": "Let  $A = \\{-3, -2, -1, 0, 1, 2, 3\\}$ . Let  $R$  be a relation on  $A$  defined by  $xRy$  if and only if  $0 \\leq x^2 + 2y \\leq 4$ . Let  $l$  be the number of elements in  $R$  and  $m$  be the minimum number of elements required to be added in  $R$  to make it a reflexive relation. then  $l + m$  is equal to",
+    "options": [
+      "19",
+      "20",
+      "17",
+      "18"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "18",
+    "explanation": " $A = \\{-3, -2, -1, 0, 1, 2, 3\\}$\n\n$$ -2y \\leq x^2 \\leq 4 - 2y $$\n\n$$ y = -3 \\quad 6 \\leq x^2 \\leq 10 \\Rightarrow x \\in \\{-3, 3\\} $$\n\n$$ y = -2 \\quad 4 \\leq x^2 \\leq 8 \\Rightarrow x \\in \\{-2, 2\\} $$\n\n$$ y = -1 \\quad 2 \\leq x^2 \\leq 6 \\Rightarrow x \\in \\{-2, 2\\} $$\n\n$$ y = 0 \\quad 0 \\leq x^2 \\leq 4 \\Rightarrow x \\in \\{-2, -1, 0, 1, 2\\} $$\n\n$$ y = 1 \\quad -2 \\leq x^2 \\leq 2 \\Rightarrow x \\in \\{-1, 0, 1\\} $$\n\n$$ y = 2 \\quad -4 \\leq x^2 \\leq 0 \\Rightarrow x \\in \\{0\\} $$\n\n$$ y = 3 \\quad -6 \\leq x^2 \\leq -2 \\Rightarrow \\text{No } x \\text{-Exist} $$\n\n$$ \\begin{aligned} R &= \\{(-3, -3), (-3, 3), (-2, -2), (-2, 2), (-1, -2), (-1, 2), \\ &\u0002 (0, -2), (0, -1), (0, 0), (0, 1), (0, 2), (1, -1), (1, 0), (1, 1), \\ &\u0002 (2, 0) \\end{aligned} $$\n\n$$ \\therefore l = 15 $$\n\nTo make it reflexive we will add\n\n$$ \\{(-1, -1), (2, 2), (3, 3)\\} \\quad \\therefore m = 3 $$\n\n$$ \\therefore l + m = 15 + 3 = 18 $$\n\nOption (4)",
+    "subject": "Maths",
+    "topic": "Algebra",
+    "chapter": "Sets Relations and Functions"
+  },
+  {
+    "question": "A line passing through the point  $P(\\sqrt{5}, \\sqrt{5})$  intersects the ellipse  $\frac{x^2}{36} + \frac{y^2}{25} = 1$  at  $A$  and  $B$  such that  $(PA) \\cdot (PB)$  is maximum. Then  $5(PA^2 + PB^2)$  is equal to :",
+    "options": [
+      "218",
+      "377",
+      "290",
+      "338"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "338",
+    "explanation": "Given ellipse is  $\\frac{x^2}{36} + \\frac{y^2}{25} = 1$\n\n![Diagram of an ellipse centered at the origin. A line segment AB passes through a point P(sqrt(5), sqrt(5)) on the ellipse. The line AB is horizontal, parallel to the x-axis, at y = sqrt(5).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/b615ff07e8a0f467f0a6f4783c4463eb_img.jpg)\n\nDiagram of an ellipse centered at the origin. A line segment AB passes through a point P(sqrt(5), sqrt(5)) on the ellipse. The line AB is horizontal, parallel to the x-axis, at y = sqrt(5).\n\nAny point on line AB can be assumed as  $Q(\\sqrt{5} + r \\cos \\theta, \\sqrt{5} + r \\sin \\theta)$\n\nPutting this in equation of ellipse, we get\n\n$$25(\\sqrt{5} + r \\cos \\theta)^2 + 36(\\sqrt{5} + r \\sin \\theta)^2 = 900$$\n\nSimplifying, we get\n\n$$r^2(25 \\cos^2 \\theta + 36 \\sin^2 \\theta) + 2\\sqrt{5}r(25 \\cos \\theta + 36 \\sin \\theta) - 595 = 0$$\n\n$|r| = PA, PB$\n\n$$\\text{Thus, } PA \\cdot PB = \\frac{595}{25 \\cos^2 \\theta + 36 \\sin^2 \\theta} = \\frac{595}{25 + 11 \\sin^2 \\theta}$$ \n\n$$= \\text{maximum, if } \\sin^2 \\theta = 0$$ \n\nThis means line AB must be parallel to x-axis\n\n$$\\Rightarrow y_A = y_B = \\sqrt{5}$$ \n\nPutting  $y = \\sqrt{5}$  in equation of ellipse, we get\n\n$$\\frac{x^2}{36} + \\frac{1}{5} = 1 \\Rightarrow x^2 = 36 \\cdot \\frac{4}{5}$$ \n\nHence,\n\n$$PA^2 + PB^2 = \\left(\\sqrt{5} - \\frac{12}{\\sqrt{5}}\\right)^2 + \\left(\\sqrt{5} + \\frac{12}{\\sqrt{5}}\\right)^2$$ \n\n$$= 2\\left(5 + \\frac{144}{5}\\right) = \\frac{338}{5}$$ \n\n$$5(PA^2 + PB^2) = 338$$",
+    "subject": "Maths",
+    "topic": "Coordinate Geometry",
+    "chapter": "Ellipse"
+  },
+  {
+    "question": "The sum  $1 + 3 + 11 + 25 + 45 + 71 + \\dots$  upto 20 terms, is equal to",
+    "options": [
+      "7240",
+      "7130",
+      "6982",
+      "8124"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "7240",
+    "explanation": "Given sum is\n$$S_n = 1 + 3 + 11 + 25 + 45 + 71 + \\dots + T_n$$\nFirst order differences are in A.P.\nThus, we can assume that\n$$T_n = an^2 + bn + c$$\n$$\\text{Solving } \\begin{cases} T_1 = 1 = a + b + c \\ T_2 = 3 = 4a + 2b + c \\ T_3 = 11 = 9a + 3b + c \\end{cases},$$we get  $a = 3, b = -7, c = 5$\nHence, general term of given series is\n$$T_n = 3n^2 - 7n + 5$$\nHence, required sum equals\n$$\\sum_{n=1}^{20} (3n^2 - 7n + 5) = 3\\left(\\frac{20 \\cdot 21 \u0002 41}{6}\\right) - 7\\left(\\frac{20 \u0002 21}{2}\\right) + 5(20) = 7240$$",
+    "subject": "Maths",
+    "topic": "Algebra",
+    "chapter": "Sequences and Series"
+  },
+  {
+    "question": "If the domain of the function\n\n$$f(x) = \\log_e\\left(\\frac{2x-3}{5+4x}\\right) + \\sin^{-1}\\left(\\frac{4+3x}{2-x}\\right) \\text{ is } [\\alpha, \\beta],$$\n\nthen  $\\alpha^2 + 4\\beta$  is equal to",
+    "options": [
+      "5",
+      "4",
+      "3",
+      "7"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "4",
+    "explanation": "Given function is\n\n$$f(x) = \\log_e\\left(\\frac{2x-3}{5+4x}\\right) + \\sin^{-1}\\left(\\frac{4+3x}{2-x}\\right)$$\n\nFor domain, the conditions are\n\n$$\\frac{2x-3}{5+4x} > 0 \\text{ and } \\left|\\frac{4+3x}{2-x}\\right| \\leq 1$$\n\n$$\\text{Now, } \\frac{2x-3}{5+4x} > 0 \\Rightarrow x \\in \\left(-\\infty, -\\frac{5}{4}\\right) \\cup \\left[\\frac{3}{2}, \\infty\\right)$$\n\n$$\\text{and } -1 \\leq \\frac{4+3x}{2-x} \\leq 1$$\n\n$$\\Rightarrow \\left(-1 \\leq \\frac{4+3x}{2-x}\\right) \\cap \\left(\\frac{4+3x}{2-x} \\leq 1\\right)$$\n\n$$\\Rightarrow \\left(\\frac{6+2x}{2-x} \\geq 0\\right) \\cap \\left(\\frac{2+4x}{2-x} \\leq 0\\right)$$\n\n$$\\Rightarrow \\frac{6+2x}{2-x} \\cdot \\frac{2+4x}{2-x} \\leq 0$$\n\n$$\\Rightarrow x \\in \\left[-3, -\\frac{1}{2}\\right]$$\n\nHence, we get the domain of f as  $x \\in \\left[-3, -\\frac{5}{4}\\right)$\n\nThis means that  $\\alpha = -3, \\beta = -\\frac{5}{4}$\n\nThus,  $\\alpha^2 + 4\\beta = 9 - 5 = 4$",
+    "subject": "Maths",
+    "topic": "Calculus",
+    "chapter": "Limits"
+  },
+  {
+    "question": "If  $\\sum_{r=1}^9 \\left(\\frac{r+3}{2^r}\\right) \\cdot {}^9C_r = \\alpha \\left(\\frac{3}{2}\\right)^9 - \\beta, \\alpha, \\beta \\in \\mathbb{N}$ , then  $(\\alpha + \\beta)^2$  is equal to",
+    "options": [
+      "27",
+      "9",
+      "81",
+      "18"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "81",
+    "explanation": "Given that\n\n$$\\sum_{r=1}^9 \\left(\\frac{r+3}{2^r}\\right) \\cdot {}^9C_r = \\alpha \\left(\\frac{3}{2}\\right)^9 - \\beta, \\alpha, \\beta \\in \\mathbb{N}$$\n\nNow,\n\n$$\\begin{aligned} \\sum_{r=1}^9 \\left(\\frac{r+3}{2^r}\\right) \\cdot {}^9C_r &= \\sum_{r=1}^9 \\left(\\frac{r}{2^r}\\right) \\cdot {}^9C_r + \\sum_{r=1}^9 \\left(\\frac{3}{2^r}\\right) \\cdot {}^9C_r \\\\ &= \\sum_{r=1}^9 \\left(\\frac{9}{2^r}\\right) \\cdot {}^8C_{r-1} + 3 \\sum_{r=1}^9 {}^9C_r \\left(\\frac{1}{2}\\right)^r \\left[ \\text{Using } \\frac{{}^9C_r}{{}^8C_{r-1}} = \\frac{9}{r} \\right] \\\\ &= \\frac{9}{2} \\sum_{r=1}^9 {}^8C_{r-1} \\left(\\frac{1}{2}\\right)^{r-1} + 3 \\left( \\sum_{r=0}^9 {}^9C_r \\left(\\frac{1}{2}\\right)^r \\right) - 1 \\\\ &= \\frac{9}{2} \\left(1 + \\frac{1}{2}\\right)^8 + 3 \\left( \\left(1 + \\frac{1}{2}\\right)^9 - 1 \\right) \\\\ &= \\frac{9}{2} \\cdot \\left(\\frac{3}{2}\\right)^8 + 3 \\left(\\frac{3}{2}\\right)^9 - 3 = 6 \\cdot \\left(\\frac{3}{2}\\right)^9 - 3 \\end{aligned}$$ \n\nHence,  $\\alpha = 6, \\beta = 3$ \n\nThus  $(\\alpha + \\beta)^2 = 81$",
+    "subject": "Maths",
+    "topic": "Algebra",
+    "chapter": "Binomial Theorem"
+  },
+  {
+    "question": "The number of solutions of the equation  $2x + 3\tan x = \frac{\\pi}{3}, x ∈ {-2\\pi, 2\\pi} - {\\pm \\frac{\\pi}{2}, \\pm \\frac{3\\pi}{2}}$  is",
+    "options": [
+      "6",
+      "5",
+      "4",
+      "3"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "5",
+    "explanation": "$\tan x = \frac{\\pi}{9} - \frac{2x}{3}$\n\n![Graph showing the intersection of the line y = pi/3 - 2x/3 and the tangent function y = tan(x) over the interval [-2pi, 2pi]. The line has a negative slope and passes through (0, pi/3). The tangent function has vertical asymptotes at -3pi/2, -pi/2, pi/2, and 3pi/2. The line intersects the tangent curve at five points within the specified domain.](38a20047db4a8d7b275406ea353b8e64_img.jpg)\n\nGraph showing the intersection of the line y = pi/3 - 2x/3 and the tangent function y = tan(x) over the interval [-2pi, 2pi]. The line has a negative slope and passes through (0, pi/3). The tangent function has vertical asymptotes at -3pi/2, -pi/2, pi/2, and 3pi/2. The line intersects the tangent curve at five points within the specified domain.\n\n5 solutions",
+    "subject": "Maths",
+    "topic": "Trigonometry",
+    "chapter": "Trigonometric Equations"
+  },
+  {
+    "question": "If  $y(x) = \\begin{vmatrix} \\sin x & \\cos x & \\sin x + \\cos x + 1 \\\\ 27 & 28 & 27 \\\\ 1 & 1 & 1 \\end{vmatrix}, x \\in \\mathbb{R}$ , then  $\\frac{d^2y}{dx^2} + y$  is equal to",
+    "options": [
+      "-1",
+      "28",
+      "27",
+      "1"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "-1",
+    "explanation": "$C_3 \\rightarrow C_3 - C_1$\n\n$$y(x) = \\begin{vmatrix} \\sin x & \\cos x & 1 + \\cos x \\\\ 27 & 28 & 0 \\\\ 1 & 1 & 0 \\end{vmatrix}$$ \n\n$$y(x) = -(1 + \\cos x)$$\n\n$$\\frac{dy}{dx} = \\sin x$$\n\n$$\\frac{d^2y}{dx^2} = \\cos x$$\n\n$$\\boxed{\\frac{d^2y}{dx^2} + y = -1}$$",
+    "subject": "Maths",
+    "topic": "Calculus",
+    "chapter": "Continuity and Differentiability"
+  },
+  {
+    "question": "Let g be a differentiable function such that  $\\int_0^x g(t) dt = x - \\int_0^x tg(t) dt, x \\geq 0$  and let  $y = y(x)$\n\nsatisfy the differential equation  $\frac{dy}{dx} - y \tan x =$\n\n$2(x+1) \nsec x g(x), x \\in \\left[0, \\frac{\\pi}{2}\\right). \\text{ If } y(0) = 0, \\text{ then}$\n\n$y\\left(\\frac{\\pi}{3}\\right)$  is equal to",
+    "options": [
+      "$\frac{2\n\t\\pi}{3\n\t\\sqrt{3}}$",
+      "$\frac{4\n\t\\pi}{3}$",
+      "$\frac{2\n\t\\pi}{3}$",
+      "$\frac{4\n\t\\pi}{3\n\t\\sqrt{3}}$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$\frac{4\n\t\\pi}{3}$",
+    "explanation": "Diff. w.r.t. x\n\n$g(x) = 1 - xg(x)$\n\n$g(x) = \\frac{1}{1+x}$\n\nso $\\frac{dy}{dx} - y \\tan x = 2 \\sec x$\n\nIF $= e^{-\\int \\tan x dx} = e^{\\log \u0004 \u0002 \u0003 x} = \u0004 \u0002 \u0003 x$\n\nsolution of D.E.\n\n$y \u0004 \u0002 \u0003 x = \\int 2 dx + c$\n\n$y \u0004 \u0002 \u0003 x = 2x + c$\n\n$y(0) = 0$\n\n$c=0$\n\n$y = \\frac{2x}{\u0004 \u0002 \u0003 x}$\n\n$y = 2x \nsec x$\n\n$y\\left(\frac{\\pi}{3}\\right) = 2 \\cdot \\frac{\\pi}{3} \\cdot 2 = \\frac{4\n\t\\pi}{3}$",
+    "subject": "Maths",
+    "topic": "Calculus",
+    "chapter": "Differential Equations"
+  },
+  {
+    "question": "A line passes through the origin and makes equal angles with the positive coordinate axes. It intersects the lines\n\n$$L_1 : 2x + y + 6 = 0 \text{ and } L_2 : 4x + 2y - p = 0, p > 0, recall$$\n\nat the points A and B, respectively. If $AB = \\frac{9}{\\sqrt{2}}$\nand the foot of the perpendicular from the point A\non the line $L_2$ is M, then $\\frac{AM}{BM}$ is equal to\n\n![A geometric diagram showing two intersecting lines, 2x+y+6=0 and 4x+2y-p=0, and a line y=x passing through the origin. Point A is the intersection of 2x+y+6=0 and y=x. Point B is the intersection of 4x+2y-p=0 and y=x. A perpendicular line segment AM is drawn from point A to the line 4x+2y-p=0, with M on the line. The angle between the two lines at point B is labeled theta.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/b4413f11707ad9212550df7519c05ec8_img.jpg)",
+    "options": [
+      "5",
+      "4",
+      "2",
+      "3"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "3",
+    "explanation": "Line is  $y = x$\n\n$$m_1 = 1, m_2 = -2$$\n\nso $\\tan \\theta = \\left| \\frac{1+2}{1-2} \\right|$\n\n$$\\boxed{\\tan \\theta = \\frac{AM}{BM} = 3}$$",
+    "subject": "Maths",
+    "topic": "Coordinate Geometry",
+    "chapter": "Straight Lines"
+  },
+  {
+    "question": "Let  $z \\in \\mathbb{C}$  be such that  $\frac{z^2 + 3i}{z - 2 + i} = 2 + 3i$ . Then the\nsum of all possible values of  $z^2$  is",
+    "options": [
+      " $19 - 2i$",
+      " $-19 - 2i$",
+      " $19 + 2i$",
+      " $-19 + 2i$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$-19 - 2i$",
+    "explanation": " $z^2 + 3i = z(2 + 3i) - 7 - 4i$\n\n$z^2 - z(2 + 3i) + 7 + 4i = 0 \\quad \\begin{matrix} \\diagup z_1 \\\\ \\diagdown z_2 \\end{matrix}$\n\n$z_1^2 + z_2^2 = (z_1 + z_2)^2 - 2z_1 z_2$\n\n$= 4 - 9 + 12i - 14 - 14i$\n\n$= -19 - 2i$",
+    "subject": "Maths",
+    "topic": "Algebra",
+    "chapter": "Complex Numbers"
+  },
+  {
+    "question": "Let  $f(x) = \\int x^3 \\sqrt{3-x^2} dx$ . If  $5f(\\sqrt{2}) = -4$ , then $f(1)$  is equal to",
+    "options": [
+      "- \\frac{2\\sqrt{2}}{5}",
+      "- \\frac{8\\sqrt{2}}{5}",
+      "- \\frac{4\\sqrt{2}}{5}",
+      "- \\frac{6\\sqrt{2}}{5}"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "- \\frac{6\\sqrt{2}}{5}",
+    "explanation": "Let $3 - x^2 = t^2$\n$$+x dx = -t dt$$\n$$f(x) = \\int (3-t^2) \\cdot t \\cdot (-t dt) + c$$\n$$= \\int (t^4 - 3t^2) dt + c$$\n$$= \\frac{t^5}{5} - t^3 + c$$\n$$f(x) = \\frac{(3-x^2)^{5/2}}{5} - (3-x^2)^{3/2} + c$$\n$$f(\\sqrt{2}) = \\frac{1}{5} - 1 + c = -\\frac{4}{5}$$\n$$c=0$$\n$$f(1) = \\frac{2^{5/2}}{5} - 2^{3/2}$$\n$$= 2^{1/2} \\left( \\frac{4}{5} - 2 \\right)$$\n$$f(1) = -\\frac{6\\sqrt{2}}{5}$$",
+    "subject": "Maths",
+    "topic": "Calculus",
+    "chapter": "Indefinite Integration"
+  },
+  {
+    "question": "Let  $a_1, a_2, a_3, \nums$  be a G. P. of increasing positive numbers. If  $a_3 a_5 = 729$  and  $a_2 + a_4 = \\frac{111}{4}$ , then\n\n$24(a_1 + a_2 + a_3)$  is equal to",
+    "options": [
+      "131",
+      "130",
+      "129",
+      "128"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "129",
+    "explanation": "Let the 1\u0002st term of G.P. be  $a$  & common ratio be  $r$\n\n$$a_3 a_5 = ar^2 \u0007 ar^4 = 729$$\n\n$$= a^2 r^6 = 729$$\n\n$$= ar^3 = 27 \text{ …}(i)$$\n\n$$a_2 + a_4 = ar + ar^3 = \\frac{111}{4}$$\n\n$$= ar = \\frac{3}{4} \text{ …}(ii)$$\n\n(i)  $ \nowhich $  (ii)\n\n$$\\frac{ar^3}{ar} = \\frac{27}{3/4}$$ \n\n$$r^2 = 36$$ \n\n$$r = 6$$ \n\nfrom (ii)\n\n$$a(6) = \\frac{3}{4} \b\text{Rightarrow} a = \\frac{1}{8}$$ \n\n$$ \text{Now, } 24(a_1 + a_2 + a_3)$$\n\n$$= 24(a + ar + ar^2)$$\n\n$$= 24a(1 + r + r^2)$$\n\n$$= 24 \times \\frac{1}{8} (1 + 6 + 36)$$\n\n$$= 3(43)$$\n\n$$= 129$$",
+    "subject": "Maths",
+    "topic": "Algebra",
+    "chapter": "Sequences and Series"
+  },
+  {
+    "question": "Let the domain of the function\n\n$$f(x) = \\log_2 \\log_4 \\log_6 (3 + 4x - x^2)$$\n be  $(a, b)$ . If\n\n$$\\int_0^{b-a} [x^2] dx = p - \\sqrt{q} - \\sqrt{r}, p, q, r \\in \\mathbb{N}, \\gcd(p, q, r) = 1,$$\n\nwhere  $[\\]$  is the greatest integer function,\n\nthen  $p + q + r$  is equal to",
+    "options": [
+      "10",
+      "8",
+      "11",
+      "9"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "10",
+    "explanation": "$$\\log_4 \\log_6 (3 + 4x - x^2) > 0$$\n\n$$\\log_6 (3 + 4x - x^2) > 1$$\n\n$$3 + 4x - x^2 > 6$$\n\n$$x^2 - 4x + 3 < 0$$\n\n$$(x-1)(x-3) < 0$$\n\n$$x \\in (1, 3)$$\n\n$$ \\text{so } a = 1 \\text{ & } b = 3$$\n\n$$\\Rightarrow \\int_0^2 [x^2] dx = ?$$\n\n$$I = \\int_0^1 [x^2] dx + \\int_1^{\\sqrt{2}} [x^2] dx + \\int_{\\sqrt{2}}^{\\sqrt{3}} [x^2] dx + \\int_{\\sqrt{3}}^{\\sqrt{4}} [x^2] dx$$\n\n$$= 0 + |x|_1^{\\sqrt{2}} + 2|x|_{\\sqrt{2}}^{\\sqrt{3}} + 3|x|_{\\sqrt{3}}^{\\sqrt{4}}$$\n\n$$= (\\sqrt{2} - 1) + 2(\\sqrt{3} - \\sqrt{2}) + 3(2 - \\sqrt{3})$$\n\n$$= 5 - \\sqrt{2} - \\sqrt{3} \\Rightarrow p + q + r = 10$$",
+    "subject": "Maths",
+    "topic": "Calculus",
+    "chapter": "Definite Integration"
+  },
+  {
+    "question": "The radius of the smallest circle which touches the parabolas  $y = x^2 + 2$  and  $x = y^2 + 2$  is",
+    "options": [
+      "$\\frac{7\\sqrt{2}}{2}$",
+      "$\\frac{7\\sqrt{2}}{16}$",
+      "$\\frac{7\\sqrt{2}}{4}$",
+      "$\\frac{7\\sqrt{2}}{8}$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$\\frac{7\\sqrt{2}}{8}$",
+    "explanation": "The given parabolas are symmetric about the line  $y = x$ .\n\n![A graph showing two parabolas, y = x^2 + 2 and x = y^2 + 2, symmetric about the line y = x. A circle is tangent to both parabolas at points A and B. The line y = x is shown as a dashed line passing through the origin and the points of tangency.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/3726f2ee5d66f197622d0f70c25f196b_img.jpg)\n\nTangents at A & B must be parallel to  $y = x$  line, so slope of the tangents = 1\n\n$$ \\left( \\frac{dy}{dx} \\right)_{\\min A} = 1 = \\left( \\frac{dy}{dx} \\right)_{\\min B} $$\n\nFor point B,  $y = x^2 + 2$\n\n$$ \\frac{dy}{dx} = 2x = 1 $$\n\n$$ x = \\frac{1}{2} \\Rightarrow y = \\frac{9}{4} $$\n\n$$ \\therefore \\text{ Point B} = \\left( \\frac{1}{2}, \\frac{9}{4} \\right) \\Rightarrow \\text{ Point A} = \\left( \\frac{9}{4}, \\frac{1}{2} \\right) $$\n\n$$AB = \\sqrt{\\left( \\frac{1}{2} - \\frac{9}{4} \\right)^2 + \\left( \\frac{9}{4} - \\frac{1}{2} \\right)^2}$$ \n\n$$= \\sqrt{\\frac{98}{16}} = \\frac{7\\sqrt{2}}{4}$$ \n\n$$ \\text{Radius} = \\frac{7\\sqrt{2}}{8} $$",
+    "subject": "Maths",
+    "topic": "Coordinate Geometry",
+    "chapter": "Parabola"
+  },
+  {
+    "question": "Let $$f(x) = \\begin{cases} (1+ax)^{1/x} & , x < 0 \\ 1+b & , x = 0 \\ \\frac{(x+4)^{1/2} - 2}{(x+c)^{1/3} - 2} & , x > 0 \\end{cases}$$ be continuous at $x = 0$ . Then $e^a$ bc is equal to",
+    "options": [
+      "64",
+      "72",
+      "48",
+      "36"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "48",
+    "explanation": "f(0^-) = $$e^{\\lim_{x \\rightarrow 0} \\frac{ax}{x}} = e^a$$\n\nf(0) = 1 + b\n\nf(0^+) = $\\frac{\\frac{1}{2\\sqrt{x+4}}}{\\frac{1}{3}(x+c)^{-2/3}} = \\frac{2(2)}{\\frac{1}{3} \\cdot c^{-2/3}}$\n\n$= \\frac{3}{4} c^{2/3}$\n\nAlso at $x = 0$ ;\n\n$c^{1/3} = 2 \\Rightarrow c = 8$\n\nSo $f(0^+) = \\frac{3}{4} (8)^{2/3} = 3$\n\nNow, $e^a = b + 1 = 3$\n\n$e^a \\cdot b \\cdot c = 3 \\cdot 2 \\cdot 8 = 48$",
+    "subject": "Maths",
+    "topic": "Calculus",
+    "chapter": "Continuity and Differentiability"
+  },
+  {
+    "question": "Line  $L_1$  passes through the point  $(1, 2, 3)$  and is parallel to  $z$ -axis. Line  $L_2$  passes through the point  $(\\lambda, 5, 6)$  and is parallel to  $y$ -axis. Let for  $\\lambda = \\lambda_1, \\lambda_2, \\lambda_2 < \\lambda_1$ , the shortest distance between the two lines be 3. Then the square of the distance of the point  $(\\lambda_1, \\lambda_2, 7)$  from the line  $L_1$  is",
+    "options": [
+      "40",
+      "32",
+      "25",
+      "37"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "25",
+    "explanation": "$L_1 ≡ ratia x-1 / 0 = ratia y-2 / 0 = ratia z-3 / 1$",
+    "subject": "Maths",
+    "topic": "3D Geometry",
+    "chapter": "Three Dimensional Geometry"
+  },
+  {
+    "question": "21. All five letter words are made using all the letters A, B, C, D, E and arranged as in an English dictionary with serial numbers. Let the word at serial number  $n$  be denoted by  $W_n$ . Let the probability  $P(W_n)$  of choosing the word  $W_n$  satisfy  $P(W_n) = 2P(W_{n-1})$ ,  $n > 1$ .\n\nIf  $P(\\text{CDBEA}) = \\frac{2^\\alpha}{2^\\beta - 1}$ ,  $\\alpha, \\beta \\in \\mathbb{N}$ , then  $\\alpha + \\beta$  is equal to : \n",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "183",
+    "explanation": "Let  $P(W_1) = x$\n\n$$\\sum_{i=1}^{120} P(W_i) = 1$$\n\n$$x + 2x + 2^2x + 2^3x + \\dots + 2^{119}x = 1$$\n\n$$\\frac{x(2^{120} - 1)}{(2 - 1)} = 1 \\Rightarrow x = \\frac{1}{2^{120} - 1} \\dots (1)$$\n\nRank of CDBEA\n\n$$A \\_ \\_ \\_ \\_ = \\lfloor 4 \\rfloor = 24$$\n\n$$B \\_ \\_ \\_ \\_ = \\lfloor 4 \\rfloor = 24$$\n\n$$C A \\_ \\_ \\_ \\_ = \\lfloor 3 \\rfloor = 6$$\n\n$$C B \\_ \\_ \\_ \\_ = \\lfloor 3 \\rfloor = 6$$\n\n$$C D A \\_ \\_ \\_ = \\lfloor 2 \\rfloor = 2$$\n\n$$C D B A E = 1$$\n\n$$C D B E A = 1$$\n\n\n\n64\n\nSo,  $P(W_{64}) = 2P(W_{63}) = \\dots = 2^{63} P(W_1)$\n\n$$= \\frac{2^{63}}{2^{120} - 1}$$\n\n$$\\alpha + \\beta = 63 + 120 = 183$$",
+    "subject": "Maths",
+    "topic": "Statistics and Probability",
+    "chapter": "Probability"
+  },
+  {
+    "question": "Let the product of the focal distances of the point\n\n$$P(4, 2\\sqrt{3}) \\text{ on the hyperbola } H: \\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1 \\text{ be } 32.$$ \n\nLet the length of the conjugate axis of H be p and the length of its latus rectum be q. Then  $p^2 + q^2$  is equal to .....",
+    "options": [
+      "120",
+      ""
+    ],
+    "type": "numerical",
+    "correct_answer": "120",
+    "explanation": "$$\\frac{x^2}{a^2} - \\frac{y^2}{b^2} = 1 \\dots (1)$$\n\n$$P(4, 2\\sqrt{3})$$\n\n$$PS_1 \\cdot PS_2 = 32$$\n\n$$|PS_1 - PS_2| = 2a$$\n\n$$P(4, 2\\sqrt{3}) \\text{ lies on } H$$\n\n$$\\therefore \\frac{16}{a^2} - \\frac{12}{b^2} = 1$$\n\n$$16b^2 - 12a^2 = a^2b^2 \\dots (2)$$\n\n$$|PS_1 - PS_2|^2 = 4a^2$$\n\n$$PS_1^2 + PS_2^2 - 2PS_1 \\cdot PS_2 = 4a^2$$\n\n$$(ae - 4)^2 + 12 + (ae + 4)^2 + 12 - 64 = 4a^2$$\n\n$$2a^2e^2 - 8 = 4a^2$$\n\n$$a^2 + b^2 - 4 = 2a^2$$\n\n$$b^2 - a^2 = 4$$\n\n$$(2) \\& (3) \\Rightarrow 16(a^2 + 4) - 12a^2 = a^2(a^2 + 4)$$\n\n$$\\Rightarrow 16a^2 + 64 - 12a^2 = a^4 + 4a^2$$\n\n$$\\Rightarrow a^4 = 64$$\n\n$$\\Rightarrow a^2 = 8$$\n\n$$\\therefore b^2 = 12$$\n\n$$p^2 + q^2 = 4b^2 + \\frac{4b^4}{a^2}$$\n\n$$= 120$$",
+    "subject": "Maths",
+    "topic": "Coordinate Geometry",
+    "chapter": "Hyperbola"
+  },
+  {
+    "question": "Let  $\\\\vec{a} = \\\\hat{i} + \\\\hat{j} + \\\\hat{k}$ ,  $\\\\vec{b} = 3\\\\hat{i} + 2\\\\hat{j} - \\\\hat{k}$ ,  $\\\\vec{c} = \\\\lambda\\\\hat{j} + \\\\mu\\\\hat{k}$  and  $\\\\hat{d}$  be a unit vector such that  $\\\\vec{a} \\\\times \\\\hat{d} = \\\\vec{b} \\\\times \\\\hat{d}$  and  $\\\\vec{c} \\\\cdot \\\\hat{d} = 1$ , If  $\\\\vec{c}$  is perpendicular to  $\\\\vec{a}$ , then  $|3\\\\lambda\\\\hat{d} + \\\\mu\\\\vec{c}|^2$  is equal to \n\n",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "5",
+    "explanation": "$$\\\\vec{a} \\\\times \\\\vec{d} - \\\\vec{b} \\\\times \\\\vec{d} = 0$$ \n$$(\\\\vec{a} - \\\\vec{b}) \\\\times \\\\vec{d} = 0$$ \n$$ \\\\vec{d} = t(\\\\vec{a} - \\\\vec{b})$$ \n$$ \\\\vec{d} = t(-2\\\\hat{i} - \\\\hat{j} + 2\\\\hat{k})$$ \n$$|\\\\vec{d}| = 1$$ \n$$|t| = \\\\frac{1}{3}$$ \n$$ \\\\vec{c} \\\\cdot \\\\vec{a} = 0$$ \n$$ \\\\lambda + \\\\mu = 0$$ \n$$ \\\\mu = -\\\\lambda$$ \n$$ \\\\vec{c} = \\\\lambda(\\\\hat{j} - \\\\hat{k}), \\\\quad |\\\\vec{c}|^2 = 2\\\\lambda^2$$ \n$$ \\\\vec{c} \\\\cdot \\\\hat{d} = 1$$ \n$$ t(-2, -1, 2) \\\\cdot \\\\lambda(0, 1, -1) = 1$$ \n$$ \\\\lambda t = \\\\frac{-1}{3} \\\\Rightarrow \\\\lambda^2 = 1$$ \n$$|3\\\\lambda\\\\hat{d} + \\\\mu\\\\vec{c}|^2 = 9\\\\lambda^2|\\\\hat{d}|^2 + \\\\mu^2|\\\\vec{c}|^2 + 6\\\\lambda\\\\mu(\\\\hat{d} \\\\cdot \\\\vec{c})$$ \n$$= 3\\\\lambda^2 + 2\\\\lambda^4$$ \n$$= 5$$",
+    "subject": "Maths",
+    "topic": "Vector Algebra",
+    "chapter": "Vector Algebra"
+  },
+  {
+    "question": "If the number of seven-digit numbers, such that the sum of their digits is even, is $m \ncdot n \ncdot 10^n$ ;  $m, n \nin \\{1, 2, 3, \ncdots, 9\\}$ , then  $m + n$  is equal to \n____.",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "14",
+    "explanation": "Total 7 digit nos. = 9000000\n\n7 digit nos. having sum of digits\n\nEven = 4500000\n\n$= 9.5 \ncdot 10^5$\n\n$m = 9, n = 5$\n\n$m + n = 14$",
+    "subject": "Maths",
+    "topic": "Algebra",
+    "chapter": "Permutations and Combinations"
+  },
+  {
+    "question": "The area of the region bounded by the curve $y = \\max\\{|x|, x|x-2|\\}$ , then x-axis and the lines $x = -2$ and $x = 4$ is equal to underline{_____}.\n\n![Graph of the function y = max{|x|, x|x-2|} from x = -2 to x = 4. The graph consists of several segments: a line y = -x from (-2, 2) to (0, 0), a parabola y = x^2 - 2x from (0, 0) to (2, 0), a line y = x from (2, 0) to (3, 3), and a line y = 3x - 3 from (3, 3) to (4, 9). The area under the curve is shaded in grey. The x-axis is labeled from -2 to 4, and the y-axis from 0 to 8.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/1022abaafa8eec5e4b5273130b9f13ae_img.jpg)",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "12",
+    "explanation": "Graph of the function y = max{|x|, x|x-2|} from x = -2 to x = 4. The graph consists of several segments: a line y = -x from (-2, 2) to (0, 0), a parabola y = x^2 - 2x from (0, 0) to (2, 0), a line y = x from (2, 0) to (3, 3), and a line y = 3x - 3 from (3, 3) to (4, 9). The area under the curve is shaded in grey. The x-axis is labeled from -2 to 4, and the y-axis from 0 to 8.\n\n$$ \n\\text{Required Area} = \\frac{1}{2} \\times 2 \\times 2 + \\frac{1}{2} \\times 3 \\times 3 + \\frac{1}{2} \\times 1 \\times 11\n$$ \n\n$$ = 12$$",
+    "subject": "Maths",
+    "topic": "Calculus",
+    "chapter": "Definite Integration"
+  },
+  {
+    "question": "During the melting of a slab of ice at 273 K at atmospheric pressure :",
+    "options": [
+      "Internal energy of ice-water system remains unchanged.",
+      "Positive work is done by the ice-water system on the atmosphere.",
+      "Internal energy of the ice-water system decreases.",
+      "Positive work is done on the ice-water system by the atmosphere."
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "Positive work is done on the ice-water system by the atmosphere.",
+    "explanation": "Volume decreases during melting of ice so positive work is done on ice water system by atmosphere Heat absorbed by ice water so $\\Delta Q$ is positive, work done by ice water system is negative Hence by first law of thermodynamics $\\Delta U = \\Delta Q + \\Delta W = \\text{Positive}$ So internal energy increases",
+    "subject": "Physics",
+    "topic": "Thermodynamics",
+    "chapter": "Thermal Properties of Matter"
+  },
+  {
+    "question": "Consider a completely full cylindrical water tank of height 1.6 m and cross-sectional area 0.5 mT. It has a small hole in its side at a height 90 cm from the bottom. Assume, the cross-sectional area of the hole to be negligibly small as compared to that of the water tank. If a load 50 kg is applied at the top surface of the water in the tank then the velocity of the water coming out at the instant when the hole is opened is : ( $g = 10 \\text{ m/s}^2$ )\n\n- (1) 3 m/s                                        (2) 5 m/s\n- (3) 2 m/s                                        (4) 4 m/s",
+    "options": [
+      "3 m/s",
+      "5 m/s",
+      "2 m/s",
+      "4 m/s"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "4 m/s",
+    "explanation": "Apply Bernoulli equation between points 1 & 2\n\n$$P_1 + \\frac{1}{2} \\rho v_1^2 + \\rho g h_1 = P_2 + \\frac{1}{2} \\rho v_2^2 + 0$$\n\n$$P_0 + \\frac{mg}{A} + \\rho g \\frac{70}{100} = P_0 + \\frac{1}{2} \\rho v_2^2$$\n\n$$\\frac{5000}{0.5} + 10^3 \\times 10 \\frac{70}{100} = \\frac{1}{2} \\times 10^3 v_2^2$$\n\n$$10^3 + 10^3 \\times 7 = \\frac{10^3}{2} v_2^2$$\n\n$$v_2^2 = 16$$\n\n$$v_2 = 4 \\text{ m/s}$$",
+    "subject": "Physics",
+    "topic": "Properties of Matter",
+    "chapter": "Mechanical Properties of Fluids"
+  },
+  {
+    "question": "Choose the correct logic circuit for the given truth table having inputs A and B.\n\n| Inputs |   | Output |\n|--------|---|--------|\n| A      | B | Y      |\n| 0      | 0 | 0      |\n| 0      | 1 | 0      |\n| 1      | 0 | 1      |\n| 1      | 1 | 1      |\n\n![Logic circuit diagram: An OR gate with inputs A and B. Its output is connected to one input of an AND gate. The other input of the AND gate is connected to input B. The output of the AND gate is Y.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/042733dc5e8e7f5f30b60adba3266cde_img.jpg)",
+    "options": [
+      "Logic circuit diagram: An OR gate with inputs A and B. Its output is connected to one input of an AND gate. The other input of the AND gate is connected to input B. The output of the AND gate is Y.\n\n![Logic circuit diagram: An OR gate with inputs A and B. Its output is connected to one input of an AND gate. The other input of the AND gate is connected to input A. The output of the AND gate is Y.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/27b06ec9f42b5d727a2630f61a5f1861_img.jpg)",
+      "Logic circuit diagram: An OR gate with inputs A and B. Its output is connected to one input of an AND gate. The other input of the AND gate is connected to input A. The output of the AND gate is Y.\n\n![Logic circuit diagram: An OR gate with inputs A and B. Its output is connected to one input of an AND gate through a NOT gate. The other input of the AND gate is connected to input B. The output of the AND gate is Y.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/1439cb942d9e363bbb3161b5540dd8c6_img.jpg)",
+      "Logic circuit diagram: An OR gate with inputs A and B. Its output is connected to one input of an AND gate through a NOT gate. The other input of the AND gate is connected to input B. The output of the AND gate is Y.\n\n![Logic circuit diagram: An OR gate with inputs A and B. Its output is connected to one input of an AND gate through a NOT gate. The other input of the AND gate is connected to input A. The output of the AND gate is Y.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/7f17c430b9598e4d748a8041457810b3_img.jpg)",
+      "Logic circuit diagram: An OR gate with inputs A and B. Its output is connected to one input of an AND gate through a NOT gate. The other input of the AND gate is connected to input A. The output of the AND gate is Y."
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "2",
+    "explanation": "Only option (2) matches with the truth table",
+    "subject": "Physics",
+    "topic": "Electrodynamics",
+    "chapter": "Semiconductors"
+  },
+  {
+    "question": "The radiation pressure exerted by a 450 W light source on a perfectly reflecting surface placed at 2m away from it, is :",
+    "options": [
+      "$1.5 \\times 10^{-8}$  Pascals",
+      "0",
+      "$6 \\times 10^{-8}$  Pascals",
+      "$3 \\times 10^{-8}$  Pascals"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$6 \\times 10^{-8}$  Pascals",
+    "explanation": "Where I = intensity at surface\nC = Speed of light\n$$I = \\frac{\\text{Power}}{\\text{Area}} = \\frac{450}{4\\pi r^2}$$\n$$= \\frac{450}{4\\pi \\times 4} = \\frac{450}{16\\pi}$$\n$$P_{\\text{rad}} = \\frac{2 \\times 450}{16\\pi \\times 3 \\times 10^8} = \\frac{150}{8\\pi \\times 10^8}$$\n$$= 5.97 \\times 10^{-8} \\approx 6 \\times 10^{-8} \\text{ Pascals}$$",
+    "subject": "Physics",
+    "topic": "Optics",
+    "chapter": "Ray Optics and Optical Instruments"
+  },
+  {
+    "question": "A wire of length 25 m and cross-sectional area  $5 \\text{ mm}^2$  having resistivity of  $2 \\times 10^{-6} \\Omega \\text{ m}$  is bent into a complete circle. The resistance between diametrically opposite points will be",
+    "options": [
+      "12.5 \\Omega",
+      "50 \\Omega",
+      "100 \\Omega",
+      "25 \\Omega"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "25",
+    "explanation": "![Diagram showing a circle with points A and B at diametrically opposite ends. To the right, an equivalent circuit diagram shows two resistors, each labeled R/2, connected in parallel between points A and B.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/27bb21592e864e2d58d5bf0cb72582d9_img.jpg)\n\nDiagram showing a circle with points A and B at diametrically opposite ends. To the right, an equivalent circuit diagram shows two resistors, each labeled R/2, connected in parallel between points A and B.\n\n$$L = 25 \\text{ m}, A = 5 \\text{ mm}^2 = 5 \\times 10^{-6} \\text{ m}^2$$\n\n$$\\rho = 2 \\times 10^{-6} \\Omega \\text{ m}$$\n\n$$R_{\\text{wire}} = \\frac{\\rho L}{A} = \\frac{2 \\times 10^{-6} \\times 25}{5 \\times 10^{-6}} = 10 \\Omega$$\n\nWhen the wire is bent into a circle, the total resistance of the wire is R. The resistance between diametrically opposite points A and B is the parallel combination of two semi-circles, each with resistance R/2.\n\n$$R_{eq} = \\frac{(R/2) \\times (R/2)}{(R/2) + (R/2)} = \\frac{R^2/4}{R} = R/4$$ \n\n$$R_{eq} = \\frac{10 \\Omega}{4} = 2.5 \\Omega$$ \n\nThere seems to be a discrepancy between the calculated answer and the provided options. Let's re-examine the problem statement and calculations.",
+    "subject": "Physics",
+    "topic": "Electrodynamics",
+    "chapter": "Current Electricity"
+  },
+  {
+    "question": "Two blocks of masses  $m$  and  $M$ , ( $M > m$ ), are placed on a frictionless table as shown in figure. A massless spring with spring constant  $k$  is attached with the lower block. If the system is slightly displaced and released then\n\n( $\\mu$  = coefficient of friction between the two blocks)\n\n![Diagram showing two blocks, m and M, on a frictionless table. Block m is on top of block M. A spring with constant k is attached to the left of block M and fixed to a wall. An arrow labeled mu points to the right from the top of block m, indicating friction.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/bb6d33498937738ff5dac8d91c9ebaad_img.jpg)\n\nDiagram showing two blocks, m and M, on a frictionless table. Block m is on top of block M. A spring with constant k is attached to the left of block M and fixed to a wall. An arrow labeled mu points to the right from the top of block m, indicating friction.\n\n(A) The time period of small oscillation of the two blocks is  $T = 2\\pi\\sqrt{\\frac{(m+M)}{k}}$\n\n(B) The acceleration of the blocks is  $a = \\frac{kx}{M+m}$\n\n( $x$  = displacement of the blocks from the mean position)\n\n(C) The magnitude of the frictional force on the upper block is  $\\frac{\\mu m|x|}{M+m}$\n\n(D) The maximum amplitude of the upper block, if it does not slip, is  $\\frac{\\mu(M+m)g}{k}$\n\n(E) Maximum frictional force can be  $\\mu(M+m)g$ .\n\nChoose the **correct** answer from the options given below :",
+    "options": [
+      "A, B, D Only",
+      "B, C, D Only",
+      "C, D, E Only",
+      "A, B, C Only"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "1",
+    "explanation": "(A) As both blocks moving together so\n\n$$\\text{Time period} = 2\\pi\\sqrt{\\frac{m}{K}}; \\text{ where } m = M + m$$\n\n$$T = 2\\pi\\sqrt{\\frac{M+m}{K}}$$\n\n(B) Let block is displaced by  $x$  in (+ve) direction so force on block will be in (-ve) direction\n\n$$F = -Kx$$\n\n$$(M+m)a = -Kx$$\n\n$$a = -\\frac{Kx}{(M+m)}$$\n\n(C) As upper block is moving due to friction thus\n\n$$f = ma = \\frac{mKx}{(M+m)}$$\n\n(D) This option is like two block problem in friction for maximum amplitude, force on block is also maximum, for which both blocks are moving together.\n\n![Diagram showing two blocks, m and M, on a frictionless table. Block m is on top of block M. A force KA is applied to the left of block M, indicated by an arrow pointing left.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/62cadae47bbb10ec50a9799a3fe0482a_img.jpg)\n\nDiagram showing two blocks, m and M, on a frictionless table. Block m is on top of block M. A force KA is applied to the left of block M, indicated by an arrow pointing left.\n\n![Diagram showing a single block m with a force f applied to its left, indicated by an arrow pointing left.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/1a4655ab13ebfd068a361d525ff_img.jpg)\n\nDiagram showing a single block m with a force f applied to its left, indicated by an arrow pointing left.\n\n$$KA = (M+m)a$$\n\n$$a = \\frac{KA}{(M+m)}$$\n\n$$f = ma = \\frac{mKA}{(M+m)}$$\n\n$$f_{\\max} = f_t = \\mu mg$$\n\n$$f = \\mu mg$$\n\n$$\\frac{mKA}{(M+m)} = \\mu mg$$\n\n$$A = \\frac{\\mu(M+m)g}{K}$$\n\n(E) Maximum friction can be  $\\mu mg$  as force is acting between blocks & normal force here is  $mg$ .",
+    "subject": "Physics",
+    "topic": "Oscillations and Waves",
+    "chapter": "Oscillations"
+  },
+  {
+    "question": "Which of the following curves possibly represent one-dimensional motion of a particle ?\n\n![Graph of Phase vs Time. The vertical axis is labeled 'Phase' and the horizontal axis is labeled 'Time'. A straight line with a positive slope starts from a negative value on the vertical axis and crosses the horizontal axis at the origin O.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/0b8b087a7baa471015d3ffeaa43d9a6c_img.jpg)\n\n(A)\n\n![Graph of Velocity vs displacement. The vertical axis is labeled 'Velocity' and the horizontal axis is labeled 'displacement'. A circle is centered at the origin O. An arrow on the circle in the first quadrant indicates a clockwise direction of traversal.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/c2b98986bdf45e15707f6b2bd7ade2bd_img.jpg)\n\n(B)\n\n![Graph of Velocity vs Time. The vertical axis is labeled 'Velocity' and the horizontal axis is labeled 'Time'. A circle is centered at the origin O. An arrow on the circle in the first quadrant indicates a clockwise direction of traversal.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/0332672e127cd13bb6d2fc8d1e27bfa2_img.jpg)\n\n(C)\n\n![Graph of Total distance vs Time. The vertical axis is labeled 'Total distance' and the horizontal axis is labeled 'Time'. The graph starts at the origin O and consists of a straight line with a positive slope followed by a horizontal line segment.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/411fa16c3211377525ba37c57784fee0_img.jpg)\n\n(D)\n\nChoose the **correct** answer from the options given below :",
+    "options": [
+      "A, B and D only",
+      "A, B and C only",
+      "A and B only",
+      "A, C and D only"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "A, B and D only",
+    "explanation": "For option (A)\n\n$\\\\phi = kt + C$ it can be 1D motion\n\neg $\\\\rightarrow x = A \\\\sin \\\\phi$ (SHM)\n\nFor option (B)\n\n$v^2 + x^2 = \\\\text{constant}$ yes 1D\n\nFor option (C)\n\ntime can't be negative Not possible\n\nFor option (D)\n\nPossible\n\nA, B & D only",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "chapter": "Kinematics"
+  },
+  {
+    "question": "A parallel plate capacitor is filled equally (half) with two dielectrics of dielectric constant $\\epsilon_1$ and $\\epsilon_2$, as shown in figures. The distance between the plates is $d$ and area of each plate is $A$. If capacitance in first configuration and second configuration are $C_1$ and $C_2$ respectively, then $\frac{C_1}{C_2}$ is :\n\nFirst Configuration\n\n![Diagram of a parallel plate capacitor in the first configuration. The plates are horizontal. The top half (thickness d/2) is filled with a dielectric of constant epsilon_2 (indicated by diagonal hatching). The bottom half (thickness d/2) is filled with a dielectric of constant epsilon_1 (indicated by dots). Electrical contacts are shown at the top and bottom centers of the plates.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/b1379438553c86ab5c3f3135d82c70aa_img.jpg)\n\nSecond Configuration\n\n![Diagram of a parallel plate capacitor in the second configuration. The plates are horizontal. The left half (area A/2) is filled with a dielectric of constant epsilon_1 (indicated by dots). The right half (area A/2) is filled with a dielectric of constant epsilon_2 (indicated by diagonal hatching). Electrical contacts are shown at the top and bottom centers of the plates.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/e8efd7a0ae9c3c392f50c3c5cc0ed342_img.jpg)",
+    "options": [
+      "$\\frac{\\epsilon_1 \\epsilon_2^2}{(\\epsilon_1 + \\epsilon_2)^2}$  \\(\\textnbsp\\)  (2)  $\\frac{4\\epsilon_1 \\epsilon_2}{(\\epsilon_1 + \\epsilon_2)^2}$",
+      "(3)  $\\frac{\\epsilon_1 \\epsilon_2}{\\epsilon_1 + \\epsilon_2}$  \\(\\textnbsp\\)  (4)  $\\frac{\\epsilon_0(\\epsilon_1 + \\epsilon_2)}{2}$",
+      "\\(\\frac{4\\epsilon_1 \\epsilon_2}{(\\epsilon_1 + \\epsilon_2)^2}\\)",
+      "$\\frac{\\epsilon_1 \\epsilon_2}{\\epsilon_1 + \\epsilon_2}$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$\\frac{4\\epsilon_1 \\epsilon_2}{(\\epsilon_1 + \\epsilon_2)^2}$",
+    "explanation": "![Diagram for the first configuration. It shows two horizontal plates separated by a distance d. The top plate is labeled C and the bottom plate is labeled C'. The top half of the gap (thickness d/2) is filled with a dielectric of constant epsilon_2 (hatched). The bottom half (thickness d/2) is filled with a dielectric of constant epsilon_1 (dotted). Vertical double-headed arrows on the left indicate the thickness of each dielectric layer is d/2.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/db171a68c3ecb9a44dbeddb84694442f_img.jpg)\n\nFirst configuration\n\nArea of plate is $A$ .\nthen\n$$C = \\frac{\\epsilon_2 \\epsilon_0 A}{d/2} = \\frac{2\\epsilon_2 \\epsilon_0 A}{d}$$\n\n$$C' = \\frac{\\epsilon_1 \\epsilon_0 A}{d/2} = \\frac{2\\epsilon_1 \\epsilon_0 A}{d}$$\n\n$$\\text{Let } C_0 = \\frac{\\epsilon_0 A}{d}$$\n\n$$C = 2\\epsilon_2 C_0$$\n\n$$C' = 2\\epsilon_1 C_0$$\n\nC & C' are in series\n\n$$C_1 = \\frac{CC'}{C+C'} = \\frac{4\\epsilon_2\\epsilon_1 C_0^2}{2C_0(\\epsilon_2 + \\epsilon_1)}$$\n\n$$= \\frac{2\\epsilon_2\\epsilon_1 C_0}{(\\epsilon_2 + \\epsilon_1)}$$\n\n![Diagram of a capacitor with two dielectric regions. The total thickness is d. The left region has dielectric constant epsilon_2 and capacitance C'. The right region has dielectric constant epsilon_1 and capacitance C. A vertical line separates the two regions. Arrows point to each region with their respective labels.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/ace13edeb79bdfa129ed84fbb4ac44e5_img.jpg)\n\nSecond configuration\n\n$$\\text{Here } C = \\frac{\\epsilon_1 \\epsilon_0 A}{2d} = \\frac{\\epsilon_1 C_0}{2}$$\n\n$$C' = \\frac{\\epsilon_2 C_0}{2}$$\n\nC & C' are in parallel\n\n$$C_2 = C' + C = (\\epsilon_1 + \\epsilon_2) \\frac{C_0}{2}$$\n\n$$\\text{Thus } \\frac{C_1}{C_2} = \\frac{2\\epsilon_2\\epsilon_1 C_0}{(\\epsilon_2 + \\epsilon_1)} \\times \\frac{2}{(\\epsilon_1 + \\epsilon_2) C_0}$$\n\n$$= \\frac{4\\epsilon_2\\epsilon_1}{(\\epsilon_2 + \\epsilon_1)^2}$$",
+    "subject": "Physics",
+    "topic": "Electrodynamics",
+    "chapter": "Capacitance"
+  },
+  {
+    "question": "34. Match the LIST-I with LIST-II\n\n|    | LIST-I                         |      | LIST-II               |\n|----|--------------------------------|------|-----------------------|\n| A. | Gravitational constant         | I.   | $[L T^{-2}]$          |\n| B. | Gravitational potential energy | II.  | $[L^2 T^{-2}]$        |\n| C. | Gravitational potential        | III. | $[ML^2 T^{-2}]$       |\n| D. | Acceleration due to gravity    | IV.  | $[M^{-1} L^3 T^{-2}]$ |\n\nChoose the *correct* answer from the options given below :",
+    "options": [
+      "A-IV, B-III, C-II, D-I",
+      "A-III, B-II, C-I, D-IV",
+      "A-II, B-IV, C-III, D-I",
+      "A-I, B-III, C-IV, D-II"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "A-IV, B-III, C-II, D-I",
+    "explanation": "(A) $G = \\frac{Fr^2}{m^2}$\n\n$[G] = \\frac{[MLT^{-2}][L^2]}{[M^2]} = [M^{-1}L^3T^{-2}]$ (IV)\n\n(B) P.E. $= mgh = [MLT^{-2}L]$\n$= [ML^2T^{-2}]$ (III)\n\n(C) Gravitational Potential $= \\frac{GM}{r}$\n$= \\frac{[M^{-1}L^3T^{-2}][M]}{[L]} = [M^0L^2T^{-2}] = [L^2T^{-2}]$ (II)\n\n(D) Acceleration due to gravity $= [g] = [LT^{-2}]$ (I)",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "chapter": "Gravitation"
+  },
+  {
+    "question": "A force of 49 N acts tangentially at the highest point of a sphere (solid) of mass 20 kg, kept on a rough horizontal plane. If the sphere rolls without slipping, then the acceleration of the center of the sphere is\n\n![Diagram of a solid sphere of radius r on a rough horizontal surface. A horizontal force F of 49 N is applied tangentially at the top of the sphere, pointing to the right. The sphere is in contact with the surface at a single point.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/5e1fb3643a8dca2e2bab69e017ee179c_img.jpg)",
+    "options": [
+      "3.5 m/s<sup>2</sup>",
+      "0.35 m/s<sup>2</sup>",
+      "2.5 m/s<sup>2</sup>",
+      "0.25 m/s<sup>2</sup>"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "3.5 m/s<sup>2</sup>",
+    "explanation": "![Diagram of a sphere of radius r. A force F is applied at the top, pointing to the right. A friction force f acts at the bottom, pointing to the left. The center of the sphere has an acceleration a to the right.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/662933fe00899933b36b5a214ac6095c_img.jpg)\n\nTorque about bottom point\n\n$$F \\times 2r = I\\alpha$$\n\n$$49 \\times 2r = \\frac{7}{5}mr^2\\alpha$$\n\n$$14 = 4r\\alpha$$\n\nAs sphere rolls without slipping\n\n$$a = r\\alpha$$\n\n$$a = \\frac{14}{4} = \\frac{7}{2} = 3.5 \\text{ m/s}^2$$",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "chapter": "Centre of Mass and Rotational Motion"
+  },
+  {
+    "question": "A piston of mass  $M$  is hung from a massless spring whose restoring force law goes as  $F = -kx^3$ , where  $k$  is the spring constant of appropriate dimension. The piston separates the vertical chamber into two parts, where the bottom part is filled with  $n$  moles of an ideal gas. An external work is done on the gas isothermally (at a constant temperature  $T$ ) with the help of a heating filament (with negligible volume) mounted in lower part of the chamber, so that the piston goes up from a height  $L_0$  to  $L_1$ , the total energy delivered by the filament is (Assume spring to be in its natural length before heating)\n\n![Diagram of a vertical chamber containing a piston of mass M. A spring is attached to the piston and the top of the chamber. The initial height of the piston is L_0 and the final height is L_1. A heating filament is shown in the bottom part of the chamber.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/4a104be5f84f688417d8c222ec4ce4fa_img.jpg)\n\nDiagram of a vertical chamber containing a piston of mass M. A spring is attached to the piston and the top of the chamber. The initial height of the piston is L_0 and the final height is L_1. A heating filament is shown in the bottom part of the chamber.",
+    "options": [
+      "3nRT \\ln\\left(\\frac{L_1}{L_0}\\right) + 2Mg(L_1 - L_0) + \\frac{k}{3}(L_1^3 - L_0^3)",
+      "nRT \\ln\\left(\\frac{L_1^2}{L_0^2}\\right) + \\frac{Mg}{2}(L_1 - L_0) + \\frac{k}{4}(L_1^4 - L_0^4)",
+      "nRT \\ln\\left(\\frac{L_1}{L_0}\\right) + Mg(L_1 - L_0) + \\frac{k}{4}(L_1^4 - L_0^4)",
+      "nRT \\ln\\left(\\frac{L_1}{L_0}\\right) + Mg(L_1 - L_0) + \\frac{3k}{4}(L_1^4 - L_0^4)"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "3",
+    "explanation": "Using WET\n\nTotal energy supplied = gravitational potential energy + spring potential energy + work done by gas\n\n$$Mg(L_1 - L_0) + \\int_{L_0}^{L_1} kx^3 dx + nRT \\ln\n\n$$\\left[\\frac{L_1 A}{L_0 A}\\right] + W_{\\text{ext}} = 0$$\n\n$$\\frac{K}{4}[x^4]_{L_0}^{L_1} + Mg(L_1 - L_0) + \\int_{L_0}^{L_1} kx^3 dx + nRT \\ln\n\n$$\\left[\\frac{L_1}{L_0}\\right] + W_{\\text{ext}} = 0$$\n\n$$\\frac{k}{4}(L_1^4 - L_0^4) + Mg(L_1 - L_0) + nRT \\ln\n\n$$\\left[\\frac{L_1}{L_0}\\right] + W_{\\text{ext}} = 0$$\n\n$$W_{\\text{ext}} = \\frac{k}{4}(L_1^4 - L_0^4) + Mg(L_1 - L_0) + nRT \\ln\\left[\\frac{L_1}{L_0}\\right]$$",
+    "subject": "Physics",
+    "topic": "Thermodynamics",
+    "chapter": "Thermodynamics"
+  },
+  {
+    "question": "A gas is kept in a container having walls which are thermally non-conducting. Initially the gas has a volume of  $800 \text{ cm}^3$  and temperature  $27^\\circ\\text{C}$ . The change in temperature when the gas is adiabatically compressed to  $200 \text{ cm}^3$  is :\n\n(Take  $\\gamma = 1.5$  :  $\\gamma$  is the ratio of specific heats at constant pressure and at constant volume)",
+    "options": [
+      "327 K",
+      "600 K",
+      "522 K",
+      "300 K"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "300 K",
+    "explanation": "$$V_1 = 800 \\text{ cm}^3 \\quad V_2 = 200 \\text{ cm}^3$$\n\n$$T_1 = 300 \\text{ K}$$ \n\nfor adiabatic\n\n$$TV^{\\gamma-1} = \\text{const.}$$\n\n$$(300)(800)^{1.5-1} = T_2(200)^{1.5-1}$$\n\n$$T_2 = 300 \\left[\\frac{800}{200}\\right]^{0.5} = 300 \\times (2^2)^{1/2}$$\n\n$$T_2 = 600 \\text{ K}$$ \n\n$$\\Delta T = 600 - 300 = 300 \\text{ K}$$",
+    "subject": "Physics",
+    "topic": "Thermodynamics",
+    "chapter": "Thermodynamics"
+  },
+  {
+    "question": "38. Match the **LIST-I** with **LIST-II**\n\n|    | <b>LIST-I</b>                                                                      |      | <b>LIST-II</b>          |\n|----|------------------------------------------------------------------------------------|------|-------------------------|\n| A. | ${}_0^1n + {}_{92}^{235}U \\rightarrow {}_{54}^{140}Xe + {}_{38}^{94}Sr + 2{}_0^1n$ | I.   | Chemical reaction       |\n| B. | $2H_2 + O_2 \\rightarrow 2H_2O$                                                     | II.  | Fusion with +ve Q value |\n| C. | ${}_1^2H + {}_1^2H \\rightarrow {}_{2}^3He + {}_0^1n$                                 | III. | Fission                 |\n| D. | ${}_1^1H + {}_1^3H \\rightarrow {}_1^2H + {}_1^2H$                                  | IV.  | Fusion with -ve Q value |\n\nChoose the **correct** answer from the options given below :",
+    "options": [
+      "A-II, B-I, C-III, D-IV",
+      "A-III, B-I, C-II, D-IV",
+      "A-II, B-I, C-IV, D-III",
+      "A-III, B-I, C-IV, D-II"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "A-III, B-I, C-II, D-IV",
+    "explanation": "Conceptual",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "chapter": "Nuclei"
+  },
+  {
+    "question": "The electrostatic potential on the surface of uniformly charged spherical shell of radius  $R = 10 \text{ cm}$  is  $120 \text{ V}$ . The potential at the centre of shell, at a distance  $r = 5 \text{ cm}$  from centre, and at a distance  $r = 15 \text{ cm}$  from the centre of the shell respectively, are :",
+    "options": [
+      "120 V, 120 V, 80 V",
+      "40 V, 40 V, 80 V",
+      "0 V, 0 V, 80 V",
+      "0 V, 120 V, 40 V"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "120 V, 120 V, 80 V",
+    "explanation": "Potential inside shell is equal to potential on surface\n$$V_{\\text{in}} = V_{\\text{surface}} = \\frac{kQ}{R} = 120 \text{ V}$$ \nat  $r = 15 \text{ cm}$ \n$$V = \\frac{kQ}{r} = \\frac{120 \\times 10}{15} = 80 \text{ V}$$",
+    "subject": "Physics",
+    "topic": "Electrodynamics",
+    "chapter": "Electrostatics"
+  },
+  {
+    "question": "The work function of a metal is  $3 \text{ eV}$ . The color of the visible light that is required to cause emission of photoelectrons is",
+    "options": [
+      "Green",
+      "Blue",
+      "Red",
+      "Yellow"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "Blue",
+    "explanation": " $(KE)_{\\text{max}} = \\frac{hc}{\\lambda} - \\phi$\n\n $\\frac{hc}{\\lambda} > \\phi \\text{ [for emission]}$\n\n $\\lambda < \\frac{hc}{\\phi} \\Rightarrow \\lambda < \\frac{1242}{3} \\text{ nm}$\n\nSo blue light",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "chapter": "Dual Nature of Matter and Radiation"
+  },
+  {
+    "question": "A particle is released from height  $S$  above the surface of the earth. At certain height its kinetic energy is three times its potential energy. The height from the surface of the earth and the speed of the particle at that instant are respectively.",
+    "options": [
+      "$\\frac{S}{2}, \\sqrt{\\frac{3gS}{2}}$",
+      "$\\frac{S}{2}, \\frac{3gS}{2}$",
+      "$\\frac{S}{4}, \\frac{3gS}{2}$",
+      "$\\frac{S}{4}, \\sqrt{\\frac{3gS}{2}}$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "4",
+    "explanation": "$$V^2 = 0 + 2g(S - x)$$\n\n$$V^2 = 2g(S - x)$$\n\nAt B, Potential energy =  $mgx$\n\n$$mgx = 3 \\times \\frac{1}{2}mv^2$$\n\n$$gx = \\frac{3}{2} \\times 2g(S - x)$$\n\n$$4x = S$$\n\n$$x = \\frac{S}{4}$$\n\n$$\\Rightarrow V = \\sqrt{2g \\times \\frac{3S}{4}} = \\sqrt{\\frac{3gS}{2}}$$",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "chapter": "Gravitation"
+  },
+  {
+    "question": "A person measures mass of 3 different particles as 435.42 g, 226.3 g and 0.125 g. According to the rules for arithmetic operations with significant figures, the additions of the masses of 3 particles will be.",
+    "options": [
+      "661.845 g",
+      "662 g",
+      "661.8 g",
+      "661.84 g"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "661.8 g",
+    "explanation": "$m_1 + m_2 + m_3 = 435.42 + 226.3 + 0.125$\nAccording to least significant digits $m = 661.8$ g",
+    "subject": "Physics",
+    "topic": "Units and Measurements",
+    "chapter": "Units and Measurements"
+  },
+  {
+    "question": "The radii of curvature for a thin convex lens are 10 cm and 15 cm respectively. The focal length of the lens is 12 cm. The refractive index of the lens material is",
+    "options": [
+      "1.2",
+      "1.4",
+      "1.5",
+      "1.8"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "1.5",
+    "explanation": "\\frac{1}{f} = (\\mu - 1) \\left( \\frac{1}{R_1} - \\frac{1}{R_2} \\right)\n\n\\frac{1}{12} = (\\mu - 1) \\left( \\frac{1}{10} - \\frac{1}{-15} \\right)\n\n\\frac{1}{12} = (\\mu - 1) \\left( \\frac{3+2}{30} \\right)\n\n\\mu = \\frac{3}{2}",
+    "subject": "Physics",
+    "topic": "Optics",
+    "chapter": "Ray Optics and Optical Instruments"
+  },
+  {
+    "question": "The angle of projection of a particle is measured from the vertical axis as $\\phi$ and the maximum height reached by the particle is $h_m$. Here $h_m$ as function of $\\phi$ can be presented as\n\n![Four graphs showing the maximum height h_m as a function of the angle of projection phi. Graph (1) shows a curve increasing from the origin to a vertical dashed line at 90 degrees. Graph (2) shows a semi-circular curve starting at the origin and ending at 90 degrees. Graph (3) shows a quarter-circle curve starting at a maximum value on the vertical axis and ending at 90 degrees. Graph (4) shows a curve starting at a maximum value on the vertical axis and decreasing towards the horizontal axis as phi increases to 90 degrees.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/07b56a8a7752e22a6fc5e9a5d2de5caa_img.jpg)\n\nFour graphs showing the maximum height h_m as a function of the angle of projection phi. Graph (1) shows a curve increasing from the origin to a vertical dashed line at 90 degrees. Graph (2) shows a semi-circular curve starting at the origin and ending at 90 degrees. Graph (3) shows a quarter-circle curve starting at a maximum value on the vertical axis and ending at 90 degrees. Graph (4) shows a curve starting at a maximum value on the vertical axis and decreasing towards the horizontal axis as phi increases to 90 degrees.",
+    "options": [
+      "Graph (1) shows a curve increasing from the origin to a vertical dashed line at 90 degrees.",
+      "Graph (2) shows a semi-circular curve starting at the origin and ending at 90 degrees.",
+      "Graph (3) shows a quarter-circle curve starting at a maximum value on the vertical axis and ending at 90 degrees.",
+      "Graph (4) shows a curve starting at a maximum value on the vertical axis and decreasing towards the horizontal axis as phi increases to 90 degrees."
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "3",
+    "explanation": "Diagram of a projectile launched from the origin at an angle theta from the vertical axis. The path is a parabolic curve reaching a maximum height H_max and returning to the horizontal axis.\n\n$$H_{\\max} = \\frac{u^2 \\cos^2 \\phi}{2g}$$",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "chapter": "Kinematics"
+  },
+  {
+    "question": "Consider following statements for refraction of light through prism, when angle of deviation is minimum.\n\n- (A) The refracted ray inside prism becomes parallel to the base. \n (B) Larger angle prisms provide smaller angle of minimum deviation. \n (C) Angle of incidence and angle of emergence becomes equal. \n (D) There are always two sets of angle of incidence for which deviation will be same except at minimum deviation setting. \n (E) Angle of refraction becomes double of prism angle.\n\nChoose the correct answer from the options given below.",
+    "options": [
+      "A, C and D Only",
+      "B, C and D Only",
+      "A, B and E Only",
+      "B, D and E Only"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "A, C and D Only",
+    "explanation": "For $\\delta_{\\min} \\Rightarrow I = e$ and refracted ray is parallel to base. A, C, D are correct",
+    "subject": "Physics",
+    "topic": "Optics",
+    "chapter": "Ray Optics and Optical Instruments"
+  },
+  {
+    "question": "Three identical spheres of mass  $m$ , are placed at the vertices of an equilateral triangle of length  $a$ . When released, they interact only through gravitational force and collide after a time  $T = 4$  seconds. If the sides of the triangle are increased to length  $2a$  and also the masses of the spheres are made  $2m$ , then they will collide after \n\n seconds.",
+    "options": [
+      "4",
+      "8",
+      "16",
+      "32"
+    ],
+    "type": "numerical",
+    "correct_answer": "8",
+    "explanation": "$$T \\propto M^x [M^{-1} L^3 T^{-2}]^y [L]^z$$\n\n$$T \\propto M^{x-y} L^{3y+z} T^{-2y}$$\n\n$$x - y = 0 \\Rightarrow x = y$$\n\n$$-2y = 1 \\Rightarrow y = -\\frac{1}{2}, x = -\\frac{1}{2}$$\n\n$$\\Rightarrow 3y + z = 0$$\n\n$$z = -3y = \\frac{3}{2}$$\n\nHence\n\n$$T \\propto m^{-1/2} G^{-1/2} a^{3/2}$$\n\n$$T \\propto \\left(\\frac{a^3}{m}\\right)^{1/2}$$\n\n$$T = 4 \\times \\left(\\frac{2^3}{2}\\right)^{1/2} = 8s$$",
+    "subject": "Physics",
+    "topic": "Mechanics",
+    "chapter": "Gravitation"
+  },
+  {
+    "question": "A 4.0 cm long straight wire carrying a current of 8A is placed perpendicular to an uniform magnetic field of strength 0.15 T. The magnetic force on the wire is \u0007\u0007\u0007 mN.",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "48",
+    "explanation": "$F = I\\ell B$\n\n$ = 8 \\times \\frac{4}{100} \\times 0.15$\n\n$ = 48 \\times 10^{-3} \\text{ N} = 48 \\text{ mN}$",
+    "subject": "Physics",
+    "topic": "Electrodynamics",
+    "chapter": "Magnetic Effects of Current"
+  },
+  {
+    "question": "Two coherent monochromatic light beams of intensities  $4I$  and  $9I$  are superimposed. The difference between the maximum and minimum intensities in the resulting interference pattern is  $xI$ .\n\nThe value of  $x$  is ________.",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "24",
+    "explanation": "$I_{\\max} = (\\sqrt{I_1} + \\sqrt{I_2})^2$\n\n$$= (\\sqrt{4I} + \\sqrt{9I})^2 = 25I$$\n\n$$I_{\\min} = (\\sqrt{I_1} - \\sqrt{I_2})^2$$\n\n$$= (\\sqrt{4I} - \\sqrt{9I})^2 = I$$\n\n$$I_{\\max} - I_{\\min} = 24I$$\n\n$$x = 24$",
+    "subject": "Physics",
+    "topic": "Optics",
+    "chapter": "Wave Optics"
+  },
+  {
+    "question": "A loop ABCDA, carrying current  $I = 12 \text{ A}$ , is placed in a plane, consists of two semi-circular segments of radius  $R_1 = 6\text{m}\text{ } \times \text{ }\frac{\text{1}}{\text{2}\text{ }\text{ }\text{ }}\text{ }\text{ }\text{ m}$ and  $R_2 = 4\text{m}\text{ } \times \text{ }\frac{\text{1}}{\text{2}\text{ }\text{ }\text{ }}\text{ }\text{ }\text{ m}$ . The magnitude of the resultant magnetic field at center O is  $k \times 10^{-7} \text{ T}$ . The value of  $k$  is \n\n![Diagram of a current loop ABCDA. The loop consists of two semi-circular segments, one with radius R1 and the other with radius R2, both centered at point O. The current I flows from A to B, then along the semi-circle to C, then from C to D, and finally along the semi-circle back to A. The segments AB and CD are straight lines on the x-axis, while the segments BC and DA are semi-circular arcs. The current direction is clockwise.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/0e002f41508d096677a06ab077502fdf_img.jpg)",
+    "options": [
+      "3",
+      "1",
+      "4",
+      "2"
+    ],
+    "type": "numerical",
+    "correct_answer": "1",
+    "explanation": "Magnetic field due to AB & CD = 0\n\n$$B_0 = |B_{R_1} - B_{R_2}|$$\n\n$$= \\frac{\\mu_0 I}{4R_2} - \\frac{\\mu_0 I}{4R_1}$$\n\n$$= \\frac{4\\pi \\times 10^{-7} \\times 12}{4} \\left( \\frac{1}{4\\pi} - \\frac{1}{6\\pi} \\right)$$\n\n$$= 12\\pi \\times 10^{-7} \\left( \\frac{1}{12\\pi} \\right)$$\n\n$$= 1 \\times 10^{-7}$$\n\n$$K = 1$$",
+    "subject": "Physics",
+    "topic": "Electrodynamics",
+    "chapter": "Magnetic Effects of Current"
+  },
+  {
+    "question": "In the figure shown below, a resistance of  $150.4 \\Omega$  is connected in series to an ammeter A of resistance  $240 \\Omega$ . A shunt resistance of  $10 \\Omega$  is connected in parallel with the ammeter. The reading of the ammeter is \n\n![Circuit diagram for Question 50. A 20V DC source is connected in series with a 150.4 ohm resistor. This series combination is connected in parallel with a 10 ohm shunt resistor. An ammeter (A) is connected in parallel with the 10 ohm shunt resistor.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/83852ec55d4802521a727926336bedab_img.jpg)\n\nCircuit diagram for Question 50. A 20V DC source is connected in series with a 150.4 ohm resistor. This series combination is connected in parallel with a 10 ohm shunt resistor. An ammeter (A) is connected in parallel with the 10 ohm shunt resistor.",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "125",
+    "explanation": "![Circuit diagram for the solution. A 20V DC source is connected in series with a 150.4 ohm resistor (R1). This is followed by a parallel combination of an ammeter (A) with resistance 240 ohms (R2) and a shunt resistor of 10 ohms (R3). The total current from the source is labeled I. The current through the ammeter is labeled I1, and the current through the shunt resistor is labeled I2.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/81a4cbf0b3c4cbc065efdf8f800dadde_img.jpg)\n\nCircuit diagram for the solution. A 20V DC source is connected in series with a 150.4 ohm resistor (R1). This is followed by a parallel combination of an ammeter (A) with resistance 240 ohms (R2) and a shunt resistor of 10 ohms (R3). The total current from the source is labeled I. The current through the ammeter is labeled I1, and the current through the shunt resistor is labeled I2.\n\n![Simplified circuit diagram for the solution. It shows a 20V DC source connected in series with two resistors, R1 and R2. R1 is 150.4 ohms and R2 represents the equivalent resistance of the parallel combination of the ammeter and the shunt resistor.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/3da1a07cb87051bf616c9876db958cf0_img.jpg)\n\nSimplified circuit diagram for the solution. It shows a 20V DC source connected in series with two resistors, R1 and R2. R1 is 150.4 ohms and R2 represents the equivalent resistance of the parallel combination of the ammeter and the shunt resistor.\n\n$$R_{eq} = R_1 + R_2$$\n\n$R_{eq} = 150.4 + \\frac{240 \\times 10}{250}$\n\n$$= 150.4 + 9.6 = 160 \\Omega$$\n\nTotal current $I = \\frac{V}{R_{eq}} = \\frac{20}{160} = 0.125 \\text{ A} = 125 \\text{ mA}$.\n\nThe current through the ammeter $I_1$ is given by the formula for current division:\n\n$$I_1 = I \times \\frac{R_{shunt}}{R_{ammeter} + R_{shunt}}$$\n\n$$I_1 = 125 \\text{ mA} \times \\frac{10}{240 + 10}$$\n\n$$I_1 = 125 \\text{ mA} \times \\frac{10}{250}$$\n\n$$I_1 = 125 \\text{ mA} \times \\frac{1}{25}$$\n\n$$I_1 = 5 \\text{ mA}$$. \n\nThere seems to be a discrepancy in the provided answer and the calculation. Let's recheck the problem statement and the steps.\n\nThe question asks for the reading of the ammeter in mA. The ammeter has a resistance of $240 \\Omega$, and the shunt resistance is $10 \\Omega$. These are in parallel.\n\nThe total resistance of the parallel combination ($R_{parallel}$):\n$$R_{parallel} = \\frac{R_{ammeter} \times R_{shunt}}{R_{ammeter} + R_{shunt}} = \\frac{240 \times 10}{240 + 10} = \\frac{2400}{250} = 9.6 \\Omega$$ \n\nThe total circuit resistance ($R_{total}$) is the sum of the series resistance and the parallel resistance:\n$$R_{total} = 150.4 \\Omega + 9.6 \\Omega = 160 \\Omega$$ \n\nThe total current ($I_{total}$) from the source is:\n$$I_{total} = \\frac{V}{R_{total}} = \\frac{20 \\text{ V}}{160 \\Omega} = 0.125 \\text{ A} = 125 \\text{ mA}$$ \n\nNow, we need to find the current through the ammeter. Using the current division rule:\n$$I_{ammeter} = I_{total} \times \\frac{R_{shunt}}{R_{ammeter} + R_{shunt}}$$\n\n$$I_{ammeter} = 125 \\text{ mA} \times \\frac{10 \\Omega}{240 \\Omega + 10 \\Omega}$$\n\n$$I_{ammeter} = 125 \\text{ mA} \times \\frac{10}{250}$$\n\n$$I_{ammeter} = 125 \\text{ mA} \times \\frac{1}{25}$$\n\n$$I_{ammeter} = 5 \\text{ mA}$$ \n\nIt seems the provided answer of 125 mA might refer to the total current through the circuit, not the current through the ammeter. The calculated value for the ammeter reading is 5 mA.\n\nHowever, if the question implies that the ammeter is measuring the total current *after* the series resistor, and *before* the shunt is applied, this would be the total current. But the diagram clearly shows the ammeter in parallel with the shunt.\n\nLet's consider a case where the *ammeter itself* with its internal resistance of $240 \\Omega$ is connected in series to a resistance of $150.4 \\Omega$, and then a $10 \n\\Omega$ shunt is connected in parallel *with the ammeter*. The total current from the source is not given, but the diagram shows a 20V DC source.\n\nIf the question meant that the *combination* of the ammeter and shunt is connected in parallel with the $10 \n\\Omega$ resistor, this would be different. But ",
+    "subject": "Physics",
+    "topic": "Electrodynamics",
+    "chapter": "Current Electricity"
+  },
+  {
+    "question": "Which of the following postulate of Bohr's model of hydrogen atom is not in agreement with quantum mechanical model of an atom ?\n\n- An atom in a stationary state does not emit electromagnetic radiation as long as it stays in the same state\n- An atom can take only certain distinct energies  $E_1, E_2, E_3$ , etc. These allowed states of constant energy are called the stationary states of atom\n- When an electron makes a transition from a higher energy stationary state to a lower energy stationary state, then it emits a photon of light\n- The electron in a H atom's stationary state moves in a circle around the nucleus",
+    "options": [
+      "An atom in a stationary state does not emit electromagnetic radiation as long as it stays in the same state",
+      "An atom can take only certain distinct energies  $E_1, E_2, E_3$ , etc. These allowed states of constant energy are called the stationary states of atom",
+      "When an electron makes a transition from a higher energy stationary state to a lower energy stationary state, then it emits a photon of light",
+      "The electron in a H atom's stationary state moves in a circle around the nucleus"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "The electron in a H atom's stationary state moves in a circle around the nucleus",
+    "explanation": "The electron in a H-atom's stationary state moves in a spherical path.",
+    "subject": "Physics",
+    "topic": "Modern Physics",
+    "chapter": "Atoms"
+  },
+  {
+    "question": "Given below are two statements\n\n**Statement I :** The N-N single bond is weaker and longer than that of P-P single bond\n\n**Statement II :** Compounds of group 15 elements in +3 oxidation states readily undergo disproportionation reactions.\n\nIn light of the above statements, choose the correct answer from the options given below",
+    "options": [
+      "Statement I is true but statement II is false",
+      "Both statement I and statement II are false",
+      "Statement I is false but statement II is true",
+      "Both statement I and statement II are true"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "Both statement I and statement II are false",
+    "explanation": "$\\\\ddot{\\\\text{N}}-\\\\ddot{\\\\text{N}}$ single bond is weaker than $\\\\ddot{\\\\text{P}}-\\\\ddot{\\\\text{P}}$ due to more $l_p-l_p$ repulsion.\n\nBond length $\\Rightarrow d_{\\\\text{P-P}} > d_{\\\\text{N-N}}$ (size $\\\\uparrow$, B.L. $\\\\uparrow$)\n\nIn group 15 elements only N & P do not show disproportionation in +3 oxidation state, As, Sb & Bi have almost inert for disproportionation in +3 oxidation state.\n\nSo both statements are false.",
+    "subject": "Chemistry",
+    "topic": "Inorganic Chemistry",
+    "chapter": "p-Block Elements"
+  },
+  {
+    "question": "Given below are two statements\n\n**Statement I :** A catalyst cannot alter the equilibrium constant ( $K_c$ ) of the reaction, temperature remaining constant\n\n**Statement II :** A homogenous catalyst can change the equilibrium composition of a system temperature remaining constant\n\nIn the light of the above statements, choose the **correct** answer from the options given below",
+    "options": [
+      "Statement I is false but Statement II is true",
+      "Both Statement I and Statement II are true",
+      "Both Statement I and Statement II is false",
+      "Statement I is true but Statement II is false"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "Both Statement I and Statement II are true",
+    "explanation": "A catalyst can change equilibrium composition if it is added at constant pressure, but it can not change equilibrium constant.",
+    "subject": "Chemistry",
+    "topic": "Physical Chemistry",
+    "chapter": "Equilibrium"
+  },
+  {
+    "question": "The metal ions that have the calculated spin only magnetic moment value of 4.9 B.M. are\n\n- A.  $\\text{Cr}^{2+}$\n- B.  $\\text{Fe}^{2+}$\n- C.  $\\text{Fe}^{3+}$\n- D.  $\\text{Co}^{2+}$\n- E.  $\\text{Mn}^{3+}$\n\nChoose the **correct** answer from the options given below",
+    "options": [
+      "A, C and E only",
+      "A, D and E only",
+      "B and E only",
+      "A, B and E only"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "A, B and E only",
+    "explanation": "Given magnetic moment = 4.9 B.M.\n\nWe know  $\\text{M.M} = \\sqrt{n(n+2)} \\text{B.M.}$ \n\nWhere,  $n \\rightarrow$  No. of unpaired  $e^-$\n\n$$4.9 = \\sqrt{n(n+2)}$$\n\nWe get  $n = 4$\n\n- (A)  ${}_{24}\\text{Cr}^{2+} \\Rightarrow [\\text{Ar}]3d^4$  (4 unpaired  $e^-$ )\n- (B)  ${}_{26}\\text{Fe}^{2+} \\Rightarrow [\\text{Ar}]3d^6$  (4 unpaired  $e^-$ )\n- (C)  ${}_{26}\\text{Fe}^{3+} \\Rightarrow [\\text{Ar}]3d^5$  (5 unpaired  $e^-$ )\n- (D)  ${}_{27}\\text{Co}^{2+} \\Rightarrow [\\text{Ar}]3d^7$  (3 unpaired  $e^-$ )\n- (E)  ${}_{25}\\text{Mn}^{3+} \\Rightarrow [\\text{Ar}]3d^4$  (4 unpaired  $e^-$ )",
+    "subject": "Chemistry",
+    "topic": "Inorganic Chemistry",
+    "chapter": "d and f Block Elements"
+  },
+  {
+    "question": "In a reaction  $A + B \rightarrow C$ , initial concentrations of A and B are related as  $[A]_0 = 8[B]_0$ . The half lives of A and B are 10 min and 40 min. respectively. If they start to disappear at the same time, both following first order kinetics, after how much time will the concentration of both the reactants be same?",
+    "options": [
+      "60 min",
+      "80 min",
+      "20 min",
+      "40 min"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "40 min",
+    "explanation": "Given :  $[A]_0 = 8[B]_0$\n\n$$[t_{1/2}]_A = 10 \text{ min.}$$ \n\n$$[t_{1/2}]_B = 40 \text{ min.}$$ \n\n1<sup>st</sup> order kinetics\n\n$$t = ?$$ \n\n$$[A]_t = [B]_t$$ \n\n$$-k_A \times t = -k_B \times t$$ \n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$8 = e^{(k_A - k_B)t}$$ \n\n$$ \n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$ \n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$ \n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$ \n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$\n\n$$ \n\n$$\n\n$$\n\n$$. \n\n$$\n\n$$3 \text{ } \times 40 = 120 = (k_A - k_B) t$$ \n\n$$\n\n$$\n\n$$3 = \frac{1}{t_{1/2}} (k_A - k_B) \times t$$",
+    "subject": "Chemistry",
+    "topic": "Physical Chemistry",
+    "chapter": "Chemical Kinetics"
+  },
+  {
+    "question": "Which of the following is the correct structure of L-fructose ?\n\n![Fischer projection of D-fructose: CH2OH at top and bottom, C=O at C2, OH groups at C3 (left), C4 (right), C5 (left), and C6 (right). Fischer projection of D-fructose: CH2OH at top and bottom, C=O at C2, OH groups at C3 (left), C4 (left), C5 (left), and C6 (right). Fischer projection of L-fructose: CH2OH at top and bottom, C=O at C2, OH groups at C3 (right), C4 (left), C5 (right), and C6 (left). Fischer projection of L-fructose: CH2OH at top and bottom, C=O at C2, OH groups at C3 (right), C4 (right), C5 (right), and C6 (left).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/f627c94970ef70e6592beec9bc38abff_img.jpg)",
+    "options": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "3",
+    "explanation": "Sol. \n![Fischer projection of D-fructose with OH at C5 boxed. Fischer projection of L-fructose with OH at C5 boxed.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/71f18ee6e8dcb94eda9f28f979eb0909_img.jpg)\nD - Fructose                      L - Fructose",
+    "subject": "Chemistry",
+    "topic": "Organic Chemistry",
+    "chapter": "Biomolecules"
+  },
+  {
+    "question": "Identify the correct statements from the following\n\n- A. ![Skeletal structure of 2-pentanone](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/36def3c30ab7072639da3a8eb34a56b1_img.jpg) and ![Skeletal structure of 3-pentanone](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/aa20759582d0e99966ddb041c16be970_img.jpg) are metamers\n- B. ![Skeletal structure of butanenitrile](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/8b5366d558486910c6f1bd2271a17b4f_img.jpg) and ![Skeletal structure of butyl isocyanide](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/a54e3c91ffcdc00f8e094832ba94954c_img.jpg) are functional isomers\n- C. ![Skeletal structure of 1-butanol](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/cd640bce33f246cedf8f2887ce89e53d_img.jpg) and ![Skeletal structure of 2-butanol](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/61845b801dbf3c2cd6e9d4c477049d4e_img.jpg) are position isomers\n- D. ![Skeletal structure of 1-butylamine](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/a24cd9de62e1357613c4ff9240cdac52_img.jpg) and ![Skeletal structure of 1-propylamine](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/68662b6b360f2a168e3c36020e8e8c68_img.jpg) are homologous\n\nChoose the **correct** answer from the options given below",
+    "options": [
+      "C & D only",
+      "B & C only",
+      "A & B only",
+      "A, B & C only"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "3",
+    "explanation": "A. and = Metamer\n\nB. and = F. G. isomer\n\nSkeletal structure of 2-pentanone Skeletal structure of 3-pentanone Skeletal structure of butanenitrile Skeletal structure of butyl isocyanide\n\nIn option C are monologoes to each - other and option D are only organic molecule not isomers.",
+    "subject": "Chemistry",
+    "topic": "Organic Chemistry",
+    "chapter": "Basic Principles of Organic Chemistry"
+  },
+  {
+    "question": "Among $10^{-9}$ g (each) of the following elements, which one will have the highest number of atoms?\n\nElement : Pb, Po, Pr and Pt",
+    "options": [
+      "Po",
+      "Pr",
+      "Pb",
+      "Pt"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "Pr",
+    "explanation": "No. of atoms = $\\frac{\\text{Mass in g}}{\\text{Molar Mas(g/mol)}} \\times N_A$\n\nTherefore for the same Mass element having the least Molar mass will have the higher no. of atoms.\n\n- $M_{\\text{Po}} = 209$\n- $M_{\\text{Pr}} = 141$\n- $M_{\\text{Pb}} = 207$\n- $M_{\\text{Pt}} = 195$",
+    "subject": "Chemistry",
+    "topic": "Physical Chemistry",
+    "chapter": "Some Basic Concepts of Chemistry"
+  },
+  {
+    "question": "Which of the following statements are correct?\n\n- A. The process of the addition an electron to a neutral gaseous atom is always exothermic\n- B. The process of removing an electron from an isolated gaseous atom is always endothermic\n- C. The 1<sup>st</sup> ionization energy of the boron is less than that of the beryllium\n- D. The electronegativity of C is 2.5 in  $\\text{CH}_4$  and  $\\text{CCl}_4$\n- E. Li is the most electropositive among elements of group I\n\nChoose the **correct** answer from the options gives below",
+    "options": [
+      "B and C only",
+      "A, C and D only",
+      "B and D only",
+      "B, C and E only"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "B and C only",
+    "explanation": "(A) The process of adding an $e^-$ to a neutral gaseous atom is not always exothermic it may be exothermic or endothermic.\n\n![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/f955f1c1e99c2d98e4c83f72cd4ac585_img.jpg)\n\n(C) Be                      B  \n $1s^2 2s^2$                $1s^2 2s^2 2p^1$\n\nIn Be 2s subshell is fully filled\n\nSo, need high energy to remove $e^-$ as compared to B.\n\n![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/cd8251daea6d31e0aa7eb325ac045ee0_img.jpg)\n\n(D) In $\\text{CCl}_4 \rightarrow \\begin{array}{c} \\text{Cl}^{\\delta-} \\ | \\ \\delta+ \\text{C} - \\text{Cl}^{\\delta-} \\ / \\quad \\\\ \\text{Cl}^{\\delta-} \\quad \\text{Cl}^{\\delta-} \\end{array}$\n\ndue to partially positive charge $z_{\\text{eff}} \\uparrow$ , EN $\\uparrow$\n\nSo, EN of C $\\Rightarrow \\text{CCl}_4 > \\text{CH}_4$\n\n(E) Cs is most electropositive.",
+    "subject": "Chemistry",
+    "topic": "Inorganic Chemistry",
+    "chapter": "Classification of Elements and Periodicity"
+  },
+  {
+    "question": "60. Which of the following properties will change when system containing solution 1 will become solution 2 ?\n\n![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/27477aec312450adbb93b7dbf7cf7403_img.jpg)\n\n|                                          |               |                                                                  |\n|------------------------------------------|---------------|------------------------------------------------------------------|\n| 10 mol of solute x<br>+<br>10 L of water | $\\rightarrow$ | 1 L of solution 1<br>+<br>1 mol of solute x<br>+<br>1 L of water |\n| (Solution 1)                             |               | (Solution 2)                                                     |\n\n- (1) Molar heat capacity\n- (2) Density\n- (3) Concentration\n- (4) Gibbs free energy",
+    "options": [
+      "Molar heat capacity",
+      "Density",
+      "Concentration",
+      "Gibbs free energy"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "Gibbs free energy",
+    "explanation": "Both solutions are having same composition, which is 1 mole of 'x' in 1 'l' water, so all the intensive properties will remain same, but as total amount is greater in solution '1' compared to solution '2'. So extensive properties will be different hence Gibbs free energy will be different.",
+    "subject": "Chemistry",
+    "topic": "Physical Chemistry",
+    "chapter": "Solutions"
+  },
+  {
+    "question": "Number of molecules from below which cannot give iodoform reaction is :\n\nEthanol, Isopropyl alcohol, Bromoacetone, 2-Butanol, 2-Butanone, Butanal, 2-Pentanone, 3-Pentanone, Pentanal and 3-Pentanol",
+    "options": [
+      "5",
+      "4",
+      "3",
+      "2"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "4",
+    "explanation": "Following will not give iodoform reaction/test.\n\n- Butanal\n- 2-Pentanone\n- Pentanal\n- 3-Pentanol",
+    "subject": "Chemistry",
+    "topic": "Organic Chemistry",
+    "chapter": "Aldehydes Ketones and Carboxylic Acids"
+  },
+  {
+    "question": "Identify [A], [B], and [C], respectively in the following reaction sequence :\n\n![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/baf655ef2f24e68f1191f947f9871d23_img.jpg)\n\n$$[A] \\xrightarrow[273-278 \\text{ K}]{\\text{NaNO}_2, \\text{HCl}} \\text{C}_6\\text{H}_5\\text{N}_2^+ \\text{Cl}^- \\xrightarrow{\\text{KI}} [B] \\xrightarrow[\\text{Dry ether}]{2\\text{Na}}} [C]$$",
+    "options": [
+      "[A] [B] [C]\n\nAniline Chlorobenzene Iodobenzene",
+      "[A] [B] [C]\n\nAniline Chlorobenzene Benzene",
+      "[A] [B] [C]\n\nAniline Iodobenzene Biphenyl",
+      "[A] [B] [C]\n\nNitrobenzene Iodobenzene Biphenyl"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "Aniline Iodobenzene Biphenyl",
+    "explanation": "The given reaction sequence is:\n$$ \\text{Aniline} \\xrightarrow[273-278 \\text{ K}]{\\text{NaNO}_2, \\text{HCl}} \\text{Benzenediazonium chloride} \\xrightarrow{\\text{KI}} \\text{Iodobenzene} \\xrightarrow[\\text{Dry ether}]{2\\text{Na}}} \\text{Biphenyl} $$ \n\nHence, [A] is Aniline, [B] is Iodobenzene, and [C] is Biphenyl.\n\n![Aniline Diazonium salt Iodobenzene Biphenyl](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/5a1177f3dbd576905d385ffcfe84ac13_img.jpg)",
+    "subject": "Chemistry",
+    "topic": "Organic Chemistry",
+    "chapter": "Amines"
+  },
+  {
+    "question": "In the following reactions, which one is NOT correct?\n\n![Diazonium salt Ethoxybenzene](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/345e7c880e3d504980bcde846a8d0428_img.jpg)\n\n(1)  $\\xrightarrow{\\text{EtOH}}$\n\nDiazonium salt Ethoxybenzene\n\n![Diazonium salt Benzene](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/388dca6ff3079b9ff61892568fa5dd2d_img.jpg)\n\n(2)  $\\\\xrightarrow{\\text{H}_3\\text{PO}_2/\\text{H}_2\\text{O}}$\n\nDiazonium salt Benzene\n\n![Diazonium salt Iodobenzene](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/033612033491fc6a9bf1bf5b9780c0f4_img.jpg)\n\n(3)  $\\\\xrightarrow{\\text{Potassium Iodide}}$\n\nDiazonium salt Iodobenzene\n\n![Diazonium salt Benzonitrile](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/c52b3c8ce7ea687c4ac1421d61386890_img.jpg)\n\n(4)  $\\\\xrightarrow{\\text{CuCN/KCN}}$\n\nDiazonium salt Benzonitrile",
+    "options": [
+      "$\\\\xrightarrow{\\text{EtOH}}$",
+      "$\\\\xrightarrow{\\text{H}_3\\text{PO}_2/\\text{H}_2\\text{O}}$",
+      "$\\\\xrightarrow{\\text{Potassium Iodide}}$",
+      "$\\\\xrightarrow{\\text{CuCN/KCN}}$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "1",
+    "explanation": "$\\\\xrightarrow{\\text{EtOH}}$  Not correct\n\n$\\\\xrightarrow{\\text{EtOH}}$\n\ndeamination reaction\n\n![Diazonium salt Ethoxybenzene Diazonium salt Benzene](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/9d2010f36bbdbef19ea6f1c6ce55f14a_img.jpg)",
+    "subject": "Chemistry",
+    "topic": "Organic Chemistry",
+    "chapter": "Amines"
+  },
+  {
+    "question": "The correct order of the complexes  $[\text{Co}(\text{NH}_3)_5(\text{H}_2\text{O})]^{3+}$  (A),  $[\text{Co}(\text{NH}_3)_6]^{3+}$  (B),  $[\text{Co}(\text{CN})_6]^{3-}$  (C) and  $[\text{CoCl}(\text{NH}_3)_5]^{2+}$  (D) in terms wavelength of light absorbed is :",
+    "options": [
+      "D > A > B > C",
+      "C > B > D > A",
+      "D > C > B > A",
+      "C > B > A > D"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "D > A > B > C",
+    "explanation": "We know  $E = h\nu = \frac{hC}{\\lambda}$\n\n$$E \\propto \\frac{1}{\\lambda}$$\n\nHere all Co in +3 oxidation state.\n\nSo, as the ligand field strength  $\\uparrow$ , CFSE  $\\uparrow$\n\nOrder of field strength of ligand :\n\n![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/7ccac4f35a6c5e1934191cb62834522c_img.jpg)\n\n$$\\text{CN}^- > \\text{NH}_3 > \\text{H}_2\\text{O} > \\text{Cl}^-$$ \n\nCFSE order : C > B > A > D\n\nWavelength order : D > A > B > C",
+    "subject": "Chemistry",
+    "topic": "Inorganic Chemistry",
+    "chapter": "Coordination Compounds"
+  },
+  {
+    "question": "In the following system,\n\n$\text{PCl}_5(\text{g}) \rightleftharpoons \text{PCl}_3(\text{g}) + \text{Cl}_2(\text{g})$  at equilibrium, upon addition of xenon gas at constant T & p, the concentration of\n\n(1)  $\text{PCl}_5$  will increase\n(2)  $\text{Cl}_2$  will decrease\n(3)  $\text{PCl}_5$ ,  $\text{PCl}_3$  &  $\text{Cl}_2$  remain constant\n(4)  $\text{PCl}_3$  will increase",
+    "options": [
+      "$\text{PCl}_5$  will increase",
+      "$\text{Cl}_2$  will decrease",
+      "$\text{PCl}_5$ ,  $\text{PCl}_3$  &  $\text{Cl}_2$  remain constant",
+      "$\text{PCl}_3$  will increase"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "2",
+    "explanation": "On addition of inert gas at constant P & T, reaction moves in the direction of greater no. of moles so it will shift in forward direction, so  $[\text{PCl}_5]$  decrease and  $[\text{PCl}_3]$  &  $[\text{Cl}_2]$  will increase.",
+    "subject": "Chemistry",
+    "topic": "Physical Chemistry",
+    "chapter": "Equilibrium"
+  },
+  {
+    "question": "2 moles each of ethylene glycol and glucose are dissolved in 500 g of water. The boiling point of the resulting solution is :\n\n(Given : Ebullioscopic constant of water =  $0.52 \\text{ K kg mol}^{-1}$ )",
+    "options": [
+      "379.2 K",
+      "377.3 K",
+      "375.3 K",
+      "277.3 K"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "377.3 K",
+    "explanation": "$\\Delta T_b = i_1 m_1 k_b + i_2 m_2 k_b$\n\n$$= 1 \\times \\frac{2}{0.5} \\times 0.52 + \\frac{1 \\times 2}{0.5} \\times 0.52 = 4.16$$\n\n$$(T_b)_{\\text{solution}} = 373.16 + 4.16 = 377.3 \\text{ K}.$$",
+    "subject": "Chemistry",
+    "topic": "Physical Chemistry",
+    "chapter": "Solutions"
+  },
+  {
+    "question": "Which compound would give 3-methyl-6-oxoheptanal upon ozonolysis ?\n\n![1,3-dimethylcyclohexene 1,4-dimethylcyclohexene 1,2-dimethylcyclohexene 1,5-dimethylcyclohexene](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/94d8c9ab91ffc66140c911c9bc883545_img.jpg)\n\n(1) (2)   \n (3) (4)",
+    "options": [
+      "1,3-dimethylcyclohexene",
+      "1,4-dimethylcyclohexene",
+      "1,2-dimethylcyclohexene",
+      "1,5-dimethylcyclohexene"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "1,4-dimethylcyclohexene",
+    "explanation": "Reaction showing 1,4-dimethylcyclohexene reacting with O3 followed by Zn.H2O to form 3-methyl-6-oxoheptanal\n\n![Reaction showing 1,4-dimethylcyclohexene reacting with O3 followed by Zn.H2O to form 3-methyl-6-oxoheptanal](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/b1b6f6ef40181796316777f08c438931_img.jpg)\n\n3-Methyl-6-oxoheptanal",
+    "subject": "Chemistry",
+    "topic": "Organic Chemistry",
+    "chapter": "Hydrocarbons"
+  },
+  {
+    "question": "**68.** Match the **LIST-I** with **LIST-II**\n\n| <b>LIST-I</b><br>(Molecules/ion) |                          | <b>LIST-II</b><br>(Hybridisation of central atom) |                         |\n|----------------------------------|--------------------------|---------------------------------------------------|-------------------------|\n| A.                               | $\\text{PF}_5$            | I.                                                | $\\text{dsp}^2$          |\n| B.                               | $\\text{SF}_6$            | II.                                               | $\\text{sp}^3\\text{d}$   |\n| C.                               | $\\text{Ni}(\\text{CO})_4$ | III.                                              | $\\text{sp}^3\\text{d}^2$ |\n| D.                               | $[\\text{PtCl}_4]^{2-}$   | IV.                                               | $\\text{sp}^3$           |\n\nChoose the **correct** answer from the options given below :\n\n- (1) A-II, B-III, C-IV, D-I\n- (2) A-IV, B-I, C-II, D-III\n- (3) A-I, B-II, C-III, D-IV\n- (4) A-III, B-I, C-IV, D-II",
+    "options": [
+      "A-II, B-III, C-IV, D-I",
+      "A-IV, B-I, C-II, D-III",
+      "A-I, B-II, C-III, D-IV",
+      "A-III, B-I, C-IV, D-II"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "A-II, B-III, C-IV, D-I",
+    "explanation": "$\\text{PF}_5 : 5\\sigma + 0 \\ell p \\rightarrow \\text{sp}^3\\text{d}$\n\n$\\text{SF}_6 : 6\\sigma + 0 \\ell p \\rightarrow \\text{sp}^3\\text{d}^2$\n\n$\\text{Ni}(\\text{CO})_4 : \\text{Ni} \\rightarrow 0$\n\nIn presence of ligand field :-\n![Orbital diagram for Ni(0) showing 3d subshell with 10 electrons, 4s empty, and 4p empty. Below the diagram is 'sp3 hybridisation'](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/5ece7b1c62fc388fb9bd504023a0c38d_img.jpg)\n\n$\\text{Ni}(0) : [\\text{Ar}]$\n\nOrbital diagram for Ni(0) showing 3d subshell with 10 electrons, 4s empty, and 4p empty. Below the diagram is 'sp3 hybridisation'\n\n$[\text{PtCl}_4]^{2-} : \text{Pt} \\rightarrow +2$\n\nIn presence of ligand field :-\n![Orbital diagram for Pt2+ showing 5d subshell with 8 electrons, 6s empty, and 6p empty. Below the diagram is 'dsp2 hybridisation'](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/d102714bad8dd6a6018b9c77a212e7a6_img.jpg)\n\n$\text{Pt}^{2+} : [\\text{Kr}]$\n\nOrbital diagram for Pt2+ showing 5d subshell with 8 electrons, 6s empty, and 6p empty. Below the diagram is 'dsp2 hybridisation'",
+    "subject": "Chemistry",
+    "topic": "Inorganic Chemistry",
+    "chapter": "Chemical Bonding and Molecular Structure"
+  },
+  {
+    "question": "The least acidic compound, among the following is:\n\n![Four chemical structures labeled (A) through (D): (A) 4-ethoxyphenol (EtO-C6H4-OH), (B) benzenesulfonic acid (C6H5-SO3H), (C) butanoic acid (CH3CH2CH2COOH), and (D) ethyl propiolate (EtO2C-C≡H).](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/5a5eb241c987c14116f4e3d52d7c2c10_img.jpg)\n\nFour chemical structures labeled (A) through (D): (A) 4-ethoxyphenol (EtO-C6H4-OH), (B) benzenesulfonic acid (C6H5-SO3H), (C) butanoic acid (CH3CH2CH2COOH), and (D) ethyl propiolate (EtO2C-C≡H).",
+    "options": [
+      "D",
+      "A",
+      "B",
+      "C"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "D",
+    "explanation": "E.g., $\\text{EtO}_2\\text{C}-\\equiv-\\text{H}$\n\nC.B. of terminal alkyne will be sp hybridisation and localised. In other C.B. will be resonance stabilised.",
+    "subject": "Chemistry",
+    "topic": "Organic Chemistry",
+    "chapter": "Aldehydes Ketones and Carboxylic Acids"
+  },
+  {
+    "question": "Correct order of limiting molar conductivity for cations in water at 298 K is :",
+    "options": [
+      "$\\\\text{H}^+ > \\\\text{Na}^+ > \\\\text{K}^+ > \\\\text{Ca}^{2+} > \\\\text{Mg}^{2+}$",
+      "$\\\\text{H}^+ > \\\\text{Ca}^{2+} > \\\\text{Mg}^{2+} > \\\\text{K}^+ > \\\\text{Na}^+$",
+      "$\\\\text{Mg}^{2+} > \\\\text{H}^+ > \\\\text{Ca}^{2+} > \\\\text{K}^+ > \\\\text{Na}^+$",
+      "$\\\\text{H}^+ > \\\\text{Na}^+ > \\\\text{Ca}^{2+} > \\\\text{Mg}^{2+} > \\\\text{K}^+$"
+    ],
+    "type": "multiple_choice",
+    "correct_answer": "$\\\\text{H}^+ > \\\\text{Ca}^{2+} > \\\\text{Mg}^{2+} > \\\\text{K}^+ > \\\\text{Na}^+$",
+    "explanation": "Limiting Molar Conductivities of Ions : \n\n- $\\\\text{H}^+ : 349.8 \\\\text{ Scm}^2 \\\\text{ mol}^{-1}$\n- $\\\\text{Na}^+ : 50.11 \\\\text{ Scm}^2 \\\\text{ mol}^{-1}$\n- $\\\\text{K}^+ : 73.52 \\\\text{ Scm}^2 \\\\text{ mol}^{-1}$\n- $\\\\text{Ca}^{2+} : 119 \\\\text{ Scm}^2 \\\\text{ mol}^{-1}$\n- $\\\\text{Mg}^{2+} : 106.12 \\\\text{ Scm}^2 \\\\text{ mol}^{-1}$\n\nTherefore correct order of limiting molar conductivity of cations will be –\n\n![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/076993cf866d8efefdee4860818a7c47_img.jpg)\n\n$\\\\text{H}^+ > \\\\text{Ca}^{2+} > \\\\text{Mg}^{2+} > \\\\text{K}^+ > \\\\text{Na}^+$",
+    "subject": "Chemistry",
+    "topic": "Physical Chemistry",
+    "chapter": "Electrochemistry"
+  },
+  {
+    "question": "During estimation of nitrogen by Dumas' method of compound X (0.42 g) :\n![Chemical structure of piperazine (X), a six-membered ring with two nitrogen atoms at positions 1 and 4, each bonded to two hydrogen atoms.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/5e7980004900f8d33eb8f1fd50a8016b_img.jpg)\n\nChemical structure of piperazine (X), a six-membered ring with two nitrogen atoms at positions 1 and 4, each bonded to two hydrogen atoms.\n\n_______ mL of $\\text{N}_2$ gas will be liberated at STP. (nearest integer)\n\n(Given molar mass in $\\text{g mol}^{-1}$ : C : 12, H : 1, N : 14)",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "111",
+    "explanation": "M.wt. of given compound = 86\n![Chemical structure of piperazine (X) with an arrow pointing to N2, indicating the release of nitrogen gas.](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/2550f33904b91c0c224bfd4f1268ef88_img.jpg)\n\nChemical structure of piperazine (X) with an arrow pointing to N2, indicating the release of nitrogen gas.\n\nApplying POAC on 'N'\n$$n_x \\times 2 = n_{\\text{N}_2} \\times 2$$\n$$\\frac{0.42}{86} = n_{\\text{N}_2}$$\n$$\\Rightarrow (\\text{Volume})_{\\text{N}_2} \\text{ at STP} = \\frac{0.42}{86} \\times 22.4 \\text{ L}$$ \n$$= 0.1108 \\text{ L} = 110.8 \\text{ ml}$$",
+    "subject": "Chemistry",
+    "topic": "Organic Chemistry",
+    "chapter": "Practical Organic Chemistry"
+  },
+  {
+    "question": "0.5 g of an organic compound on combustion gave 1.46 g of  $\\text{CO}_2$  and 0.9 g of  $\\text{H}_2\\text{O}$ . The percentage of carbon in the compound is \u0001\u0001\u0001\u0001. (Nearest integer)  \n [Given : Molar mass (in  $\\text{g mol}^{-1}$ ) C : 12, H : 1, O : 16]",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "80",
+    "explanation": "Organic  $\\rightarrow \\text{CO}_2$\n\nCompound\n\nApplying POAC on 'C'\n\n$$(\\text{mole}) \\text{ of 'C' in compound} = n_{\\text{CO}_2} \\times 1$$\n\nSo mass of 'C' in compound\n\n$$= \\frac{1.46}{44} \\times 12$$\n\n$$\\text{So, \\% of 'C' in compound} = \\frac{1.46}{44} \\times \\frac{12}{0.5} \\times 100$$\n\n$$= 79.63$$",
+    "subject": "Chemistry",
+    "topic": "Organic Chemistry",
+    "chapter": "Practical Organic Chemistry"
+  },
+  {
+    "question": "The number of optical isomers exhibited by the iron complex (A) obtained from the following reaction is <img src=\"https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/38930480d4bcbbcf8ddcbe3ba8b7ecd5_img.jpg\" alt=\".\" width=\"100\">\n\n$$\\text{FeCl}_3 + \\text{KOH} + \\text{H}_2\\text{C}_2\\text{O}_4 \\rightarrow \\text{A}$$",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "type": "numerical",
+    "correct_answer": "2",
+    "explanation": "\\text{FeCl}_3 + \\text{KOH} + \\text{H}_2\\text{C}_2\\text{O}_4 \\rightarrow \\text{K}_3[\\text{Fe}(\\text{C}_2\\text{O}_4)_3]\n\n(A)\n\n=> [Fe(C2O4)3]3- is [M(AA)3] type complex.\n\nSo total optical isomers = 2",
+    "subject": "Chemistry",
+    "topic": "Inorganic Chemistry",
+    "chapter": "Coordination Compounds"
+  },
+  {
+    "question": "Given :\n\n$$\\Delta H_{\\text{sub}}^\\circ [\\text{C}(\\text{graphite})] = 710 \\text{ kJ mol}^{-1}$$ \n\n$$\\Delta_{\\text{C-H}} H^\\circ = 414 \\text{ kJ mol}^{-1}$$ \n\n$$\\Delta_{\\text{H-H}} H^\\circ = 436 \\text{ kJ mol}^{-1}$$ \n\n$$\\Delta_{\\text{C=C}} H^\\circ = 611 \\text{ kJ mol}^{-1}$$ \n\nThe  $\\Delta H_f^\\circ$  for  $\\text{CH}_2=\\text{CH}_2$  is \n\n$$\\text{\\_\natext{\\_\natext{}}}\\text{ kJ mol}^{-1}$$  (nearest integer value) \n\n![Diagram representing the enthalpy change for the formation of ethene](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/5a515f5f65583e486406aff3dd71e876_img.jpg)",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "25",
+    "explanation": "$$\\begin{array}{ccc} 2\\text{C}_{(\\text{s})} + 2\\text{H}_{2(\\text{g})} & \\longrightarrow & \\text{CH}_2 = \\text{CH}_{2(\\text{g})} : [\\Delta H_f^\\circ]_{\\text{C}_2\\text{H}_{4(\\text{g})}} \\\\ \n ↓ & ↖ & \\\\ 2\\text{C}_{(\\text{g})} + 4\\text{H}_{(\\text{g})} & & \\end{array}$$ \n\n$$[\\Delta H_f^\\circ]_{\\text{C}_2\\text{H}_{4(\\text{g})}} = 2 \\times [\\Delta H_{\\text{sub}}^\\circ]_{\\text{C}_{(\\text{s})}} + 2 \\times \\Delta H_{\\text{H-H}}^\\circ - 1 \\times \\Delta H_{\\text{C=C}}^\\circ - 4 \\times \\Delta H_{\\text{C-H}}^\\circ$$ \n\n$$\\Rightarrow [\\Delta H_f^\\circ]_{\\text{C}_2\\text{H}_{4(\\text{g})}} = (2 \\times 710) + (2 \\times 436) - 611 - 4 \\times 414$$ \n\n$$\\Rightarrow [\\Delta H_f^\\circ]_{\\text{C}_2\\text{H}_{4(\\text{g})}} = 25 \\text{ kJ / mol}}$$",
+    "subject": "Chemistry",
+    "topic": "Physical Chemistry",
+    "chapter": "Thermodynamics"
+  },
+  {
+    "question": "Consider the following reactions\n\n![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/0640a68e293b8029df8267bdb2b94ce0_img.jpg)\n\n$$\\text{A} + \\text{NaCl} + \\text{H}_2\\text{SO}_4 \\rightarrow \\text{CrO}_2\\text{Cl}_2 + \\text{Side Products BaA}$$ Little amount\n\n![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/126ae38a45b7a30db7c8bdae4cba227e_img.jpg)\n\n$$\\text{CrO}_2\\text{Cl}_2(\\text{Vapour}) + \\text{NaOH} \\rightarrow \\text{B} + \\text{NaCl} + \\text{H}_2\\text{O}$$ \n\n![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/42a90c455dee73f75c6f120bada2aa7a_img.jpg)\n\n$$\\text{B} + \\text{H}^+ \\rightarrow \\text{C} + \\text{H}_2\\text{O}$$ \n\nThe number of terminal 'O' present in the compound 'C' is ______.",
+    "options": [],
+    "type": "numerical",
+    "correct_answer": "6",
+    "explanation": "\\text{Cr}_2\\text{O}_7^{2-} + \\text{NaCl} + \\text{H}_2\\text{SO}_4 \\rightarrow \\text{CrO}_2\\text{Cl}_2\n\n![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/b7bee9076e83105bbf2c8c65cecd162a_img.jpg)\n\n$$\\text{CrO}_2\\text{Cl}_2(\\text{Vapour}) + \\text{NaOH} \\rightarrow \\text{Na}_2\\text{CrO}_4 + \\text{NaCl} + \\text{H}_2\\text{O}$$ \n\n![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/7a139d2283122906adf5b6acae0fa37e_img.jpg)\n\n$$\\text{Na}_2\\text{CrO}_4 + \\text{H}^+ \\rightarrow \\text{Na}_2\\text{Cr}_2\\text{O}_7 + \\text{H}_2\\text{O}$$ \n\n(C)\n\n![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/82f73e6162f1240a40e258bca31a28e5_img.jpg)\n\n$$\\text{Na}_2\\text{Cr}_2\\text{O}_7 \\rightarrow 2\\text{Na}^+ + \\text{Cr}_2\\text{O}_7^{2-}$$ \n\n![](https://tripple-score.sfo3.digitaloceanspaces.com/TripleScore/JEE_Mains_2025_Shift_1_Question_Paper_Apr_03_With_Solutions/ed6aee0272c188e13a3d787e719743f4_img.jpg)\n\n$$ \\begin{array}{c} \\text{O}^\\ominus & & \\text{O}^\\ominus \\\\ || & & || \\ \\text{O}=\\text{Cr} & \\text{---O---} & \\text{Cr}=\\text{O} \\\\ || & & || \\ \\text{O} & & \\text{O} \\end{array} $$ \n\nNo of terminal \"O\" = 6",
+    "subject": "Chemistry",
+    "topic": "Inorganic Chemistry",
+    "chapter": "d and f Block Elements"
+  }
+]
