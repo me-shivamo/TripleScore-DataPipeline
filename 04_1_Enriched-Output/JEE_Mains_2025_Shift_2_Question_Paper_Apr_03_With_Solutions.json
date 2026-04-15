@@ -672,8 +672,8 @@
     "correct_answer": "A-III, B-IV, C-I, D-II",
     "explanation": "(A) $[k] = \\frac{PV}{NT} = \\frac{ML^2T^{-2}}{K} = ML^2T^{-2}K^{-1}$\n\n(B) $[\\eta] = \\frac{F}{6\\pi r v} = \\frac{MLT^{-2}}{L^2T^{-1}} = ML^{-1}T^{-1}$\n\n(C) $[h] = \\frac{E}{f} = \\frac{ML^2T^{-2}}{T^{-1}} = ML^2T^{-1}$\n\n(D) $\\frac{dQ}{dt} = k \\frac{AdT}{dx}$\n\n$k = \\frac{(ML^2T^{-3})L}{L^2K} = MLT^{-3}K^{-1}$",
     "subject": "Physics",
-    "topic": "Units and Measurements",
-    "chapter": "Units and Measurements",
+    "topic": "Thermodynamics",
+    "chapter": "Kinetic Theory of Gases",
     "source": "Apr 2025 Shift 2"
   },
   {
