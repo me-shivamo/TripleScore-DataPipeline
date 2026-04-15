@@ -10,8 +10,8 @@ Reads 04_Classified-Output/*.json files, adds 'id' (first key) and 'source'
 
 Title format : JEE Mains {year} {month} {day} - {subject} Q{number}
                e.g. JEE Mains 2026 Jan 28 - Physics Q5
-Source format: {month} {year} Shift {shift}
-               e.g. Jan 2026 Shift 1
+Source format: {day} {month} {year} Shift {shift}
+               e.g. 28 Jan 2026 Shift 1
 """
 
 import json
@@ -54,7 +54,7 @@ def enrich_file(input_file: Path, output_dir: Path):
     """Add 'title' and 'source' to every question in a single JSON file."""
     questions = json.loads(input_file.read_text(encoding="utf-8"))
     year, month, day, shift = parse_pdf_meta(input_file.stem)
-    source = f"{month} {year} Shift {shift}"
+    source = f"{day} {month} {year} Shift {shift}" if day else f"{month} {year} Shift {shift}"
     date_part = f"{month} {day}".strip() if day else month
 
     print(f"\nProcessing {input_file.name}: {len(questions)} question(s)", flush=True)
