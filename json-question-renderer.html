@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Question JSON Renderer</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"/>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="katexReady = true"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@9.1.6/marked.min.js"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f0f2f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px 16px;
+      gap: 24px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 960px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    textarea {
+      width: 100%;
+      height: 220px;
+      padding: 14px;
+      font-family: 'Consolas', 'Courier New', monospace;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      resize: vertical;
+      background: #fff;
+      color: #222;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    textarea:focus { border-color: #4f8ef7; }
+
+    .actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 9px 22px;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    button:active { transform: scale(0.97); }
+
+    #renderBtn { background: #4f8ef7; color: #fff; }
+    #renderBtn:hover { background: #3a78e0; }
+
+    #clearBtn { background: #e5e7eb; color: #444; }
+    #clearBtn:hover { background: #d1d5db; }
+
+    #loadFileBtn { background: #10b981; color: #fff; }
+    #loadFileBtn:hover { background: #059669; }
+
+    #fileInput { display: none; }
+
+    .stats-bar {
+      display: flex;
+      gap: 16px;
+      padding: 10px 16px;
+      background: #fff;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .stat { display: flex; gap: 6px; align-items: center; }
+    .stat-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot-ok { background: #10b981; }
+    .dot-warn { background: #f59e0b; }
+    .dot-corrupt { background: #ef4444; }
+
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 5px 14px;
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: #fff;
+      color: #555;
+      transition: all 0.15s;
+    }
+
+    .filter-btn.active { background: #4f8ef7; color: #fff; border-color: #4f8ef7; }
+    .filter-btn.corrupt-filter.active { background: #ef4444; border-color: #ef4444; }
+    .filter-btn.warn-filter.active { background: #f59e0b; border-color: #f59e0b; }
+
+    #output {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .placeholder {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 32px;
+      text-align: center;
+      color: #aaa;
+      font-style: italic;
+    }
+
+    /* ── Question card ── */
+    .q-card {
+      background: #fff;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 24px 28px;
+      position: relative;
+    }
+
+    .q-card.status-ok { border-left: 5px solid #10b981; }
+    .q-card.status-warn { border-left: 5px solid #f59e0b; background: #fffbeb; }
+    .q-card.status-corrupt { border-left: 5px solid #ef4444; background: #fff5f5; }
+
+    .q-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .q-number {
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: #888;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .q-badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .badge {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .badge-subject { background: #e0e7ff; color: #4338ca; }
+    .badge-type { background: #dcfce7; color: #166534; }
+    .badge-integer { background: #fef3c7; color: #92400e; }
+    .badge-ok { background: #dcfce7; color: #166534; }
+    .badge-warn { background: #fef9c3; color: #854d0e; }
+    .badge-corrupt { background: #fee2e2; color: #991b1b; }
+
+    .q-body { font-size: 1rem; line-height: 1.8; color: #1a1a2e; margin-bottom: 14px; }
+
+    .options-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .option-item {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 7px 12px;
+      border-radius: 6px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .option-item.correct-option {
+      background: #f0fdf4;
+      border-color: #86efac;
+    }
+
+    .option-label {
+      font-weight: 700;
+      color: #555;
+      min-width: 20px;
+    }
+
+    .correct-option .option-label { color: #16a34a; }
+
+    details {
+      margin-top: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #4f8ef7;
+      user-select: none;
+      padding: 4px 0;
+    }
+
+    summary:hover { color: #3a78e0; }
+
+    .explanation-body {
+      margin-top: 10px;
+      padding: 14px 16px;
+      background: #f8faff;
+      border-radius: 6px;
+      border: 1px solid #dbeafe;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    /* Corruption issues panel */
+    .corruption-panel {
+      margin-top: 12px;
+      padding: 10px 14px;
+      background: #fff1f2;
+      border-radius: 6px;
+      border: 1px solid #fecaca;
+      font-size: 0.8rem;
+      color: #7f1d1d;
+    }
+
+    .corruption-panel.warn-panel {
+      background: #fffbeb;
+      border-color: #fde68a;
+      color: #78350f;
+    }
+
+    .corruption-panel ul {
+      padding-left: 1.2em;
+      margin-top: 4px;
+    }
+
+    .corruption-panel li { margin: 2px 0; }
+
+    /* Rendered markdown styles — scoped to question cards */
+    .q-card h1, .q-card h2, .q-card h3 { margin: 0.8em 0 0.4em; color: #1a1a2e; }
+    .q-card p { margin: 0.4em 0; }
+    .q-card ol, .q-card ul { padding-left: 1.6em; margin: 0.4em 0; }
+    .q-card li { margin: 0.2em 0; }
+    .q-card strong { font-weight: 700; color: #111; }
+    .q-card em { font-style: italic; }
+    .q-card code { background: #f3f4f6; padding: 2px 5px; border-radius: 4px; font-family: 'Consolas', monospace; font-size: 0.85em; }
+    .q-card pre { background: #f3f4f6; padding: 12px; border-radius: 6px; overflow-x: auto; margin: 0.6em 0; }
+    .q-card pre code { background: none; padding: 0; }
+    .q-card blockquote { border-left: 4px solid #4f8ef7; padding-left: 12px; color: #555; margin: 0.6em 0; }
+    .q-card .katex-display { margin: 0.8em 0; overflow-x: auto; }
+    .q-card img { max-width: 100%; border-radius: 6px; margin: 8px 0; }
+
+    .corrupt-text {
+      background: #fee2e2;
+      border-radius: 3px;
+      padding: 0 3px;
+      font-family: 'Consolas', monospace;
+      font-size: 0.85em;
+      color: #991b1b;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Question JSON Renderer</h1>
+
+  <div class="container">
+
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <label for="jsonInput">Paste Question JSON (array or single object)</label>
+      <textarea id="jsonInput" placeholder='Paste your JSON here — array of question objects or a single object.&#10;&#10;Expected keys: question, options, type, correct_answer, explanation, subject'></textarea>
+    </div>
+
+    <div class="actions">
+      <button id="renderBtn">Render</button>
+      <button id="clearBtn">Clear</button>
+      <button id="loadFileBtn">Load JSON File</button>
+      <input type="file" id="fileInput" accept=".json"/>
+      <span id="parseError" style="color:#ef4444;font-size:0.85rem;font-weight:600;display:none;"></span>
+    </div>
+
+    <div id="statsBar" class="stats-bar" style="display:none">
+      <span class="stat"><span class="stat-dot dot-ok"></span><span id="countOk">0</span> clean</span>
+      <span class="stat"><span class="stat-dot dot-warn"></span><span id="countWarn">0</span> warnings</span>
+      <span class="stat"><span class="stat-dot dot-corrupt"></span><span id="countCorrupt">0</span> corrupt</span>
+      <span style="margin-left:auto;color:#888" id="totalCount"></span>
+    </div>
+
+    <div id="filterBar" class="filter-bar" style="display:none">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="ok">Clean only</button>
+      <button class="filter-btn warn-filter" data-filter="warn">Warnings</button>
+      <button class="filter-btn corrupt-filter" data-filter="corrupt">Corrupt only</button>
+      <button class="filter-btn corrupt-filter" data-filter="issues" style="background:#fff8f8;border-color:#fca5a5;color:#b91c1c">All Issues</button>
+    </div>
+
+    <div id="output">
+      <div class="placeholder">Output will appear here after clicking Render.</div>
+    </div>
+
+  </div>
+
+  <script>
+    let katexReady = false;
+    let renderedCards = [];
+    let activeFilter = 'all';
+
+    marked.setOptions({ gfm: true, breaks: true, mangle: false, headerIds: false });
+
+    // ── Control character ranges that indicate corruption ──
+    const CONTROL_CHAR_RE = /[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]/g;
+
+    // Unescaped single backslash before a letter that isn't a valid LaTeX command
+    // (catches \f \b \n used literally as single-escape when \\ was intended)
+    const BAD_ESCAPE_RE = /(?<!\\)\\(?![\\{}[\]()^_&%$#~|]|[a-zA-Z]+)/g;
+
+    // Checks if a string contains known garbage patterns
+    function detectIssues(val, fieldName) {
+      const issues = [];
+      if (typeof val !== 'string') return issues;
+
+      const ctrlMatches = [...val.matchAll(CONTROL_CHAR_RE)];
+      if (ctrlMatches.length) {
+        const codes = [...new Set(ctrlMatches.map(m => `U+${m[0].charCodeAt(0).toString(16).padStart(4,'0').toUpperCase()}`))];
+        issues.push({ severity: 'corrupt', msg: `\`${fieldName}\` contains control characters: ${codes.join(', ')}` });
+      }
+
+      // Check for replacement character
+      if (val.includes('\uFFFD')) {
+        issues.push({ severity: 'corrupt', msg: `\`${fieldName}\` contains replacement character (encoding error)` });
+      }
+
+      // Detect raw \n that isn't a newline but looks like escaped string artifact
+      // i.e. literal backslash-n inside an already-parsed string means double-escaping issue
+      if (/\\\s*\n\s*\\/.test(val)) {
+        issues.push({ severity: 'warn', msg: `\`${fieldName}\` may have broken multi-line LaTeX (newline mid-expression)` });
+      }
+
+      // Single backslash before common LaTeX that should be \\
+      const singleEscapes = val.match(/(?<![\\])\\\b(frac|sqrt|cdot|rightarrow|Rightarrow|therefore|vec|hat|bar|left|right|begin|end|text|sum|int|prod|lim|infty|pi|alpha|beta|gamma|theta|lambda|mu|sigma|omega|Delta|Sigma|partial|nabla|times|div|pm|mp|leq|geq|neq|approx|equiv|in|notin|subset|cup|cap|forall|exists)/g);
+      if (singleEscapes && singleEscapes.length) {
+        const unique = [...new Set(singleEscapes)].slice(0, 5).join(', ');
+        issues.push({ severity: 'warn', msg: `\`${fieldName}\` has single-escaped LaTeX commands (likely should be \\\\): ${unique}` });
+      }
+
+      // Empty or whitespace-only
+      if (val.trim() === '') {
+        issues.push({ severity: 'warn', msg: `\`${fieldName}\` is empty` });
+      }
+
+      return issues;
+    }
+
+    function analyzeQuestion(q, idx) {
+      const issues = [];
+
+      const requiredFields = ['question', 'options', 'type', 'correct_answer', 'explanation', 'subject'];
+      for (const f of requiredFields) {
+        if (!(f in q)) issues.push({ severity: 'warn', msg: `Missing field: \`${f}\`` });
+      }
+
+      for (const field of ['question', 'explanation', 'correct_answer', 'subject', 'type']) {
+        if (typeof q[field] === 'string') {
+          issues.push(...detectIssues(q[field], field));
+        }
+      }
+
+      if (Array.isArray(q.options)) {
+        q.options.forEach((opt, i) => {
+          issues.push(...detectIssues(opt, `options[${i}]`));
+        });
+      } else if ('options' in q) {
+        issues.push({ severity: 'warn', msg: '`options` is not an array' });
+      }
+
+      // Check correct_answer appears in options (for MC) — normalise whitespace before comparing
+      if (q.type === 'multiple_choice' && Array.isArray(q.options) && q.correct_answer) {
+        const norm = s => s.replace(/\s+/g, ' ').trim();
+        const ans = norm(q.correct_answer);
+        const found = q.options.some(o => norm(o) === ans);
+        if (!found) {
+          issues.push({ severity: 'warn', msg: `\`correct_answer\` "${ans.slice(0,40)}" not found verbatim in options` });
+        }
+      }
+
+      const maxSev = issues.some(i => i.severity === 'corrupt') ? 'corrupt'
+                   : issues.some(i => i.severity === 'warn') ? 'warn' : 'ok';
+      return { issues, severity: maxSev };
+    }
+
+    function applyKatex(el) {
+      if (typeof renderMathInElement === 'function') {
+        renderMathInElement(el, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$',  right: '$',  display: false },
+            { left: '\\(', right: '\\)', display: false },
+            { left: '\\[', right: '\\]', display: true }
+          ],
+          throwOnError: false
+        });
+      }
+    }
+
+    // Always use marked.parse() — same as the markdown renderer.
+    // KaTeX auto-render needs raw text nodes in the DOM; parseInline
+    // can strip or escape delimiters before KaTeX sees them.
+    function renderMarkdown(text) {
+      if (typeof text !== 'string') return String(text);
+      return marked.parse(text);
+    }
+
+    const OPTION_LABELS = ['A', 'B', 'C', 'D', 'E', 'F'];
+
+    function buildCard(q, idx, analysis) {
+      const { issues, severity } = analysis;
+      const card = document.createElement('div');
+      card.className = `q-card status-${severity}`;
+      card.dataset.status = severity;
+
+      // Header
+      const header = document.createElement('div');
+      header.className = 'q-header';
+
+      const qNum = document.createElement('span');
+      qNum.className = 'q-number';
+      qNum.textContent = `Q${idx + 1}`;
+      header.appendChild(qNum);
+
+      const badges = document.createElement('div');
+      badges.className = 'q-badges';
+
+      if (q.subject) {
+        const b = document.createElement('span');
+        b.className = 'badge badge-subject';
+        b.textContent = q.subject;
+        badges.appendChild(b);
+      }
+
+      if (q.type) {
+        const b = document.createElement('span');
+        b.className = `badge ${q.type === 'integer' ? 'badge-integer' : 'badge-type'}`;
+        b.textContent = q.type.replace('_', ' ');
+        badges.appendChild(b);
+      }
+
+      const sevBadge = document.createElement('span');
+      sevBadge.className = `badge badge-${severity}`;
+      sevBadge.textContent = severity === 'ok' ? '✓ clean' : severity === 'warn' ? '⚠ warning' : '✗ corrupt';
+      badges.appendChild(sevBadge);
+
+      header.appendChild(badges);
+      card.appendChild(header);
+
+      // Question body
+      const qBody = document.createElement('div');
+      qBody.className = 'q-body';
+      qBody.innerHTML = renderMarkdown(q.question || '*(no question)*');
+      card.appendChild(qBody);
+
+      // Normalize helper: collapse whitespace for loose equality (LaTeX options often have padding spaces)
+      const normalise = s => (typeof s === 'string' ? s.replace(/\s+/g, ' ').trim() : '');
+      const correctNorm = normalise(q.correct_answer);
+
+      // Options — inline render (each option is a single expression, no block wrappers needed)
+      if (Array.isArray(q.options) && q.options.length) {
+        const ul = document.createElement('ul');
+        ul.className = 'options-list';
+        q.options.forEach((opt, i) => {
+          const li = document.createElement('li');
+          const isCorrect = correctNorm && normalise(opt) === correctNorm;
+          li.className = `option-item${isCorrect ? ' correct-option' : ''}`;
+
+          const lbl = document.createElement('span');
+          lbl.className = 'option-label';
+          lbl.textContent = OPTION_LABELS[i] || String(i + 1);
+          li.appendChild(lbl);
+
+          const txt = document.createElement('span');
+          txt.innerHTML = renderMarkdown(opt);
+          li.appendChild(txt);
+          ul.appendChild(li);
+        });
+        card.appendChild(ul);
+      } else if (q.type === 'integer' && q.correct_answer !== undefined) {
+        const ansBox = document.createElement('div');
+        ansBox.style.cssText = 'font-size:0.9rem;color:#555;margin-bottom:12px;';
+        const txt = document.createElement('span');
+        txt.innerHTML = renderMarkdown(String(q.correct_answer));
+        ansBox.innerHTML = '<strong>Answer:</strong> ';
+        ansBox.appendChild(txt);
+        card.appendChild(ansBox);
+      }
+
+      // Explanation (collapsible) — full block render for multi-paragraph + images
+      if (q.explanation) {
+        const det = document.createElement('details');
+        const sum = document.createElement('summary');
+        sum.textContent = 'Show Explanation';
+        det.appendChild(sum);
+
+        const expBody = document.createElement('div');
+        expBody.className = 'explanation-body';
+        expBody.innerHTML = renderMarkdown(q.explanation);
+        det.appendChild(expBody);
+        card.appendChild(det);
+      }
+
+      // Issues panel
+      if (issues.length) {
+        const panel = document.createElement('div');
+        panel.className = `corruption-panel ${severity === 'warn' ? 'warn-panel' : ''}`;
+        const title = document.createElement('strong');
+        title.textContent = severity === 'corrupt' ? '✗ Corruption detected:' : '⚠ Warnings:';
+        panel.appendChild(title);
+        const ul = document.createElement('ul');
+        issues.forEach(issue => {
+          const li = document.createElement('li');
+          li.innerHTML = issue.msg.replace(/`([^`]+)`/g, '<code>$1</code>');
+          ul.appendChild(li);
+        });
+        panel.appendChild(ul);
+        card.appendChild(panel);
+      }
+
+      return card;
+    }
+
+    function applyFilter(filter) {
+      activeFilter = filter;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === filter);
+      });
+      renderedCards.forEach(({ card, severity }) => {
+        let show = filter === 'all'
+          || filter === severity
+          || (filter === 'issues' && (severity === 'corrupt' || severity === 'warn'));
+        card.style.display = show ? '' : 'none';
+      });
+    }
+
+    function render() {
+      const raw = document.getElementById('jsonInput').value.trim();
+      const errEl = document.getElementById('parseError');
+      const output = document.getElementById('output');
+
+      errEl.style.display = 'none';
+      output.innerHTML = '';
+      renderedCards = [];
+
+      if (!raw) {
+        output.innerHTML = '<div class="placeholder">Nothing to render.</div>';
+        document.getElementById('statsBar').style.display = 'none';
+        document.getElementById('filterBar').style.display = 'none';
+        return;
+      }
+
+      let questions;
+      try {
+        const parsed = JSON.parse(raw);
+        questions = Array.isArray(parsed) ? parsed : [parsed];
+      } catch (e) {
+        errEl.textContent = 'JSON parse error: ' + e.message;
+        errEl.style.display = 'inline';
+        output.innerHTML = '<div class="placeholder">Fix the JSON error above and try again.</div>';
+        document.getElementById('statsBar').style.display = 'none';
+        document.getElementById('filterBar').style.display = 'none';
+        return;
+      }
+
+      let countOk = 0, countWarn = 0, countCorrupt = 0;
+
+      questions.forEach((q, idx) => {
+        const analysis = analyzeQuestion(q, idx);
+        if (analysis.severity === 'ok') countOk++;
+        else if (analysis.severity === 'warn') countWarn++;
+        else countCorrupt++;
+
+        const card = buildCard(q, idx, analysis);
+        output.appendChild(card);
+        // Same pattern as markdown-renderer.html: applyKatex on the whole card after DOM insertion
+        applyKatex(card);
+        renderedCards.push({ card, severity: analysis.severity });
+      });
+
+      document.getElementById('countOk').textContent = countOk;
+      document.getElementById('countWarn').textContent = countWarn;
+      document.getElementById('countCorrupt').textContent = countCorrupt;
+      document.getElementById('totalCount').textContent = `${questions.length} question${questions.length !== 1 ? 's' : ''} total`;
+      document.getElementById('statsBar').style.display = 'flex';
+      document.getElementById('filterBar').style.display = 'flex';
+
+      applyFilter(activeFilter);
+
+      // If there are corrupt/warn questions, auto-switch to "All Issues" view
+      if (countCorrupt > 0 || countWarn > 0) {
+        if (activeFilter === 'all') applyFilter('all');
+      }
+    }
+
+    document.getElementById('renderBtn').addEventListener('click', render);
+
+    document.getElementById('clearBtn').addEventListener('click', () => {
+      document.getElementById('jsonInput').value = '';
+      document.getElementById('output').innerHTML = '<div class="placeholder">Output will appear here after clicking Render.</div>';
+      document.getElementById('statsBar').style.display = 'none';
+      document.getElementById('filterBar').style.display = 'none';
+      document.getElementById('parseError').style.display = 'none';
+      renderedCards = [];
+    });
+
+    document.getElementById('loadFileBtn').addEventListener('click', () => {
+      document.getElementById('fileInput').click();
+    });
+
+    document.getElementById('fileInput').addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (ev) => {
+        document.getElementById('jsonInput').value = ev.target.result;
+        render();
+      };
+      reader.readAsText(file);
+      e.target.value = '';
+    });
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
+    });
+
+    document.getElementById('jsonInput').addEventListener('keydown', (e) => {
+      if (e.ctrlKey && e.key === 'Enter') render();
+    });
+  </script>
+</body>
+</html>
