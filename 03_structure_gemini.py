@@ -58,13 +58,19 @@ QUESTION_START = re.compile(
 
 SYSTEM_PROMPT_SINGLE = """You are a JEE exam question parser. Extract structured data from this markdown block.
 
+CRITICAL: Copy all text character-for-character from the source. Do NOT rephrase, reformat, reorder, or alter any content — including LaTeX, symbols, whitespace, or markdown syntax. The ONLY permitted modifications are:
+1. Remove leading question number prefix (e.g. "1.", "**2.**").
+2. Remove option label prefixes (e.g. "(1)", "(A)", "A.").
+3. Remove "Sol." prefix and "Correct option (N)" suffix from explanation.
+4. Remove duplicate image alt-text that appears as a standalone paragraph immediately after its ![desc](url).
+
 Rules:
-- "question": Full question text. Preserve the exact markdown text in string. Remove question number prefix. If the question has diagram(s)/image(s), keep them inline as markdown image syntax ![description](url) at their original position in the text. Remove duplicate image description text that appears as a standalone paragraph after the image link.
-- "options": Array of option strings. Preserve the exact markdown text. Remove option numbers "(1)" or "(A)" etc... prefixes. Always 4 elements for MCQ.
-- "type": "multiple_choice", "numerical", "multiple_select", "open_text".
-- "correct_answer": The actual answer value, NOT include the option number.
-- "explanation": Full solution text exact as in markdown (make sure that it will proper render on website). Preserve markdown text in string. Remove "Sol." prefix and "Correct option (N)" suffix. If the solution has diagram(s)/image(s), keep them inline as markdown image syntax ![description](url) at their original position. Remove duplicate image description text that appears as a standalone paragraph after the image link.
-- "subject": Classify as "Physics", "Chemistry", or "Maths" based on question content."""
+- "question": Question text after removing prefix. Keep all images as ![desc](url) inline.
+- "options": 4-element array for MCQ; empty array for numerical/open_text. Keep exact text after removing label prefix.
+- "type": "multiple_choice", "numerical", "multiple_select", or "open_text".
+- "correct_answer": Exact answer value, no option number.
+- "explanation": Full solution text after removing Sol. prefix and Correct option suffix. Keep all images inline.
+- "subject": "Physics", "Chemistry", or "Maths"."""
 
 RESPONSE_SCHEMA_SINGLE = {
     "type": "json_schema",
