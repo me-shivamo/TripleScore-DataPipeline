@@ -10,6 +10,7 @@ Requires: sudo apt install python3-tk  (one-time, WSL2/Linux)
 import asyncio
 import collections
 import contextlib
+import ctypes
 import importlib
 import io
 import json
@@ -337,6 +338,8 @@ class PipelineApp:
 
         self._pipeline_md_path = None
         self._pipeline_spaces_md_path = None
+        self._active_thread: threading.Thread | None = None
+        self._stop_event = threading.Event()
 
         self.step_widgets: dict = {}
         self.step_states: dict[str, StepState] = {}
@@ -467,6 +470,20 @@ class PipelineApp:
             cursor="hand2",
             relief="flat",
         ).pack(padx=10, pady=6)
+
+        self.stop_btn = tk.Button(
+            right,
+            text="  ■   Stop  ",
+            font=(FONT_FAMILY, 10, "bold"),
+            bg=C["btn_danger_bg"], fg=C["btn_danger_fg"],
+            activebackground="#DC2626",
+            activeforeground="#FFFFFF",
+            relief="flat", cursor="hand2",
+            padx=4, pady=8,
+            command=self._stop_pipeline,
+            state="disabled",
+        )
+        self.stop_btn.pack(side="left", padx=(0, 8))
 
         self.run_all_btn = tk.Button(
             right,
@@ -1207,6 +1224,7 @@ class PipelineApp:
         inner.bind("<Enter>", lambda e: self._set_active_scroll_canvas(canvas))
 
         self._build_question_stats_card(inner)
+        self._build_question_diff_card(inner)
 
     def _build_question_stats_card(self, parent):
         """Tool card: count questions in a 05_Embedded-Output file by subject/chapter."""
@@ -1396,6 +1414,234 @@ class PipelineApp:
                          font=(FONT_FAMILY, 8),
                          bg=C["surface"], fg=C["text_primary"]
                          ).pack(side="right", padx=8)
+
+    def _build_question_diff_card(self, parent):
+        """Tool card: compare MD questions vs JSON questions, show which JSON questions are unique."""
+        import re as _re
+
+        card = tk.Frame(parent, bg=C["surface"],
+                        highlightbackground=C["border"], highlightthickness=1)
+        card.pack(fill="x", padx=12, pady=(0, 12))
+
+        # ── Card header ────────────────────────────────────────────────
+        card_hdr = tk.Frame(card, bg=C["indigo_light"])
+        card_hdr.pack(fill="x")
+        tk.Label(card_hdr, text="Question Diff  (MD vs JSON)",
+                 font=(FONT_FAMILY, 10, "bold"),
+                 bg=C["indigo_light"], fg=C["indigo"]
+                 ).pack(side="left", padx=12, pady=8)
+
+        # ── MD file picker ──────────────────────────────────────────────
+        md_frame = tk.Frame(card, bg=C["surface"])
+        md_frame.pack(fill="x", padx=10, pady=(8, 4))
+        tk.Label(md_frame, text="MD file (02_DO-Spaces-Output/)",
+                 font=(FONT_FAMILY, 8), bg=C["surface"], fg=C["text_secondary"]
+                 ).pack(anchor="w", pady=(0, 3))
+
+        md_row = tk.Frame(md_frame, bg=C["surface"])
+        md_row.pack(fill="x")
+
+        self._diff_md_var = tk.StringVar()
+        e_md = self._input_entry(md_row, self._diff_md_var, width=22)
+        e_md.pack(side="left", fill="x", expand=True, padx=(0, 4))
+
+        def _browse_diff_md():
+            path = filedialog.askopenfilename(
+                initialdir=str(BASE_DIR / "02_DO-Spaces-Output"),
+                title="Select MD file",
+                filetypes=[("Markdown files", "*.md")],
+            )
+            if path:
+                self._diff_md_var.set(path)
+
+        tk.Button(md_row, text="Browse",
+                  font=(FONT_FAMILY, 8),
+                  bg=C["btn_ghost_bg"], fg=C["btn_ghost_fg"],
+                  activebackground=C["indigo_light"], activeforeground=C["indigo"],
+                  relief="flat", cursor="hand2", padx=8, pady=3,
+                  highlightbackground=C["btn_ghost_brd"], highlightthickness=1,
+                  command=_browse_diff_md
+                  ).pack(side="left")
+
+        def _autofill_diff_md():
+            pdf = self.cfg.get("pdf_path", tk.StringVar()).get().strip()
+            if not pdf:
+                return
+            candidate = BASE_DIR / "02_DO-Spaces-Output" / f"{Path(pdf).stem}.md"
+            if candidate.exists():
+                self._diff_md_var.set(str(candidate))
+
+        tk.Button(md_frame, text="Use selected PDF's file",
+                  font=(FONT_FAMILY, 8),
+                  bg=C["surface"], fg=C["indigo"],
+                  activebackground=C["indigo_light"], activeforeground=C["indigo"],
+                  relief="flat", cursor="hand2", anchor="w",
+                  command=_autofill_diff_md
+                  ).pack(anchor="w", pady=(3, 0))
+
+        # ── JSON file picker ────────────────────────────────────────────
+        json_frame = tk.Frame(card, bg=C["surface"])
+        json_frame.pack(fill="x", padx=10, pady=(4, 4))
+        tk.Label(json_frame, text="JSON file (03_Structured-Output/)",
+                 font=(FONT_FAMILY, 8), bg=C["surface"], fg=C["text_secondary"]
+                 ).pack(anchor="w", pady=(0, 3))
+
+        json_row = tk.Frame(json_frame, bg=C["surface"])
+        json_row.pack(fill="x")
+
+        self._diff_json_var = tk.StringVar()
+        e_json = self._input_entry(json_row, self._diff_json_var, width=22)
+        e_json.pack(side="left", fill="x", expand=True, padx=(0, 4))
+
+        def _browse_diff_json():
+            path = filedialog.askopenfilename(
+                initialdir=str(BASE_DIR / "03_Structured-Output"),
+                title="Select structured JSON",
+                filetypes=[("JSON files", "*.json")],
+            )
+            if path:
+                self._diff_json_var.set(path)
+
+        tk.Button(json_row, text="Browse",
+                  font=(FONT_FAMILY, 8),
+                  bg=C["btn_ghost_bg"], fg=C["btn_ghost_fg"],
+                  activebackground=C["indigo_light"], activeforeground=C["indigo"],
+                  relief="flat", cursor="hand2", padx=8, pady=3,
+                  highlightbackground=C["btn_ghost_brd"], highlightthickness=1,
+                  command=_browse_diff_json
+                  ).pack(side="left")
+
+        def _autofill_diff_json():
+            pdf = self.cfg.get("pdf_path", tk.StringVar()).get().strip()
+            if not pdf:
+                return
+            candidate = BASE_DIR / "03_Structured-Output" / f"{Path(pdf).stem}.json"
+            if candidate.exists():
+                self._diff_json_var.set(str(candidate))
+
+        tk.Button(json_frame, text="Use selected PDF's file",
+                  font=(FONT_FAMILY, 8),
+                  bg=C["surface"], fg=C["indigo"],
+                  activebackground=C["indigo_light"], activeforeground=C["indigo"],
+                  relief="flat", cursor="hand2", anchor="w",
+                  command=_autofill_diff_json
+                  ).pack(anchor="w", pady=(3, 0))
+
+        # ── Run button ──────────────────────────────────────────────────
+        tk.Button(card, text="Find Unique JSON Questions",
+                  font=(FONT_FAMILY, 9, "bold"),
+                  bg=C["btn_primary_bg"], fg=C["btn_primary_fg"],
+                  activebackground=C["btn_primary_hov"],
+                  activeforeground=C["btn_primary_fg"],
+                  relief="flat", cursor="hand2", pady=6,
+                  command=self._run_question_diff
+                  ).pack(fill="x", padx=10, pady=(4, 6))
+
+        # ── Status label (full results go to Output Log) ────────────────
+        self._diff_status_var = tk.StringVar(value="Results will appear in Output Log →")
+        tk.Label(card,
+                 textvariable=self._diff_status_var,
+                 font=(FONT_FAMILY, 8, "italic"),
+                 bg=C["surface"], fg=C["text_muted"],
+                 wraplength=280, justify="left",
+                 anchor="w",
+                 ).pack(fill="x", padx=12, pady=(0, 10))
+
+    def _run_question_diff(self):
+        import re as _re
+
+        def _normalize(text: str) -> str:
+            text = _re.sub(r"<[^>]+>", "", text)
+            text = text.lower()
+            text = _re.sub(r"[^\w\s]", " ", text)
+            text = _re.sub(r"\s+", " ", text).strip()
+            words = text.split()
+            return " ".join(words[:8])
+
+        def _err(msg: str):
+            self._diff_status_var.set(f"Error: {msg}")
+            self._append_log(f"[Question Diff] ERROR: {msg}\n", force_tag="error")
+
+        md_str = self._diff_md_var.get().strip()
+        json_str = self._diff_json_var.get().strip()
+
+        if not md_str:
+            _err("No MD file selected.")
+            return
+        if not json_str:
+            _err("No JSON file selected.")
+            return
+
+        md_path = Path(md_str)
+        json_path = Path(json_str)
+
+        if not md_path.exists():
+            _err(f"MD file not found: {md_path.name}")
+            return
+        if not json_path.exists():
+            _err(f"JSON file not found: {json_path.name}")
+            return
+
+        try:
+            md_text = md_path.read_text(encoding="utf-8")
+        except Exception as exc:
+            _err(f"Failed to read MD: {exc}")
+            return
+
+        try:
+            questions = json.loads(json_path.read_text(encoding="utf-8"))
+        except Exception as exc:
+            _err(f"Failed to read JSON: {exc}")
+            return
+
+        if not isinstance(questions, list):
+            _err("JSON file is not an array.")
+            return
+
+        md_keys: set[str] = set()
+        for line in md_text.splitlines():
+            m = _re.match(r"^\d+\.\s+(.+)", line)
+            if m:
+                md_keys.add(_normalize(m.group(1)))
+
+        unmatched: list[tuple[int, str, str]] = []
+        for idx, q in enumerate(questions):
+            q_text = q.get("question", "")
+            key = _normalize(q_text)
+            if key and key not in md_keys:
+                unmatched.append((idx + 1, q.get("subject", "?"), q_text))
+
+        self._render_diff_results(md_path.name, json_path.name, len(questions), unmatched)
+
+    def _render_diff_results(self, md_name: str, json_name: str, total: int, unmatched: list):
+        import re as _re
+
+        sep = "─" * 60 + "\n"
+
+        self._append_log(
+            f"\n=== Question Diff: {json_name} vs {md_name} ===\n",
+            force_tag="header",
+        )
+
+        if not unmatched:
+            self._diff_status_var.set(f"✓ All {total} matched")
+            self._append_log(
+                f"✓ All {total} JSON questions found in MD — no unique questions.\n",
+                force_tag="success",
+            )
+            return
+
+        self._diff_status_var.set(f"{len(unmatched)} unmatched — see Output Log")
+        self._append_log(
+            f"{len(unmatched)} unmatched question(s) out of {total}:\n\n",
+            force_tag="warn",
+        )
+
+        for q_num, subject, q_text in unmatched:
+            clean = _re.sub(r"<[^>]+>", "", q_text)
+            self._append_log(f"Q{q_num}  [{subject}]\n", force_tag="header")
+            self._append_log(f"{clean}\n\n")
+            self._append_log(sep)
 
     # ------------------------------------------------------------------ #
     #  LOG PANE                                                            #
@@ -1790,8 +2036,34 @@ class PipelineApp:
     #  RUN LOGIC (unchanged)                                               #
     # ------------------------------------------------------------------ #
 
+    def _stop_pipeline(self):
+        """Force-terminate the active pipeline thread."""
+        t = self._active_thread
+        if t is None or not t.is_alive():
+            return
+        self._stop_event.set()
+        tid = t.ident
+        if tid is not None:
+            ctypes.pythonapi.PyThreadState_SetAsyncExc(
+                ctypes.c_ulong(tid),
+                ctypes.py_object(SystemExit),
+            )
+        self._append_log("\n[Stop] Termination requested — pipeline will halt.\n", "warn")
+        self.stop_btn.config(state="disabled")
+        # Mark any running steps as error
+        for sid, state in list(self.step_states.items()):
+            if state == StepState.RUNNING:
+                self._set_step_state(sid, StepState.ERROR)
+        self.run_all_btn.config(state="normal")
+        for w in self.step_widgets.values():
+            if "run_btn" in w:
+                w["run_btn"].config(state="normal")
+        self.status_var.set("Stopped by user.")
+
     def _exec_on_thread(self, sid, factory_fn, is_async, on_done):
+        self._stop_event.clear()
         writer = QueueWriter(self.log_queue)
+        self.root.after(0, lambda: self.stop_btn.config(state="normal"))
         def thread_target():
             result = None; exc = None
             try:
@@ -1805,11 +2077,17 @@ class PipelineApp:
                             loop.close()
                     else:
                         result = factory_fn()
-            except Exception as e:
-                exc = e; self.log_queue.put(traceback.format_exc())
+            except (Exception, SystemExit) as e:
+                exc = e if not isinstance(e, SystemExit) else None
+                if not isinstance(e, SystemExit):
+                    self.log_queue.put(traceback.format_exc())
             finally:
+                self.root.after(0, lambda: self.stop_btn.config(state="disabled"))
+                self._active_thread = None
                 self.root.after(0, lambda: on_done(result, exc))
-        threading.Thread(target=thread_target, daemon=True).start()
+        t = threading.Thread(target=thread_target, daemon=True)
+        self._active_thread = t
+        t.start()
 
     def _run_step(self, sid: str):
         cfg = self._read_config()
@@ -1847,6 +2125,7 @@ class PipelineApp:
                 self._set_step_state(sid, StepState.SKIPPED)
 
         writer = QueueWriter(self.log_queue)
+        self._stop_event.clear()
 
         def pipeline_thread():
             md_path = None; spaces_md_path = None
@@ -1897,10 +2176,15 @@ class PipelineApp:
 
             self.root.after(0, lambda ok=pipeline_success: self._on_pipeline_complete(ok))
 
-        threading.Thread(target=pipeline_thread, daemon=True).start()
+        t = threading.Thread(target=pipeline_thread, daemon=True)
+        self._active_thread = t
+        self.stop_btn.config(state="normal")
+        t.start()
 
     def _on_pipeline_complete(self, success: bool = True):
         self.run_all_btn.config(state="normal")
+        self.stop_btn.config(state="disabled")
+        self._active_thread = None
         for w in self.step_widgets.values():
             if "run_btn" in w:
                 w["run_btn"].config(state="normal")
